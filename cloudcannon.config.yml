@@ -2,10 +2,10 @@ paths:
   uploads: public/uploads
   static: public
 collections_config:
-  content:
-    path: src/content
-    icon: wysiwyg
-    disable_url: false
+  src:
+    path: src
+    icon: abc
+    disable_url: true
     disable_add: false
     disable_add_folder: false
     disable_file_actions: false
