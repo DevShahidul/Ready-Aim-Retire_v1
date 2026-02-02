@@ -1,0 +1,383 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTABanner from '../../components/CTABanner.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { getCollection } from 'astro:content';
+
+export const prerender = true;
+
+// Get all blog posts and sort by date (newest first)
+const allPosts = await getCollection('blog');
+const sortedPosts = allPosts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+
+// Get unique categories from all posts
+const categories = ['All', ...new Set(allPosts.map(post => post.data.category))];
+---
+
+<BaseLayout
+    title="Blog – ReadyAimRetire"
+    description="Expert insights on retirement planning, tax strategies, and financial independence from the ReadyAimRetire team."
+    solidHeader={true}
+>
+    <!-- Hero Section -->
+    <section class="blog-hero">
+        <div class="container" data-aos="fade-up">
+            <Breadcrumbs theme="light" items={[{ label: "Blog" }]} />
+            <h1>Retirement Insights</h1>
+            <p>Expert insights, practical strategies, and the latest news to help you master your retirement planning journey.</p>
+        </div>
+    </section>
+
+    <!-- Category Filter -->
+    <section class="filter-section">
+        <div class="container">
+            <div class="category-filters" data-aos="fade-up">
+                {categories.map((category) => (
+                    <button
+                        class={`filter-btn ${category === 'All' ? 'active' : ''}`}
+                        data-category={category}
+                    >
+                        {category}
+                    </button>
+                ))}
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Posts Grid -->
+    <section class="blog-grid-section">
+        <div class="container">
+            <div class="blog-grid">
+                {sortedPosts.map((post, index) => (
+                    <article
+                        class="blog-card"
+                        data-category={post.data.category}
+                        data-aos="fade-up"
+                        data-aos-delay={index < 6 ? index * 100 : 0}
+                    >
+                        <a href={`/blog/${post.slug}`} class="card-link">
+                            <div class="card-image">
+                                {post.data.image ? (
+                                    <img src={post.data.image} alt={post.data.title} />
+                                ) : (
+                                    <div class="placeholder-image">
+                                        <i class="fas fa-newspaper"></i>
+                                    </div>
+                                )}
+                                <span class="category-badge">{post.data.category}</span>
+                            </div>
+                            <div class="card-content">
+                                <h2>{post.data.title}</h2>
+                                <p class="excerpt">{post.data.description}</p>
+                                <div class="card-meta">
+                                    <span class="date">
+                                        <i class="far fa-calendar"></i>
+                                        {post.data.date.toLocaleDateString('en-US', {
+                                            year: 'numeric',
+                                            month: 'long',
+                                            day: 'numeric'
+                                        })}
+                                    </span>
+                                    <span class="read-time">
+                                        <i class="far fa-clock"></i>
+                                        {post.data.readTime}
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                ))}
+            </div>
+
+            {sortedPosts.length === 0 && (
+                <div class="no-posts" data-aos="fade-up">
+                    <i class="fas fa-inbox"></i>
+                    <p>No blog posts available yet. Check back soon for expert retirement planning insights!</p>
+                </div>
+            )}
+        </div>
+    </section>
+
+    <!-- Call to Action Banner -->
+    <CTABanner />
+</BaseLayout>
+
+<style>
+    .blog-hero {
+        background: var(--color-bg-light);
+        padding: 8rem 0 3rem 0;
+        text-align: left;
+    }
+
+    .blog-hero h1 {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-size: clamp(2.5rem, 5vw, 3.5rem);
+        font-weight: 400;
+        color: #1a1a2e;
+        margin: 0;
+        line-height: 1.2;
+    }
+
+    .blog-hero p {
+        font-size: 1rem;
+        color: #4a5568;
+        max-width: 600px;
+        margin: 1rem 0 0 0;
+        line-height: 1.6;
+    }
+
+    .filter-section {
+        background: #ffffff;
+        padding: 2rem 0;
+        border-bottom: 1px solid #e5e7eb;
+    }
+
+    .category-filters {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+    }
+
+    .filter-btn {
+        padding: 0.65rem 1.5rem;
+        background: #f3f4f6;
+        border: 2px solid transparent;
+        border-radius: 50px;
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: #374151;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .filter-btn:hover {
+        background: #e5e7eb;
+        color: #1a1a2e;
+    }
+
+    .filter-btn.active {
+        background: #14b8a6;
+        color: #ffffff;
+        border-color: #14b8a6;
+    }
+
+    .blog-grid-section {
+        background: #f6f6f4;
+        padding: 4rem 0;
+        min-height: 400px;
+    }
+
+    .blog-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    .blog-card {
+        background: #ffffff;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        display: none;
+    }
+
+    .blog-card.visible {
+        display: block;
+    }
+
+    .blog-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    }
+
+    .card-link {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+    }
+
+    .card-image {
+        position: relative;
+        width: 100%;
+        height: 240px;
+        overflow: hidden;
+        background: linear-gradient(135deg, #e0f2f1 0%, #b2dfdb 100%);
+    }
+
+    .card-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+
+    .blog-card:hover .card-image img {
+        transform: scale(1.05);
+    }
+
+    .placeholder-image {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);
+    }
+
+    .placeholder-image i {
+        font-size: 4rem;
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    .category-badge {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        background: rgba(20, 184, 166, 0.95);
+        color: #ffffff;
+        padding: 0.4rem 0.9rem;
+        border-radius: 50px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        backdrop-filter: blur(10px);
+    }
+
+    .card-content {
+        padding: 1.75rem;
+    }
+
+    .card-content h2 {
+        font-family: 'Inter', sans-serif;
+        font-size: 1.35rem;
+        font-weight: 700;
+        color: #1a1a2e;
+        margin: 0 0 0.75rem 0;
+        line-height: 1.3;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .excerpt {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        color: #6b7280;
+        margin: 0 0 1.25rem 0;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .card-meta {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        font-size: 0.85rem;
+        color: #9ca3af;
+    }
+
+    .card-meta span {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+    }
+
+    .card-meta i {
+        font-size: 0.9rem;
+        color: #14b8a6;
+    }
+
+    .no-posts {
+        text-align: center;
+        padding: 4rem 2rem;
+        color: #6b7280;
+    }
+
+    .no-posts i {
+        font-size: 4rem;
+        color: #d1d5db;
+        margin-bottom: 1rem;
+    }
+
+    .no-posts p {
+        font-size: 1.1rem;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    @media (max-width: 900px) {
+        .blog-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .blog-hero {
+            padding: 6rem 0 2rem 0;
+        }
+
+        .filter-section {
+            padding: 1.5rem 0;
+        }
+
+        .category-filters {
+            gap: 0.75rem;
+        }
+
+        .filter-btn {
+            padding: 0.5rem 1.2rem;
+            font-size: 0.85rem;
+        }
+
+        .blog-grid-section {
+            padding: 3rem 0;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .blog-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .card-image {
+            height: 200px;
+        }
+    }
+</style>
+
+<script>
+    // Category filtering functionality
+    document.addEventListener('DOMContentLoaded', () => {
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const blogCards = document.querySelectorAll('.blog-card');
+
+        // Show all cards initially
+        blogCards.forEach(card => card.classList.add('visible'));
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const category = btn.dataset.category;
+
+                // Update active state
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                // Filter cards
+                blogCards.forEach(card => {
+                    const cardCategory = card.dataset.category;
+                    if (category === 'All' || cardCategory === category) {
+                        card.classList.add('visible');
+                    } else {
+                        card.classList.remove('visible');
+                    }
+                });
+            });
+        });
+    });
+</script>

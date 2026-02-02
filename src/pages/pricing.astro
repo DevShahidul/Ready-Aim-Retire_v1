@@ -1,0 +1,561 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+---
+
+<BaseLayout
+    title="Pricing – ReadyAimRetire"
+    description="Choose the right ReadyAimRetire plan for your retirement planning needs. Free tier available, premium features for serious planners."
+    solidHeader={true}
+>
+    <!-- Pricing Section -->
+    <section class="pricing-section">
+        <div class="container">
+            <Breadcrumbs items={[{ label: "Pricing" }]} />
+            <h1 class="pricing-title heading-serif" data-aos="fade-up">Simple, transparent pricing</h1>
+
+            <!-- Intro text and Billing Toggle on same row -->
+            <div class="pricing-subheader" data-aos="fade-up" data-aos-delay="100">
+                <p class="pricing-intro">OnTarget™ is free to start and powerful when you're ready to go deeper. Whether you're just exploring or building a long-term plan, you only pay for what you need.</p>
+                <div class="billing-toggle">
+                    <button class="toggle-pill" data-billing="monthly">Monthly</button>
+                    <button class="toggle-pill active" data-billing="yearly">Annual (Save 38%)</button>
+                </div>
+            </div>
+
+            <!-- Pricing Cards Grid -->
+            <div class="pricing-cards" data-aos="fade-up" data-aos-delay="200">
+                <!-- Basic Plan -->
+                <div class="pricing-card-v2">
+                    <div class="price-badge" data-monthly="0" data-yearly="0">
+                        <span class="price">$0</span>
+                        <span class="period">/y</span>
+                    </div>
+                    <div class="card-header-row">
+                        <h3 class="plan-name">Basic</h3>
+                    </div>
+                    <p class="plan-description">For exploring your retirement picture and getting oriented.</p>
+                    <a href={`${import.meta.env.PUBLIC_APP_URL}/signup`} class="btn-choose-plan">Choose Plan</a>
+                    <ul class="plan-features">
+                        <li><i class="fa-solid fa-circle-check"></i> <span>Build a basic retirement plan</span></li>
+                        <li><i class="fa-solid fa-circle-check"></i> <span>Visualize your financial timeline</span></li>
+                        <li><i class="fa-solid fa-circle-check"></i> <span>Track net worth at a high level</span></li>
+                        <li><i class="fa-solid fa-circle-check"></i> <span>Run limited scenarios</span></li>
+                        <li><i class="fa-solid fa-circle-check"></i> <span>Save your plan for a limited time</span></li>
+                    </ul>
+                    <div class="plan-limitations">
+                        <h4>Limitations</h4>
+                        <ul>
+                            <li><i class="fa-solid fa-circle limitation-icon"></i> <span>Limited scenario creation</span></li>
+                            <li><i class="fa-solid fa-circle limitation-icon"></i> <span>Plan saved for a limited time</span></li>
+                            <li><i class="fa-solid fa-circle limitation-icon"></i> <span>Premium features locked</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Pro Plan -->
+                <div class="pricing-card-v2">
+                    <div class="price-badge" data-monthly="12" data-yearly="115">
+                        <span class="price">$115</span>
+                        <span class="period">/y</span>
+                    </div>
+                    <div class="card-header-row">
+                        <h3 class="plan-name">Pro</h3>
+                    </div>
+                    <p class="plan-description">For those ready to take aim, who want clarity, control, and confidence.</p>
+                    <a href={`${import.meta.env.PUBLIC_APP_URL}/signup`} class="btn-choose-plan">Choose Plan</a>
+                    <h4 class="features-subheading">Everything in Basic, plus:</h4>
+                    <ul class="plan-features">
+                        <li><i class="fa-solid fa-circle-check"></i> <span>Save unlimited plans</span></li>
+                        <li><i class="fa-solid fa-circle-check"></i> <span>Create and compare unlimited scenarios</span></li>
+                        <li><i class="fa-solid fa-circle-check"></i> <span>Full historical stress testing</span></li>
+                        <li><i class="fa-solid fa-circle-check"></i> <span>Advanced withdrawal strategy modeling</span></li>
+                        <li><i class="fa-solid fa-circle-check"></i> <span>Detailed retirement budgeting</span></li>
+                        <li><i class="fa-solid fa-circle-check"></i> <span>Tax-aware planning across all account types</span></li>
+                        <li><i class="fa-solid fa-circle-check"></i> <span>Social Security planning tools</span></li>
+                        <li><i class="fa-solid fa-circle-check"></i> <span>Plan for major life events, expected, and unexpected expenses</span></li>
+                        <li><i class="fa-solid fa-circle-check"></i> <span>Ongoing updates as your life changes</span></li>
+                    </ul>
+                </div>
+
+                <!-- Lifetime Plan -->
+                <div class="pricing-card-v2">
+                    <div class="price-badge" data-monthly="1199" data-yearly="1199" data-onetime="true">
+                        <span class="price">$1199</span>
+                        <span class="period">/y</span>
+                    </div>
+                    <div class="card-header-row">
+                        <h3 class="plan-name">Lifetime</h3>
+                    </div>
+                    <p class="plan-description">Get all the great features of Pro with a single one-time payment.</p>
+                    <a href={`${import.meta.env.PUBLIC_APP_URL}/signup`} class="btn-choose-plan">Choose Plan</a>
+                    <ul class="plan-features">
+                        <li><i class="fa-solid fa-circle-check"></i> <span>Everything in Pro</span></li>
+                        <li><i class="fa-solid fa-circle-check"></i> <span>One-time payment</span></li>
+                        <li><i class="fa-solid fa-circle-check"></i> <span>No subscriptions</span></li>
+                    </ul>
+                </div>
+
+                <!-- Professional Plan -->
+                <div class="pricing-card-v2 professional">
+                    <div class="price-badge" data-monthly="732" data-yearly="549">
+                        <span class="price">$549</span>
+                        <span class="period">/y</span>
+                    </div>
+                    <div class="card-header-row">
+                        <h3 class="plan-name">Professional</h3>
+                    </div>
+                    <p class="plan-description">Modern financial planning software for financial advisors and coaches.</p>
+                    <a href="/advisors" class="btn-choose-plan">Coming Soon</a>
+                    <ul class="plan-features">
+                        <li><i class="fa-solid fa-circle-check"></i> <span>Everything in <strong>Premium</strong></span></li>
+                        <li><i class="fa-solid fa-circle-check"></i> <span><strong>20</strong> Client Seats</span></li>
+                        <li><i class="fa-solid fa-circle-check"></i> <span>Plan team <strong>meetings</strong></span></li>
+                        <li><i class="fa-solid fa-circle-check"></i> <span>Advisor Dashboard</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why We Charge Section -->
+    <section class="why-charge-section">
+        <div class="container">
+            <div class="why-charge-content">
+                <div class="why-charge-logo">
+                    <img src="/images/landing/ontargetlogo.png" alt="OnTarget - Ready Aim Retire" class="ontarget-logo-img">
+                </div>
+                <div class="why-charge-box">
+                    <h2>Why we charge - and why it's worth it</h2>
+                    <p class="why-charge-intro">This isn't a one-time calculator. It's an ongoing planning tool.</p>
+                    <p class="why-charge-desc">Retirement planning isn't something you do once. It's something you revisit as markets, life, and priorities change.</p>
+                    <p class="why-charge-supports"><strong>Your Pro subscription supports:</strong></p>
+                    <ul class="why-charge-points">
+                        <li><svg class="check-icon" viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Continuous improvements</li>
+                        <li><svg class="check-icon" viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> New features and modeling tools</li>
+                        <li><svg class="check-icon" viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Accurate, thoughtful assumptions</li>
+                        <li><svg class="check-icon" viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> A product built for planners - not advertisers</li>
+                    </ul>
+                    <div class="why-charge-divider"></div>
+                    <div class="why-charge-bold-statements">
+                        <p><strong>We don't sell your data.</strong></p>
+                        <p><strong>We don't push products.</strong></p>
+                        <p><strong>Our incentives are aligned with your clarity.</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="faq-title">Frequently asked questions</h2>
+            <div class="faq-list">
+                <div class="faq-item-static">
+                    <h3 class="faq-question-text">Can I switch between monthly and annual plans?</h3>
+                    <p class="faq-answer-text">Yes – upgrade, downgrade, or switch billing at any time.</p>
+                </div>
+                <div class="faq-item-static">
+                    <h3 class="faq-question-text">Is my data safe?</h3>
+                    <p class="faq-answer-text">Yes. Your plans are private and secure. We never sell or share your data.</p>
+                </div>
+                <div class="faq-item-static">
+                    <h3 class="faq-question-text">Do I need Pro forever?</h3>
+                    <p class="faq-answer-text">No. You can cancel anytime. Your account remains accessible under the Free plan.</p>
+                </div>
+                <div class="faq-item-static">
+                    <h3 class="faq-question-text">Is this a replacement for a financial advisor?</h3>
+                    <p class="faq-answer-text">OnTarget™ is designed to help you understand and engage with your plan – whether you work with an advisor or not.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section with Image -->
+    <section class="pricing-cta-section">
+        <div class="pricing-cta-wrapper">
+            <div class="pricing-cta-image">
+                <img src="/images/landing/pricing/Screenshot 2026-01-19 192629.png" alt="Couple walking together planning their retirement">
+            </div>
+            <div class="pricing-cta-text" style="background-image: url('/images/landing/pricing/arrow_background.png');">
+                <div class="pricing-cta-logo">
+                    <img src="/images/landing/ontargetlogo_white.png" alt="OnTarget" class="ontarget-white-logo">
+                </div>
+                <div class="pricing-cta-badge">
+                    <span class="cta-arrow-icon">→</span>
+                    <span class="cta-badge-text">Ready to build your plan<br>with confidence?</span>
+                </div>
+                <h3 class="pricing-cta-heading">If you're serious about understanding your retirement, OnTarget™ Pro gives you the tools to explore everything that matters - no guesswork.</h3>
+                <a href={`${import.meta.env.PUBLIC_APP_URL}/signup`} class="btn-cta-white">Get Started <span class="arrow">→</span></a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Billing toggle functionality
+            const toggleButtons = document.querySelectorAll('.toggle-pill');
+            const priceBadges = document.querySelectorAll('.price-badge');
+
+            function updatePricing(billing) {
+                priceBadges.forEach(badge => {
+                    const priceEl = badge.querySelector('.price');
+                    const periodEl = badge.querySelector('.period');
+                    const isOnetime = badge.dataset.onetime === 'true';
+                    const monthlyNote = badge.dataset.monthlyNote;
+
+                    const card = badge.closest('.pricing-card-v2');
+                    const billingNoteEl = card?.querySelector('.billing-note');
+
+                    const price = billing === 'monthly'
+                        ? badge.dataset.monthly
+                        : badge.dataset.yearly;
+
+                    priceEl.textContent = '$' + price;
+
+                    if (!isOnetime && periodEl) {
+                        periodEl.textContent = billing === 'monthly' ? '/ mo' : '/ yr';
+                    }
+
+                    if (billingNoteEl) {
+                        if (billing === 'monthly' && monthlyNote) {
+                            billingNoteEl.textContent = monthlyNote;
+                            billingNoteEl.style.display = 'block';
+                        } else {
+                            billingNoteEl.style.display = 'none';
+                        }
+                    }
+                });
+            }
+
+            toggleButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    toggleButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    updatePricing(this.dataset.billing);
+                });
+            });
+
+            // Initialize with yearly pricing
+            updatePricing('yearly');
+        });
+    </script>
+
+    <!-- SoftwareApplication Schema for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "ReadyAimRetire",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Web",
+        "description": "Retirement planning software with scenario modeling, tax optimization, and Monte Carlo simulations.",
+        "offers": {
+            "@type": "AggregateOffer",
+            "priceCurrency": "USD",
+            "lowPrice": "0",
+            "highPrice": "1199",
+            "offerCount": "4"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "ratingCount": "150"
+        }
+    }
+    </script>
+</BaseLayout>
+
+<style>
+    /* ========================================
+       Why We Charge Section
+       ======================================== */
+    .why-charge-section {
+        background: var(--color-bg-light);
+        padding: 1.5rem 0 5rem 0;  /* Reduced top padding */
+    }
+
+    .why-charge-content {
+        display: flex;
+        gap: 4rem;
+        align-items: flex-start;
+    }
+
+    .why-charge-logo {
+        flex: 0 0 220px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .ontarget-logo-img {
+        max-width: 200px;
+        height: auto;
+    }
+
+    .why-charge-box {
+        flex: 1;
+        background: #e8e8e8;
+        border-radius: 16px;
+        padding: 2.5rem 3rem;
+    }
+
+    .why-charge-box h2 {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-size: 1.75rem;
+        font-weight: 400;
+        color: #1a1a2e;
+        margin: 0 0 1.5rem 0;
+    }
+
+    .why-charge-intro {
+        font-size: 0.95rem;
+        color: #555;
+        margin: 0 0 1rem 0;
+        line-height: 1.6;
+    }
+
+    .why-charge-desc {
+        font-size: 0.95rem;
+        color: #555;
+        margin: 0 0 1.5rem 0;
+        line-height: 1.6;
+    }
+
+    .why-charge-supports {
+        font-size: 0.95rem;
+        color: #1a1a2e;
+        margin: 0 0 1rem 0;
+    }
+
+    .why-charge-points {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 1.5rem 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .why-charge-points li {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: #555;
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    .why-charge-points .check-icon {
+        color: #555;
+        flex-shrink: 0;
+    }
+
+    .why-charge-divider {
+        height: 1px;
+        background: #ccc;
+        margin: 1.5rem 0;
+    }
+
+    .why-charge-bold-statements p {
+        font-size: 1rem;
+        color: var(--color-professional);
+        margin: 0 0 0.25rem 0;
+        line-height: 1.5;
+    }
+
+    .why-charge-bold-statements p strong {
+        font-weight: 600;
+    }
+
+    @media (max-width: 900px) {
+        .why-charge-content {
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .why-charge-logo {
+            flex: none;
+        }
+
+        .why-charge-box {
+            padding: 2rem;
+        }
+    }
+
+    /* ========================================
+       FAQ Section
+       ======================================== */
+    .faq-section {
+        background: var(--color-bg-light);
+        padding: 5rem 0;
+    }
+
+    .faq-title {
+        font-size: 1.75rem;
+        font-weight: 600;
+        color: #1a1a2e;
+        margin: 0 0 2.5rem 0;
+    }
+
+    .faq-list {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .faq-item-static {
+        border-bottom: none;
+    }
+
+    .faq-question-text {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #1a1a2e;
+        margin: 0 0 0.5rem 0;
+    }
+
+    .faq-answer-text {
+        font-size: 0.95rem;
+        color: #666;
+        margin: 0;
+        line-height: 1.6;
+    }
+
+    /* ========================================
+       Pricing CTA Section
+       ======================================== */
+    .pricing-cta-section {
+        background: var(--color-bg-light);
+        padding: 3rem 0;
+    }
+
+    .pricing-cta-wrapper {
+        display: flex;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+    .pricing-cta-image {
+        flex: 0 0 50%;
+        position: relative;
+        aspect-ratio: 1 / 1;  /* Perfect square */
+    }
+
+    .pricing-cta-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .pricing-cta-text {
+        flex: 0 0 50%;
+        aspect-ratio: 1 / 1;  /* Perfect square */
+        background-color: var(--color-teal);
+        background-size: cover;
+        background-position: center;
+        padding: 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        box-sizing: border-box;
+    }
+
+    .pricing-cta-logo {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+    }
+
+    .ontarget-white-logo {
+        width: 120px;
+        height: auto;
+    }
+
+    .pricing-cta-badge {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.75rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .cta-arrow-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        background: #ffffff;
+        border-radius: 50%;
+        color: var(--color-teal);
+        font-size: 1rem;
+        font-weight: bold;
+        flex-shrink: 0;
+    }
+
+    .cta-badge-text {
+        font-size: 0.95rem;
+        color: #ffffff;
+        line-height: 1.4;
+    }
+
+    .pricing-cta-heading {
+        font-size: 1.75rem;
+        font-weight: 400;
+        color: #ffffff;
+        line-height: 1.4;
+        margin: 0 0 2rem 0;
+        max-width: 450px;
+    }
+
+    .btn-cta-white {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: #ffffff;
+        color: #1a1a2e;
+        padding: 0.85rem 1.75rem;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 0.95rem;
+        transition: background 0.2s ease, transform 0.2s ease;
+        width: fit-content;
+    }
+
+    .btn-cta-white:hover {
+        background: #f0f0f0;
+        transform: translateY(-2px);
+    }
+
+    .btn-cta-white .arrow {
+        font-size: 1rem;
+    }
+
+    @media (max-width: 900px) {
+        .pricing-cta-wrapper {
+            flex-direction: column;
+            max-width: 600px;
+        }
+
+        .pricing-cta-image {
+            flex: none;
+            aspect-ratio: 1 / 1;
+            width: 100%;
+        }
+
+        .pricing-cta-text {
+            flex: none;
+            aspect-ratio: auto;  /* Remove square constraint on mobile */
+            padding: 2rem;
+            min-height: 400px;
+        }
+
+        .pricing-cta-heading {
+            font-size: 1.5rem;
+        }
+    }
+</style>

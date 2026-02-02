@@ -1,0 +1,235 @@
+{
+  "testimonials": [
+    {
+      "id": 1,
+      "name": "Graham",
+      "date": "Jan 2018",
+      "quote": "I have been using the calculator a lot and I think it's fantastic! Nothing else I've found comes close to how useful this is.",
+      "sourceImage": "Review-1.png",
+      "sourceType": "email"
+    },
+    {
+      "id": 4,
+      "name": "Diane",
+      "date": "Apr 2019",
+      "quote": "Your version is the best one I've found yet! Thanks for sharing it.",
+      "sourceImage": "Review-4.png",
+      "sourceType": "email"
+    },
+    {
+      "id": 5,
+      "name": "Anddie",
+      "date": "Apr 2019",
+      "quote": "I love your calculator. It is my favorite one I have found because I can put in multiple pensions starting at various ages. When I discuss finances with friends and family it is always the calculator I point them to.",
+      "sourceImage": "Review-5.png",
+      "sourceType": "email"
+    },
+    {
+      "id": 6,
+      "name": "Raj",
+      "date": "Apr 2019",
+      "quote": "So glad to see this site back up. I love being able to manipulate different scenarios. The table view gives me the most info. Love it. Please keep it up!",
+      "sourceImage": "Review-6.png",
+      "sourceType": "email"
+    },
+    {
+      "id": 7,
+      "name": "Felix",
+      "date": "May 2019",
+      "quote": "Your 4% investment retirement calculator is #1 best. Thanks for the great calc again!",
+      "sourceImage": "Review-7.png",
+      "sourceType": "email"
+    },
+    {
+      "id": 10,
+      "name": "Susan",
+      "date": "Feb 2020",
+      "quote": "I just found your calculator from a comment to an article and just wanted to tell you how clear and easy it is! Our financial advisor uses Living Balance Sheet and your calculator was much easier to use than his. I just love being able to work with the various levers to see the results of the Monte Carlo simulations.",
+      "sourceImage": "Review-10.png",
+      "sourceType": "email"
+    },
+    {
+      "id": 11,
+      "name": "Roy",
+      "date": "Apr 2020",
+      "quote": "I love your calculator because it makes it look like I can retire now!",
+      "sourceImage": "Review-11.png",
+      "sourceType": "email"
+    },
+    {
+      "id": 12,
+      "name": "David",
+      "date": "May 2020",
+      "quote": "Your calculator is absolutely amazing.",
+      "sourceImage": "Review-12.png",
+      "sourceType": "email"
+    },
+    {
+      "id": 13,
+      "name": "Rich",
+      "date": "Aug 2020",
+      "quote": "Calculator is amazing. Great work and thank you!",
+      "sourceImage": "Review-13.png",
+      "sourceType": "email"
+    },
+    {
+      "id": 14,
+      "name": "Geoffry",
+      "date": "Aug 2020",
+      "quote": "I really like using your savings withdrawal calculator. Congrats! It's super easy running various scenarios.",
+      "sourceImage": "Review-14.png",
+      "sourceType": "email"
+    },
+    {
+      "id": 16,
+      "name": "Adam",
+      "date": "Dec 2020",
+      "quote": "Just wanted to say that as a financial nerd of sorts, I truly love and appreciate your tool. It's the most comprehensive and accurate tool out there. Thank you very much!",
+      "sourceImage": "Review-16.png",
+      "sourceType": "email"
+    },
+    {
+      "id": 17,
+      "name": "Ginny",
+      "date": "Jan 2021",
+      "quote": "Thank you for creating that calculator!",
+      "sourceImage": "Review-17.png",
+      "sourceType": "email"
+    },
+    {
+      "id": 18,
+      "name": "Howard",
+      "date": "Jan 2021",
+      "quote": "I think this is the most comprehensive and dynamic tool I have seen for retirement planning. I love the flexibility of scenarios that are offered, and a simplistic interface. Thanks for providing this incredible tool for the compulsive planner!!",
+      "sourceImage": "Review-18.png",
+      "sourceType": "email"
+    },
+    {
+      "id": 19,
+      "name": "Jon",
+      "date": "Jan 2021",
+      "quote": "I love your calculator. I have been scouring the internet trying to find one that could do what I needed it to do, and yours was the best one. Especially with all the options. I sat down with my bride, and we walked through your tool adding in our income and expense streams and it looks very good. It really gave her peace of mind and perspective.",
+      "sourceImage": "Review-19.png",
+      "sourceType": "email"
+    },
+    {
+      "id": 21,
+      "name": "Deryk",
+      "date": "Mar 2021",
+      "quote": "Really enjoy your calculator. Really well done and I think it's even better than the firecalc calculator. I love some of the add-ons you put in it. Really like this site, I'll put a link on my FB Page.",
+      "sourceImage": "Review-21.png",
+      "sourceType": "email"
+    },
+    {
+      "id": 22,
+      "name": "John",
+      "date": "Apr 2021",
+      "quote": "I just wanted to say I love the calculator. Great tool!",
+      "sourceImage": "Review-22.png",
+      "sourceType": "email"
+    },
+    {
+      "id": 23,
+      "name": "Imad",
+      "date": "Apr 2021",
+      "quote": "Your calculator is well coded and comprehensive. I found it the most close to reality of all calculators out there. Thanks again. You helped a lot.",
+      "sourceImage": "Review-23.png",
+      "sourceType": "email"
+    },
+    {
+      "id": 24,
+      "name": "David",
+      "date": "May 2021",
+      "quote": "I stumbled on your site/calculator. It was the first I clicked on and I see no need to look further. It seems exhaustive, or at least it has all the capabilities I'd like to see.",
+      "sourceImage": "Review-24.png",
+      "sourceType": "email"
+    },
+    {
+      "id": 29,
+      "name": "J",
+      "date": "Jun 2021",
+      "quote": "Your 4 percent rule calculator is the most complete retirement calculator I've found. I absolutely love it. Great job overall on your calculator!!!!",
+      "sourceImage": "Review-29.png",
+      "sourceType": "email"
+    },
+    {
+      "id": 30,
+      "name": "Ken",
+      "date": "Jul 2021",
+      "quote": "I wanted to take a moment to thank you for your work on this very valuable tool to help folks like myself. It gives me some peace of mind and helps me easily add in some inflation along with Social Security for my wife and me at 70 years of age.",
+      "sourceImage": "Review-30.png",
+      "sourceType": "email"
+    },
+    {
+      "id": 60,
+      "name": "Ed",
+      "date": "Oct 2023",
+      "quote": "Good calculator. Nice to play with various numbers and see the impact.",
+      "sourceImage": "Review-60.png",
+      "sourceType": "email"
+    },
+    {
+      "id": 65,
+      "name": "Scott",
+      "date": "Feb 2024",
+      "quote": "As I approach retirement, I have looked at quite a few calculators on the web to get a complete number of variables like yours. Yours seems to be nicely done and takes into account my situation with retiring but delaying SS and simple army pension included as it impacts bottom line to see when I can retire and hope to live a long life to enjoy it.",
+      "sourceImage": "Review-65.png",
+      "sourceType": "email"
+    },
+    {
+      "id": 70,
+      "name": "Robert",
+      "date": "Jun 2024",
+      "quote": "I utilize the calculator all the time, it's fantastic and part of my quarterly finetuning. In fact, I've even shared it with a few of my friends. I'm 52 and looking at a possible early retirement 58-60 range and find the ability to game out options invaluable. Thanks so much for creating that tool.",
+      "sourceImage": "Review-70.png",
+      "sourceType": "email"
+    },
+    {
+      "id": 75,
+      "name": "Rich",
+      "date": "Sep 2024",
+      "quote": "I recently found your calculator, it appears to be the best I've seen.",
+      "sourceImage": "Review-75.png",
+      "sourceType": "email"
+    },
+    {
+      "id": 80,
+      "name": "Terri",
+      "date": "Feb 2025",
+      "quote": "I found your web site and love it.",
+      "sourceImage": "Review-80.png",
+      "sourceType": "email"
+    },
+    {
+      "id": 81,
+      "name": "Tawny",
+      "date": "Feb 2025",
+      "quote": "Just wanted to say thank you for such a great online tool and that you make it available to everyone really says a lot about you! Thank you so much!",
+      "sourceImage": "Review-81.png",
+      "sourceType": "email"
+    },
+    {
+      "id": 82,
+      "name": "Mark",
+      "date": "Mar 2025",
+      "quote": "I found your calculator about a year ago and have relied heavily on it for retirement calculations.",
+      "sourceImage": "Review-82.png",
+      "sourceType": "email"
+    },
+    {
+      "id": 83,
+      "name": "Timothy",
+      "date": "Mar 2025",
+      "quote": "Firstly, amazing website. Thank you for your work. This is a really great resource.",
+      "sourceImage": "Review-83.png",
+      "sourceType": "email"
+    }
+  ],
+  "metadata": {
+    "totalReviews": 83,
+    "extractedTestimonials": 28,
+    "sourceImagesPath": "/images/reviews/",
+    "lastUpdated": "2026-01-18",
+    "notes": "Testimonials extracted from email reviews. sourceImage references the original anonymized screenshot that can be shown in a popup."
+  }
+}

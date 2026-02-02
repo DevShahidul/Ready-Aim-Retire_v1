@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>RAR Screenshot Slider Animation</title>
+
+<style>
+  body {
+    background: #ffffff;
+    font-family: system-ui, sans-serif;
+    margin: 0;
+    padding: 40px;
+    color: #111827;
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: auto;
+    text-align: center;
+  }
+
+  canvas {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+  }
+
+  .controls {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    align-items: center;
+  }
+
+  input[type="range"] {
+    width: 260px;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <canvas id="canvas"></canvas>
+
+  <div class="controls">
+    <label for="speed">Animation speed</label>
+    <input id="speed" type="range" min="1" max="60" value="12" />
+    <span id="fpsLabel">12 FPS</span>
+  </div>
+</div>
+
+<script>
+/* -------------------------------------------------
+   FRAME FILES
+   (order doesn't matter — we sort numerically)
+------------------------------------------------- */
+let frames = [
+  
+  "sweep-profile-account-slider-shared_investment_0-slider-600000.png",
+  "sweep-profile-account-slider-shared_investment_0-slider-590000.png",
+  "sweep-profile-account-slider-shared_investment_0-slider-580000.png",
+  "sweep-profile-account-slider-shared_investment_0-slider-570000.png",
+  "sweep-profile-account-slider-shared_investment_0-slider-560000.png",
+  "sweep-profile-account-slider-shared_investment_0-slider-550000.png",
+  "sweep-profile-account-slider-shared_investment_0-slider-540000.png",
+  "sweep-profile-account-slider-shared_investment_0-slider-530000.png",
+  "sweep-profile-account-slider-shared_investment_0-slider-520000.png",
+  "sweep-profile-account-slider-shared_investment_0-slider-510000.png",
+  "sweep-profile-account-slider-shared_investment_0-slider-500000.png",
+  "sweep-profile-account-slider-shared_investment_0-slider-490000.png",
+  "sweep-profile-account-slider-shared_investment_0-slider-480000.png",
+  "sweep-profile-account-slider-shared_investment_0-slider-470000.png",
+  "sweep-profile-account-slider-shared_investment_0-slider-460000.png",
+  "sweep-profile-account-slider-shared_investment_0-slider-450000.png",
+  "sweep-profile-account-slider-shared_investment_0-slider-440000.png",
+  "sweep-profile-account-slider-shared_investment_0-slider-430000.png",
+  "sweep-profile-account-slider-shared_investment_0-slider-420000.png",
+  "sweep-profile-account-slider-shared_investment_0-slider-410000.png",
+  "sweep-profile-account-slider-shared_investment_0-slider-400000.png",
+  "sweep-profile-account-slider-shared_investment_0-slider-390000.png",
+  "sweep-profile-account-slider-shared_investment_0-slider-380000.png",
+  "sweep-profile-account-slider-shared_investment_0-slider-370000.png",
+  "sweep-profile-account-slider-shared_investment_0-slider-360000.png",
+  "sweep-profile-account-slider-shared_investment_0-slider-350000.png",
+  "sweep-profile-account-slider-shared_investment_0-slider-340000.png",
+  "sweep-profile-account-slider-shared_investment_0-slider-330000.png",
+  "sweep-profile-account-slider-shared_investment_0-slider-320000.png",
+  "sweep-profile-account-slider-shared_investment_0-slider-310000.png",
+  "sweep-profile-account-slider-shared_investment_0-slider-300000.png",
+  "sweep-profile-account-slider-shared_investment_0-slider-290000.png",
+  "sweep-profile-account-slider-shared_investment_0-slider-280000.png",
+  "sweep-profile-account-slider-shared_investment_0-slider-270000.png",
+  "sweep-profile-account-slider-shared_investment_0-slider-260000.png",
+  "sweep-profile-account-slider-shared_investment_0-slider-250000.png",
+  "sweep-profile-account-slider-shared_investment_0-slider-240000.png",
+  "sweep-profile-account-slider-shared_investment_0-slider-230000.png",
+  "sweep-profile-account-slider-shared_investment_0-slider-220000.png",
+  "sweep-profile-account-slider-shared_investment_0-slider-210000.png",
+  "sweep-profile-account-slider-shared_investment_0-slider-200000.png",
+  "sweep-profile-account-slider-shared_investment_0-slider-190000.png",
+  "sweep-profile-account-slider-shared_investment_0-slider-180000.png",
+  "sweep-profile-account-slider-shared_investment_0-slider-170000.png",
+  "sweep-profile-account-slider-shared_investment_0-slider-160000.png",
+  "sweep-profile-account-slider-shared_investment_0-slider-150000.png",
+  "sweep-profile-account-slider-shared_investment_0-slider-140000.png",
+  "sweep-profile-account-slider-shared_investment_0-slider-130000.png",
+  "sweep-profile-account-slider-shared_investment_0-slider-120000.png",
+  "sweep-profile-account-slider-shared_investment_0-slider-110000.png",
+
+ 
+];
+
+/* -------------------------------------------------
+   SORT FRAMES NUMERICALLY (CRITICAL FIX)
+------------------------------------------------- */
+frames.sort((a, b) => {
+  const na = Number(a.match(/slider-(\d+)\.png/)[1]);
+  const nb = Number(b.match(/slider-(\d+)\.png/)[1]);
+  return na - nb;
+});
+
+/* -------------------------------------------------
+   PRELOAD IMAGES
+------------------------------------------------- */
+const images = [];
+let loaded = 0;
+
+frames.forEach(src => {
+  const img = new Image();
+  img.src = src;
+  img.onload = () => {
+    loaded++;
+    if (loaded === frames.length) start();
+  };
+  images.push(img);
+});
+
+/* -------------------------------------------------
+   CANVAS + CONTROLS
+------------------------------------------------- */
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+
+const speedSlider = document.getElementById('speed');
+const fpsLabel = document.getElementById('fpsLabel');
+
+/* -------------------------------------------------
+   ANIMATION STATE
+------------------------------------------------- */
+let index = 0;
+let direction = 1;
+let fps = Number(speedSlider.value);
+
+/* -------------------------------------------------
+   START ANIMATION
+------------------------------------------------- */
+function start() {
+  canvas.width = images[0].naturalWidth;
+  canvas.height = images[0].naturalHeight;
+
+  speedSlider.addEventListener('input', () => {
+    fps = Number(speedSlider.value);
+    fpsLabel.textContent = `${fps} FPS`;
+  });
+
+  let lastTime = 0;
+
+  function loop(time) {
+    const interval = 1000 / fps;
+
+    if (time - lastTime >= interval) {
+      lastTime = time;
+
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.drawImage(images[index], 0, 0);
+
+      index += direction;
+
+      if (index >= images.length - 1) direction = -1;
+      if (index <= 0) direction = 1;
+    }
+
+    requestAnimationFrame(loop);
+  }
+
+  requestAnimationFrame(loop);
+}
+</script>
+
+</body>
+</html>

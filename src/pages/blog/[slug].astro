@@ -1,0 +1,518 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTABanner from '../../components/CTABanner.astro';
+import { getCollection } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+
+export const prerender = true;
+
+export async function getStaticPaths() {
+    const blogPosts = await getCollection('blog');
+    return blogPosts.map(post => ({
+        params: { slug: post.slug },
+        props: { post },
+    }));
+}
+
+interface Props {
+    post: CollectionEntry<'blog'>;
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+
+// Get all posts to find related ones
+const allPosts = await getCollection('blog');
+const relatedPosts = allPosts
+    .filter(p => p.slug !== post.slug && p.data.category === post.data.category)
+    .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+    .slice(0, 3);
+
+// If we don't have 3 related posts from the same category, fill with latest posts
+if (relatedPosts.length < 3) {
+    const additionalPosts = allPosts
+        .filter(p => p.slug !== post.slug && !relatedPosts.includes(p))
+        .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+        .slice(0, 3 - relatedPosts.length);
+    relatedPosts.push(...additionalPosts);
+}
+---
+
+<BaseLayout title={`${post.data.title} – ReadyAimRetire Blog`} solidHeader={true}>
+    <!-- Hero Section (like other pages) -->
+    <section class="blog-hero">
+        <div class="container">
+            <!-- Breadcrumbs -->
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+                <a href="/">Home</a>
+                <span class="separator">/</span>
+                <a href="/blog">Blog</a>
+                <span class="separator">/</span>
+                <span class="current">{post.data.category}</span>
+            </nav>
+
+            <span class="category-badge">{post.data.category}</span>
+            <h1>{post.data.title}</h1>
+            <p class="hero-description">{post.data.description}</p>
+            <div class="post-meta">
+                <span class="author">
+                    <i class="fas fa-user-circle"></i>
+                    {post.data.author}
+                </span>
+                <span class="date">
+                    <i class="far fa-calendar"></i>
+                    {post.data.date.toLocaleDateString('en-US', {
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric'
+                    })}
+                </span>
+                <span class="read-time">
+                    <i class="far fa-clock"></i>
+                    {post.data.readTime}
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Article Content -->
+    <article class="blog-content">
+        <div class="container">
+            <div class="content-wrapper">
+                <Content />
+            </div>
+        </div>
+    </article>
+
+    <!-- Author Bio -->
+    <section class="author-bio">
+        <div class="container">
+            <div class="bio-box">
+                <div class="bio-avatar">
+                    <i class="fas fa-bullseye"></i>
+                </div>
+                <div class="bio-content">
+                    <h3>About {post.data.author}</h3>
+                    <p>The ReadyAimRetire team is dedicated to helping you master your retirement planning with expert insights, practical strategies, and powerful tools. Our mission is to make retirement planning accessible, understandable, and actionable for everyone.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Posts -->
+    {relatedPosts.length > 0 && (
+        <section class="related-posts">
+            <div class="container">
+                <h2>Related Articles</h2>
+                <div class="related-grid">
+                    {relatedPosts.map((relatedPost) => (
+                        <article class="related-card">
+                            <a href={`/blog/${relatedPost.slug}`}>
+                                <div class="related-image">
+                                    <div class="placeholder-image">
+                                        <i class="fas fa-newspaper"></i>
+                                    </div>
+                                    <span class="category-badge-small">{relatedPost.data.category}</span>
+                                </div>
+                                <div class="related-content">
+                                    <h3>{relatedPost.data.title}</h3>
+                                    <p class="related-date">
+                                        <i class="far fa-calendar"></i>
+                                        {relatedPost.data.date.toLocaleDateString('en-US', {
+                                            year: 'numeric',
+                                            month: 'short',
+                                            day: 'numeric'
+                                        })}
+                                    </p>
+                                </div>
+                            </a>
+                        </article>
+                    ))}
+                </div>
+            </div>
+        </section>
+    )}
+
+    <!-- Call to Action Banner -->
+    <CTABanner />
+
+    <!-- Article Schema for SEO -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": post.data.title,
+        "description": post.data.description,
+        "image": post.data.image ? `https://readyaimretire.com${post.data.image}` : "https://readyaimretire.com/images/logos/rar/rar_white_black_bg.png",
+        "datePublished": post.data.date.toISOString(),
+        "author": {
+            "@type": "Organization",
+            "name": "ReadyAimRetire Team"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "ReadyAimRetire",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://readyaimretire.com/images/logos/rar/rar_white_black_bg.png"
+            }
+        }
+    })} />
+</BaseLayout>
+
+<style>
+    /* Hero Section - matches pattern of other pages */
+    .blog-hero {
+        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        padding: 8rem 0 3rem 0;
+        color: #ffffff;
+    }
+
+    /* Breadcrumbs */
+    .breadcrumbs {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.875rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .breadcrumbs a {
+        color: rgba(255, 255, 255, 0.7);
+        text-decoration: none;
+        transition: color 0.2s;
+    }
+
+    .breadcrumbs a:hover {
+        color: #14b8a6;
+    }
+
+    .breadcrumbs .separator {
+        color: rgba(255, 255, 255, 0.4);
+    }
+
+    .breadcrumbs .current {
+        color: rgba(255, 255, 255, 0.9);
+    }
+
+    .category-badge {
+        display: inline-block;
+        background: #14b8a6;
+        color: #ffffff;
+        padding: 0.4rem 1rem;
+        border-radius: 50px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-bottom: 1rem;
+    }
+
+    .blog-hero h1 {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-size: clamp(2rem, 4vw, 3rem);
+        font-weight: 700;
+        color: #ffffff;
+        margin: 0 0 1rem 0;
+        line-height: 1.2;
+        max-width: 800px;
+    }
+
+    .hero-description {
+        font-size: 1.15rem;
+        color: rgba(255, 255, 255, 0.85);
+        line-height: 1.6;
+        margin: 0 0 1.5rem 0;
+        max-width: 700px;
+    }
+
+    .post-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.7);
+    }
+
+    .post-meta span {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .post-meta i {
+        color: #14b8a6;
+    }
+
+    /* Article Content */
+    .blog-content {
+        background: #ffffff;
+        padding: 4rem 0;
+    }
+
+    .content-wrapper {
+        max-width: 750px;
+        margin: 0 auto;
+    }
+
+    .content-wrapper :global(h2) {
+        font-family: 'Inter', sans-serif;
+        font-size: 1.75rem;
+        font-weight: 700;
+        color: #1a1a2e;
+        margin: 2.5rem 0 1rem 0;
+        line-height: 1.3;
+    }
+
+    .content-wrapper :global(h3) {
+        font-family: 'Inter', sans-serif;
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: #1a1a2e;
+        margin: 2rem 0 0.75rem 0;
+        line-height: 1.4;
+    }
+
+    .content-wrapper :global(p) {
+        font-size: 1.05rem;
+        line-height: 1.8;
+        color: #374151;
+        margin: 0 0 1.5rem 0;
+    }
+
+    .content-wrapper :global(ul),
+    .content-wrapper :global(ol) {
+        font-size: 1.05rem;
+        line-height: 1.8;
+        color: #374151;
+        margin: 0 0 1.5rem 0;
+        padding-left: 1.5rem;
+    }
+
+    .content-wrapper :global(li) {
+        margin-bottom: 0.5rem;
+    }
+
+    .content-wrapper :global(blockquote) {
+        border-left: 4px solid #14b8a6;
+        padding: 1rem 1.5rem;
+        margin: 2rem 0;
+        background: #f8f9fa;
+        font-style: italic;
+        color: #4b5563;
+    }
+
+    .content-wrapper :global(a) {
+        color: #14b8a6;
+        text-decoration: underline;
+    }
+
+    .content-wrapper :global(a:hover) {
+        color: #0d9488;
+    }
+
+    /* Author Bio */
+    .author-bio {
+        background: #f8f9fa;
+        padding: 3rem 0;
+    }
+
+    .bio-box {
+        max-width: 750px;
+        margin: 0 auto;
+        display: flex;
+        gap: 1.5rem;
+        background: #ffffff;
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .bio-avatar {
+        flex-shrink: 0;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .bio-avatar i {
+        font-size: 1.75rem;
+        color: #ffffff;
+    }
+
+    .bio-content h3 {
+        font-family: 'Inter', sans-serif;
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: #1a1a2e;
+        margin: 0 0 0.5rem 0;
+    }
+
+    .bio-content p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+        color: #6b7280;
+        margin: 0;
+    }
+
+    /* Related Posts */
+    .related-posts {
+        background: #ffffff;
+        padding: 4rem 0;
+        border-top: 1px solid #e5e7eb;
+    }
+
+    .related-posts h2 {
+        font-family: 'Inter', sans-serif;
+        font-size: 1.75rem;
+        font-weight: 700;
+        color: #1a1a2e;
+        margin: 0 0 2rem 0;
+        text-align: center;
+    }
+
+    .related-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .related-card {
+        background: #ffffff;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .related-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    }
+
+    .related-card a {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+    }
+
+    .related-image {
+        position: relative;
+        width: 100%;
+        height: 150px;
+        overflow: hidden;
+    }
+
+    .placeholder-image {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);
+    }
+
+    .placeholder-image i {
+        font-size: 2.5rem;
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    .category-badge-small {
+        position: absolute;
+        top: 0.5rem;
+        left: 0.5rem;
+        background: rgba(26, 26, 46, 0.9);
+        color: #ffffff;
+        padding: 0.25rem 0.6rem;
+        border-radius: 50px;
+        font-size: 0.65rem;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    .related-content {
+        padding: 1rem;
+    }
+
+    .related-content h3 {
+        font-family: 'Inter', sans-serif;
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: #1a1a2e;
+        margin: 0 0 0.5rem 0;
+        line-height: 1.4;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .related-date {
+        font-size: 0.75rem;
+        color: #9ca3af;
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        margin: 0;
+    }
+
+    .related-date i {
+        color: #14b8a6;
+        font-size: 0.7rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+        .related-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .blog-hero {
+            padding: 7rem 0 2.5rem 0;
+        }
+
+        .post-meta {
+            gap: 1rem;
+        }
+
+        .blog-content {
+            padding: 3rem 0;
+        }
+
+        .bio-box {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .related-posts {
+            padding: 3rem 0;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .blog-hero {
+            padding: 6rem 0 2rem 0;
+        }
+
+        .post-meta {
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .related-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .breadcrumbs {
+            flex-wrap: wrap;
+        }
+    }
+</style>

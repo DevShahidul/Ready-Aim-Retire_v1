@@ -1,0 +1,330 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTABanner from '../components/CTABanner.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+---
+
+<BaseLayout
+    title="Refer Friends – ReadyAimRetire"
+    description="Share ReadyAimRetire with friends and family. Refer 5 friends and get a free 1-hour personal planning session."
+    solidHeader={true}
+>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <Breadcrumbs items={[{ label: "Refer Friends" }]} />
+            <h1 class="hero-title" data-aos="fade-up">Refer Friends.<br>Get Personalized Guidance.</h1>
+            <div class="hero-grid" data-aos="fade-up" data-aos-delay="100">
+                <div class="hero-left">
+                    <p class="hero-tagline hero-tagline-lg">Help others plan better - and get a<br>1-on-1 session on us.</p>
+                    <a href={`${import.meta.env.PUBLIC_APP_URL}/signup`} class="btn-dark">
+                        Start Planning for Free
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                </div>
+                <div class="hero-right">
+                    <p>If Ready Aim Retire has helped you understand your retirement plan, chances are it could help people you care about too.</p>
+                    <p>That's why we created our referral program.</p>
+                    <p>When you refer <strong>5 friends</strong> who create an account, you'll receive a <strong>free 1-hour personal consultation</strong> with a Ready Aim Retire planning specialist.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Two Cards Section -->
+    <section class="section-gray section-no-top-padding">
+        <div class="container">
+            <div class="card-grid-2" data-aos="fade-up">
+                <!-- How it works Card -->
+                <div class="card">
+                    <img src="/images/landing/stock/target.png" alt="" class="card-icon">
+                    <h2 class="heading-h2">How it <span class="text-teal">works</span></h2>
+                    <p class="card-subtitle card-subtitle-dark"><strong>Simple. Transparent. Worth it.</strong></p>
+                    <div class="steps-list-dark">
+                        <div class="step-dark">
+                            <div class="step-number-dark">1.</div>
+                            <div class="step-content-dark">
+                                <h4>Share your referral link</h4>
+                                <p>Invite friends, family, or colleagues to try Ready Aim Retire.</p>
+                            </div>
+                        </div>
+                        <div class="step-dark">
+                            <div class="step-number-dark">2.</div>
+                            <div class="step-content-dark">
+                                <h4>They create a Pro account</h4>
+                                <p>You friends find the value in creating a Pro account for themselves</p>
+                            </div>
+                        </div>
+                        <div class="step-dark">
+                            <div class="step-number-dark">3.</div>
+                            <div class="step-content-dark">
+                                <h4>Refer 5 friends</h4>
+                                <p>Once five referred users have created accounts, you qualify.</p>
+                            </div>
+                        </div>
+                        <div class="step-dark">
+                            <div class="step-number-dark">4.</div>
+                            <div class="step-content-dark">
+                                <h4>Get a free 1-hour consultation</h4>
+                                <p>We'll reach out to schedule your session.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- What you get Card -->
+                <div class="card">
+                    <img src="/images/landing/stock/connected_balls.png" alt="" class="card-icon">
+                    <h2 class="heading-h2"><span class="text-teal">What you get</span>: A 1-hour<br>personal planning session</h2>
+                    <p class="card-subtitle card-subtitle-dark"><strong>A focused, educational consultation - not a sales call</strong></p>
+                    <p>Your free session is similar to the personalized training sessions offered by professional planners.</p>
+                    <p>During the session, we can:</p>
+                    <ul class="bullet-list">
+                        <li>Review your retirement plan and assumptions</li>
+                        <li>Walk through scenarios you're curious about</li>
+                        <li>Help you interpret stress test results</li>
+                        <li>Discuss withdrawal strategies and longevity considerations</li>
+                        <li>Answer questions specific to your situation</li>
+                    </ul>
+                    <p class="card-footer text-italic">This session is about understanding and confidence.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who the consultation is for Section -->
+    <section class="section-gray">
+        <div class="container">
+            <div class="card-lg card-grid-2-uneven" data-aos="fade-up">
+                <div class="card-content">
+                    <h2 class="heading-h2"><span class="text-teal">Who</span> the consultation is for?</h2>
+                    <p class="card-subtitle card-subtitle-dark"><strong>This session is ideal if you want to:</strong></p>
+                    <ul class="checklist">
+                        <li>
+                            <img src="/images/UI/checkmark.png" alt="" class="checklist-icon">
+                            Sanity-check your assumptions
+                        </li>
+                        <li>
+                            <img src="/images/UI/checkmark.png" alt="" class="checklist-icon">
+                            Better understand your plan's strengths and risks
+                        </li>
+                        <li>
+                            <img src="/images/UI/checkmark.png" alt="" class="checklist-icon">
+                            Get clarity on confusing areas
+                        </li>
+                        <li>
+                            <img src="/images/UI/checkmark.png" alt="" class="checklist-icon">
+                            Learn how to use the tool more effectively
+                        </li>
+                    </ul>
+                    <p class="card-footer text-italic">You remain fully in control of your decisions</p>
+                </div>
+                <div class="card-image card-image-padded">
+                    <img src="/images/landing/stock/older_couple_laptop.jpg" alt="Couple reviewing their retirement plan on laptop">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Three Columns Section -->
+    <section class="columns-section">
+        <div class="container">
+            <div class="columns-3" data-aos="fade-up">
+                <!-- Why we offer this -->
+                <div class="column">
+                    <h3>Why we offer this</h3>
+                    <p>We believe:</p>
+                    <ul class="bullet-list">
+                        <li>Good tools paired with understanding create better outcomes</li>
+                        <li>People trust recommendations from people they know</li>
+                        <li>Education is one of the most valuable things we can offer</li>
+                    </ul>
+                    <p class="column-footer">Referrals help us grow thoughtfully - and consultations help you go deeper.</p>
+                </div>
+
+                <!-- Track your referrals -->
+                <div class="column">
+                    <h3>Track your referrals</h3>
+                    <p>You'll be able to:</p>
+                    <p>OnTarget<sup>™</sup> works well for:</p>
+                    <ul class="bullet-list">
+                        <li>See how many referrals you've made</li>
+                        <li>Track progress toward your free session</li>
+                        <li>Get notified once you qualify</li>
+                    </ul>
+                    <p class="text-help text-italic">(Referral tracking available in your account dashboard.)</p>
+                </div>
+
+                <!-- Ready to start referring? -->
+                <div class="column">
+                    <h3>Ready to start referring?</h3>
+                    <p>Help others gain clarity - and earn a valuable 1-on-1 session for yourself.</p>
+                    <a href={`${import.meta.env.PUBLIC_APP_URL}/referrals`} class="btn-outline-dark mt-1">
+                        Share Your Referral Link
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Referral Program Details Section -->
+    <section class="section-gray">
+        <div class="container">
+            <h2 class="details-heading" data-aos="fade-up">Referral Program Details</h2>
+            <ul class="details-list" data-aos="fade-up" data-aos-delay="100">
+                <li>
+                    <div class="details-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </div>
+                    <span>Referrals must create an account using your referral link</span>
+                </li>
+                <li>
+                    <div class="details-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </div>
+                    <span>Five (5) unique Pro account signups are required</span>
+                </li>
+                <li>
+                    <div class="details-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </div>
+                    <span>One consultation per account holder</span>
+                </li>
+                <li>
+                    <div class="details-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </div>
+                    <span>Consultation has no cash value and cannot be transferred</span>
+                </li>
+                <li>
+                    <div class="details-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </div>
+                    <span>Sessions are educational in nature and not personalized financial advice</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <CTABanner />
+</BaseLayout>
+
+<style>
+    /* Steps list for dark text (used in cards) */
+    .steps-list-dark {
+        margin-top: 1rem;
+    }
+
+    .step-dark {
+        display: flex;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .step-dark:last-child {
+        margin-bottom: 0;
+    }
+
+    .step-number-dark {
+        font-size: 0.9rem;
+        font-weight: 700;
+        color: #1a1a2e;
+        min-width: 20px;
+    }
+
+    .step-content-dark h4 {
+        font-family: 'Inter', sans-serif;
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: #1a1a2e;
+        margin: 0 0 0.25rem 0;
+    }
+
+    .step-content-dark p {
+        font-size: 0.85rem;
+        color: #777;
+        margin: 0;
+        line-height: 1.5;
+    }
+
+    /* Card image with padding */
+    .card-image-padded {
+        border-radius: 12px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+        margin: 1rem;
+    }
+
+    .card-image-padded img {
+        border-radius: 12px;
+        object-position: center top;
+    }
+
+    /* Details section */
+    .details-heading {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-size: clamp(2rem, 4vw, 2.75rem);
+        font-weight: 400;
+        color: var(--color-primary);
+        margin: 0 0 2.5rem 0;
+        line-height: 1.2;
+    }
+
+    .details-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        max-width: 700px;
+    }
+
+    .details-list li {
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+        padding: 0.75rem 0;
+        font-size: 1rem;
+        line-height: 1.6;
+        color: #1a1a2e;
+        font-weight: 500;
+    }
+
+    .details-icon {
+        width: 28px;
+        height: 28px;
+        background-color: var(--color-primary);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        margin-top: 2px;
+    }
+
+    .details-icon svg {
+        color: #ffffff;
+        width: 14px;
+        height: 14px;
+    }
+</style>

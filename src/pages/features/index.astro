@@ -1,0 +1,284 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTABanner from '../../components/CTABanner.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+---
+
+<BaseLayout
+    title="Features – ReadyAimRetire"
+    description="Explore ReadyAimRetire's powerful retirement planning features. Timeline, stress-testing, scenarios, and more."
+    solidHeader={true}
+>
+    <!-- Hero Section -->
+    <section class="hero features-hero">
+        <div class="container" data-aos="fade-up">
+            <Breadcrumbs items={[{ label: "Features" }]} />
+            <h1>Powerful Features for Confident Retirement Planning</h1>
+            <p>No black boxes. No vague scores. See exactly how your decisions shape your financial future with transparent, comprehensive planning tools.</p>
+        </div>
+    </section>
+
+    <!-- Feature Categories Grid -->
+    <section style="padding: 5rem 0; background: #f6f6f4;">
+        <div class="container">
+            <div class="features-grid">
+
+                <!-- Holistic Timeline -->
+                <a href="/features/timeline" class="feature-category-card" data-aos="fade-up">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Holistic Timeline</h3>
+                    <p>Watch your financial life unfold year by year. See how every decision impacts your accounts, income, spending, and taxes over time.</p>
+                    <span class="learn-more">Learn More <i class="fas fa-arrow-right"></i></span>
+                </a>
+
+                <!-- Stress-Test Your Plan -->
+                <a href="/features/stress-test" class="feature-category-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">
+                        <i class="fas fa-vial"></i>
+                    </div>
+                    <h3>Stress-Test Your Plan</h3>
+                    <p>Run your retirement plan through historical market data and see how it holds up against real-world volatility.</p>
+                    <span class="learn-more">Learn More <i class="fas fa-arrow-right"></i></span>
+                </a>
+
+                <!-- Scenario Planning -->
+                <a href="/features/scenarios" class="feature-category-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">
+                        <i class="fas fa-sliders-h"></i>
+                    </div>
+                    <h3>Scenario Planning</h3>
+                    <p>What if you retire earlier? Spend more? Markets underperform? Instantly model unlimited scenarios with intuitive controls.</p>
+                    <span class="learn-more">Learn More <i class="fas fa-arrow-right"></i></span>
+                </a>
+
+                <!-- Taxes & Benefits -->
+                <a href="/features/taxes" class="feature-category-card" data-aos="fade-up">
+                    <div class="feature-icon">
+                        <i class="fas fa-file-invoice-dollar"></i>
+                    </div>
+                    <h3>Taxes & Benefits</h3>
+                    <p>See taxes, Social Security, Medicare premiums, and Roth conversions as integral parts of your plan—not afterthoughts.</p>
+                    <span class="learn-more">Learn More <i class="fas fa-arrow-right"></i></span>
+                </a>
+
+                <!-- Income & Spending -->
+                <a href="/features/income" class="feature-category-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                    <h3>Income & Spending</h3>
+                    <p>Understand exactly where your retirement income comes from and how your spending evolves across the years.</p>
+                    <span class="learn-more">Learn More <i class="fas fa-arrow-right"></i></span>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Why ReadyAimRetire Section -->
+    <section style="padding: 5rem 0; background: #ffffff;">
+        <div class="container">
+            <div class="why-section" data-aos="fade-up">
+                <h2>Why ReadyAimRetire?</h2>
+                <p class="why-intro">Most retirement tools give you a single score or a vague probability. ReadyAimRetire shows you the complete picture with year-by-year clarity.</p>
+
+                <div class="why-grid">
+                    <div class="why-card">
+                        <i class="fas fa-eye"></i>
+                        <h4>Complete Transparency</h4>
+                        <p>See exactly how every number is calculated and why it changes.</p>
+                    </div>
+                    <div class="why-card">
+                        <i class="fas fa-bolt"></i>
+                        <h4>Instant Updates</h4>
+                        <p>Over 100 sliders update your plan in real-time as you explore scenarios.</p>
+                    </div>
+                    <div class="why-card">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h4>Educational</h4>
+                        <p>Understand the 'why' behind retirement planning decisions.</p>
+                    </div>
+                    <div class="why-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h4>Comprehensive</h4>
+                        <p>Everything from taxes to healthcare to market volatility in one place.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Banner -->
+    <CTABanner />
+</BaseLayout>
+
+<style>
+    .features-hero {
+        background: linear-gradient(135deg, #3b5998 0%, #415776 100%);
+        padding: 8rem 0 3rem 0;
+        min-height: 50vh;
+    }
+
+    .features-hero h1 {
+        font-family: 'Inter', sans-serif;
+        font-size: clamp(2rem, 5vw, 3rem);
+        font-weight: 700;
+        color: #ffffff;
+        margin: 0 0 1.5rem 0;
+        line-height: 1.2;
+    }
+
+    .features-hero p {
+        font-size: clamp(1rem, 2vw, 1.25rem);
+        color: rgba(255, 255, 255, 0.9);
+        max-width: 800px;
+        margin: 0 auto;
+        line-height: 1.6;
+    }
+
+    /* Features Grid */
+    .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .feature-category-card {
+        background: #ffffff;
+        border-radius: 16px;
+        padding: 2.5rem 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .feature-category-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .feature-icon {
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, #3b7eff 0%, #2563eb 100%);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .feature-icon i {
+        font-size: 1.75rem;
+        color: #ffffff;
+    }
+
+    .feature-category-card h3 {
+        font-family: 'Inter', sans-serif;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #1a1a2e;
+        margin: 0;
+        line-height: 1.3;
+    }
+
+    .feature-category-card p {
+        font-size: 1rem;
+        line-height: 1.7;
+        color: #555;
+        margin: 0;
+        flex-grow: 1;
+    }
+
+    .learn-more {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-weight: 600;
+        font-size: 0.95rem;
+        color: #3b7eff;
+        transition: gap 0.3s ease;
+    }
+
+    .feature-category-card:hover .learn-more {
+        gap: 0.75rem;
+    }
+
+    .learn-more i {
+        font-size: 0.85rem;
+    }
+
+    /* Why Section */
+    .why-section {
+        max-width: 1000px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .why-section h2 {
+        font-family: 'Inter', sans-serif;
+        font-size: clamp(1.75rem, 4vw, 2.5rem);
+        font-weight: 700;
+        color: #1a1a2e;
+        margin: 0 0 1rem 0;
+    }
+
+    .why-intro {
+        font-size: 1.15rem;
+        line-height: 1.7;
+        color: #555;
+        margin: 0 0 3rem 0;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .why-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+
+    .why-card {
+        text-align: center;
+    }
+
+    .why-card i {
+        font-size: 2.5rem;
+        color: #3b7eff;
+        margin-bottom: 1rem;
+    }
+
+    .why-card h4 {
+        font-family: 'Inter', sans-serif;
+        font-size: 1.15rem;
+        font-weight: 600;
+        color: #1a1a2e;
+        margin: 0 0 0.75rem 0;
+    }
+
+    .why-card p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        color: #666;
+        margin: 0;
+    }
+
+    @media (max-width: 768px) {
+        .features-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .why-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>

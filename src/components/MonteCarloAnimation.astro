@@ -1,0 +1,414 @@
+---
+/**
+ * MonteCarloAnimation
+ * Auto-generated animation component from Graph Sweep Tool
+ * Generated: 2026-01-25T06:22:19.682Z
+ */
+
+interface Props {
+    class?: string;
+}
+
+const { class: className } = Astro.props;
+---
+
+<div class:list={["animation-player", className]} data-animation-config='{"name":"monte-carlo","label":"Roth IRA Balance","fps":27,"overlayX":-92,"overlayY":225,"frameValues":[100000,110000,120000,130000,140000,150000,160000,170000,180000,190000,200000,210000,220000,230000,240000,250000,260000,270000,280000,290000,300000,310000,320000,330000,340000,350000,360000,370000,380000,390000,400000,410000,420000,430000,440000,450000,460000,470000,480000,490000,500000,510000,520000,530000,540000,550000,560000,570000,580000,590000,600000,610000,620000,630000,640000,650000,660000,670000,680000,690000,700000,710000,720000,730000,740000,750000,760000,770000,780000,790000,800000],"imageUrls":["/animations/monte-carlo/monte-carlo-100000.jpg","/animations/monte-carlo/monte-carlo-110000.jpg","/animations/monte-carlo/monte-carlo-120000.jpg","/animations/monte-carlo/monte-carlo-130000.jpg","/animations/monte-carlo/monte-carlo-140000.jpg","/animations/monte-carlo/monte-carlo-150000.jpg","/animations/monte-carlo/monte-carlo-160000.jpg","/animations/monte-carlo/monte-carlo-170000.jpg","/animations/monte-carlo/monte-carlo-180000.jpg","/animations/monte-carlo/monte-carlo-190000.jpg","/animations/monte-carlo/monte-carlo-200000.jpg","/animations/monte-carlo/monte-carlo-210000.jpg","/animations/monte-carlo/monte-carlo-220000.jpg","/animations/monte-carlo/monte-carlo-230000.jpg","/animations/monte-carlo/monte-carlo-240000.jpg","/animations/monte-carlo/monte-carlo-250000.jpg","/animations/monte-carlo/monte-carlo-260000.jpg","/animations/monte-carlo/monte-carlo-270000.jpg","/animations/monte-carlo/monte-carlo-280000.jpg","/animations/monte-carlo/monte-carlo-290000.jpg","/animations/monte-carlo/monte-carlo-300000.jpg","/animations/monte-carlo/monte-carlo-310000.jpg","/animations/monte-carlo/monte-carlo-320000.jpg","/animations/monte-carlo/monte-carlo-330000.jpg","/animations/monte-carlo/monte-carlo-340000.jpg","/animations/monte-carlo/monte-carlo-350000.jpg","/animations/monte-carlo/monte-carlo-360000.jpg","/animations/monte-carlo/monte-carlo-370000.jpg","/animations/monte-carlo/monte-carlo-380000.jpg","/animations/monte-carlo/monte-carlo-390000.jpg","/animations/monte-carlo/monte-carlo-400000.jpg","/animations/monte-carlo/monte-carlo-410000.jpg","/animations/monte-carlo/monte-carlo-420000.jpg","/animations/monte-carlo/monte-carlo-430000.jpg","/animations/monte-carlo/monte-carlo-440000.jpg","/animations/monte-carlo/monte-carlo-450000.jpg","/animations/monte-carlo/monte-carlo-460000.jpg","/animations/monte-carlo/monte-carlo-470000.jpg","/animations/monte-carlo/monte-carlo-480000.jpg","/animations/monte-carlo/monte-carlo-490000.jpg","/animations/monte-carlo/monte-carlo-500000.jpg","/animations/monte-carlo/monte-carlo-510000.jpg","/animations/monte-carlo/monte-carlo-520000.jpg","/animations/monte-carlo/monte-carlo-530000.jpg","/animations/monte-carlo/monte-carlo-540000.jpg","/animations/monte-carlo/monte-carlo-550000.jpg","/animations/monte-carlo/monte-carlo-560000.jpg","/animations/monte-carlo/monte-carlo-570000.jpg","/animations/monte-carlo/monte-carlo-580000.jpg","/animations/monte-carlo/monte-carlo-590000.jpg","/animations/monte-carlo/monte-carlo-600000.jpg","/animations/monte-carlo/monte-carlo-610000.jpg","/animations/monte-carlo/monte-carlo-620000.jpg","/animations/monte-carlo/monte-carlo-630000.jpg","/animations/monte-carlo/monte-carlo-640000.jpg","/animations/monte-carlo/monte-carlo-650000.jpg","/animations/monte-carlo/monte-carlo-660000.jpg","/animations/monte-carlo/monte-carlo-670000.jpg","/animations/monte-carlo/monte-carlo-680000.jpg","/animations/monte-carlo/monte-carlo-690000.jpg","/animations/monte-carlo/monte-carlo-700000.jpg","/animations/monte-carlo/monte-carlo-710000.jpg","/animations/monte-carlo/monte-carlo-720000.jpg","/animations/monte-carlo/monte-carlo-730000.jpg","/animations/monte-carlo/monte-carlo-740000.jpg","/animations/monte-carlo/monte-carlo-750000.jpg","/animations/monte-carlo/monte-carlo-760000.jpg","/animations/monte-carlo/monte-carlo-770000.jpg","/animations/monte-carlo/monte-carlo-780000.jpg","/animations/monte-carlo/monte-carlo-790000.jpg","/animations/monte-carlo/monte-carlo-800000.jpg"],"isMonetary":true,"showPrompt":true}'>
+    <div class="animation-canvas-wrapper">
+        <canvas class="animation-canvas"></canvas>
+
+        <!-- Slider Overlay -->
+        <div class="slider-overlay">
+            <div class="slider-container">
+                <div class="slider-label">Roth IRA Balance</div>
+                <input type="range" class="slider-control" min="100000" max="800000" step="10000" value="100000" />
+                <div class="slider-input">
+                    <input type="text" class="slider-value" value="100000" readonly />
+                    <div class="spinner-buttons">
+                        <button class="spinner-button spinner-up">&#8743;</button>
+                        <button class="spinner-button spinner-down">&#8744;</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Hand icon -->
+            <div class="hand-icon">
+                <svg viewBox="0 0 24 24" fill="#333">
+                    <path d="M10.5 1.5c-1.38 0-2.5 1.12-2.5 2.5v8.5L5.91 10.4c-.78-.78-2.05-.78-2.83 0-.78.78-.78 2.05 0 2.83l5.66 5.66c1.17 1.17 2.76 1.83 4.41 1.83h2.84c3.31 0 6-2.69 6-6V9c0-1.38-1.12-2.5-2.5-2.5s-2.5 1.12-2.5 2.5v-.5c0-1.38-1.12-2.5-2.5-2.5s-2.5 1.12-2.5 2.5V8c0-1.38-1.12-2.5-2.5-2.5S10.5 6.62 10.5 8V4c0-1.38-1.12-2.5-2.5-2.5h2.5z"/>
+                </svg>
+            </div>
+            <!-- Try Slider Prompt -->
+            <div class="try-slider-prompt">
+                <div class="prompt-text">Try moving the slider</div>
+                <svg class="prompt-arrow" viewBox="0 0 100 60" preserveAspectRatio="none">
+                    <defs>
+                        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                            <polygon points="0 0, 10 3.5, 0 7" fill="#41bab4" />
+                        </marker>
+                    </defs>
+                    <path class="arrow-path" stroke="#41bab4" stroke-width="2" fill="none" marker-end="url(#arrowhead)" />
+                </svg>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .animation-player {
+        display: inline-block;
+    }
+
+    .animation-canvas-wrapper {
+        position: relative;
+        display: inline-block;
+        background: #fff;
+        border-radius: 16px;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+        padding: 10px;
+    }
+
+    .animation-canvas {
+        display: block;
+        border-radius: 4px;
+    }
+
+    /* Slider Overlay */
+    .slider-overlay {
+        position: absolute;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        padding: 12px 16px;
+        z-index: 100;
+        min-width: 320px;
+        left: -92px;
+        top: 225px;
+    }
+
+    .slider-container {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        position: relative;
+    }
+
+    .slider-label {
+        min-width: 140px;
+        font-size: 13px;
+        font-weight: 600;
+        font-family: Roboto, sans-serif;
+        color: #333;
+    }
+
+    .slider-control {
+        flex: 1;
+        min-width: 100px;
+        -webkit-appearance: none;
+        appearance: none;
+        background: #e3ebff;
+        border-radius: 3px;
+        height: 6px;
+        cursor: pointer;
+    }
+
+    .slider-control::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background: #48435f;
+        cursor: pointer;
+        border: none;
+        box-shadow: 0 0 0 3px rgba(43, 116, 215, 0.25);
+    }
+
+    .slider-control::-moz-range-thumb {
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background: #48435f;
+        cursor: pointer;
+        border: none;
+        box-shadow: 0 0 0 3px rgba(43, 116, 215, 0.25);
+    }
+
+    .slider-input {
+        display: flex;
+        align-items: center;
+        gap: 2px;
+    }
+
+    .slider-input input {
+        width: 80px;
+        padding: 4px 8px;
+        font-size: 13px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        text-align: right;
+        font-family: inherit;
+    }
+
+    .spinner-buttons {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .spinner-button {
+        background-color: #f1f1f1;
+        border: 1px solid #ccc;
+        height: 14px;
+        width: 18px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 10px;
+        padding: 0;
+    }
+
+    .spinner-button:hover {
+        background-color: #e1e1e1;
+    }
+
+    .spinner-up {
+        border-top-right-radius: 3px;
+        border-top-left-radius: 3px;
+        border-bottom: none;
+    }
+
+    .spinner-down {
+        border-bottom-right-radius: 3px;
+        border-bottom-left-radius: 3px;
+    }
+
+    .hand-icon {
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        pointer-events: none;
+        z-index: 101;
+        transform: translate(-50%, -100%);
+        opacity: 0.9;
+        transition: left 0.05s ease-out;
+    }
+
+    .hand-icon svg {
+        width: 100%;
+        height: 100%;
+        filter: drop-shadow(1px 2px 2px rgba(0,0,0,0.3));
+    }
+
+    /* Try Slider Prompt */
+    .try-slider-prompt {
+        position: absolute;
+        pointer-events: none;
+        z-index: 102;
+    }
+
+    .prompt-text {
+        font-size: 14px;
+        font-weight: 600;
+        color: #41bab4;
+        white-space: nowrap;
+        position: relative;
+        top: 20px;
+    }
+
+    .prompt-arrow {
+        position: absolute;
+        width: 80px;
+        height: 50px;
+        overflow: visible;
+    }
+
+    .arrow-path {
+        stroke: #41bab4;
+    }
+</style>
+
+<script>
+    // Self-contained animation player
+    document.querySelectorAll('.animation-player').forEach(player => {
+        const config = JSON.parse(player.dataset.animationConfig);
+        const canvas = player.querySelector('.animation-canvas');
+        const ctx = canvas.getContext('2d');
+        const overlay = player.querySelector('.slider-overlay');
+        const slider = player.querySelector('.slider-control');
+        const valueInput = player.querySelector('.slider-value');
+        const handIcon = player.querySelector('.hand-icon');
+        const trySliderPrompt = player.querySelector('.try-slider-prompt');
+        const arrowPath = player.querySelector('.arrow-path');
+        const promptArrow = player.querySelector('.prompt-arrow');
+
+        let images = [];
+        let index = 0;
+        let direction = 1;
+        let playing = true;
+        let userControlling = false;
+        let lastTime = 0;
+        let restartTimer = null;
+
+        // Format value for display
+        function formatValue(value) {
+            if (config.isMonetary && Math.abs(value) >= 1000) {
+                return '$' + value.toLocaleString('en-US');
+            }
+            return value.toString();
+        }
+
+        // Update hand icon position
+        function updateHandPosition() {
+            const sliderRect = slider.getBoundingClientRect();
+            const overlayRect = overlay.getBoundingClientRect();
+            const min = parseFloat(slider.min);
+            const max = parseFloat(slider.max);
+            const val = parseFloat(slider.value);
+            const percent = (val - min) / (max - min);
+            const thumbWidth = 14;
+            const trackWidth = sliderRect.width - thumbWidth;
+            const thumbX = thumbWidth / 2 + percent * trackWidth;
+            const sliderLeft = sliderRect.left - overlayRect.left;
+            handIcon.style.left = (sliderLeft + thumbX) + 'px';
+            handIcon.style.top = (sliderRect.top - overlayRect.top + 25) + 'px';
+
+            // Update prompt arrow if enabled
+            if (config.showPrompt && trySliderPrompt) {
+                updatePromptArrow(sliderLeft + thumbX, sliderRect.top - overlayRect.top);
+            }
+        }
+
+        // Update prompt arrow position
+        function updatePromptArrow(thumbX, thumbY) {
+            if (!trySliderPrompt || !arrowPath) return;
+            const overlayRect = overlay.getBoundingClientRect();
+            const promptTop = 60;
+            const textOffset = 20;
+            const promptLeft = overlayRect.width / 2 - 70;
+            trySliderPrompt.style.left = promptLeft + 'px';
+            trySliderPrompt.style.top = promptTop + 'px';
+            const arrowStartX = 70;
+            const arrowStartY = textOffset + 1;
+            const targetX = thumbX - promptLeft;
+            const targetY = thumbY - promptTop + 25;
+            const pathD = 'M ' + arrowStartX + ' ' + arrowStartY + ' L ' + targetX + ' ' + targetY;
+            arrowPath.setAttribute('d', pathD);
+            const minX = Math.min(arrowStartX, targetX) - 15;
+            const minY = Math.min(arrowStartY, targetY) - 15;
+            const maxX = Math.max(arrowStartX, targetX) + 15;
+            const maxY = Math.max(arrowStartY, targetY) + 15;
+            promptArrow.setAttribute('viewBox', minX + ' ' + minY + ' ' + (maxX - minX) + ' ' + (maxY - minY));
+            promptArrow.style.width = (maxX - minX) + 'px';
+            promptArrow.style.height = (maxY - minY) + 'px';
+            promptArrow.style.left = minX + 'px';
+            promptArrow.style.top = minY + 'px';
+        }
+
+        // Hide interaction hints
+        function hideHints() {
+            handIcon.style.display = 'none';
+            if (trySliderPrompt) trySliderPrompt.style.display = 'none';
+        }
+
+        // Show interaction hints
+        function showHints() {
+            handIcon.style.display = 'block';
+            if (config.showPrompt && trySliderPrompt) trySliderPrompt.style.display = 'block';
+        }
+
+        // Start restart timer
+        function startRestartTimer() {
+            if (restartTimer) clearTimeout(restartTimer);
+            restartTimer = setTimeout(() => {
+                userControlling = false;
+                playing = true;
+                showHints();
+            }, 5000);
+        }
+
+        // Draw current frame
+        function drawFrame() {
+            if (images.length === 0) return;
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.drawImage(images[index], 0, 0);
+        }
+
+        // Update slider to match frame
+        function updateSlider() {
+            const value = config.frameValues[index];
+            slider.value = value;
+            valueInput.value = formatValue(value);
+            updateHandPosition();
+        }
+
+        // Find frame for value
+        function findFrameForValue(value) {
+            let closestIdx = 0;
+            let closestDiff = Math.abs(config.frameValues[0] - value);
+            for (let i = 1; i < config.frameValues.length; i++) {
+                const diff = Math.abs(config.frameValues[i] - value);
+                if (diff < closestDiff) {
+                    closestDiff = diff;
+                    closestIdx = i;
+                }
+            }
+            return closestIdx;
+        }
+
+        // Animation loop
+        function loop(time) {
+            if (playing && images.length > 0 && !userControlling) {
+                const interval = 1000 / config.fps;
+                if (time - lastTime >= interval) {
+                    lastTime = time;
+                    drawFrame();
+                    updateSlider();
+                    index += direction;
+                    if (index >= images.length - 1) direction = -1;
+                    if (index <= 0) direction = 1;
+                }
+            }
+            requestAnimationFrame(loop);
+        }
+
+        // Slider interaction
+        slider.addEventListener('mousedown', () => {
+            userControlling = true;
+            playing = false;
+            hideHints();
+            if (restartTimer) clearTimeout(restartTimer);
+        });
+
+        slider.addEventListener('input', () => {
+            const value = parseFloat(slider.value);
+            index = findFrameForValue(value);
+            drawFrame();
+            valueInput.value = formatValue(value);
+        });
+
+        slider.addEventListener('mouseup', () => {
+            startRestartTimer();
+        });
+
+        slider.addEventListener('mouseleave', () => {
+            if (userControlling) startRestartTimer();
+        });
+
+        // Load images
+        let loaded = 0;
+        config.imageUrls.forEach((url, i) => {
+            const img = new Image();
+            img.onload = () => {
+                loaded++;
+                if (loaded === config.imageUrls.length) {
+                    // All loaded - set canvas size and start
+                    canvas.width = images[0].naturalWidth;
+                    canvas.height = images[0].naturalHeight;
+                    drawFrame();
+                    updateSlider();
+                    requestAnimationFrame(loop);
+                }
+            };
+            img.src = url;
+            images[i] = img;
+        });
+    });
+</script>

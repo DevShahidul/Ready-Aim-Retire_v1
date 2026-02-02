@@ -1,0 +1,582 @@
+<html lang="en"><head>
+
+    <!-- Basic SEO & Character Set -->
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="description" content="Explore Quantum Platelets, a mesmerizing interactive art experience powered by WebGL. Manipulate abstract, glowing particle fields in real-time to create unique visual phenomena.">
+    <meta name="keywords" content="webgl, interactive art, generative art, shader, real-time graphics, quantum platelets, creative coding, digital art">
+    <meta name="author" content="Chris Pirillo">
+
+    <!-- Viewport & Core Vitals -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://pirillo.com/arcade/quantum-platelets.html">
+
+
+    <!-- Resource Hints: Preconnect to critical third-party origins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin="">
+    <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin="">
+
+    <!-- Resource Hints: Preload critical CSS for faster rendering -->
+    <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&amp;display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap"></noscript>
+
+    <!-- Stylesheets -->
+    <script src="https://cdn.tailwindcss.com"></script> <!-- Tailwind is required for initial UI, should not be deferred -->
+
+    <!-- Critical Inline CSS: Essential for above-the-fold content and preventing CLS -->
+    <style>
+        /* Using font-display: swap in the preloaded link handles FOUT/FOIT */
+        body {
+            font-family: 'Share Tech Mono', monospace;
+            color: #E0E0E0;
+            overflow: hidden;
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            background-color: #000; /* Set base background to prevent flash of unstyled content */
+        }
+        .sidebar {
+            transition: transform 0.3s ease-in-out;
+        }
+        .sidebar-content {
+            scrollbar-width: thin;
+            scrollbar-color: #4f4f4f #1f2937;
+        }
+        .sidebar-content::-webkit-scrollbar { width: 8px; }
+        .sidebar-content::-webkit-scrollbar-track { background: #1f2937; }
+        .sidebar-content::-webkit-scrollbar-thumb { background-color: #4f4f4f; border-radius: 10px; border: 3px solid #1f2937; }
+        input[type="range"] {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 100%;
+            height: 4px;
+            background: #4a5568;
+            border-radius: 5px;
+            outline: none;
+            opacity: 0.7;
+            transition: opacity .2s;
+        }
+        input[type="range"]:hover { opacity: 1; }
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 16px;
+            height: 16px;
+            background: #a0aec0;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+        input[type="range"]::-moz-range-thumb {
+            width: 16px;
+            height: 16px;
+            background: #a0aec0;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+    </style>
+
+    <!-- Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-1CQ4D3VQ3L"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-1CQ4D3VQ3L');
+    </script>
+
+    <!-- JSON-LD Structured Data for Rich Snippets -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Quantum Platelets",
+      "applicationCategory": "Game",
+      "operatingSystem": "Any (WebGL)",
+      "url": "https://pirillo.com/arcade/quantum-platelets.html",
+      "author": {
+        "@type": "Person",
+        "name": "Chris Pirillo",
+        "url": "https://chris.pirillo.com/"
+      },
+      "description": "An interactive, real-time WebGL art experience where users can manipulate and randomize parameters to create unique, glowing abstract visuals.",
+      "screenshot": "https://pirillo.com/arcade/images/quantum-platelets.png",
+      "offers": {
+        "@type": "Offer",
+        "price": "0"
+      }
+    }
+    </script>
+
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.fixed{position:fixed}.absolute{position:absolute}.left-0{left:0px}.right-0{right:0px}.right-4{right:1rem}.top-0{top:0px}.top-4{top:1rem}.z-10{z-index:10}.z-20{z-index:20}.mb-4{margin-bottom:1rem}.mb-5{margin-bottom:1.25rem}.mb-1{margin-bottom:0.25rem}.flex{display:flex}.hidden{display:none}.h-8{height:2rem}.h-full{height:100%}.w-8{width:2rem}.w-80{width:20rem}.w-full{width:100%}.translate-x-full{--tw-translate-x:100%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.transform{transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.items-center{align-items:center}.justify-between{justify-content:space-between}.space-y-5 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.25rem * var(--tw-space-y-reverse))}.overflow-y-auto{overflow-y:auto}.rounded{border-radius:0.25rem}.bg-black{--tw-bg-opacity:1;background-color:rgb(0 0 0 / var(--tw-bg-opacity, 1))}.bg-gray-900{--tw-bg-opacity:1;background-color:rgb(17 24 39 / var(--tw-bg-opacity, 1))}.bg-indigo-500{--tw-bg-opacity:1;background-color:rgb(99 102 241 / var(--tw-bg-opacity, 1))}.bg-gray-700{--tw-bg-opacity:1;background-color:rgb(55 65 81 / var(--tw-bg-opacity, 1))}.bg-opacity-80{--tw-bg-opacity:0.8}.p-2{padding:0.5rem}.p-6{padding:1.5rem}.px-4{padding-left:1rem;padding-right:1rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.text-center{text-align:center}.font-mono{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}.text-2xl{font-size:1.5rem;line-height:2rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.font-bold{font-weight:700}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.backdrop-blur-md{--tw-backdrop-blur:blur(12px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-300{transition-duration:300ms}.hover\:bg-indigo-600:hover{--tw-bg-opacity:1;background-color:rgb(79 70 229 / var(--tw-bg-opacity, 1))}@media (min-width: 640px){.sm\:w-96{width:24rem}}</style></head>
+<body class="bg-black">
+
+    <main>
+        <!-- WebGL Canvas: This is the Largest Contentful Paint element. It's sized to prevent layout shift. -->
+        <canvas id="gl-canvas" class="absolute top-0 left-0 w-full h-full" width="370" height="800" aria-label="Interactive WebGL animation of quantum platelets"></canvas>
+
+        <!-- Header containing navigation elements -->
+        <header>
+            <!-- Hamburger Menu Button with accessibility improvements -->
+            <button id="menu-toggle" class="absolute top-4 right-4 z-20 p-2 text-white" aria-label="Toggle settings menu" aria-expanded="false" aria-controls="sidebar">
+                <svg id="menu-open-icon" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="32" height="32" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+                <svg id="menu-close-icon" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="32" height="32" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </header>
+
+        <!-- Sidebar: Using <aside> for auxiliary content -->
+        <aside id="sidebar" class="sidebar fixed top-0 right-0 h-full w-80 sm:w-96 bg-gray-900 bg-opacity-80 backdrop-blur-md z-10 shadow-2xl transform translate-x-full">
+            <div class="sidebar-content p-6 h-full overflow-y-auto">
+                <h1 class="text-2xl mb-4 text-center">Quantum Platelets</h1>
+                <div class="mb-5">
+                    <button id="randomize-btn" class="w-full bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded transition-colors duration-300">
+                        Randomize
+                    </button>
+                </div>
+                <section id="controls-container" class="space-y-5" aria-label="Shader Controls">
+                    <!-- Controls will be dynamically inserted here by JavaScript -->
+                
+                    <div class="control-group">
+                        <div class="flex justify-between items-center mb-1">
+                            <label for="iterations" class="text-sm">Scene: Iterations</label>
+                            <span id="iterations-value" class="text-sm font-mono bg-gray-700 px-2 py-1 rounded">58</span>
+                        </div>
+                        <input type="range" id="iterations" name="iterations" min="5" max="150" value="30" step="1" class="w-full">
+                    </div>
+                
+                    <div class="control-group">
+                        <div class="flex justify-between items-center mb-1">
+                            <label for="v_y" class="text-sm">Scene: Vertical Offset</label>
+                            <span id="v_y-value" class="text-sm font-mono bg-gray-700 px-2 py-1 rounded">0.51</span>
+                        </div>
+                        <input type="range" id="v_y" name="v_y" min="0" max="1" value="1" step="0.01" class="w-full">
+                    </div>
+                
+                    <div class="control-group">
+                        <div class="flex justify-between items-center mb-1">
+                            <label for="step_base" class="text-sm">Raymarch: Step Base</label>
+                            <span id="step_base-value" class="text-sm font-mono bg-gray-700 px-2 py-1 rounded">0.006</span>
+                        </div>
+                        <input type="range" id="step_base" name="step_base" min="0.001" max="0.03" value="0.01" step="0.001" class="w-full">
+                    </div>
+                
+                    <div class="control-group">
+                        <div class="flex justify-between items-center mb-1">
+                            <label for="step_mult" class="text-sm">Raymarch: Step Multiplier</label>
+                            <span id="step_mult-value" class="text-sm font-mono bg-gray-700 px-2 py-1 rounded">1.02</span>
+                        </div>
+                        <input type="range" id="step_mult" name="step_mult" min="0.75" max="2" value="0.75" step="0.01" class="w-full">
+                    </div>
+                
+                    <div class="control-group">
+                        <div class="flex justify-between items-center mb-1">
+                            <label for="sdf_radius" class="text-sm">Shape: Radius</label>
+                            <span id="sdf_radius-value" class="text-sm font-mono bg-gray-700 px-2 py-1 rounded">0.404</span>
+                        </div>
+                        <input type="range" id="sdf_radius" name="sdf_radius" min="0.01" max="0.5" value="0.1" step="0.001" class="w-full">
+                    </div>
+                
+                    <div class="control-group">
+                        <div class="flex justify-between items-center mb-1">
+                            <label for="sdf_freq" class="text-sm">Shape: Frequency</label>
+                            <span id="sdf_freq-value" class="text-sm font-mono bg-gray-700 px-2 py-1 rounded">0.39</span>
+                        </div>
+                        <input type="range" id="sdf_freq" name="sdf_freq" min="0.1" max="2" value="0.6" step="0.01" class="w-full">
+                    </div>
+                
+                    <div class="control-group">
+                        <div class="flex justify-between items-center mb-1">
+                            <label for="sdf_time_mult" class="text-sm">Shape: Time Warp</label>
+                            <span id="sdf_time_mult-value" class="text-sm font-mono bg-gray-700 px-2 py-1 rounded">0.88</span>
+                        </div>
+                        <input type="range" id="sdf_time_mult" name="sdf_time_mult" min="0" max="1" value="0.2" step="0.01" class="w-full">
+                    </div>
+                
+                    <div class="control-group">
+                        <div class="flex justify-between items-center mb-1">
+                            <label for="glow_strength" class="text-sm">Shading: Glow Strength</label>
+                            <span id="glow_strength-value" class="text-sm font-mono bg-gray-700 px-2 py-1 rounded">27.4</span>
+                        </div>
+                        <input type="range" id="glow_strength" name="glow_strength" min="15" max="30" value="15" step="0.1" class="w-full">
+                    </div>
+                
+                    <div class="control-group">
+                        <div class="flex justify-between items-center mb-1">
+                            <label for="glow_dampen" class="text-sm">Shading: Glow Dampen</label>
+                            <span id="glow_dampen-value" class="text-sm font-mono bg-gray-700 px-2 py-1 rounded">0.48</span>
+                        </div>
+                        <input type="range" id="glow_dampen" name="glow_dampen" min="0.01" max="1" value="0.1" step="0.01" class="w-full">
+                    </div>
+                
+                    <div class="control-group">
+                        <div class="flex justify-between items-center mb-1">
+                            <label for="glow_freq" class="text-sm">Shading: Glow Frequency</label>
+                            <span id="glow_freq-value" class="text-sm font-mono bg-gray-700 px-2 py-1 rounded">0.79</span>
+                        </div>
+                        <input type="range" id="glow_freq" name="glow_freq" min="0.05" max="1" value="0.2" step="0.01" class="w-full">
+                    </div>
+                
+                    <div class="control-group">
+                        <div class="flex justify-between items-center mb-1">
+                            <label for="color_mult_r" class="text-sm">Color: Red Channel</label>
+                            <span id="color_mult_r-value" class="text-sm font-mono bg-gray-700 px-2 py-1 rounded">18.9</span>
+                        </div>
+                        <input type="range" id="color_mult_r" name="color_mult_r" min="0" max="20" value="9" step="0.1" class="w-full">
+                    </div>
+                
+                    <div class="control-group">
+                        <div class="flex justify-between items-center mb-1">
+                            <label for="color_mult_g" class="text-sm">Color: Green Channel</label>
+                            <span id="color_mult_g-value" class="text-sm font-mono bg-gray-700 px-2 py-1 rounded">7.9</span>
+                        </div>
+                        <input type="range" id="color_mult_g" name="color_mult_g" min="0" max="20" value="3" step="0.1" class="w-full">
+                    </div>
+                
+                    <div class="control-group">
+                        <div class="flex justify-between items-center mb-1">
+                            <label for="color_mult_b" class="text-sm">Color: Blue Channel</label>
+                            <span id="color_mult_b-value" class="text-sm font-mono bg-gray-700 px-2 py-1 rounded">2.2</span>
+                        </div>
+                        <input type="range" id="color_mult_b" name="color_mult_b" min="0" max="20" value="1" step="0.1" class="w-full">
+                    </div>
+                
+                    <div class="control-group">
+                        <div class="flex justify-between items-center mb-1">
+                            <label for="color_mult_a" class="text-sm">Color: Alpha Channel (tanh)</label>
+                            <span id="color_mult_a-value" class="text-sm font-mono bg-gray-700 px-2 py-1 rounded">6.1</span>
+                        </div>
+                        <input type="range" id="color_mult_a" name="color_mult_a" min="0" max="20" value="0" step="0.1" class="w-full">
+                    </div>
+                </section>
+            </div>
+        </aside>
+    </main>
+
+    <!--
+      SHADER SCRIPTS
+      These are not executable JavaScript but data blocks read by the main script.
+      They are correctly placed to be available when the main script runs.
+    -->
+    <script id="vertex-shader" type="x-shader/x-vertex">
+        attribute vec4 a_position;
+        void main() {
+            gl_Position = a_position;
+        }
+    </script>
+
+    <script id="fragment-shader" type="x-shader/x-fragment">
+        precision highp float;
+        uniform vec2 u_resolution;
+        uniform float u_time;
+
+        // --- User Controls ---
+        uniform float u_zoom;
+        uniform float u_iterations;
+        uniform float u_v_y;
+
+        // Raymarching parameters
+        uniform float u_step_base;
+        uniform float u_step_mult;
+
+        // SDF (Signed Distance Function) parameters
+        uniform float u_sdf_freq;
+        uniform float u_sdf_time_mult;
+        uniform float u_sdf_radius;
+
+        // Shading/Coloring parameters
+        uniform float u_glow_dampen;
+        uniform float u_glow_strength;
+        uniform float u_glow_freq;
+        uniform vec4 u_color_mult;
+        uniform float u_exposure;
+
+        // Manual implementation of tanh for GLSL ES 1.00 (WebGL 1)
+        float tanh(float x) {
+            float ex = exp(x);
+            float emx = exp(-x);
+            if (ex == 0.0) return -1.0;
+            if (emx == 0.0) return 1.0;
+            return (ex - emx) / (ex + emx);
+        }
+
+        // --- Rotation Matrix functions to break grid artifacts ---
+        mat3 rotX(float a) {
+            float s = sin(a); float c = cos(a);
+            return mat3(1.0, 0.0, 0.0, 0.0, c, -s, 0.0, s, c);
+        }
+        mat3 rotY(float a) {
+            float s = sin(a); float c = cos(a);
+            return mat3(c, 0.0, s, 0.0, 1.0, 0.0, -s, 0.0, c);
+        }
+
+        void main() {
+            vec2 uv = (gl_FragCoord.xy * 2.0 - u_resolution.xy) / u_resolution.y;
+            vec3 s = normalize(vec3(uv * u_zoom, -1.0));
+
+            vec4 o = vec4(0.0);
+            float z = 0.0;
+            vec3 v = vec3(0.0, u_v_y, 0.0);
+            
+            for(float i = 0.0; i < 200.0; i++) {
+                if (i >= u_iterations) break;
+
+                vec3 p = s * z + v;
+                p.z -= u_time;
+                
+                // Apply a slight, fixed rotation to the space to break axis-aligned artifacts.
+                p = rotY(0.3) * rotX(0.2) * p;
+
+                vec3 q = p;
+                q += p * v - sin(q.zxy * u_sdf_freq - u_time * u_sdf_time_mult);
+                float d = length(sin(q) - v) - u_sdf_radius;
+
+                d = u_step_base + u_step_mult * abs(d);
+                z += d;
+
+                if (d < 0.001 || z > 100.0) break;
+
+                o += (u_glow_strength - cos(length(p) / u_glow_freq) / (u_glow_dampen + d)) / d / z;
+            }
+
+            // Apply tanh component-wise using our manual implementation
+            vec4 final_color = o / u_exposure * u_color_mult;
+            final_color.x = tanh(final_color.x);
+            final_color.y = tanh(final_color.y);
+            final_color.z = tanh(final_color.z);
+            final_color.w = tanh(final_color.w);
+
+            gl_FragColor = final_color;
+            gl_FragColor.a = 1.0;
+        }
+    </script>
+
+    <!--
+      MAIN APPLICATION SCRIPT
+      - This script is UNCHANGED as per the instructions.
+      - The 'defer' attribute is not added because the script relies on `window.onload`,
+        which already defers execution until all page content is loaded. Adding 'defer'
+        would be redundant and could alter execution timing in subtle ways.
+        The current placement at the end of the body is the best practice for this scenario.
+    -->
+    <script>
+        // --- Main Application Logic ---
+        window.onload = () => {
+            const canvas = document.getElementById('gl-canvas');
+            const gl = canvas.getContext('webgl', { antialias: true });
+
+            if (!gl) {
+                console.error("WebGL not supported!");
+                document.body.innerHTML = "Sorry, your browser does not support WebGL.";
+                return;
+            }
+
+            // --- Shader and Program Setup ---
+            function createShader(gl, type, source) {
+                const shader = gl.createShader(type);
+                gl.shaderSource(shader, source);
+                gl.compileShader(shader);
+                if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
+                    // Log the error to the console for debugging.
+                    console.error('An error occurred compiling the shaders: ' + gl.getShaderInfoLog(shader));
+                    gl.deleteShader(shader);
+                    return null;
+                }
+                return shader;
+            }
+
+            const vertexShaderSource = document.getElementById('vertex-shader').text;
+            const fragmentShaderSource = document.getElementById('fragment-shader').text;
+            const vertexShader = createShader(gl, gl.VERTEX_SHADER, vertexShaderSource);
+            const fragmentShader = createShader(gl, gl.FRAGMENT_SHADER, fragmentShaderSource);
+            
+            // --- Error handling for shader creation ---
+            if (!vertexShader || !fragmentShader) {
+                console.error("Shader creation failed. Aborting initialization.");
+                return;
+            }
+
+            const program = gl.createProgram();
+            gl.attachShader(program, vertexShader);
+            gl.attachShader(program, fragmentShader);
+            gl.linkProgram(program);
+
+            if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
+                console.error('Unable to initialize the shader program: ' + gl.getProgramInfoLog(program));
+                return;
+            }
+            gl.useProgram(program);
+
+            // --- Buffer for a fullscreen quad ---
+            const positionBuffer = gl.createBuffer();
+            gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
+            gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 1, -1, -1, 1, 1, 1]), gl.STATIC_DRAW);
+            const positionAttributeLocation = gl.getAttribLocation(program, "a_position");
+            gl.enableVertexAttribArray(positionAttributeLocation);
+            gl.vertexAttribPointer(positionAttributeLocation, 2, gl.FLOAT, false, 0, 0);
+
+            // --- Uniforms and Controls ---
+            const uniforms = {
+                // Scene
+                iterations: { value: 30, min: 5, max: 150, step: 1, label: "Scene: Iterations" },
+                v_y: { value: 1.0, min: 0, max: 1, step: 0.01, label: "Scene: Vertical Offset" },
+                
+                // Raymarching
+                step_base: { value: 0.01, min: 0.001, max: 0.030, step: 0.001, label: "Raymarch: Step Base" },
+                step_mult: { value: 0.75, min: 0.75, max: 2.0, step: 0.01, label: "Raymarch: Step Multiplier" },
+                
+                // Shape (SDF)
+                sdf_radius: { value: 0.1, min: 0.01, max: 0.5, step: 0.001, label: "Shape: Radius" },
+                sdf_freq: { value: 0.6, min: 0.1, max: 2.0, step: 0.01, label: "Shape: Frequency" },
+                sdf_time_mult: { value: 0.2, min: 0.0, max: 1.0, step: 0.01, label: "Shape: Time Warp" },
+                                
+                // Shading
+                glow_strength: { value: 15.0, min: 15.0, max: 30.0, step: 0.1, label: "Shading: Glow Strength" },
+                glow_dampen: { value: 0.1, min: 0.01, max: 1.0, step: 0.01, label: "Shading: Glow Dampen" },
+                glow_freq: { value: 0.2, min: 0.05, max: 1.0, step: 0.01, label: "Shading: Glow Frequency" },
+                
+                // Color Channels (handled separately)
+                color_mult_r: { value: 9.0, min: 0.0, max: 20.0, step: 0.1, label: "Color: Red Channel" },
+                color_mult_g: { value: 3.0, min: 0.0, max: 20.0, step: 0.1, label: "Color: Green Channel" },
+                color_mult_b: { value: 1.0, min: 0.0, max: 20.0, step: 0.1, label: "Color: Blue Channel" },
+                color_mult_a: { value: 0.0, min: 0.0, max: 20.0, step: 0.1, label: "Color: Alpha Channel (tanh)" },
+            };
+
+            const uniformLocations = {};
+            for (const key in uniforms) {
+                if (!key.startsWith('color_mult_')) {
+                    uniformLocations[key] = gl.getUniformLocation(program, `u_${key}`);
+                }
+            }
+            // Get fixed uniform locations separately
+            uniformLocations.zoom = gl.getUniformLocation(program, 'u_zoom');
+            uniformLocations.exposure = gl.getUniformLocation(program, 'u_exposure');
+            uniformLocations.color_mult = gl.getUniformLocation(program, 'u_color_mult');
+            uniformLocations.resolution = gl.getUniformLocation(program, 'u_resolution');
+            uniformLocations.time = gl.getUniformLocation(program, 'u_time');
+
+            const controlsContainer = document.getElementById('controls-container');
+            for (const key in uniforms) {
+                const u = uniforms[key];
+                const controlHTML = `
+                    <div class="control-group">
+                        <div class="flex justify-between items-center mb-1">
+                            <label for="${key}" class="text-sm">${u.label}</label>
+                            <span id="${key}-value" class="text-sm font-mono bg-gray-700 px-2 py-1 rounded">${u.value}</span>
+                        </div>
+                        <input type="range" id="${key}" name="${key}" min="${u.min}" max="${u.max}" value="${u.value}" step="${u.step}" class="w-full">
+                    </div>
+                `;
+                controlsContainer.innerHTML += controlHTML;
+            }
+
+            for (const key in uniforms) {
+                const input = document.getElementById(key);
+                const valueSpan = document.getElementById(`${key}-value`);
+                input.addEventListener('input', (e) => {
+                    uniforms[key].value = parseFloat(e.target.value);
+                    valueSpan.textContent = uniforms[key].value;
+                });
+            }
+
+            // --- Randomization Logic ---
+            function randomizeSettings() {
+                for (const key in uniforms) {
+                    const u = uniforms[key];
+                    const randomValue = Math.random() * (u.max - u.min) + u.min;
+                    
+                    let finalValue;
+                    if (u.step >= 1) {
+                         finalValue = Math.round(randomValue / u.step) * u.step;
+                    } else {
+                        // For floating point, round to a reasonable number of decimal places
+                        const precision = 1 / u.step;
+                        finalValue = (Math.round(randomValue * precision) / precision).toFixed(String(u.step).split('.')[1]?.length || 0);
+                    }
+                    
+                    uniforms[key].value = parseFloat(finalValue);
+
+                    const input = document.getElementById(key);
+                    const valueSpan = document.getElementById(`${key}-value`);
+
+                    if (input && valueSpan) {
+                        input.value = uniforms[key].value;
+                        valueSpan.textContent = uniforms[key].value;
+                    }
+                }
+            }
+
+            // --- UI Interaction ---
+            const menuToggle = document.getElementById('menu-toggle');
+            const sidebar = document.getElementById('sidebar');
+            const openIcon = document.getElementById('menu-open-icon');
+            const closeIcon = document.getElementById('menu-close-icon');
+            const randomizeBtn = document.getElementById('randomize-btn');
+            
+            menuToggle.addEventListener('click', () => {
+                const isExpanded = sidebar.classList.toggle('translate-x-full');
+                openIcon.classList.toggle('hidden');
+                closeIcon.classList.toggle('hidden');
+                menuToggle.setAttribute('aria-expanded', !isExpanded);
+            });
+
+            randomizeBtn.addEventListener('click', randomizeSettings);
+            
+            // Randomize on initial load
+            randomizeSettings();
+
+            // --- Render Loop ---
+            let startTime = Date.now();
+            function render() {
+                // Resize canvas to match display size
+                const dpr = window.devicePixelRatio || 1;
+                const displayWidth = Math.floor(canvas.clientWidth * dpr);
+                const displayHeight = Math.floor(canvas.clientHeight * dpr);
+
+                if (canvas.width !== displayWidth || canvas.height !== displayHeight) {
+                    canvas.width = displayWidth;
+                    canvas.height = displayHeight;
+                    gl.viewport(0, 0, canvas.width, canvas.height);
+                }
+
+                // Update uniforms
+                const currentTime = (Date.now() - startTime) * 0.001;
+                gl.uniform1f(uniformLocations.time, currentTime);
+                gl.uniform2f(uniformLocations.resolution, canvas.width, canvas.height);
+                
+                // Set the fixed uniforms
+                gl.uniform1f(uniformLocations.zoom, 0.1);
+                gl.uniform1f(uniformLocations.exposure, 20000.0);
+
+                for (const key in uniforms) {
+                    if (!key.startsWith('color_mult_') && uniformLocations[key]) {
+                        gl.uniform1f(uniformLocations[key], uniforms[key].value);
+                    }
+                }
+                gl.uniform4f(uniformLocations.color_mult, 
+                    uniforms.color_mult_r.value, 
+                    uniforms.color_mult_g.value,
+                    uniforms.color_mult_b.value,
+                    uniforms.color_mult_a.value
+                );
+
+                // Draw
+                gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+
+                requestAnimationFrame(render);
+            }
+
+            requestAnimationFrame(render);
+        };
+    </script>
+
+
+</body></html>

@@ -1,0 +1,733 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTABanner from '../components/CTABanner.astro';
+import MonteCarloAnimation from '../components/MonteCarloAnimation.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+---
+
+<BaseLayout
+    title="Chance of Success – Test Your Retirement Plan | ReadyAimRetire"
+    description="Run your retirement plan through 153 years of market history. See your probability of success across 150+ simulations including every major crash since 1871."
+    solidHeader={true}
+>
+    <!-- Hero Section -->
+    <section class="cos-hero">
+        <div class="container">
+            <Breadcrumbs items={[{ label: "Chance of Success" }]} />
+            <div class="cos-hero-content" data-aos="fade">
+                <p class="cos-hero-eyebrow">OnTarget™ Feature</p>
+                <h1>Know Your <span class="text-primary">Chance of Success</span></h1>
+            </div>
+            <div class="cos-hero-visual" data-aos="fade-up" data-aos-delay="200">
+                <MonteCarloAnimation />
+            </div>
+            <div class="cos-hero-bottom" data-aos="fade-up" data-aos-delay="400">
+                <p class="cos-hero-subtitle">Test your retirement plan against 153 years of real market history. See exactly how your plan would have performed through every crash, every boom, and every market cycle since 1871.</p>
+                <a href={`${import.meta.env.PUBLIC_APP_URL}/signup`} class="btn btn-hero">Start Your Plan <span class="arrow">→</span></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="cos-problem-section">
+        <div class="container">
+            <div class="cos-problem-grid" data-aos="fade-up">
+                <div class="cos-problem-content">
+                    <h2>Single-number projections are <span class="text-teal">misleading</span></h2>
+                    <p>Most retirement calculators tell you a single number: "You'll have $2.1 million at retirement." But that assumes markets return exactly 7% every year. They don't.</p>
+                    <p>What if you retire right before a crash? What if inflation spikes? What if the next decade looks like 2000-2010 instead of 2010-2020?</p>
+                    <p class="text-italic">A single number gives false confidence. You need a range of outcomes.</p>
+                </div>
+                <div class="cos-problem-visual">
+                    <div class="cos-comparison-card">
+                        <div class="cos-comparison-bad">
+                            <div class="cos-comparison-label">Simple Calculator</div>
+                            <div class="cos-comparison-value">$2.1M</div>
+                            <div class="cos-comparison-note">Assumes 7% every year</div>
+                        </div>
+                        <div class="cos-comparison-vs">vs</div>
+                        <div class="cos-comparison-good">
+                            <div class="cos-comparison-label">ReadyAimRetire</div>
+                            <div class="cos-comparison-value">87% Success</div>
+                            <div class="cos-comparison-note">$800K – $4.2M range</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="section-gray">
+        <div class="container feature" data-aos="fade-right">
+            <div class="feature-img">
+                <img src="/images/accounts.png" alt="Portfolio chart with percentile bands">
+            </div>
+            <div class="feature-text">
+                <h2>Stress-test against <span class="text-teal">real market history</span></h2>
+                <p>Instead of guessing what markets might do, we test your plan against what markets actually did. Every month. Every year. Since 1871.</p>
+                <ul class="feature-list">
+                    <li>The Great Depression (1929-1932)</li>
+                    <li>Oil Crisis & Stagflation (1973-1974)</li>
+                    <li>Dot-com Crash (2000-2002)</li>
+                    <li>Financial Crisis (2008-2009)</li>
+                    <li>COVID Crash (2020)</li>
+                </ul>
+                <p class="text-italic">If your plan survives history's worst, you can retire with confidence.</p>
+                <a href={`${import.meta.env.PUBLIC_APP_URL}/signup`} class="btn-dark" style="margin-top: 1.5rem;">See Your Success Rate <span class="arrow">→</span></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Outcomes Section -->
+    <section>
+        <div class="container feature" data-aos="fade-left">
+            <div class="feature-text">
+                <h2>More than just <span class="text-teal">pass or fail</span></h2>
+                <p>Success isn't binary. Some plans end with surplus. Others cut it close. ReadyAimRetire shows you the full distribution of outcomes across all historical scenarios.</p>
+                <div class="cos-outcomes-grid">
+                    <div class="cos-outcome cos-outcome-surplus">
+                        <div class="cos-outcome-color"></div>
+                        <div class="cos-outcome-info">
+                            <div class="cos-outcome-name">Surplus</div>
+                            <div class="cos-outcome-desc">End with 150%+ of starting balance</div>
+                        </div>
+                    </div>
+                    <div class="cos-outcome cos-outcome-ontrack">
+                        <div class="cos-outcome-color"></div>
+                        <div class="cos-outcome-info">
+                            <div class="cos-outcome-name">On Track</div>
+                            <div class="cos-outcome-desc">End with healthy remaining funds</div>
+                        </div>
+                    </div>
+                    <div class="cos-outcome cos-outcome-tight">
+                        <div class="cos-outcome-color"></div>
+                        <div class="cos-outcome-info">
+                            <div class="cos-outcome-name">Tight Finish</div>
+                            <div class="cos-outcome-desc">Money depletes near the end</div>
+                        </div>
+                    </div>
+                    <div class="cos-outcome cos-outcome-ranout">
+                        <div class="cos-outcome-color"></div>
+                        <div class="cos-outcome-info">
+                            <div class="cos-outcome-name">Ran Out</div>
+                            <div class="cos-outcome-desc">Money depletes with years remaining</div>
+                        </div>
+                    </div>
+                </div>
+                <p style="margin-top: 1.5rem;">See exactly where your plan falls – and adjust until you're comfortable with the risk.</p>
+            </div>
+            <div class="feature-img">
+                <img src="/images/new_colors.png" alt="Outcome distribution visualization">
+            </div>
+        </div>
+    </section>
+
+    <!-- Control Section -->
+    <section class="section-gray">
+        <div class="container feature" data-aos="fade-right">
+            <div class="feature-img">
+                <img src="/images/model_real_life.jpg" alt="Control which history to test">
+            </div>
+            <div class="feature-text">
+                <h2>Control which <span class="text-teal">history to test</span></h2>
+                <p>Not everyone wants the same level of conservatism. With the dual-handle year range slider, you decide which historical periods to include in your test.</p>
+                <ul class="feature-checklist">
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        <strong>Conservative:</strong> Test 1871-2024 (includes all crashes)
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        <strong>Moderate:</strong> Test 1950-2024 (post-WWII era)
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        <strong>Recent:</strong> Test 1990-2024 (modern markets)
+                    </li>
+                </ul>
+                <p class="text-italic">See exactly how many simulations run and which events are included.</p>
+                <a href={`${import.meta.env.PUBLIC_APP_URL}/signup`} class="btn-dark" style="margin-top: 1.5rem;">Customize Your Test <span class="arrow">→</span></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Integration Section -->
+    <section>
+        <div class="container feature" data-aos="fade-left">
+            <div class="feature-text">
+                <h2>Not a <span class="text-teal">simplified</span> calculator</h2>
+                <p>Each simulation runs your complete retirement plan with full integration of taxes, benefits, and withdrawal strategies. This isn't a back-of-napkin estimate.</p>
+                <ul class="feature-list">
+                    <li><strong>Full tax integration:</strong> Federal brackets, state taxes, IRMAA</li>
+                    <li><strong>Social Security timing:</strong> Optimal claiming strategy impact</li>
+                    <li><strong>Pension coordination:</strong> Multiple income sources modeled</li>
+                    <li><strong>Withdrawal optimization:</strong> Tax-aware account sequencing</li>
+                    <li><strong>RMD calculations:</strong> Required distributions included</li>
+                    <li><strong>Monthly granularity:</strong> Not annual approximations</li>
+                </ul>
+                <a href={`${import.meta.env.PUBLIC_APP_URL}/signup`} class="btn-dark" style="margin-top: 1.5rem;">See the Full Picture <span class="arrow">→</span></a>
+            </div>
+            <div class="feature-img">
+                <img src="/images/taxes.png" alt="Full tax and benefit integration">
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="cos-stats-section">
+        <div class="container">
+            <h2 class="cos-stats-heading" data-aos="fade-up">Built on <span class="text-teal">evidence</span>, not assumptions</h2>
+            <div class="cos-stats-grid" data-aos="fade-up" data-aos-delay="100">
+                <div class="cos-stat-card">
+                    <div class="cos-stat-number">153+</div>
+                    <div class="cos-stat-label">Years of Market Data</div>
+                    <div class="cos-stat-desc">Real returns from 1871 to today</div>
+                </div>
+                <div class="cos-stat-card">
+                    <div class="cos-stat-number">150+</div>
+                    <div class="cos-stat-label">Simulations Per Plan</div>
+                    <div class="cos-stat-desc">Every historical starting year tested</div>
+                </div>
+                <div class="cos-stat-card">
+                    <div class="cos-stat-number">5</div>
+                    <div class="cos-stat-label">Major Crashes Included</div>
+                    <div class="cos-stat-desc">1929, 1973, 2000, 2008, 2020</div>
+                </div>
+                <div class="cos-stat-card">
+                    <div class="cos-stat-number">Monthly</div>
+                    <div class="cos-stat-label">Calculation Granularity</div>
+                    <div class="cos-stat-desc">Not annual approximations</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="section-gray">
+        <div class="container">
+            <h2 class="cos-section-heading" data-aos="fade-up">How it <span class="text-teal">works</span></h2>
+            <div class="cos-steps-grid" data-aos="fade-up" data-aos-delay="100">
+                <div class="cos-step">
+                    <div class="cos-step-number">1</div>
+                    <h3>Enter Your Plan</h3>
+                    <p>Add your portfolio, income sources, spending, and retirement goals.</p>
+                </div>
+                <div class="cos-step">
+                    <div class="cos-step-number">2</div>
+                    <h3>Run the Test</h3>
+                    <p>We simulate your plan through 150+ historical market periods.</p>
+                </div>
+                <div class="cos-step">
+                    <div class="cos-step-number">3</div>
+                    <h3>See Your Odds</h3>
+                    <p>Get your success rate, outcome distribution, and ending balance ranges.</p>
+                </div>
+                <div class="cos-step">
+                    <div class="cos-step-number">4</div>
+                    <h3>Adjust & Optimize</h3>
+                    <p>Tweak spending, timing, or allocation until you reach your target confidence.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="clearer-plan-section-v2">
+        <div class="container">
+            <div class="clearer-plan-card" data-aos="fade-up">
+                <div class="clearer-plan-text">
+                    <h2>Stop guessing. Start <span class="text-teal">knowing.</span></h2>
+                    <p>Run your retirement plan through 153 years of market history and see your true probability of success.</p>
+                    <p class="text-bold">Confidence comes from evidence, not assumptions.</p>
+                </div>
+                <div class="clearer-plan-image">
+                    <img src="/images/landing/stock/couple_water.jpg" alt="Confident retirement planning">
+                    <div class="clearer-plan-stat-overlay">
+                        <div class="stat-number">153+</div>
+                        <div class="stat-headline">Years of real market data to test your plan against.</div>
+                        <div class="stat-subtext">Every crash. Every boom. Every cycle since 1871.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="clearer-plan-benefits" data-aos="fade-up" data-aos-delay="100">
+                <div class="benefit-pill">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>Historical accuracy</span>
+                </div>
+                <div class="benefit-pill">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>150+ simulations</span>
+                </div>
+                <div class="benefit-pill">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>Real crash testing</span>
+                </div>
+                <div class="benefit-pill">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>Evidence-based confidence</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Banner -->
+    <CTABanner />
+
+    <!-- Page-specific scripts -->
+    <script is:inline>
+    document.addEventListener('DOMContentLoaded', function() {
+        // GSAP animations
+        gsap.registerPlugin(ScrollTrigger);
+
+        const featureSections = document.querySelectorAll('.feature');
+        featureSections.forEach((section, index) => {
+            const img = section.querySelector('.feature-img');
+            const text = section.querySelector('.feature-text');
+            const isEven = index % 2 === 1;
+            gsap.set(img, { opacity: 0, x: isEven ? 100 : -100 });
+            gsap.set(text, { opacity: 0, x: isEven ? -100 : 100 });
+            gsap.timeline({
+                scrollTrigger: {
+                    trigger: section,
+                    start: 'top 80%',
+                    toggleActions: 'play none none none'
+                }
+            })
+            .to(img, { opacity: 1, x: 0, duration: 0.8, ease: 'power3.out' })
+            .to(text, { opacity: 1, x: 0, duration: 0.8, ease: 'power3.out' }, '-=0.6');
+        });
+    });
+    </script>
+
+    <!-- SoftwareApplication Schema for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "ReadyAimRetire Chance of Success Calculator",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Web",
+        "description": "Monte Carlo retirement planning simulator that tests plans against historical market data from 1871 to present.",
+        "url": "https://readyaimretire.com/chanceofsuccess",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "author": {
+            "@type": "Organization",
+            "name": "ReadyAimRetire"
+        }
+    }
+    </script>
+
+    <!-- BreadcrumbList Schema for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://readyaimretire.com"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Chance of Success",
+                "item": "https://readyaimretire.com/chanceofsuccess"
+            }
+        ]
+    }
+    </script>
+</BaseLayout>
+
+<style>
+    /* Hero Section */
+    .cos-hero {
+        background: #ffffff;
+        padding: 8rem 0 3rem 0;
+        overflow: hidden;
+    }
+
+    .cos-hero-content {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .cos-hero-eyebrow {
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: #14b8a6;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        margin-bottom: 1rem;
+    }
+
+    .cos-hero h1 {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-size: clamp(2.5rem, 5vw, 3.5rem);
+        font-weight: 700;
+        color: #1a1a2e;
+        line-height: 1.1;
+        margin: 0;
+    }
+
+    .cos-hero .text-primary {
+        color: #14b8a6;
+    }
+
+    .cos-hero-visual {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 2rem;
+    }
+
+    .cos-hero-visual .animation-player {
+        transform: scale(0.6);
+        transform-origin: center center;
+    }
+
+    .cos-hero-bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .cos-hero-subtitle {
+        font-size: 1.125rem;
+        color: #444;
+        line-height: 1.7;
+        margin: 0;
+        max-width: 600px;
+        text-align: left;
+    }
+
+    .cos-hero .btn-hero {
+        background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);
+        color: #ffffff;
+        padding: 1rem 2rem;
+        font-size: 1rem;
+        font-weight: 600;
+        border-radius: 50px;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        transition: transform 0.2s, box-shadow 0.2s;
+        flex-shrink: 0;
+        white-space: nowrap;
+    }
+
+    .cos-hero .btn-hero:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 30px rgba(20, 184, 166, 0.3);
+    }
+
+    /* Problem Section */
+    .cos-problem-section {
+        padding: 5rem 0;
+        background: #ffffff;
+    }
+
+    .cos-problem-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+    }
+
+    .cos-problem-content h2 {
+        font-family: 'Inter', sans-serif;
+        font-size: clamp(1.75rem, 3vw, 2.25rem);
+        font-weight: 700;
+        color: #1a1a2e;
+        line-height: 1.2;
+        margin: 0 0 1.5rem 0;
+    }
+
+    .cos-problem-content p {
+        font-size: 1.05rem;
+        line-height: 1.8;
+        color: #444;
+        margin-bottom: 1rem;
+    }
+
+    .cos-comparison-card {
+        background: #f8fafc;
+        border-radius: 16px;
+        padding: 2rem;
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .cos-comparison-bad,
+    .cos-comparison-good {
+        flex: 1;
+        text-align: center;
+        padding: 1.5rem;
+        border-radius: 12px;
+    }
+
+    .cos-comparison-bad {
+        background: #fef2f2;
+        border: 2px solid #fecaca;
+    }
+
+    .cos-comparison-good {
+        background: #f0fdfa;
+        border: 2px solid #99f6e4;
+    }
+
+    .cos-comparison-label {
+        font-size: 0.75rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: #666;
+        margin-bottom: 0.5rem;
+    }
+
+    .cos-comparison-value {
+        font-size: 1.75rem;
+        font-weight: 700;
+        color: #1a1a2e;
+        margin-bottom: 0.25rem;
+    }
+
+    .cos-comparison-note {
+        font-size: 0.875rem;
+        color: #666;
+    }
+
+    .cos-comparison-vs {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #999;
+    }
+
+    /* Outcomes Grid */
+    .cos-outcomes-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        margin-top: 1.5rem;
+    }
+
+    .cos-outcome {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.75rem;
+        background: #f8fafc;
+        border-radius: 8px;
+    }
+
+    .cos-outcome-color {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        flex-shrink: 0;
+    }
+
+    .cos-outcome-surplus .cos-outcome-color { background: #10b981; }
+    .cos-outcome-ontrack .cos-outcome-color { background: #3b82f6; }
+    .cos-outcome-tight .cos-outcome-color { background: #f59e0b; }
+    .cos-outcome-ranout .cos-outcome-color { background: #ef4444; }
+
+    .cos-outcome-name {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: #1a1a2e;
+    }
+
+    .cos-outcome-desc {
+        font-size: 0.8rem;
+        color: #666;
+    }
+
+    /* Stats Section */
+    .cos-stats-section {
+        padding: 5rem 0;
+        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    }
+
+    .cos-stats-heading {
+        font-family: 'Inter', sans-serif;
+        font-size: clamp(1.75rem, 3vw, 2.25rem);
+        font-weight: 700;
+        color: #ffffff;
+        text-align: center;
+        margin: 0 0 3rem 0;
+    }
+
+    .cos-stats-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+    }
+
+    .cos-stat-card {
+        text-align: center;
+        padding: 2rem 1rem;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .cos-stat-number {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #14b8a6;
+        margin-bottom: 0.5rem;
+    }
+
+    .cos-stat-label {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #ffffff;
+        margin-bottom: 0.25rem;
+    }
+
+    .cos-stat-desc {
+        font-size: 0.875rem;
+        color: rgba(255, 255, 255, 0.6);
+    }
+
+    /* Section Heading */
+    .cos-section-heading {
+        font-family: 'Inter', sans-serif;
+        font-size: clamp(1.75rem, 3vw, 2.25rem);
+        font-weight: 700;
+        color: #1a1a2e;
+        text-align: center;
+        margin: 0 0 3rem 0;
+    }
+
+    /* Steps Grid */
+    .cos-steps-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+    }
+
+    .cos-step {
+        text-align: center;
+        padding: 1.5rem;
+    }
+
+    .cos-step-number {
+        width: 48px;
+        height: 48px;
+        background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);
+        color: #ffffff;
+        font-size: 1.25rem;
+        font-weight: 700;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1rem auto;
+    }
+
+    .cos-step h3 {
+        font-family: 'Inter', sans-serif;
+        font-size: 1.125rem;
+        font-weight: 600;
+        color: #1a1a2e;
+        margin: 0 0 0.75rem 0;
+    }
+
+    .cos-step p {
+        font-size: 0.95rem;
+        color: #666;
+        line-height: 1.6;
+        margin: 0;
+    }
+
+    /* Utility Classes */
+    .text-teal {
+        color: #14b8a6;
+    }
+
+    .text-italic {
+        font-style: italic;
+        color: #666;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+        .cos-problem-grid {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .cos-hero {
+            padding: 6rem 0 3rem 0;
+        }
+
+        .cos-hero-visual .animation-player {
+            transform: scale(0.5);
+        }
+
+        .cos-stats-grid,
+        .cos-steps-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .cos-hero-bottom {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .cos-hero-subtitle {
+            text-align: center;
+        }
+
+        .cos-stats-grid,
+        .cos-steps-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .cos-comparison-card {
+            flex-direction: column;
+        }
+
+        .cos-comparison-vs {
+            transform: rotate(90deg);
+        }
+
+        .cos-outcomes-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .cos-cta-card {
+            padding: 2.5rem 1.5rem;
+        }
+    }
+</style>

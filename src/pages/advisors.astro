@@ -1,0 +1,280 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTABanner from '../components/CTABanner.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+---
+
+<BaseLayout
+    title="For Advisors – ReadyAimRetire"
+    description="Built for Advisors who value clarity and client understanding. A modern planning tool that helps clients see their retirement - and trust the plan."
+    solidHeader={true}
+>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <Breadcrumbs items={[{ label: "For Advisors" }]} />
+            <h1 class="hero-title">Built for Advisors who value clarity and client understanding</h1>
+            <div class="hero-grid">
+                <div class="hero-left">
+                    <p class="hero-tagline">A modern planning tool that helps clients see their retirement - and trust the plan.</p>
+                    <a href="#advisor-access" class="btn-dark">
+                        Explore Advisor Access
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                </div>
+                <div class="hero-right">
+                    <p>OnTarget<sup>™</sup> Planner is a powerful, visual retirement planning platform designed to support advisors who want better client engagement, clearer conversations, and more confident decision-making.</p>
+                    <div class="value-props">
+                        <div class="value-prop">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Prioritizes clarity</span>
+                        </div>
+                        <div class="value-prop">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Not a sales tool</span>
+                        </div>
+                        <div class="value-prop">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Built for understanding</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Better Tools Section -->
+    <section class="section-dark-gray">
+        <div class="container">
+            <div class="card-lg card-grid-2-uneven-alt">
+                <div class="card-content">
+                    <h2 class="heading-h2">Better tools lead to better <span class="text-teal">conversations</span></h2>
+                    <p class="card-subtitle card-subtitle-dark"><strong>Clients don't struggle with advice — they struggle with understanding.</strong></p>
+                    <p>Many clients leave meetings with:</p>
+                    <ul class="bullet-list">
+                        <li>A recommendation they trust — but don't fully understand</li>
+                        <li>A plan they can't visualize</li>
+                        <li>Uncertainty about tradeoffs and risks</li>
+                    </ul>
+                    <p>OnTarget™ helps bridge that gap by turning complex planning concepts into clear, visual stories your clients can follow.</p>
+                </div>
+                <div class="card-image">
+                    <img src="/images/landing/advisors/68_percent.png" alt="68% of people say trust is the top factor in choosing a financial planner">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Two Cards Section -->
+    <section class="section-gray">
+        <div class="container">
+            <div class="card-grid-2">
+                <!-- Support Card -->
+                <div class="card">
+                    <h3>Designed to <span class="text-teal">support</span> - not replace - advisors</h3>
+                    <p class="card-subtitle card-subtitle-dark"><strong>Your expertise stays front and center</strong></p>
+                    <p>OnTarget™ is not built to automate advice or remove professional judgment. Instead, it helps you:</p>
+                    <ul class="checklist">
+                        <li>
+                            <img src="/images/UI/checkmark.png" alt="" class="checklist-icon">
+                            Demonstrate assumptions clearly
+                        </li>
+                        <li>
+                            <img src="/images/UI/checkmark.png" alt="" class="checklist-icon">
+                            Explore scenarios collaboratively
+                        </li>
+                        <li>
+                            <img src="/images/UI/checkmark.png" alt="" class="checklist-icon">
+                            Show cause-and-effect visually
+                        </li>
+                        <li>
+                            <img src="/images/UI/checkmark.png" alt="" class="checklist-icon">
+                            Keep clients engaged between meetings
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Powerful Modeling Card -->
+                <div class="card-teal">
+                    <h3>Powerful modeling with understanding</h3>
+                    <p class="card-subtitle card-subtitle-light"><strong>Transparency builds trust. With OnTarget™, advisors can:</strong></p>
+                    <ul class="checklist-light">
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            Model full-lifecycle retirement plans
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            Run and compare multiple scenarios live
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            Stress test plans against historical data
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            Explore withdrawal strategies and tax impacts
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            Adjust assumptions in real time
+                        </li>
+                    </ul>
+                    <p class="card-footer-light">Clients don't just see results - they see why those results change.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Three Columns Section - Benefits -->
+    <section class="columns-section">
+        <div class="container">
+            <div class="columns-3">
+                <!-- Improve Client Engagement -->
+                <div class="column">
+                    <h3>Improve Client Engagement and Confidence</h3>
+                    <p><strong>When clients understand the plan, they stick with it</strong></p>
+                    <p>Visual, intuitive planning helps:</p>
+                    <ul class="bullet-list">
+                        <li>Reduce second-guessing during market volatility</li>
+                        <li>Improve long-term plan adherence</li>
+                        <li>Encourage thoughtful questions instead of reactive decisions</li>
+                        <li>Build confidence in both the plan and the advisor</li>
+                    </ul>
+                    <p class="column-footer">Understanding is the foundation of trust.</p>
+                </div>
+
+                <!-- Flexible -->
+                <div class="column">
+                    <h3>Flexible for Different Advisory Styles</h3>
+                    <p><strong>Use it your way</strong></p>
+                    <p>OnTarget™ works well for:</p>
+                    <ul class="bullet-list">
+                        <li>Advisors who lead planning in-meeting</li>
+                        <li>Advisors who collaborate with clients between meetings</li>
+                        <li>Advisors who want clients more engaged, not more confused</li>
+                    </ul>
+                    <p class="column-footer">You choose how deeply clients interact with the tool — from advisor-led planning to shared exploration.</p>
+                </div>
+
+                <!-- Natural Fit -->
+                <div class="column">
+                    <h3>A Natural Fit for Modern Advisory Practices</h3>
+                    <p><strong>OnTarget™ is especially valuable for advisors who:</strong></p>
+                    <ul class="bullet-list">
+                        <li>Emphasize education and transparency</li>
+                        <li>Serve DIY-inclined or analytically minded clients</li>
+                        <li>Want clearer visuals than spreadsheets provide</li>
+                        <li>Prefer tools that explain, not obscure</li>
+                    </ul>
+                    <p class="column-footer">It's a planning platform that respects both advisor expertise and client intelligence.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Three Columns Section - Info -->
+    <section class="columns-section-gray" id="advisor-access">
+        <div class="container">
+            <div class="columns-3">
+                <!-- How Advisors Use -->
+                <div class="column">
+                    <h3>How Advisors Typically Use OnTarget™</h3>
+                    <ul class="bullet-list">
+                        <li>Build a baseline retirement plan</li>
+                        <li>Walk clients through their financial timeline</li>
+                        <li>Explore "what-if" scenarios together</li>
+                        <li>Stress test assumptions</li>
+                        <li>Adjust strategies collaboratively</li>
+                        <li>Revisit and refine as life changes</li>
+                    </ul>
+                    <p class="column-footer">The result: fewer surprises and more productive meetings.</p>
+                </div>
+
+                <!-- Data Privacy -->
+                <div class="column">
+                    <h3>Data Privacy and Professional Integrity</h3>
+                    <p><strong>We believe trust matters.</strong></p>
+                    <ul class="bullet-list">
+                        <li>Client data remains private and secure</li>
+                        <li>No product sales or commissions</li>
+                        <li>No conflicts of interest</li>
+                        <li>No advertising-driven incentives</li>
+                    </ul>
+                    <p class="column-footer">Our success depends on building tools advisors are proud to use.</p>
+                </div>
+
+                <!-- Advisor Access & Pricing -->
+                <div class="column">
+                    <h3>Advisor Access & Pricing</h3>
+                    <p>OnTarget™ offers advisor access designed to support professional use cases.</p>
+                    <p>If you're interested in using OnTarget™ with clients, we'd love to talk about:</p>
+                    <ul class="bullet-list">
+                        <li>Advisor-specific features</li>
+                        <li>Licensing options</li>
+                        <li>Client collaboration workflows</li>
+                    </ul>
+                    <a href={`${import.meta.env.PUBLIC_APP_URL}/advisors/request`} class="btn-dark-sm mt-2">
+                        Request Advisor Information
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bottom Line Section -->
+    <section class="bottom-banner">
+        <div class="container">
+            <div class="bottom-banner-grid">
+                <div class="bottom-banner-content">
+                    <div class="bottom-banner-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </div>
+                    <div class="bottom-banner-text">
+                        <h3>The Bottom Line</h3>
+                        <p>OnTarget™ helps advisors do what they do best - guide, explain, and build confidence - with tools that make complex planning easier to understand.</p>
+                        <p class="bottom-banner-subtext">Better understanding leads to better outcomes. For clients and advisors alike.</p>
+                    </div>
+                </div>
+                <div class="bottom-banner-cta">
+                    <a href="#advisor-access" class="btn-outline-white">
+                        Learn More About Advisor Access
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <CTABanner />
+</BaseLayout>

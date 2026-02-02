@@ -1,0 +1,850 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTABanner from '../components/CTABanner.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+---
+
+<BaseLayout
+    title="Retirement Budget Planner – Build a Budget That Powers Your Plan | ReadyAimRetire"
+    description="Create a detailed retirement budget with 9 categories, age-based expenses, and per-item inflation. Connect directly to retirement simulations for realistic projections."
+    solidHeader={true}
+>
+    <!-- Hero Section -->
+    <section class="budget-hero">
+        <div class="container">
+            <Breadcrumbs items={[{ label: "Retirement Budget" }]} />
+            <div class="budget-hero-content" data-aos="fade">
+                <p class="budget-hero-eyebrow">OnTarget™ Feature</p>
+                <h1>Build a Budget That Powers Your <span class="text-primary">Retirement Plan</span></h1>
+                <p class="budget-hero-subtitle">Every expense. Every category. Connected directly to your retirement projections. Know what retirement will actually cost - because you've mapped it out.</p>
+            </div>
+            <div class="budget-hero-image" data-aos="fade-up" data-aos-delay="200">
+                <img src="/images/new_colors.png" alt="Budget Dashboard">
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="budget-problem-section">
+        <div class="container">
+            <div class="budget-problem-grid" data-aos="fade-up">
+                <div class="budget-problem-content">
+                    <h2>Retirement calculators ask the <span class="text-teal">wrong question</span></h2>
+                    <p>"What's your annual spending?" That's what most retirement calculators ask. One number. As if your mortgage, groceries, healthcare, and travel all cost the same and never change.</p>
+                    <p>But your mortgage pays off at 62. Medicare starts at 65. Healthcare costs rise faster than groceries. Travel is heavy early in retirement, then slows down.</p>
+                    <p class="text-italic">You need a real budget - not a guess.</p>
+                </div>
+                <div class="budget-problem-visual">
+                    <div class="budget-comparison-card">
+                        <div class="comparison-simple">
+                            <div class="comparison-label">Simple Calculator</div>
+                            <div class="comparison-input">
+                                <span class="input-label">Annual Spending:</span>
+                                <span class="input-value">$72,000</span>
+                            </div>
+                            <div class="comparison-note">That's it. One number.</div>
+                        </div>
+                        <div class="comparison-vs">vs</div>
+                        <div class="comparison-detailed">
+                            <div class="comparison-label">ReadyAimRetire</div>
+                            <div class="mini-budget">
+                                <div class="mini-item">🏠 Housing: $2,100/mo</div>
+                                <div class="mini-item">⚕️ Healthcare: $800/mo</div>
+                                <div class="mini-item">🍽️ Food: $600/mo</div>
+                                <div class="mini-item">+ 6 more categories...</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="section-gray">
+        <div class="container feature" data-aos="fade-right">
+            <div class="feature-img">
+                <img src="/images/accounts.png" alt="Budget categories">
+            </div>
+            <div class="feature-text">
+                <h2>Track every type of <span class="text-teal">expense</span></h2>
+                <p>Nine categories cover your complete spending picture. Classify each expense as a Need, Want, or Splurge to understand your true essentials.</p>
+                <div class="categories-grid">
+                    <div class="category-item"><span>🏠</span> Housing</div>
+                    <div class="category-item"><span>🚗</span> Transportation</div>
+                    <div class="category-item"><span>⚡</span> Utilities</div>
+                    <div class="category-item"><span>🍽️</span> Food</div>
+                    <div class="category-item"><span>🎬</span> Entertainment</div>
+                    <div class="category-item"><span>☂️</span> Insurance</div>
+                    <div class="category-item"><span>⚕️</span> Healthcare</div>
+                    <div class="category-item"><span>🛒</span> Shopping</div>
+                    <div class="category-item"><span>📌</span> Other</div>
+                </div>
+                <div class="expense-types">
+                    <div class="expense-type type-need">
+                        <strong>Needs:</strong> Essential expenses you can't avoid
+                    </div>
+                    <div class="expense-type type-want">
+                        <strong>Wants:</strong> Quality of life expenses
+                    </div>
+                    <div class="expense-type type-splurge">
+                        <strong>Splurge:</strong> Discretionary luxuries
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Age-Based Section -->
+    <section>
+        <div class="container feature" data-aos="fade-left">
+            <div class="feature-text">
+                <h2>Expenses change <span class="text-teal">over time</span></h2>
+                <p>Your budget at 55 won't match your budget at 75. ReadyAimRetire lets you specify when each expense starts and ends.</p>
+                <ul class="feature-list">
+                    <li><strong>Mortgage:</strong> Starts now, ends at 62 (paid off)</li>
+                    <li><strong>Medicare premiums:</strong> Start at 65, continue for life</li>
+                    <li><strong>Kids' college:</strong> Ages 48-52 only</li>
+                    <li><strong>Travel budget:</strong> Heavy at 65, decreases after 80</li>
+                    <li><strong>Long-term care:</strong> Starts at 80, ends at plan end</li>
+                </ul>
+                <p style="margin-top: 1rem;">Every expense has a start age and end age. Your projections reflect reality - not a static number that never changes.</p>
+                <a href={`${import.meta.env.PUBLIC_APP_URL}/signup`} class="btn-dark" style="margin-top: 1.5rem;">Build Your Budget <span class="arrow">→</span></a>
+            </div>
+            <div class="feature-img">
+                <img src="/images/model_real_life.jpg" alt="Age-based expense projections">
+            </div>
+        </div>
+    </section>
+
+    <!-- Inflation Section -->
+    <section class="section-gray">
+        <div class="container feature" data-aos="fade-right">
+            <div class="feature-img">
+                <img src="/images/taxes.png" alt="Inflation adjustments">
+            </div>
+            <div class="feature-text">
+                <h2>Different costs, <span class="text-teal">different inflation</span></h2>
+                <p>Healthcare doesn't inflate at the same rate as groceries. ReadyAimRetire lets you set inflation rates per expense for realistic projections.</p>
+                <div class="inflation-example">
+                    <div class="inflation-card">
+                        <div class="inflation-header">$500/month Healthcare Today</div>
+                        <div class="inflation-row">
+                            <span>In 10 years (5% inflation):</span>
+                            <span class="inflation-value">$814/mo</span>
+                        </div>
+                        <div class="inflation-row">
+                            <span>In 20 years (5% inflation):</span>
+                            <span class="inflation-value">$1,327/mo</span>
+                        </div>
+                        <div class="inflation-row">
+                            <span>In 30 years (5% inflation):</span>
+                            <span class="inflation-value">$2,161/mo</span>
+                        </div>
+                    </div>
+                </div>
+                <ul class="feature-checklist" style="margin-top: 1.5rem;">
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        Use global inflation rate or customize per expense
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        Healthcare at 5%, general expenses at 3%
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        Projections show true future costs
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Integration Section -->
+    <section>
+        <div class="container feature" data-aos="fade-left">
+            <div class="feature-text">
+                <h2>Your budget drives your <span class="text-teal">retirement plan</span></h2>
+                <p>This isn't just a budgeting tool. Your budget connects directly to retirement simulations. Withdrawal calculations use your actual spending - not a guess.</p>
+                <div class="integration-flow">
+                    <div class="flow-step">
+                        <div class="flow-icon">📝</div>
+                        <div class="flow-label">Your Budget</div>
+                    </div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-step">
+                        <div class="flow-icon">📊</div>
+                        <div class="flow-label">Age Projections</div>
+                    </div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-step">
+                        <div class="flow-icon">🎯</div>
+                        <div class="flow-label">Withdrawal Calc</div>
+                    </div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-step">
+                        <div class="flow-icon">✅</div>
+                        <div class="flow-label">Success Rate</div>
+                    </div>
+                </div>
+                <p style="margin-top: 1.5rem;">Change an expense in your budget and watch your retirement projections update instantly. Everything is connected.</p>
+                <a href={`${import.meta.env.PUBLIC_APP_URL}/signup`} class="btn-dark" style="margin-top: 1.5rem;">Connect Your Budget <span class="arrow">→</span></a>
+            </div>
+            <div class="feature-img">
+                <img src="/images/landing/stock/couple_laptop.jpg" alt="Budget integration">
+            </div>
+        </div>
+    </section>
+
+    <!-- Scenarios Section -->
+    <section class="section-gray">
+        <div class="container feature" data-aos="fade-right">
+            <div class="feature-img">
+                <img src="/images/landing/stock/older_couple_laptop.jpg" alt="Budget scenarios">
+            </div>
+            <div class="feature-text">
+                <h2>Model different <span class="text-teal">lifestyles</span></h2>
+                <p>What if you only spent on essentials? What if you traveled more? Save multiple budget scenarios and compare how each affects your retirement success.</p>
+                <div class="scenarios-grid">
+                    <div class="scenario-card">
+                        <div class="scenario-name">Lean Retirement</div>
+                        <div class="scenario-desc">Needs only: $4,200/mo</div>
+                        <div class="scenario-rate scenario-high">94% success</div>
+                    </div>
+                    <div class="scenario-card">
+                        <div class="scenario-name">Comfortable</div>
+                        <div class="scenario-desc">Needs + Wants: $6,500/mo</div>
+                        <div class="scenario-rate scenario-medium">82% success</div>
+                    </div>
+                    <div class="scenario-card">
+                        <div class="scenario-name">Dream Retirement</div>
+                        <div class="scenario-desc">Everything: $8,800/mo</div>
+                        <div class="scenario-rate scenario-low">71% success</div>
+                    </div>
+                </div>
+                <p style="margin-top: 1rem;">See exactly how your lifestyle choices affect your chance of success. Make informed trade-offs.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="budget-benefits-section">
+        <div class="container">
+            <h2 class="budget-section-heading" data-aos="fade-up">A budget built for <span class="text-teal">retirement planning</span></h2>
+            <div class="budget-benefits-grid" data-aos="fade-up" data-aos-delay="100">
+                <div class="budget-benefit-card">
+                    <div class="budget-benefit-icon">📋</div>
+                    <h3>9 Categories</h3>
+                    <p>Complete coverage of all spending types</p>
+                </div>
+                <div class="budget-benefit-card">
+                    <div class="budget-benefit-icon">📅</div>
+                    <h3>Age-Based</h3>
+                    <p>Expenses start and end at specific ages</p>
+                </div>
+                <div class="budget-benefit-card">
+                    <div class="budget-benefit-icon">📈</div>
+                    <h3>Per-Item Inflation</h3>
+                    <p>Healthcare, education, general - all different</p>
+                </div>
+                <div class="budget-benefit-card">
+                    <div class="budget-benefit-icon">🔗</div>
+                    <h3>Direct Integration</h3>
+                    <p>Budget powers your retirement simulations</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="budget-steps-section">
+        <div class="container">
+            <h2 class="budget-section-heading-dark" data-aos="fade-up">How it <span class="text-teal">works</span></h2>
+            <div class="budget-steps-grid" data-aos="fade-up" data-aos-delay="100">
+                <div class="budget-step">
+                    <div class="budget-step-number">1</div>
+                    <h3>Add Your Expenses</h3>
+                    <p>Enter each expense with amount, category, and frequency. Use our pre-configured list of 70+ common expenses for quick setup.</p>
+                </div>
+                <div class="budget-step">
+                    <div class="budget-step-number">2</div>
+                    <h3>Set Age Ranges</h3>
+                    <p>Define when each expense starts and ends. Mortgage payoff? College tuition? Medicare? Set the timing.</p>
+                </div>
+                <div class="budget-step">
+                    <div class="budget-step-number">3</div>
+                    <h3>Customize Inflation</h3>
+                    <p>Apply different inflation rates to different expenses. Healthcare grows faster than groceries.</p>
+                </div>
+                <div class="budget-step">
+                    <div class="budget-step-number">4</div>
+                    <h3>Link to Retirement</h3>
+                    <p>Connect your budget to retirement simulations. Watch projections update with your real spending.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="clearer-plan-section-v2">
+        <div class="container">
+            <div class="clearer-plan-card" data-aos="fade-up">
+                <div class="clearer-plan-text">
+                    <h2>Know what retirement will <span class="text-teal">actually cost.</span></h2>
+                    <p>Build a detailed budget that powers realistic retirement projections. Every expense, every category, every year - all connected.</p>
+                    <p class="text-bold">Your budget. Your retirement. Connected.</p>
+                </div>
+                <div class="clearer-plan-image">
+                    <img src="/images/landing/stock/couple_water.jpg" alt="Retirement budget planning">
+                    <div class="clearer-plan-stat-overlay">
+                        <div class="stat-number">70+</div>
+                        <div class="stat-headline">Pre-configured common expenses for quick budget setup.</div>
+                        <div class="stat-subtext">From mortgage to Netflix - we've got you covered.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="clearer-plan-benefits" data-aos="fade-up" data-aos-delay="100">
+                <div class="benefit-pill">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>Detailed categories</span>
+                </div>
+                <div class="benefit-pill">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>Age-based projections</span>
+                </div>
+                <div class="benefit-pill">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>Smart inflation</span>
+                </div>
+                <div class="benefit-pill">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>Retirement integration</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Banner -->
+    <CTABanner />
+
+    <!-- Page-specific scripts -->
+    <script is:inline>
+    document.addEventListener('DOMContentLoaded', function() {
+        gsap.registerPlugin(ScrollTrigger);
+
+        const featureSections = document.querySelectorAll('.feature');
+        featureSections.forEach((section, index) => {
+            const img = section.querySelector('.feature-img');
+            const text = section.querySelector('.feature-text');
+            const isEven = index % 2 === 1;
+            gsap.set(img, { opacity: 0, x: isEven ? 100 : -100 });
+            gsap.set(text, { opacity: 0, x: isEven ? -100 : 100 });
+            gsap.timeline({
+                scrollTrigger: {
+                    trigger: section,
+                    start: 'top 80%',
+                    toggleActions: 'play none none none'
+                }
+            })
+            .to(img, { opacity: 1, x: 0, duration: 0.8, ease: 'power3.out' })
+            .to(text, { opacity: 1, x: 0, duration: 0.8, ease: 'power3.out' }, '-=0.6');
+        });
+    });
+    </script>
+
+    <!-- Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "ReadyAimRetire Retirement Budget Planner",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Web",
+        "description": "Detailed retirement budget planner with 9 categories, age-based expenses, per-item inflation, and direct integration with retirement simulations.",
+        "url": "https://readyaimretire.com/budget",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        }
+    }
+    </script>
+</BaseLayout>
+
+<style>
+    /* Hero Section */
+    .budget-hero {
+        background: #ffffff;
+        padding: 8rem 0 3rem 0;
+        text-align: center;
+    }
+
+    .budget-hero-content {
+        max-width: 800px;
+        margin: 0 auto 3rem auto;
+    }
+
+    .budget-hero-eyebrow {
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: #14b8a6;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        margin-bottom: 1rem;
+    }
+
+    .budget-hero h1 {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-size: clamp(2.25rem, 5vw, 3.25rem);
+        font-weight: 700;
+        color: #1a1a2e;
+        line-height: 1.1;
+        margin: 0 0 1.5rem 0;
+    }
+
+    .budget-hero .text-primary {
+        color: #14b8a6;
+    }
+
+    .budget-hero-subtitle {
+        font-size: 1.125rem;
+        color: #444;
+        line-height: 1.7;
+        margin: 0;
+    }
+
+    .budget-hero-image img {
+        max-width: 100%;
+        border-radius: 12px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Problem Section */
+    .budget-problem-section {
+        padding: 5rem 0;
+        background: #f8fafc;
+    }
+
+    .budget-problem-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+    }
+
+    .budget-problem-content h2 {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-size: clamp(1.75rem, 3vw, 2.25rem);
+        font-weight: 700;
+        color: #1a1a2e;
+        line-height: 1.2;
+        margin: 0 0 1.5rem 0;
+    }
+
+    .budget-problem-content p {
+        font-size: 1.05rem;
+        line-height: 1.8;
+        color: #444;
+        margin-bottom: 1rem;
+    }
+
+    .budget-comparison-card {
+        background: #ffffff;
+        border-radius: 16px;
+        padding: 2rem;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: center;
+    }
+
+    .comparison-simple, .comparison-detailed {
+        width: 100%;
+        padding: 1.25rem;
+        border-radius: 12px;
+        text-align: center;
+    }
+
+    .comparison-simple {
+        background: #fef2f2;
+        border: 2px solid #fecaca;
+    }
+
+    .comparison-detailed {
+        background: #f0fdfa;
+        border: 2px solid #99f6e4;
+    }
+
+    .comparison-label {
+        font-size: 0.75rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: #666;
+        margin-bottom: 0.75rem;
+    }
+
+    .comparison-input {
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .input-label {
+        color: #666;
+    }
+
+    .input-value {
+        font-weight: 600;
+        color: #1a1a2e;
+    }
+
+    .comparison-note {
+        font-size: 0.85rem;
+        color: #999;
+        font-style: italic;
+    }
+
+    .comparison-vs {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #999;
+    }
+
+    .mini-budget {
+        text-align: left;
+        font-size: 0.9rem;
+    }
+
+    .mini-item {
+        padding: 0.35rem 0;
+        color: #1a1a2e;
+    }
+
+    /* Categories Grid */
+    .categories-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.75rem;
+        margin: 1.5rem 0;
+    }
+
+    .category-item {
+        background: #f8fafc;
+        padding: 0.6rem 0.75rem;
+        border-radius: 8px;
+        font-size: 0.9rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .category-item span {
+        font-size: 1.1rem;
+    }
+
+    /* Expense Types */
+    .expense-types {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-top: 1rem;
+    }
+
+    .expense-type {
+        padding: 0.5rem 0.75rem;
+        border-radius: 6px;
+        font-size: 0.9rem;
+    }
+
+    .type-need {
+        background: #dbeafe;
+        color: #1e40af;
+    }
+
+    .type-want {
+        background: #fef3c7;
+        color: #92400e;
+    }
+
+    .type-splurge {
+        background: #fce7f3;
+        color: #9d174d;
+    }
+
+    /* Inflation Example */
+    .inflation-example {
+        margin: 1.5rem 0;
+    }
+
+    .inflation-card {
+        background: #f8fafc;
+        border-radius: 12px;
+        padding: 1.25rem;
+    }
+
+    .inflation-header {
+        font-weight: 600;
+        color: #1a1a2e;
+        margin-bottom: 1rem;
+        padding-bottom: 0.75rem;
+        border-bottom: 1px solid #e2e8f0;
+    }
+
+    .inflation-row {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.5rem 0;
+        font-size: 0.95rem;
+    }
+
+    .inflation-value {
+        font-weight: 600;
+        color: #dc2626;
+    }
+
+    /* Integration Flow */
+    .integration-flow {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        margin: 1.5rem 0;
+        flex-wrap: wrap;
+    }
+
+    .flow-step {
+        text-align: center;
+        padding: 1rem;
+        background: #f8fafc;
+        border-radius: 12px;
+        min-width: 100px;
+    }
+
+    .flow-icon {
+        font-size: 1.75rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .flow-label {
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: #1a1a2e;
+    }
+
+    .flow-arrow {
+        font-size: 1.5rem;
+        color: #14b8a6;
+    }
+
+    /* Scenarios Grid */
+    .scenarios-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        margin: 1.5rem 0;
+    }
+
+    .scenario-card {
+        background: #f8fafc;
+        border-radius: 12px;
+        padding: 1.25rem;
+        text-align: center;
+    }
+
+    .scenario-name {
+        font-weight: 600;
+        color: #1a1a2e;
+        margin-bottom: 0.25rem;
+    }
+
+    .scenario-desc {
+        font-size: 0.85rem;
+        color: #666;
+        margin-bottom: 0.75rem;
+    }
+
+    .scenario-rate {
+        font-weight: 700;
+        font-size: 1.1rem;
+        padding: 0.35rem 0.75rem;
+        border-radius: 20px;
+        display: inline-block;
+    }
+
+    .scenario-high {
+        background: #d1fae5;
+        color: #065f46;
+    }
+
+    .scenario-medium {
+        background: #fef3c7;
+        color: #92400e;
+    }
+
+    .scenario-low {
+        background: #fee2e2;
+        color: #991b1b;
+    }
+
+    /* Benefits Section */
+    .budget-benefits-section {
+        padding: 5rem 0;
+        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    }
+
+    .budget-section-heading {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-size: clamp(1.75rem, 3vw, 2.25rem);
+        font-weight: 700;
+        color: #ffffff;
+        text-align: center;
+        margin: 0 0 3rem 0;
+    }
+
+    .budget-benefits-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+    }
+
+    .budget-benefit-card {
+        text-align: center;
+        padding: 2rem 1rem;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .budget-benefit-icon {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .budget-benefit-card h3 {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #ffffff;
+        margin: 0 0 0.5rem 0;
+    }
+
+    .budget-benefit-card p {
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.7);
+        margin: 0;
+        line-height: 1.5;
+    }
+
+    /* Steps Section */
+    .budget-steps-section {
+        padding: 5rem 0;
+        background: #f8fafc;
+    }
+
+    .budget-section-heading-dark {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-size: clamp(1.75rem, 3vw, 2.25rem);
+        font-weight: 700;
+        color: #1a1a2e;
+        text-align: center;
+        margin: 0 0 3rem 0;
+    }
+
+    .budget-steps-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+    }
+
+    .budget-step {
+        text-align: center;
+        padding: 1.5rem;
+    }
+
+    .budget-step-number {
+        width: 48px;
+        height: 48px;
+        background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);
+        color: #ffffff;
+        font-size: 1.25rem;
+        font-weight: 700;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1rem auto;
+    }
+
+    .budget-step h3 {
+        font-family: 'Inter', sans-serif;
+        font-size: 1.125rem;
+        font-weight: 600;
+        color: #1a1a2e;
+        margin: 0 0 0.75rem 0;
+    }
+
+    .budget-step p {
+        font-size: 0.95rem;
+        color: #666;
+        line-height: 1.6;
+        margin: 0;
+    }
+
+    /* Utility */
+    .text-teal { color: #14b8a6; }
+    .text-italic { font-style: italic; color: #666; }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+        .budget-problem-grid {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .budget-benefits-grid,
+        .budget-steps-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .scenarios-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .budget-benefits-grid,
+        .budget-steps-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .categories-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .integration-flow {
+            flex-direction: column;
+        }
+
+        .flow-arrow {
+            transform: rotate(90deg);
+        }
+    }
+</style>

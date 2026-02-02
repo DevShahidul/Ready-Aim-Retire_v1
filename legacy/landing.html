@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReadyAimRetire – Plan Your Financial Future</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-Xx5G3WrO7X3Yh67hJ8mvd7vCZh9boeiP3zM0YHi2sPL2He+V3I6aH8ig8jtIVGcu+6XwTGTZ2xSwhNUz0Py2Tg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- AOS library for scroll animations -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+    <style>
+        /* Base styles */
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #ffffff;
+        }
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(15, 23, 42, 0.97);
+            box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+            backdrop-filter: blur(8px);
+            z-index: 1000;
+        }
+        header .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0;
+            font-weight: 600;
+            font-size: 1.25rem;
+            color: #fff;
+        }
+        .logo img {
+            width: 40px;
+            height: auto;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+            margin: 0;
+            padding: 0;
+            font-weight: 500;
+            color: #d1d5db;
+        }
+        nav ul li a {
+            color: #d1d5db;
+            transition: color 0.2s;
+        }
+        nav ul li a:hover {
+            color: #fff;
+        }
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .btn {
+            padding: 0.6rem 1.2rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        .btn-primary {
+            background-color: #2563eb;
+            color: #ffffff;
+        }
+        .btn-primary:hover {
+            background-color: #1d4ed8;
+        }
+        .btn-outline {
+            background-color: transparent;
+            border: 1px solid #d1d5db;
+            color: #d1d5db;
+        }
+        .btn-outline:hover {
+            border-color: #fff;
+            color: #fff;
+        }
+        /* Hero section */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 8rem 0 6rem 0;
+            background: #ffffff;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin: 0 0 1rem 0;
+            max-width: 800px;
+        }
+        .hero h1 .highlight {
+            color: #2563eb;
+        }
+        /* Style 1: Bold Blue */
+        .highlight-style-1 {
+            color: #2563eb;
+            -webkit-text-fill-color: #2563eb;
+        }
+        /* Style 2: Blue with Glow */
+        .highlight-style-2 {
+            color: #2563eb;
+            -webkit-text-fill-color: #2563eb;
+            text-shadow: 0 0 10px rgba(37, 99, 235, 0.5), 0 0 30px rgba(37, 99, 235, 0.3);
+        }
+        /* Style 3: Blue with Underline */
+        .highlight-style-3 {
+            color: #2563eb;
+            -webkit-text-fill-color: #2563eb;
+            position: relative;
+            display: inline-block;
+        }
+        .highlight-style-3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0.05em;
+            width: 100%;
+            height: 4px;
+            background: #2563eb;
+            border-radius: 2px;
+        }
+        /* Style 4: Highlighter Marker Effect */
+        .highlight-style-4 {
+            color: #1a1a2e;
+            -webkit-text-fill-color: #1a1a2e;
+            background-color: rgba(250, 204, 21, 0.4);
+            padding: 0 0.1em;
+        }
+        /* Style 5: Pill Background */
+        .highlight-style-5 {
+            color: #ffffff;
+            -webkit-text-fill-color: #ffffff;
+            background: #2563eb;
+            padding: 0.1em 0.3em;
+            border-radius: 8px;
+        }
+        /* Style 6: Italic Blue */
+        .highlight-style-6 {
+            color: #2563eb;
+            -webkit-text-fill-color: #2563eb;
+            font-style: italic;
+        }
+        /* Style 7: 3D Shadow Effect */
+        .highlight-style-7 {
+            color: #2563eb;
+            -webkit-text-fill-color: #2563eb;
+            text-shadow: 2px 2px 0 rgba(37, 99, 235, 0.3), 4px 4px 0 rgba(37, 99, 235, 0.15);
+        }
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 750px;
+            margin-bottom: 2rem;
+            color: #555;
+        }
+        .hero .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .hero .hero-img {
+            margin-top: 3rem;
+            max-width: 100%;
+            width: 900px;
+            border-radius: 8px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            height: auto;
+            aspect-ratio: 16 / 9;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        /* Sections */
+        section {
+            padding: 5rem 0;
+        }
+        .section-gray {
+            background: #fafafa;
+        }
+        .feature {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        .feature:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        .feature-text {
+            flex: 1;
+        }
+        .feature-text h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        .feature-text p {
+            font-size: 1.15rem;
+            line-height: 1.7;
+            color: #444;
+        }
+        .feature-text ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .feature-text ul li {
+            margin-bottom: 0.75rem;
+            font-size: 1rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+        }
+        .feature-text ul li i {
+            color: #2e74ff;
+            margin-top: 0.15rem;
+        }
+        .feature-img {
+            flex: 1;
+            text-align: center;
+        }
+        .feature-img img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 8px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+        }
+        /* Cards for resources section */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .card {
+            background: #ffffff;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .card h3 {
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+        .card p {
+            margin: 0;
+            color: #666;
+        }
+        /* Testimonials */
+        .testimonials {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        .testimonial {
+            background: #ffffff;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            position: relative;
+        }
+        .testimonial .quote {
+            font-style: italic;
+            color: #444;
+            margin: 0.5rem 0 1rem 0;
+        }
+        .testimonial .stars {
+            color: #fbbf24;
+        }
+        .testimonial .author {
+            font-weight: 600;
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+        }
+        /* Footer */
+        footer {
+            background: #000000;
+            color: #d1d5db;
+            padding: 3rem 0;
+            font-size: 0.9rem;
+        }
+        footer .footer-top {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        @media (min-width: 768px) {
+            footer .footer-top {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+        footer .footer-col {
+            min-width: 160px;
+        }
+        footer .footer-col h4 {
+            margin-bottom: 1rem;
+            font-weight: 700;
+            color: #ffffff;
+        }
+        footer .footer-col ul {
+            list-style: none;
+            padding: 0;
+        }
+        footer .footer-col ul li {
+            margin-bottom: 0.5rem;
+        }
+        footer .footer-col ul li a {
+            color: #94a3b8;
+            transition: color 0.2s;
+        }
+        footer .footer-col ul li a:hover {
+            color: #ffffff;
+        }
+        footer .social {
+            display: flex;
+            gap: 0.75rem;
+            margin-top: 1rem;
+        }
+        footer .social a {
+            color: #94a3b8;
+            font-size: 1.25rem;
+            transition: color 0.2s;
+        }
+        footer .social a:hover {
+            color: #ffffff;
+        }
+        footer .disclaimer {
+            margin-top: 2rem;
+            color: #64748b;
+            font-size: 0.8rem;
+            line-height: 1.4;
+        }
+        /* Scrolling Testimonials */
+        .testimonials-scroll {
+            overflow: hidden;
+            padding: 1rem 0;
+        }
+        .testimonials-row {
+            display: flex;
+            gap: 1.5rem;
+            width: max-content;
+        }
+        .testimonials-row.scroll-left {
+            animation: scrollLeft 40s linear infinite;
+        }
+        .testimonials-row.scroll-right {
+            animation: scrollRight 40s linear infinite;
+        }
+        .testimonials-row:hover {
+            animation-play-state: paused;
+        }
+        @keyframes scrollLeft {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        @keyframes scrollRight {
+            0% { transform: translateX(-50%); }
+            100% { transform: translateX(0); }
+        }
+        .testimonial-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 1.75rem 1.5rem;
+            min-width: 300px;
+            max-width: 350px;
+            min-height: 120px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            border: 1px solid #e5e7eb;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .testimonial-card .username {
+            font-weight: 600;
+            color: #0f172a;
+            margin-bottom: 0.5rem;
+        }
+        .testimonial-card .quote {
+            color: #4b5563;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin: 0;
+        }
+        .testimonial-card .quote strong {
+            color: #0f172a;
+        }
+
+        /* Scrolling Sliders Window */
+        .scrolling-window {
+            position: relative;
+        }
+        .scrolling-content {
+            display: flex;
+            flex-direction: column;
+            animation: scrollUp 30s linear infinite;
+            animation-play-state: running;
+            will-change: transform;
+        }
+        .scrolling-content img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        @keyframes scrollUp {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-50%); }
+        }
+        .scrolling-window:hover .scrolling-content {
+            animation-play-state: paused;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.25rem;
+            }
+            .feature {
+                flex-direction: column;
+            }
+            .feature:nth-child(even) {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container nav">
+            <a href="#" class="logo" data-aos="fade-down">
+                <img src="../images/UI/ReadyAimRetireLogo.png" alt="ReadyAimRetire Logo">
+                <span style="padding-top: 10px;">eadyAimRetire!</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#advisors">Advisors</a></li>
+                    <li><a href="#employers">Employers</a></li>
+                    <li><a href="#resources">Resources</a></li>
+                </ul>
+            </nav>
+            <div class="nav-right" data-aos="fade-down">
+                <a href="#signin" class="btn btn-outline">Sign in</a>
+                <a href="#" class="btn btn-primary">Try for free</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container" data-aos="fade" data-aos-delay="200">
+            <h1 id="hero-title">Plan Your Retirement With <br><span class="highlight">Clarity and Confidence</span></h1>
+            <p id="hero-subtitle">ReadyAimRetire gives you a clear view of your entire financial life. Track your accounts, spending, and long-term trajectory with intuitive tools that reveal how today's decisions shape tomorrow's outcomes.</p>
+            <a href="#" class="btn btn-primary" style="margin-bottom: 2rem;">Start Your Journey</a>
+        </div>
+        <div class="container" data-aos="fade" data-aos-delay="400">
+            <img class="hero-img" src="../images/subscribe/multiple_monitors.png" alt="App screenshot placeholder">
+        </div>
+    </section>
+
+    <!-- Temporary Slider Popup -->
+    <div id="slider-popup" style="display: none; position: fixed; top: 100px; left: 50%; transform: translateX(-50%); background: rgba(15, 23, 42, 0.95); padding: 0; border-radius: 10px; color: #fff; box-shadow: 0 8px 32px rgba(0,0,0,0.4); z-index: 10000; min-width: 320px;">
+        <div id="popup-header" style="display: flex; justify-content: space-between; align-items: center; padding: 10px 15px; background: rgba(0,0,0,0.3); border-radius: 10px 10px 0 0; cursor: move;">
+            <span style="font-weight: 600; font-size: 0.9rem;">Title & Style Preview</span>
+            <button id="popup-close" style="background: none; border: none; color: #fff; font-size: 1.2rem; cursor: pointer; padding: 0 5px;">&times;</button>
+        </div>
+        <div style="padding: 15px 20px;">
+            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+                <span style="font-size: 0.85rem; white-space: nowrap; min-width: 40px;">Title:</span>
+                <input type="range" id="title-slider" min="1" max="18" value="1" style="width: 150px; cursor: pointer;">
+                <span id="slider-value" style="font-weight: 600; min-width: 40px;">1/18</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <span style="font-size: 0.85rem; white-space: nowrap; min-width: 40px;">Style:</span>
+                <input type="range" id="style-slider" min="1" max="7" value="1" style="width: 150px; cursor: pointer;">
+                <span id="style-value" style="font-weight: 600; min-width: 90px;">1 - Blue</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features Section 1 -->
+    <section id="features">
+        <div class="container feature" data-aos="fade-right" data-aos-anchor-placement="top-center">
+            <div class="feature-img" style="position: relative;">
+                <img src="images/model_real_life.jpg" alt="Model scenarios illustration">
+                <!-- Scrolling Sliders Window Overlay -->
+                <div class="scrolling-window" style="position: absolute; top: 50%; left: -70px; transform: translateY(-50%); width: 54%; height: 420px; overflow: hidden; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+                    <div class="scrolling-content">
+                        <img src="images/sliders.png" alt="Sliders preview">
+                        <img src="images/sliders.png" alt="Sliders preview">
+                    </div>
+                </div>
+            </div>
+            <div class="feature-text">
+                <h2>Retirement Planning, Finally Built for Real-Time Thinking</h2>
+                <p>Most calculators lock your choices behind static forms. ReadyAimRetire lets you <strong><em>play</em></strong>. Over 100 intuitive sliders instantly update your plan as you adjust savings, spending, retirement age, returns, withdrawals, and everything in between. No waiting. No rigid wizards. Just fast, fluid exploration so you can see how small decisions ripple across the years and discover your best path with confidence.</p>
+                <a href="#" class="btn btn-primary" style="margin-top: 1.5rem;">Get started</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section 2 -->
+    <section class="section-gray">
+        <div class="container feature" data-aos="fade-left" data-aos-anchor-placement="top-center">
+            <div class="feature-text">
+                <h2>Optimize With Tax-Smart Strategy</h2>
+                <p>Smart planning goes beyond investment returns. ReadyAimRetire helps you evaluate withdrawal orders, Roth conversions, IRMAA thresholds, and the cascading effects of taxes—so you keep more of what you've saved.</p>
+                <a href="#" class="btn btn-primary" style="margin-top: 1.5rem;">Get started</a>
+            </div>
+            <div class="feature-img">
+                <img src="images/taxes.png" alt="Tax strategy illustration">
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section 3 -->
+    <section>
+        <div class="container feature" data-aos="fade-right" data-aos-anchor-placement="top-center">
+            <div class="feature-img">
+                <img src="images/accounts.png" alt="Clear visuals illustration">
+            </div>
+            <div class="feature-text">
+                <h2>Make Confident Decisions With Clear Visuals</h2>
+                <p>Complex analysis becomes easy to understand. Clean charts and year-by-year insights show exactly what moves the needle, empowering you to compare strategies and choose the path that supports your best retirement.</p>
+                <a href="#" class="btn btn-primary" style="margin-top: 1.5rem;">Get started</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section 4 -->
+    <section class="section-gray">
+        <div class="container feature" data-aos="fade-left" data-aos-anchor-placement="top-center">
+            <div class="feature-text">
+                <h2>Transparent, Real-World Planning</h2>
+                <p>No black boxes. No vague scores. ReadyAimRetire shows exactly how your results are calculated, why each number changes, and what levers you can adjust to improve your plan. You get clarity, control, and confidence grounded in real-world rules—not guesswork.</p>
+                <a href="#" class="btn btn-primary" style="margin-top: 1.5rem;">Get started</a>
+            </div>
+            <div class="feature-img">
+                <img src="images/transparent_planning.png" alt="Transparent planning illustration">
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section id="resources">
+        <div class="container" data-aos="fade-up">
+            <h2 style="text-align: center;">New to ReadyAimRetire?</h2>
+            <p style="text-align: center; max-width: 600px; margin: 0.5rem auto 2rem auto;">Explore these links and resources to get started.</p>
+            <div class="card-grid">
+                <div class="card" data-aos="zoom-in" data-aos-delay="0">
+                    <img src="https://test.fourpercentrule.com/images/UI/ReadyAimRetireLogo.png" alt="Chance of Success icon" style="width: 48px;">
+                    <h3>Chance of Success</h3>
+                    <p>Gauge your probability of success with Monte Carlo simulations.</p>
+                </div>
+                <div class="card" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="https://test.fourpercentrule.com/images/UI/ReadyAimRetireLogo.png" alt="Tax Analytics icon" style="width: 48px;">
+                    <h3>Tax Analytics</h3>
+                    <p>Understand how taxes impact your journey and optimize accordingly.</p>
+                </div>
+                <div class="card" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="https://test.fourpercentrule.com/images/UI/ReadyAimRetireLogo.png" alt="Net Worth Calculator icon" style="width: 48px;">
+                    <h3>Net Worth Calculator</h3>
+                    <p>Measure your net worth now and project it into the future.</p>
+                </div>
+                <div class="card" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="https://test.fourpercentrule.com/images/UI/ReadyAimRetireLogo.png" alt="Financial Planning icon" style="width: 48px;">
+                    <h3>Financial Planning</h3>
+                    <p>Get expert tips on building a comprehensive financial plan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" style="background: #0f172a; padding: 4rem 0;">
+        <div class="container" data-aos="fade-up">
+            <h2 style="text-align: center; margin-bottom: 0.5rem; color: #fff;">What People Are Saying</h2>
+            <p style="text-align: center; color: #94a3b8; margin-bottom: 2rem;">Read success stories from our users and see how ReadyAimRetire transforms their planning.</p>
+        </div>
+
+        <!-- Row 1 - Scrolls Left -->
+        <div class="testimonials-scroll">
+            <div class="testimonials-row scroll-left">
+                <!-- First set -->
+                <div class="testimonial-card">
+                    <div class="username">@RetirementReady</div>
+                    <p class="quote">If you're planning for retirement and not using ReadyAimRetire, <strong>I don't know what to tell you.</strong></p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="username">@SmartSaver</div>
+                    <p class="quote">ReadyAimRetire is great! <strong>I don't make financial decisions without checking it first!</strong></p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="username">@FuturePlanner</div>
+                    <p class="quote">I love ReadyAimRetire. <strong>Worth every minute I spend with it. It pays for itself.</strong></p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="username">@TaxOptimizer</div>
+                    <p class="quote">This is the most <strong>intuitive retirement planning platform I've ever seen.</strong></p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="username">@EarlyRetirement</div>
+                    <p class="quote">The tax projections alone saved me <strong>thousands in unnecessary withdrawals.</strong></p>
+                </div>
+                <!-- Duplicate set for seamless loop -->
+                <div class="testimonial-card">
+                    <div class="username">@RetirementReady</div>
+                    <p class="quote">If you're planning for retirement and not using ReadyAimRetire, <strong>I don't know what to tell you.</strong></p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="username">@SmartSaver</div>
+                    <p class="quote">ReadyAimRetire is great! <strong>I don't make financial decisions without checking it first!</strong></p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="username">@FuturePlanner</div>
+                    <p class="quote">I love ReadyAimRetire. <strong>Worth every minute I spend with it. It pays for itself.</strong></p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="username">@TaxOptimizer</div>
+                    <p class="quote">This is the most <strong>intuitive retirement planning platform I've ever seen.</strong></p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="username">@EarlyRetirement</div>
+                    <p class="quote">The tax projections alone saved me <strong>thousands in unnecessary withdrawals.</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Row 2 - Scrolls Right -->
+        <div class="testimonials-scroll" style="margin-top: 1rem;">
+            <div class="testimonials-row scroll-right">
+                <!-- First set -->
+                <div class="testimonial-card">
+                    <div class="username">@WealthBuilder</div>
+                    <p class="quote">I have been recommending ReadyAimRetire to all my friends. <strong>It has transformed how I plan.</strong></p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="username">@FinancialFreedom</div>
+                    <p class="quote">What you guys are building is truly phenomenal <strong>so keep it going!</strong></p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="username">@RetireEarly</div>
+                    <p class="quote"><strong>What a phenomenal tool!!!</strong> Finally something that shows the real numbers.</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="username">@MoneyMaster</div>
+                    <p class="quote">You guys are killing it with all the upgrades and improvements. <strong>ReadyAimRetire is awesome!</strong></p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="username">@PlanAhead</div>
+                    <p class="quote">The clarity this tool provides is <strong>unmatched by anything else I've tried.</strong></p>
+                </div>
+                <!-- Duplicate set for seamless loop -->
+                <div class="testimonial-card">
+                    <div class="username">@WealthBuilder</div>
+                    <p class="quote">I have been recommending ReadyAimRetire to all my friends. <strong>It has transformed how I plan.</strong></p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="username">@FinancialFreedom</div>
+                    <p class="quote">What you guys are building is truly phenomenal <strong>so keep it going!</strong></p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="username">@RetireEarly</div>
+                    <p class="quote"><strong>What a phenomenal tool!!!</strong> Finally something that shows the real numbers.</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="username">@MoneyMaster</div>
+                    <p class="quote">You guys are killing it with all the upgrades and improvements. <strong>ReadyAimRetire is awesome!</strong></p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="username">@PlanAhead</div>
+                    <p class="quote">The clarity this tool provides is <strong>unmatched by anything else I've tried.</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section with WebGL Background -->
+    <section id="cta-section" style="position: relative; overflow: hidden; padding: 0;">
+        <canvas id="cta-canvas" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0;"></canvas>
+        <div class="container" data-aos="zoom-in" style="position: relative; z-index: 1; padding: 5rem 0;">
+            <div style="color: #fff; padding: 3rem 2rem; text-align: center;">
+                <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+                    <img src="../images/UI/ReadyAimRetireLogo.png" alt="ReadyAimRetire Logo" style="width: 150px; height: auto;">
+                    <span style="font-size: 4.5rem; font-weight: 600; padding-top: 38px;">eadyAimRetire!</span>
+                </div>
+                <h2 style="margin-top: 0; font-size: 2rem;">Ready to Take Control of Your Financial Future?</h2>
+                <p style="max-width: 600px; margin: 1rem auto 2rem auto; color: rgba(255,255,255,0.9);">Sign up today and start building the financial plan you deserve. It's free to get started!</p>
+                <a href="#" class="btn btn-primary" style="background-color: #fff; color: #3b82f6;">Try for free</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+            <a href="#" class="logo" style="color: #ffffff; font-size: 1.25rem;"><img src="../images/UI/ReadyAimRetireLogo.png" alt="ReadyAimRetire Logo" style="width: 65px; height: auto;"><span style="padding-top: 10px;">eadyAimRetire!</span></a>
+            <nav>
+                <ul style="display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 2rem; list-style: none; padding: 0; margin: 0;">
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Cookie Settings</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Discord</a></li>
+                    <li><a href="#">Email</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Newsletter</a></li>
+                </ul>
+            </nav>
+            <p style="color: #64748b; margin: 0;">© 2025 ReadyAimRetire LLC</p>
+        </div>
+        <div class="container disclaimer">
+            <p>Disclaimer: The content, tools, and resources on ReadyAimRetire.com are intended for educational purposes only and should not be construed as professional financial or investment advice. You should consult a professional advisor to determine what may be best for your individual needs.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            duration: 600,
+            easing: 'ease-out-quart',
+            offset: 0,
+            anchorPlacement: 'top-center'
+        });
+
+        // Temporary Title/Subtitle Preview Slider
+        const heroOptions = [
+            {
+                title: 'Plan Your Retirement With <br><span class="highlight">Clarity and Confidence</span>',
+                subtitle: 'ReadyAimRetire gives you a clear view of your entire financial life. Track your accounts, spending, and long-term trajectory with intuitive tools that reveal how today\'s decisions shape tomorrow\'s outcomes.'
+            },
+            {
+                title: 'Build a Retirement Plan That <br><span class="highlight">Actually Makes Sense</span>',
+                subtitle: 'Cut through the noise. See how your savings, spending, and life decisions change your long-term outlook—instantly and intuitively.'
+            },
+            {
+                title: 'See Your Future Clearly. <br><span class="highlight">Shape It With Every Click.</span>',
+                subtitle: 'Powerful simulations, real numbers, and interactive tools give you full control to design the future you want.'
+            },
+            {
+                title: 'Smarter Retirement Planning <br><span class="highlight">Starts Here</span>',
+                subtitle: 'From taxes to withdrawals to long-term projections—ReadyAimRetire turns complex planning into a clear, actionable roadmap.'
+            },
+            {
+                title: 'Your Best Retirement Begins With <br><span class="highlight">a Better Plan</span>',
+                subtitle: 'Visualize decades of decisions in minutes. Compare strategies, avoid mistakes, and plan with confidence.'
+            },
+            {
+                title: 'Bring Your Future <br><span class="highlight">Into Focus</span>',
+                subtitle: 'Model your income, expenses, taxes, and lifestyle choices—then discover what it takes to reach financial freedom.'
+            },
+            {
+                title: 'A Retirement You Can <br><span class="highlight">See and Believe In</span>',
+                subtitle: 'ReadyAimRetire reveals how your financial story unfolds and empowers you to make informed, confident decisions.'
+            },
+            {
+                title: 'Design a Retirement That <br><span class="highlight">Fits Your Life</span>',
+                subtitle: 'Every plan is unique. Build yours with tools that adapt to your goals, timeline, and the realities of your financial picture.'
+            },
+            {
+                title: 'Confidence Comes From <br><span class="highlight">Clarity</span>',
+                subtitle: 'Uncover the long-term impact of every decision. See potential outcomes, test ideas, and plan with purpose.'
+            },
+            {
+                title: 'Make the Future <br><span class="highlight">Feel Manageable</span>',
+                subtitle: 'ReadyAimRetire turns complex financial planning into a friendly, visual experience—so you can move forward with confidence.'
+            },
+            {
+                title: 'Numbers-Driven Planning <br><span class="highlight">for Real Life</span>',
+                subtitle: 'Run simulations, evaluate strategies, and understand how your money performs across hundreds of real-world scenarios.'
+            },
+            {
+                title: 'Turn Insights Into <br><span class="highlight">a Confident Retirement Strategy</span>',
+                subtitle: 'ReadyAimRetire blends powerful modeling with practical guidance so you always know your next smart financial move.'
+            },
+            {
+                title: 'Plan Better. <br><span class="highlight">Retire Smarter.</span>',
+                subtitle: 'Precise calculations, tax-aware projections, and dynamic tools deliver clarity at every stage of your journey.'
+            },
+            {
+                title: 'Your Financial Future, <br><span class="highlight">Fully Mapped Out</span>',
+                subtitle: 'From accumulation to withdrawals to long-term sustainability—simulate it all with ease.'
+            },
+            {
+                title: 'Clarity for <br><span class="highlight">Every Stage of Retirement</span>',
+                subtitle: 'Model scenarios, explore possibilities, and plan with confidence using ReadyAimRetire\'s powerful simulation engine.'
+            },
+            {
+                title: 'A Smarter Way to <br><span class="highlight">Plan Your Future</span>',
+                subtitle: 'High-precision modeling empowers you to build, test, and fine-tune a retirement plan that supports your goals.'
+            },
+            {
+                title: 'See the Path. <br><span class="highlight">Shape the Outcome.</span>',
+                subtitle: 'Quickly test "what-ifs," compare strategies, and understand how small decisions shape your long-term financial story.'
+            },
+            {
+                title: 'From Uncertainty <br><span class="highlight">to Understanding</span>',
+                subtitle: 'ReadyAimRetire turns complex retirement planning into clear, intuitive insight.'
+            }
+        ];
+
+        const slider = document.getElementById('title-slider');
+        const sliderValue = document.getElementById('slider-value');
+        const heroTitle = document.getElementById('hero-title');
+        const heroSubtitle = document.getElementById('hero-subtitle');
+
+        const styleSlider = document.getElementById('style-slider');
+        const styleValue = document.getElementById('style-value');
+
+        const styleNames = [
+            '1 - Blue',
+            '2 - Glow',
+            '3 - Underline',
+            '4 - Marker',
+            '5 - Pill',
+            '6 - Italic',
+            '7 - 3D Shadow'
+        ];
+
+        let currentStyleIndex = 1;
+
+        function applyHighlightStyle(styleNum) {
+            const highlight = document.querySelector('.highlight');
+            if (highlight) {
+                // Remove all style classes
+                for (let i = 1; i <= 7; i++) {
+                    highlight.classList.remove('highlight-style-' + i);
+                }
+                // Add the selected style class
+                highlight.classList.add('highlight-style-' + styleNum);
+            }
+        }
+
+        slider.addEventListener('input', function() {
+            const index = parseInt(this.value) - 1;
+            sliderValue.textContent = this.value + '/18';
+            heroTitle.innerHTML = heroOptions[index].title;
+            heroSubtitle.textContent = heroOptions[index].subtitle;
+            // Re-apply current style after title change
+            applyHighlightStyle(currentStyleIndex);
+        });
+
+        styleSlider.addEventListener('input', function() {
+            currentStyleIndex = parseInt(this.value);
+            styleValue.textContent = styleNames[currentStyleIndex - 1];
+            applyHighlightStyle(currentStyleIndex);
+        });
+
+        // Apply initial style
+        applyHighlightStyle(1);
+
+        // Ensure scrolling animation starts when visible
+        const scrollingContent = document.querySelector('.scrolling-content');
+        if (scrollingContent) {
+            // Force animation to running state immediately
+            scrollingContent.style.animationPlayState = 'running';
+
+            // Use Intersection Observer to ensure animation starts when visible
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        // Element is visible, ensure animation is running
+                        scrollingContent.style.animation = 'none';
+                        scrollingContent.offsetHeight; // Trigger reflow
+                        scrollingContent.style.animation = 'scrollUp 30s linear infinite';
+                        scrollingContent.style.animationPlayState = 'running';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            observer.observe(scrollingContent);
+
+            // Also trigger after AOS initializes (backup)
+            setTimeout(function() {
+                scrollingContent.style.animation = 'none';
+                scrollingContent.offsetHeight; // Trigger reflow
+                scrollingContent.style.animation = 'scrollUp 30s linear infinite';
+                scrollingContent.style.animationPlayState = 'running';
+            }, 1000);
+        }
+
+        // --- WebGL Background for CTA Section ---
+        (function() {
+            const canvas = document.getElementById('cta-canvas');
+            if (!canvas) return;
+
+            const gl = canvas.getContext('webgl', { antialias: true });
+            if (!gl) return;
+
+            const vertexShaderSource = `
+                attribute vec4 a_position;
+                void main() {
+                    gl_Position = a_position;
+                }
+            `;
+
+            const fragmentShaderSource = `
+                precision highp float;
+                uniform vec2 u_resolution;
+                uniform float u_time;
+
+                float tanh_custom(float x) {
+                    float ex = exp(x);
+                    float emx = exp(-x);
+                    if (ex == 0.0) return -1.0;
+                    if (emx == 0.0) return 1.0;
+                    return (ex - emx) / (ex + emx);
+                }
+
+                mat3 rotX(float a) {
+                    float s = sin(a); float c = cos(a);
+                    return mat3(1.0, 0.0, 0.0, 0.0, c, -s, 0.0, s, c);
+                }
+                mat3 rotY(float a) {
+                    float s = sin(a); float c = cos(a);
+                    return mat3(c, 0.0, s, 0.0, 1.0, 0.0, -s, 0.0, c);
+                }
+
+                void main() {
+                    vec2 uv = (gl_FragCoord.xy * 2.0 - u_resolution.xy) / u_resolution.y;
+                    vec3 s = normalize(vec3(uv * 0.1, -1.0));
+
+                    vec4 o = vec4(0.0);
+                    float z = 0.0;
+                    vec3 v = vec3(0.0, 0.5, 0.0);
+
+                    for(float i = 0.0; i < 60.0; i++) {
+                        vec3 p = s * z + v;
+                        p.z -= u_time * 0.5;
+                        p = rotY(0.3) * rotX(0.2) * p;
+
+                        vec3 q = p;
+                        q += p * v - sin(q.zxy * 0.5 - u_time * 0.3);
+                        float d = length(sin(q) - v) - 0.3;
+
+                        d = 0.008 + 1.0 * abs(d);
+                        z += d;
+
+                        if (d < 0.001 || z > 100.0) break;
+
+                        o += (20.0 - cos(length(p) / 0.3) / (0.3 + d)) / d / z;
+                    }
+
+                    vec4 final_color = o / 20000.0 * vec4(2.0, 5.0, 14.0, 1.0);
+                    final_color.x = tanh_custom(final_color.x);
+                    final_color.y = tanh_custom(final_color.y);
+                    final_color.z = tanh_custom(final_color.z);
+                    final_color.w = tanh_custom(final_color.w);
+
+                    gl_FragColor = final_color;
+                    gl_FragColor.a = 1.0;
+                }
+            `;
+
+            function createShader(gl, type, source) {
+                const shader = gl.createShader(type);
+                gl.shaderSource(shader, source);
+                gl.compileShader(shader);
+                if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
+                    gl.deleteShader(shader);
+                    return null;
+                }
+                return shader;
+            }
+
+            const vertexShader = createShader(gl, gl.VERTEX_SHADER, vertexShaderSource);
+            const fragmentShader = createShader(gl, gl.FRAGMENT_SHADER, fragmentShaderSource);
+            if (!vertexShader || !fragmentShader) return;
+
+            const program = gl.createProgram();
+            gl.attachShader(program, vertexShader);
+            gl.attachShader(program, fragmentShader);
+            gl.linkProgram(program);
+            if (!gl.getProgramParameter(program, gl.LINK_STATUS)) return;
+            gl.useProgram(program);
+
+            const positionBuffer = gl.createBuffer();
+            gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
+            gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 1, -1, -1, 1, 1, 1]), gl.STATIC_DRAW);
+            const positionAttributeLocation = gl.getAttribLocation(program, "a_position");
+            gl.enableVertexAttribArray(positionAttributeLocation);
+            gl.vertexAttribPointer(positionAttributeLocation, 2, gl.FLOAT, false, 0, 0);
+
+            const resolutionLocation = gl.getUniformLocation(program, 'u_resolution');
+            const timeLocation = gl.getUniformLocation(program, 'u_time');
+
+            let startTime = Date.now();
+            function render() {
+                const dpr = window.devicePixelRatio || 1;
+                const displayWidth = Math.floor(canvas.clientWidth * dpr);
+                const displayHeight = Math.floor(canvas.clientHeight * dpr);
+
+                if (canvas.width !== displayWidth || canvas.height !== displayHeight) {
+                    canvas.width = displayWidth;
+                    canvas.height = displayHeight;
+                    gl.viewport(0, 0, canvas.width, canvas.height);
+                }
+
+                const currentTime = (Date.now() - startTime) * 0.001;
+                gl.uniform1f(timeLocation, currentTime);
+                gl.uniform2f(resolutionLocation, canvas.width, canvas.height);
+                gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+
+                requestAnimationFrame(render);
+            }
+
+            requestAnimationFrame(render);
+        })();
+
+        // Popup functionality
+        const popup = document.getElementById('slider-popup');
+        const popupHeader = document.getElementById('popup-header');
+        const popupClose = document.getElementById('popup-close');
+
+        // Show popup when hero title or subtitle is clicked
+        heroTitle.style.cursor = 'pointer';
+        heroSubtitle.style.cursor = 'pointer';
+
+        heroTitle.addEventListener('click', function() {
+            popup.style.display = 'block';
+            popup.style.transform = 'none';
+        });
+
+        heroSubtitle.addEventListener('click', function() {
+            popup.style.display = 'block';
+            popup.style.transform = 'none';
+        });
+
+        // Close popup
+        popupClose.addEventListener('click', function() {
+            popup.style.display = 'none';
+        });
+
+        // Draggable popup
+        let isDragging = false;
+        let offsetX, offsetY;
+
+        popupHeader.addEventListener('mousedown', function(e) {
+            isDragging = true;
+            offsetX = e.clientX - popup.offsetLeft;
+            offsetY = e.clientY - popup.offsetTop;
+            popup.style.transform = 'none';
+        });
+
+        document.addEventListener('mousemove', function(e) {
+            if (isDragging) {
+                popup.style.left = (e.clientX - offsetX) + 'px';
+                popup.style.top = (e.clientY - offsetY) + 'px';
+            }
+        });
+
+        document.addEventListener('mouseup', function() {
+            isDragging = false;
+        });
+    </script>
+</body>
+</html>

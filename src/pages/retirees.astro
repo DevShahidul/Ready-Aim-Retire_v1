@@ -1,0 +1,800 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTABanner from '../components/CTABanner.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+---
+
+<BaseLayout
+    title="For Retirees – ReadyAimRetire"
+    description="Make your retirement savings last. Plan Social Security, RMDs, and withdrawal strategies with confidence."
+    solidHeader={true}
+>
+    <!-- Hero Section -->
+    <section class="retiree-hero">
+        <div class="container" data-aos="fade-up">
+            <Breadcrumbs items={[{ label: "For Retirees" }]} />
+            <h1>Make Your Retirement Savings Last</h1>
+            <p>ReadyAimRetire helps retirees navigate Social Security, RMDs, taxes, and withdrawal strategies with clarity and confidence.</p>
+            <a href={`${import.meta.env.PUBLIC_APP_URL}/signup`} class="btn-primary-large">Plan Your Retirement Income</a>
+        </div>
+    </section>
+
+    <!-- Key Benefits for Retirees Section -->
+    <section class="benefits-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Designed for Your Retirement Journey</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="benefit-icon">
+                        <i class="fas fa-piggy-bank"></i>
+                    </div>
+                    <h3>Social Security Optimization</h3>
+                    <p>Find the optimal claiming strategy for you and your spouse. See exactly how timing affects your lifetime benefits.</p>
+                </div>
+                <div class="benefit-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="benefit-icon">
+                        <i class="fas fa-file-invoice-dollar"></i>
+                    </div>
+                    <h3>RMD Planning</h3>
+                    <p>Stay compliant with Required Minimum Distributions while minimizing the tax impact on your retirement.</p>
+                </div>
+                <div class="benefit-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="benefit-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>Medicare & IRMAA Management</h3>
+                    <p>Avoid costly IRMAA surcharges by understanding how your income affects Medicare premiums.</p>
+                </div>
+                <div class="benefit-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="benefit-icon">
+                        <i class="fas fa-wallet"></i>
+                    </div>
+                    <h3>Withdrawal Sequencing</h3>
+                    <p>Know exactly which accounts to tap first to minimize taxes and maximize longevity.</p>
+                </div>
+                <div class="benefit-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="benefit-icon">
+                        <i class="fas fa-exchange-alt"></i>
+                    </div>
+                    <h3>Roth Conversion Opportunities</h3>
+                    <p>Identify the best years to convert traditional IRA funds to Roth and reduce future RMDs.</p>
+                </div>
+                <div class="benefit-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="benefit-icon">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <h3>Legacy Planning</h3>
+                    <p>See how your decisions today affect what you can leave to your loved ones.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Income Planning Section -->
+    <section class="income-planning-section">
+        <div class="container">
+            <div class="income-content" data-aos="fade-right">
+                <div class="income-text">
+                    <h2>See Where Your Retirement Income Comes From</h2>
+                    <p>Visualize your complete income picture year by year. Watch how Social Security, pensions, withdrawals, and investments work together to fund your retirement lifestyle.</p>
+                    <ul class="income-features">
+                        <li><i class="fas fa-check-circle"></i> Track multiple income sources over time</li>
+                        <li><i class="fas fa-check-circle"></i> Understand how inflation affects purchasing power</li>
+                        <li><i class="fas fa-check-circle"></i> See when to start Social Security benefits</li>
+                        <li><i class="fas fa-check-circle"></i> Plan for changing income needs throughout retirement</li>
+                    </ul>
+                </div>
+                <div class="income-visual">
+                    <div class="chart-placeholder">
+                        <div class="chart-bar" style="height: 60%; background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);">
+                            <span class="chart-label">Social Security</span>
+                        </div>
+                        <div class="chart-bar" style="height: 75%; background: linear-gradient(135deg, #415776 0%, #2d3e54 100%);">
+                            <span class="chart-label">Investments</span>
+                        </div>
+                        <div class="chart-bar" style="height: 50%; background: linear-gradient(135deg, #41bab4 0%, #3aa8a3 100%);">
+                            <span class="chart-label">Pension</span>
+                        </div>
+                        <div class="chart-bar" style="height: 85%; background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);">
+                            <span class="chart-label">Total Income</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials from Retirees -->
+    <section class="retiree-testimonials-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">What Retirees Are Saying</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card-retiree" data-aos="fade-up" data-aos-delay="0">
+                    <div class="quote-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p class="testimonial-text">"ReadyAimRetire showed me I could afford to delay Social Security until 70, which will give my wife and me an extra $200,000 over our lifetimes. That's a game-changer."</p>
+                    <div class="testimonial-author">
+                        <strong>Robert K.</strong>
+                        <span>Retired Teacher</span>
+                    </div>
+                </div>
+                <div class="testimonial-card-retiree" data-aos="fade-up" data-aos-delay="100">
+                    <div class="quote-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p class="testimonial-text">"I never understood IRMAA until I saw it visualized in the app. Now I know exactly how to manage my withdrawals to avoid those Medicare surcharges."</p>
+                    <div class="testimonial-author">
+                        <strong>Patricia M.</strong>
+                        <span>Recently Retired</span>
+                    </div>
+                </div>
+                <div class="testimonial-card-retiree" data-aos="fade-up" data-aos-delay="200">
+                    <div class="quote-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p class="testimonial-text">"The withdrawal sequencing feature alone saved us thousands in taxes. We're withdrawing from our accounts in the most tax-efficient way possible."</p>
+                    <div class="testimonial-author">
+                        <strong>David & Susan W.</strong>
+                        <span>Retired Couple</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tax Optimization Section -->
+    <section class="tax-optimization-section">
+        <div class="container">
+            <div class="tax-content" data-aos="fade-left">
+                <div class="tax-visual">
+                    <div class="tax-breakdown">
+                        <div class="tax-item" style="background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);">
+                            <span class="tax-label">Federal</span>
+                            <span class="tax-amount">$18,500</span>
+                        </div>
+                        <div class="tax-item" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);">
+                            <span class="tax-label">State</span>
+                            <span class="tax-amount">$4,200</span>
+                        </div>
+                        <div class="tax-item" style="background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);">
+                            <span class="tax-label">IRMAA</span>
+                            <span class="tax-amount">$1,800</span>
+                        </div>
+                        <div class="tax-item" style="background: linear-gradient(135deg, #415776 0%, #2d3e54 100%);">
+                            <span class="tax-label">Cap Gains</span>
+                            <span class="tax-amount">$2,100</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="tax-text">
+                    <h2>Navigate Retirement Taxes with Confidence</h2>
+                    <p>Retirement taxes are complex. ReadyAimRetire helps you understand the complete tax picture so you can make smarter decisions.</p>
+                    <ul class="tax-features">
+                        <li><i class="fas fa-check-circle"></i> Federal and state income tax projections</li>
+                        <li><i class="fas fa-check-circle"></i> Social Security taxation calculations</li>
+                        <li><i class="fas fa-check-circle"></i> Capital gains impact analysis</li>
+                        <li><i class="fas fa-check-circle"></i> IRMAA threshold monitoring</li>
+                    </ul>
+                    <a href={`${import.meta.env.PUBLIC_APP_URL}/signup`} class="btn-outline-teal">Start Planning Today</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Retiree FAQ Section -->
+    <section class="retiree-faq-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Common Questions from Retirees</h2>
+            <div class="faq-grid">
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="0">
+                    <h3><i class="fas fa-question-circle"></i> How does ReadyAimRetire handle Social Security calculations?</h3>
+                    <p>Our tool uses the latest Social Security benefit formulas to model different claiming strategies. You can compare scenarios for you and your spouse to find the optimal timing based on your individual situation, life expectancy, and other income sources.</p>
+                </div>
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                    <h3><i class="fas fa-question-circle"></i> Can I model different withdrawal strategies?</h3>
+                    <p>Absolutely. ReadyAimRetire lets you test various withdrawal approaches—proportional, tax-efficient sequencing, or custom strategies. See the tax implications and longevity of each approach in real-time.</p>
+                </div>
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                    <h3><i class="fas fa-question-circle"></i> How accurate are the tax projections?</h3>
+                    <p>Our tax calculations use current federal and state tax brackets, standard deductions, and include Social Security taxation, capital gains, and IRMAA thresholds. While tax laws may change, our projections give you a solid baseline for planning.</p>
+                </div>
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                    <h3><i class="fas fa-question-circle"></i> Can I include my pension in the plan?</h3>
+                    <p>Yes! You can add pensions, part-time income, rental income, or any other income stream. ReadyAimRetire integrates all your income sources into a comprehensive retirement picture.</p>
+                </div>
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+                    <h3><i class="fas fa-question-circle"></i> Is ReadyAimRetire suitable for couples planning together?</h3>
+                    <p>Definitely. Our tool is designed to handle complex couple scenarios including different retirement ages, Social Security strategies, survivor benefits, and coordinated withdrawal planning.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Peace of Mind Section -->
+    <section class="peace-of-mind-section">
+        <div class="container">
+            <div class="peace-content" data-aos="zoom-in">
+                <h2>Retire with Peace of Mind</h2>
+                <p class="peace-subtitle">You've spent decades building your retirement savings. Now make sure it lasts.</p>
+                <div class="trust-stats">
+                    <div class="trust-stat">
+                        <span class="stat-number">10,000+</span>
+                        <span class="stat-label">Retirees Trust ReadyAimRetire</span>
+                    </div>
+                    <div class="trust-stat">
+                        <span class="stat-number">$500M+</span>
+                        <span class="stat-label">In Retirement Assets Planned</span>
+                    </div>
+                    <div class="trust-stat">
+                        <span class="stat-number">4.8★</span>
+                        <span class="stat-label">Average User Rating</span>
+                    </div>
+                </div>
+                <a href={`${import.meta.env.PUBLIC_APP_URL}/signup`} class="btn-primary-large">Start Planning Today</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <CTABanner
+        headline="Ready to take control of your retirement income?"
+        description="Join thousands of retirees who use ReadyAimRetire to make confident financial decisions."
+        buttonText="Get Started Free"
+    />
+</BaseLayout>
+
+<style>
+    /* Hero Section */
+    .retiree-hero {
+        background: linear-gradient(135deg, #415776 0%, #2d4a61 100%);
+        padding: 8rem 0 3rem 0;
+        text-align: center;
+        color: #ffffff;
+    }
+
+    .retiree-hero h1 {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-size: clamp(2.5rem, 5vw, 3.75rem);
+        font-weight: 400;
+        margin: 0 0 1.5rem 0;
+        line-height: 1.2;
+        color: #ffffff;
+    }
+
+    .retiree-hero p {
+        font-size: clamp(1.1rem, 2vw, 1.35rem);
+        max-width: 800px;
+        margin: 0 auto 2.5rem auto;
+        color: rgba(255, 255, 255, 0.9);
+        line-height: 1.6;
+    }
+
+    .btn-primary-large {
+        display: inline-block;
+        background-color: #14b8a6;
+        color: #ffffff;
+        padding: 1rem 2.5rem;
+        font-size: 1.1rem;
+        font-weight: 600;
+        border-radius: 50px;
+        text-decoration: none;
+        transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .btn-primary-large:hover {
+        background-color: #0d9488;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(20, 184, 166, 0.3);
+    }
+
+    /* Benefits Section */
+    .benefits-section {
+        background: #f6f6f4;
+        padding: 6rem 0;
+    }
+
+    .section-title {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-size: clamp(2rem, 4vw, 2.75rem);
+        font-weight: 400;
+        text-align: center;
+        color: #1a1a2e;
+        margin: 0 0 3.5rem 0;
+        line-height: 1.3;
+    }
+
+    .benefits-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .benefit-card {
+        background: #ffffff;
+        border-radius: 16px;
+        padding: 2.5rem 2rem;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .benefit-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    }
+
+    .benefit-icon {
+        width: 64px;
+        height: 64px;
+        background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1.5rem;
+    }
+
+    .benefit-icon i {
+        font-size: 1.75rem;
+        color: #ffffff;
+    }
+
+    .benefit-card h3 {
+        font-family: 'Inter', sans-serif;
+        font-size: 1.35rem;
+        font-weight: 600;
+        color: #1a1a2e;
+        margin: 0 0 1rem 0;
+        line-height: 1.3;
+    }
+
+    .benefit-card p {
+        font-size: 1.05rem;
+        line-height: 1.7;
+        color: #555;
+        margin: 0;
+    }
+
+    /* Income Planning Section */
+    .income-planning-section {
+        background: #ffffff;
+        padding: 6rem 0;
+    }
+
+    .income-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+    }
+
+    .income-text h2 {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+        font-weight: 400;
+        color: #1a1a2e;
+        margin: 0 0 1.5rem 0;
+        line-height: 1.3;
+    }
+
+    .income-text p {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        color: #555;
+        margin: 0 0 2rem 0;
+    }
+
+    .income-features {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .income-features li {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.75rem 0;
+        font-size: 1.05rem;
+        color: #444;
+    }
+
+    .income-features li i {
+        color: #14b8a6;
+        font-size: 1.25rem;
+        flex-shrink: 0;
+    }
+
+    .income-visual {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .chart-placeholder {
+        width: 100%;
+        max-width: 450px;
+        height: 350px;
+        background: #f8fafc;
+        border-radius: 16px;
+        padding: 2rem;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-around;
+        gap: 1rem;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    }
+
+    .chart-bar {
+        flex: 1;
+        border-radius: 8px 8px 0 0;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        padding-bottom: 1rem;
+        position: relative;
+        transition: transform 0.3s ease;
+    }
+
+    .chart-bar:hover {
+        transform: translateY(-8px);
+    }
+
+    .chart-label {
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: #ffffff;
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        transform: rotate(180deg);
+    }
+
+    /* Testimonials Section */
+    .retiree-testimonials-section {
+        background: #f6f6f4;
+        padding: 6rem 0;
+    }
+
+    .testimonials-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .testimonial-card-retiree {
+        background: #ffffff;
+        border-radius: 16px;
+        padding: 2.5rem 2rem;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        position: relative;
+    }
+
+    .quote-icon {
+        width: 48px;
+        height: 48px;
+        background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1.5rem;
+    }
+
+    .quote-icon i {
+        font-size: 1.25rem;
+        color: #ffffff;
+    }
+
+    .testimonial-text {
+        font-size: 1.05rem;
+        line-height: 1.7;
+        color: #444;
+        margin: 0 0 1.5rem 0;
+        font-style: italic;
+    }
+
+    .testimonial-author {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+
+    .testimonial-author strong {
+        font-size: 1.05rem;
+        font-weight: 600;
+        color: #1a1a2e;
+    }
+
+    .testimonial-author span {
+        font-size: 0.95rem;
+        color: #888;
+    }
+
+    /* Tax Optimization Section */
+    .tax-optimization-section {
+        background: #ffffff;
+        padding: 6rem 0;
+    }
+
+    .tax-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+    }
+
+    .tax-visual {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .tax-breakdown {
+        width: 100%;
+        max-width: 450px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .tax-item {
+        background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);
+        border-radius: 16px;
+        padding: 2rem 1.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }
+
+    .tax-item:hover {
+        transform: translateY(-4px);
+    }
+
+    .tax-label {
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.9);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
+    .tax-amount {
+        font-size: 1.75rem;
+        font-weight: 700;
+        color: #ffffff;
+    }
+
+    .tax-text h2 {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+        font-weight: 400;
+        color: #1a1a2e;
+        margin: 0 0 1.5rem 0;
+        line-height: 1.3;
+    }
+
+    .tax-text p {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        color: #555;
+        margin: 0 0 2rem 0;
+    }
+
+    .tax-features {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 2rem 0;
+    }
+
+    .tax-features li {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.75rem 0;
+        font-size: 1.05rem;
+        color: #444;
+    }
+
+    .tax-features li i {
+        color: #14b8a6;
+        font-size: 1.25rem;
+        flex-shrink: 0;
+    }
+
+    .btn-outline-teal {
+        display: inline-block;
+        background-color: transparent;
+        color: #14b8a6;
+        border: 2px solid #14b8a6;
+        padding: 0.85rem 2rem;
+        font-size: 1rem;
+        font-weight: 600;
+        border-radius: 50px;
+        text-decoration: none;
+        transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+    }
+
+    .btn-outline-teal:hover {
+        background-color: #14b8a6;
+        color: #ffffff;
+        transform: translateY(-2px);
+    }
+
+    /* FAQ Section */
+    .retiree-faq-section {
+        background: #f6f6f4;
+        padding: 6rem 0;
+    }
+
+    .faq-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .faq-item {
+        background: #ffffff;
+        border-radius: 12px;
+        padding: 2rem 2.5rem;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+    }
+
+    .faq-item h3 {
+        font-family: 'Inter', sans-serif;
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: #1a1a2e;
+        margin: 0 0 1rem 0;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        line-height: 1.4;
+    }
+
+    .faq-item h3 i {
+        color: #14b8a6;
+        font-size: 1.5rem;
+        flex-shrink: 0;
+    }
+
+    .faq-item p {
+        font-size: 1.05rem;
+        line-height: 1.7;
+        color: #555;
+        margin: 0;
+    }
+
+    /* Peace of Mind Section */
+    .peace-of-mind-section {
+        background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);
+        padding: 6rem 0;
+        text-align: center;
+        color: #ffffff;
+    }
+
+    .peace-content h2 {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-size: clamp(2rem, 4vw, 3rem);
+        font-weight: 400;
+        color: #ffffff;
+        margin: 0 0 1rem 0;
+        line-height: 1.2;
+    }
+
+    .peace-subtitle {
+        font-size: clamp(1.1rem, 2vw, 1.35rem);
+        color: rgba(255, 255, 255, 0.9);
+        margin: 0 0 3rem 0;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .trust-stats {
+        display: flex;
+        justify-content: center;
+        gap: 4rem;
+        margin: 0 0 3rem 0;
+        flex-wrap: wrap;
+    }
+
+    .trust-stat {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .stat-number {
+        font-size: clamp(2.5rem, 4vw, 3.5rem);
+        font-weight: 700;
+        color: #ffffff;
+        line-height: 1;
+    }
+
+    .stat-label {
+        font-size: 1rem;
+        color: rgba(255, 255, 255, 0.85);
+        max-width: 180px;
+        line-height: 1.4;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 900px) {
+        .benefits-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .testimonials-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .income-content,
+        .tax-content {
+            grid-template-columns: 1fr;
+            gap: 3rem;
+        }
+
+        .trust-stats {
+            gap: 2rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .retiree-hero {
+            padding: 6rem 0 3rem 0;
+        }
+
+        .benefits-section,
+        .income-planning-section,
+        .retiree-testimonials-section,
+        .tax-optimization-section,
+        .retiree-faq-section,
+        .peace-of-mind-section {
+            padding: 4rem 0;
+        }
+
+        .section-title {
+            margin-bottom: 2.5rem;
+        }
+
+        .tax-breakdown {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .benefits-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .benefit-card {
+            padding: 2rem 1.5rem;
+        }
+
+        .chart-placeholder {
+            height: 280px;
+            padding: 1.5rem;
+        }
+
+        .faq-item {
+            padding: 1.5rem 1.25rem;
+        }
+
+        .trust-stats {
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .stat-label {
+            max-width: none;
+        }
+    }
+</style>

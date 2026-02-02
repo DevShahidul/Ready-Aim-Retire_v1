@@ -1,0 +1,609 @@
+---
+// Header component with dropdown menus
+---
+
+<header>
+    <div class="nav">
+        <a href="/" class="logo">
+            <img src="/images/logos/rar/rar_white_black_bg.png" alt="ReadyAimRetire Logo">
+        </a>
+        <nav class="main-nav">
+            <ul>
+                <li class="has-dropdown">
+                    <a href="/features">Features</a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-header">EXPLORE & LEARN</div>
+                        <div class="dropdown-grid">
+                            <a href="/features/timeline" class="dropdown-item">
+                                <span class="dropdown-title">Holistic Timeline</span>
+                                <span class="dropdown-desc">Watch your financial life unfold year by year - accumulation...</span>
+                            </a>
+                            <a href="/chanceofsuccess" class="dropdown-item">
+                                <span class="dropdown-title">Chance of Success</span>
+                                <span class="dropdown-desc">Run your plan through historical market data. More certainty...</span>
+                            </a>
+                            <a href="/features/scenarios" class="dropdown-item">
+                                <span class="dropdown-title">Scenario Planning</span>
+                                <span class="dropdown-desc">What if you retire earlier? Spend more? Markets underperform?...</span>
+                            </a>
+                            <a href="/features/taxes" class="dropdown-item">
+                                <span class="dropdown-title">Maximise Taxes & Benefits</span>
+                                <span class="dropdown-desc">See taxes and social security as part of the plan - not fits into...</span>
+                            </a>
+                            <a href="/budget" class="dropdown-item">
+                                <span class="dropdown-title">Retirement Budget</span>
+                                <span class="dropdown-desc">Build a detailed budget that powers your retirement projections.</span>
+                            </a>
+                            <a href="/accounts" class="dropdown-item">
+                                <span class="dropdown-title">Accounts & Assets</span>
+                                <span class="dropdown-desc">Organize all your accounts, assets, and liabilities in one place.</span>
+                            </a>
+                            <a href="/networth" class="dropdown-item">
+                                <span class="dropdown-title">Net Worth Tracking</span>
+                                <span class="dropdown-desc">Track your progress toward financial freedom over time.</span>
+                            </a>
+                            <a href="/features/income" class="dropdown-item">
+                                <span class="dropdown-title">Income & Spending Clarity</span>
+                                <span class="dropdown-desc">Understand where your money comes from and where it goes.</span>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="/pricing">Pricing</a></li>
+                <li><a href="/faqs">FAQs</a></li>
+                <li><a href="/about">About us</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/updates">Latest Updates</a></li>
+                <li><a href="/advisors">Advisors</a></li>
+            </ul>
+        </nav>
+        <div class="nav-right">
+            <a href={`${import.meta.env.PUBLIC_APP_URL}/login`} class="nav-link">Sign in</a>
+            <a href={`${import.meta.env.PUBLIC_APP_URL}/signup`} class="btn btn-outline">Get Started <span class="arrow">→</span></a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button class="mobile-menu-btn" aria-label="Toggle mobile menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay">
+        <div class="mobile-menu-header">
+            <a href="/" class="logo">
+                <img src="/images/logos/rar/rar_white_black_bg.png" alt="ReadyAimRetire Logo">
+            </a>
+            <button class="mobile-menu-close" aria-label="Close mobile menu">
+                <span>&times;</span>
+            </button>
+        </div>
+
+        <nav class="mobile-nav">
+            <ul>
+                <li>
+                    <a href="/features">Features</a>
+                    <ul class="mobile-submenu">
+                        <li><a href="/features/timeline">Holistic Timeline</a></li>
+                        <li><a href="/chanceofsuccess">Chance of Success</a></li>
+                        <li><a href="/features/scenarios">Scenario Planning</a></li>
+                        <li><a href="/features/taxes">Maximise Taxes & Benefits</a></li>
+                        <li><a href="/budget">Retirement Budget</a></li>
+                        <li><a href="/accounts">Accounts & Assets</a></li>
+                        <li><a href="/networth">Net Worth Tracking</a></li>
+                        <li><a href="/features/income">Income & Spending Clarity</a></li>
+                    </ul>
+                </li>
+                <li><a href="/pricing">Pricing</a></li>
+                <li><a href="/faqs">FAQs</a></li>
+                <li><a href="/about">About us</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/updates">Latest Updates</a></li>
+                <li><a href="/advisors">Advisors</a></li>
+            </ul>
+
+            <div class="mobile-nav-actions">
+                <a href={`${import.meta.env.PUBLIC_APP_URL}/login`} class="mobile-nav-link">Sign in</a>
+                <a href={`${import.meta.env.PUBLIC_APP_URL}/signup`} class="mobile-btn">Get Started <span class="arrow">→</span></a>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<style>
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: transparent;
+        box-shadow: none;
+        z-index: 1000;
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    header.scrolled {
+        background: rgba(255, 255, 255, 0.98);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .solid-header header {
+        background: rgba(255, 255, 255, 0.98);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    header.scrolled .logo-text,
+    header.scrolled nav ul li a,
+    header.scrolled .nav-link,
+    .solid-header header .logo-text,
+    .solid-header header nav ul li a,
+    .solid-header header .nav-link {
+        color: #1a1a2e;
+    }
+
+    header.scrolled .btn-outline,
+    .solid-header header .btn-outline {
+        background-color: #1a1a2e;
+        color: #ffffff;
+    }
+
+    header.scrolled .btn-outline:hover,
+    .solid-header header .btn-outline:hover {
+        background-color: #2a2a3e;
+        color: #ffffff;
+    }
+
+    /* Logo image - invert colors when scrolled */
+    header.scrolled .logo img,
+    .solid-header header .logo img {
+        filter: brightness(0) saturate(100%);
+    }
+
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        text-decoration: none;
+    }
+
+    .logo img {
+        width: 125px;
+        height: auto;
+    }
+
+    .logo-text {
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: #ffffff;
+        line-height: 1.1;
+    }
+
+    .main-nav ul {
+        list-style: none;
+        display: flex;
+        gap: 2rem;
+        margin: 0;
+        padding: 0;
+    }
+
+    .main-nav ul li {
+        position: relative;
+    }
+
+    .main-nav ul li a {
+        color: #d1d5db;
+        font-weight: 500;
+        font-size: 0.9rem;
+        text-decoration: none;
+        transition: color 0.2s ease;
+        padding: 0.5rem 0;
+        display: block;
+    }
+
+    .main-nav ul li a:hover {
+        color: #ffffff;
+    }
+
+    header.scrolled .main-nav ul li a:hover,
+    .solid-header header .main-nav ul li a:hover {
+        color: var(--color-primary);
+    }
+
+    /* Dropdown Menu */
+    .has-dropdown {
+        position: relative;
+    }
+
+    .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+        padding: 1.5rem;
+        min-width: 500px;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
+        transform: translateX(-50%) translateY(10px);
+        z-index: 1000;
+    }
+
+    .has-dropdown:hover .dropdown-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(-50%) translateY(0);
+    }
+
+    .dropdown-header {
+        font-size: 0.7rem;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        color: var(--color-primary);
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+    }
+
+    .dropdown-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .dropdown-item {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+        padding: 0.75rem;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: background-color 0.2s ease;
+    }
+
+    .dropdown-item:hover {
+        background-color: #f8fafc;
+    }
+
+    .dropdown-title {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: #1a1a2e;
+    }
+
+    .dropdown-desc {
+        font-size: 0.8rem;
+        color: #64748b;
+        line-height: 1.4;
+    }
+
+    /* Nav Right */
+    .nav-right {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .nav-link {
+        color: #ffffff;
+        font-weight: 500;
+        font-size: 0.9rem;
+        text-decoration: none;
+        transition: color 0.2s ease;
+    }
+
+    .nav-link:hover {
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    .btn-outline {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background-color: #ffffff;
+        border: none;
+        color: #1a1a2e;
+        border-radius: 6px;
+        padding: 0.5rem 1.25rem;
+        font-size: 0.9rem;
+        font-weight: 500;
+        text-decoration: none;
+        transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+    }
+
+    .btn-outline:hover {
+        background-color: #f0f0f0;
+    }
+
+    .btn-outline .arrow {
+        font-size: 1rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+        .main-nav ul {
+            gap: 1.25rem;
+        }
+
+        .main-nav ul li a {
+            font-size: 0.85rem;
+        }
+    }
+
+    @media (max-width: 900px) {
+        .main-nav {
+            display: none;
+        }
+
+        .nav-right {
+            gap: 1rem;
+        }
+    }
+
+    /* Mobile Menu Button */
+    .mobile-menu-btn {
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 24px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        z-index: 1001;
+    }
+
+    .mobile-menu-btn span {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: #ffffff;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+    }
+
+    header.scrolled .mobile-menu-btn span,
+    .solid-header header .mobile-menu-btn span {
+        background-color: #1a1a2e;
+    }
+
+    /* Mobile Menu Overlay */
+    .mobile-menu-overlay {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        z-index: 2000;
+        transition: right 0.4s ease;
+        overflow-y: auto;
+    }
+
+    .mobile-menu-overlay.active {
+        right: 0;
+    }
+
+    .mobile-menu-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 1.5rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .mobile-menu-header .logo-text {
+        color: #ffffff;
+    }
+
+    .mobile-menu-close {
+        background: transparent;
+        border: none;
+        color: #ffffff;
+        font-size: 2.5rem;
+        cursor: pointer;
+        padding: 0;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 1;
+    }
+
+    /* Mobile Navigation */
+    .mobile-nav {
+        padding: 2rem 1.5rem;
+    }
+
+    .mobile-nav > ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .mobile-nav > ul > li {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .mobile-nav > ul > li > a {
+        display: block;
+        color: #ffffff;
+        font-size: 1.1rem;
+        font-weight: 500;
+        text-decoration: none;
+        padding: 1rem 0;
+        transition: color 0.2s ease;
+    }
+
+    .mobile-nav > ul > li > a:hover {
+        color: var(--color-primary);
+    }
+
+    /* Mobile Submenu */
+    .mobile-submenu {
+        list-style: none;
+        padding: 0.5rem 0 1rem 1rem;
+        margin: 0;
+    }
+
+    .mobile-submenu li {
+        margin-bottom: 0.5rem;
+    }
+
+    .mobile-submenu li a {
+        display: block;
+        color: #d1d5db;
+        font-size: 0.95rem;
+        text-decoration: none;
+        padding: 0.5rem 0;
+        transition: color 0.2s ease;
+    }
+
+    .mobile-submenu li a:hover {
+        color: #ffffff;
+    }
+
+    /* Mobile Nav Actions */
+    .mobile-nav-actions {
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .mobile-nav-link {
+        color: #ffffff;
+        font-weight: 500;
+        font-size: 1rem;
+        text-decoration: none;
+        text-align: center;
+        padding: 0.75rem;
+        transition: color 0.2s ease;
+    }
+
+    .mobile-nav-link:hover {
+        color: var(--color-primary);
+    }
+
+    .mobile-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        background-color: transparent;
+        border: 2px solid #ffffff;
+        color: #ffffff;
+        border-radius: 50px;
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+        font-weight: 500;
+        text-decoration: none;
+        transition: all 0.2s ease;
+    }
+
+    .mobile-btn:hover {
+        background-color: #ffffff;
+        color: #1a1a2e;
+    }
+
+    .mobile-btn .arrow {
+        font-size: 1.1rem;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 900px) {
+        .mobile-menu-btn {
+            display: flex;
+        }
+
+        .nav-right {
+            display: none;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .mobile-menu-header {
+            padding: 1rem;
+        }
+
+        .mobile-nav {
+            padding: 1.5rem 1rem;
+        }
+
+        .mobile-nav > ul > li > a {
+            font-size: 1rem;
+        }
+    }
+</style>
+
+<script>
+    // Handle scroll behavior for header
+    const header = document.querySelector('header');
+
+    function updateHeaderState() {
+        if (window.scrollY > 50) {
+            header?.classList.add('scrolled');
+        } else {
+            header?.classList.remove('scrolled');
+        }
+    }
+
+    // Initial check
+    updateHeaderState();
+
+    // Listen for scroll events
+    window.addEventListener('scroll', updateHeaderState);
+
+    // Mobile menu functionality
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const mobileMenuClose = document.querySelector('.mobile-menu-close');
+    const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav a');
+
+    function openMobileMenu() {
+        mobileMenuOverlay?.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeMobileMenu() {
+        mobileMenuOverlay?.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    // Open menu
+    mobileMenuBtn?.addEventListener('click', openMobileMenu);
+
+    // Close menu
+    mobileMenuClose?.addEventListener('click', closeMobileMenu);
+
+    // Close menu when clicking on a link
+    mobileNavLinks.forEach(link => {
+        link.addEventListener('click', closeMobileMenu);
+    });
+
+    // Close menu when clicking outside
+    mobileMenuOverlay?.addEventListener('click', (e) => {
+        if (e.target === mobileMenuOverlay) {
+            closeMobileMenu();
+        }
+    });
+
+    // Close menu on escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && mobileMenuOverlay?.classList.contains('active')) {
+            closeMobileMenu();
+        }
+    });
+</script>

@@ -1,0 +1,997 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTABanner from '../components/CTABanner.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+---
+
+<BaseLayout
+    title="Contact Us – ReadyAimRetire"
+    description="Get in touch with the ReadyAimRetire team. We're here to help with your retirement planning questions."
+    solidHeader={true}
+>
+    <!-- Hero Section -->
+    <section class="contact-hero">
+        <div class="container">
+            <Breadcrumbs items={[{ label: "Contact Us" }]} />
+            <h1>Contact Us</h1>
+            <p class="hero-subtitle">We're here to help</p>
+            <p class="hero-description">Have a question, need support, or just want to reach out?</p>
+            <p class="hero-text">Whether you're curious about retirement planning, need help with your OnTarget Pro membership, or are interested in partnerships, we'd love to hear from you.</p>
+        </div>
+    </section>
+
+    <!-- Contact Methods -->
+    <section class="contact-methods">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- General Questions & Support -->
+                <div class="contact-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="card-icon">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <h3>GENERAL QUESTIONS & SUPPORT</h3>
+                    <p>For questions about the product, support needs, or general inquiries</p>
+                    <a href="mailto:support@readyaimretire.com" class="email-link">
+                        <i class="fas fa-envelope"></i>
+                        support@readyaimretire.com
+                    </a>
+                </div>
+
+                <!-- Student Pro Access -->
+                <div class="contact-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>STUDENT PRO ACCESS</h3>
+                    <p>Students can receive a free Pro account to support their financial education</p>
+                    <a href="mailto:support@readyaimretire.com" class="email-link">
+                        <i class="fas fa-envelope"></i>
+                        support@readyaimretire.com
+                    </a>
+                </div>
+
+                <!-- Advisors & Partnerships -->
+                <div class="contact-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>ADVISORS & PARTNERSHIPS</h3>
+                    <p>For financial advisors interested in partnerships and collaboration opportunities</p>
+                    <a href="mailto:support@readyaimretire.com" class="email-link">
+                        <i class="fas fa-envelope"></i>
+                        support@readyaimretire.com
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mailing Address -->
+    <section class="mailing-address">
+        <div class="container">
+            <div class="address-card" data-aos="fade-up">
+                <h2>Mailing Address</h2>
+                <div class="address-content">
+                    <p>Ready Aim Retire</p>
+                    <p>1321 17th St Lot 70447</p>
+                    <p>Denver, CO 80202</p>
+                    <p>United States</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stay Connected -->
+    <section class="stay-connected">
+        <div class="container">
+            <div class="connected-content" data-aos="fade-up">
+                <h2>Stay Connected</h2>
+                <p>Follow us on social media for retirement planning tips, product updates, and financial insights.</p>
+
+                <div class="social-links">
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X">
+                        <i class="fab fa-x-twitter"></i>
+                    </a>
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                </div>
+
+                <a href={`${import.meta.env.PUBLIC_APP_URL}/signup`} class="btn-start-planning">
+                    Start Planning for Free
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="form-wrapper" data-aos="fade-up">
+                <h2>Send Us a Message</h2>
+                <p class="form-description">Fill out the form below and we'll get back to you within 24 hours.</p>
+
+                <form class="contact-form">
+                    <!-- Honeypot field - hidden from humans, visible to bots -->
+                    <div class="hp-field" aria-hidden="true">
+                        <label for="website">Website</label>
+                        <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="name">
+                            Name
+                            <span class="required-indicator">*</span>
+                        </label>
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            required
+                            aria-describedby="name-error"
+                        >
+                        <span class="error-message" id="name-error" role="alert"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contact-email">
+                            Email
+                            <span class="required-indicator">*</span>
+                        </label>
+                        <input
+                            type="email"
+                            id="contact-email"
+                            name="email"
+                            required
+                            aria-describedby="contact-email-error"
+                        >
+                        <span class="error-message" id="contact-email-error" role="alert"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">
+                            Message
+                            <span class="required-indicator">*</span>
+                        </label>
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="6"
+                            required
+                            aria-describedby="message-error"
+                        ></textarea>
+                        <span class="error-message" id="message-error" role="alert"></span>
+                    </div>
+
+                    <button type="submit" class="btn-submit">
+                        Send Message
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-card" data-aos="fade-up">
+                <h2>Get the latest news in your inbox</h2>
+                <p>Subscribe to our newsletter for retirement planning tips, product updates, and financial insights.</p>
+
+                <form class="newsletter-form">
+                    <!-- Honeypot field -->
+                    <div class="hp-field" aria-hidden="true">
+                        <label for="newsletter-website">Website</label>
+                        <input type="text" id="newsletter-website" name="website" tabindex="-1" autocomplete="off">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input
+                                type="text"
+                                id="firstName"
+                                name="firstName"
+                                placeholder="First Name *"
+                                required
+                                aria-describedby="firstName-error"
+                            >
+                            <span class="error-message" id="firstName-error" role="alert"></span>
+                        </div>
+                        <div class="form-group">
+                            <input
+                                type="text"
+                                id="lastName"
+                                name="lastName"
+                                placeholder="Last Name *"
+                                required
+                                aria-describedby="lastName-error"
+                            >
+                            <span class="error-message" id="lastName-error" role="alert"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input
+                            type="email"
+                            id="newsletter-email"
+                            name="email"
+                            placeholder="Email Address *"
+                            required
+                            aria-describedby="newsletter-email-error"
+                        >
+                        <span class="error-message" id="newsletter-email-error" role="alert"></span>
+                    </div>
+                    <button type="submit" class="btn-subscribe">
+                        Subscribe
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <CTABanner />
+</BaseLayout>
+
+<style>
+    /* Contact Hero */
+    .contact-hero {
+        background: url('/images/landingbackground.png') center top no-repeat;
+        background-size: 100% auto;
+        background-color: #f6f6f4;
+        padding: 8rem 0 3rem 0;
+        text-align: center;
+    }
+
+    .contact-hero h1 {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-size: clamp(3rem, 5vw, 4rem);
+        font-weight: 400;
+        margin: 0 0 1rem 0;
+        color: #ffffff;
+        line-height: 1.2;
+    }
+
+    .hero-subtitle {
+        font-size: 1.5rem;
+        color: rgba(255, 255, 255, 0.9);
+        margin: 0 0 2rem 0;
+        font-weight: 300;
+    }
+
+    .hero-description {
+        font-size: 1.2rem;
+        color: rgba(255, 255, 255, 0.9);
+        margin: 0 0 1rem 0;
+        font-weight: 500;
+    }
+
+    .hero-text {
+        font-size: 1rem;
+        color: rgba(255, 255, 255, 0.85);
+        max-width: 700px;
+        margin: 0 auto;
+        line-height: 1.6;
+    }
+
+    /* Contact Methods */
+    .contact-methods {
+        background: #f6f6f4;
+        padding: 5rem 0;
+    }
+
+    .contact-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .contact-card {
+        background: #ffffff;
+        border-radius: 16px;
+        padding: 2.5rem 2rem;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .contact-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-icon {
+        width: 64px;
+        height: 64px;
+        background: linear-gradient(135deg, #41bab4 0%, #14b8a6 100%);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1.5rem;
+    }
+
+    .card-icon i {
+        font-size: 1.75rem;
+        color: #ffffff;
+    }
+
+    .contact-card h3 {
+        font-family: 'Inter', sans-serif;
+        font-size: 0.85rem;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        color: #415776;
+        margin: 0 0 1rem 0;
+        text-transform: uppercase;
+    }
+
+    .contact-card p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        color: #666;
+        margin: 0 0 1.5rem 0;
+    }
+
+    .email-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: #41bab4;
+        font-weight: 500;
+        font-size: 0.95rem;
+        text-decoration: none;
+        transition: color 0.2s ease;
+    }
+
+    .email-link:hover {
+        color: #14b8a6;
+    }
+
+    .email-link i {
+        font-size: 1rem;
+    }
+
+    /* Mailing Address */
+    .mailing-address {
+        background: #ffffff;
+        padding: 5rem 0;
+    }
+
+    .address-card {
+        max-width: 600px;
+        margin: 0 auto;
+        text-align: center;
+        background: #f6f6f4;
+        border-radius: 16px;
+        padding: 3rem 2rem;
+    }
+
+    .address-card h2 {
+        font-family: 'Inter', sans-serif;
+        font-size: 1.75rem;
+        font-weight: 600;
+        color: #1a1a2e;
+        margin: 0 0 1.5rem 0;
+    }
+
+    .address-content p {
+        font-size: 1rem;
+        line-height: 1.8;
+        color: #555;
+        margin: 0.25rem 0;
+    }
+
+    /* Stay Connected */
+    .stay-connected {
+        background: #f6f6f4;
+        padding: 5rem 0;
+    }
+
+    .connected-content {
+        max-width: 700px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .connected-content h2 {
+        font-family: 'Inter', sans-serif;
+        font-size: 2rem;
+        font-weight: 600;
+        color: #1a1a2e;
+        margin: 0 0 1rem 0;
+    }
+
+    .connected-content > p {
+        font-size: 1.05rem;
+        line-height: 1.6;
+        color: #666;
+        margin: 0 0 2.5rem 0;
+    }
+
+    .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 1.25rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .social-links a {
+        width: 50px;
+        height: 50px;
+        background: #ffffff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #415776;
+        font-size: 1.5rem;
+        transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    .social-links a:hover {
+        background: #41bab4;
+        color: #ffffff;
+        transform: translateY(-3px);
+        box-shadow: 0 4px 12px rgba(65, 186, 180, 0.3);
+    }
+
+    .btn-start-planning {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.75rem;
+        background-color: #1a1a2e;
+        color: #ffffff;
+        padding: 0.9rem 2rem;
+        font-size: 1rem;
+        font-weight: 600;
+        border-radius: 50px;
+        text-decoration: none;
+        transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .btn-start-planning:hover {
+        background-color: #2a2a3e;
+        transform: translateY(-2px);
+    }
+
+    .btn-start-planning i {
+        font-size: 0.9rem;
+    }
+
+    /* Contact Form Section */
+    .contact-form-section {
+        background: #ffffff;
+        padding: 5rem 0;
+    }
+
+    .form-wrapper {
+        max-width: 700px;
+        margin: 0 auto;
+        background: #f6f6f4;
+        border-radius: 20px;
+        padding: 3.5rem 3rem;
+    }
+
+    .form-wrapper h2 {
+        font-family: 'Inter', sans-serif;
+        font-size: 2rem;
+        font-weight: 600;
+        color: #1a1a2e;
+        margin: 0 0 0.75rem 0;
+        text-align: center;
+    }
+
+    .form-description {
+        font-size: 1rem;
+        line-height: 1.6;
+        color: #666;
+        margin: 0 0 2.5rem 0;
+        text-align: center;
+    }
+
+    .contact-form .form-group {
+        position: relative;
+        margin-bottom: 1.5rem;
+    }
+
+    .contact-form .form-group label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: 500;
+        color: #1a1a2e;
+        font-size: 0.95rem;
+    }
+
+    .required-indicator {
+        color: #ef4444;
+        margin-left: 0.25rem;
+    }
+
+    .contact-form input[type="text"],
+    .contact-form input[type="email"],
+    .contact-form textarea {
+        width: 100%;
+        padding: 0.9rem 1.25rem;
+        border: 2px solid #e5e7eb;
+        border-radius: 8px;
+        background: #ffffff;
+        color: #1a1a2e;
+        font-size: 0.95rem;
+        font-family: inherit;
+        transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        box-sizing: border-box;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+        outline: none;
+        border-color: #41bab4;
+        box-shadow: 0 0 0 3px rgba(65, 186, 180, 0.1);
+    }
+
+    .contact-form textarea {
+        resize: vertical;
+        min-height: 120px;
+    }
+
+    .error-message {
+        display: none;
+        color: #ef4444;
+        font-size: 0.875rem;
+        margin-top: 0.25rem;
+    }
+
+    .input-error {
+        border-color: #ef4444 !important;
+        box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1) !important;
+    }
+
+    .success-message {
+        text-align: center;
+        padding: 3rem 2rem;
+    }
+
+    .success-message i {
+        font-size: 3rem;
+        color: #14b8a6;
+        margin-bottom: 1rem;
+        display: block;
+    }
+
+    .success-message h3 {
+        color: #1a1a2e;
+        margin-bottom: 0.5rem;
+        font-size: 1.75rem;
+    }
+
+    .success-message p {
+        color: #64748b;
+        font-size: 1rem;
+    }
+
+    /* Honeypot - hidden from humans, visible to bots */
+    .hp-field {
+        position: absolute;
+        left: -9999px;
+        opacity: 0;
+        pointer-events: none;
+        width: 0;
+        height: 0;
+        overflow: hidden;
+    }
+
+    .btn-submit {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.75rem;
+        background-color: #1a1a2e;
+        color: #ffffff;
+        padding: 0.9rem 2rem;
+        font-size: 1rem;
+        font-weight: 600;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.2s ease, transform 0.2s ease;
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+
+    .btn-submit:hover {
+        background-color: #2a2a3e;
+        transform: translateY(-2px);
+    }
+
+    .btn-submit:disabled {
+        background-color: #94a3b8;
+        cursor: not-allowed;
+        transform: none;
+    }
+
+    .btn-submit i {
+        font-size: 0.9rem;
+    }
+
+    /* Newsletter Section */
+    .newsletter-section {
+        background: #f6f6f4;
+        padding: 5rem 0;
+    }
+
+    .newsletter-card {
+        max-width: 700px;
+        margin: 0 auto;
+        background: linear-gradient(135deg, #415776 0%, #2e3f56 100%);
+        border-radius: 20px;
+        padding: 3.5rem 3rem;
+        text-align: center;
+    }
+
+    .newsletter-card h2 {
+        font-family: 'Inter', sans-serif;
+        font-size: 2rem;
+        font-weight: 600;
+        color: #ffffff;
+        margin: 0 0 1rem 0;
+    }
+
+    .newsletter-card > p {
+        font-size: 1rem;
+        line-height: 1.6;
+        color: rgba(255, 255, 255, 0.85);
+        margin: 0 0 2.5rem 0;
+    }
+
+    .newsletter-form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .newsletter-form .form-group {
+        position: relative;
+    }
+
+    .newsletter-form .form-group input {
+        width: 100%;
+        padding: 0.9rem 1.25rem;
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.1);
+        color: #ffffff;
+        font-size: 0.95rem;
+        transition: border-color 0.2s ease, background-color 0.2s ease;
+        box-sizing: border-box;
+    }
+
+    .newsletter-form .form-group input::placeholder {
+        color: rgba(255, 255, 255, 0.6);
+    }
+
+    .newsletter-form .form-group input:focus {
+        outline: none;
+        border-color: #41bab4;
+        background: rgba(255, 255, 255, 0.15);
+    }
+
+    .newsletter-form .error-message {
+        color: #fca5a5;
+        text-align: left;
+    }
+
+    .newsletter-form .input-error {
+        border-color: #fca5a5 !important;
+        box-shadow: 0 0 0 3px rgba(252, 165, 165, 0.2) !important;
+    }
+
+    .newsletter-form .success-message {
+        background: rgba(20, 184, 166, 0.1);
+        border-radius: 12px;
+        padding: 2.5rem 2rem;
+    }
+
+    .newsletter-form .success-message i {
+        color: #14b8a6;
+    }
+
+    .newsletter-form .success-message h3 {
+        color: #ffffff;
+    }
+
+    .newsletter-form .success-message p {
+        color: rgba(255, 255, 255, 0.85);
+    }
+
+    .btn-subscribe {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.75rem;
+        background-color: #41bab4;
+        color: #ffffff;
+        padding: 0.9rem 2rem;
+        font-size: 1rem;
+        font-weight: 600;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.2s ease, transform 0.2s ease;
+        margin-top: 0.5rem;
+    }
+
+    .btn-subscribe:hover {
+        background-color: #14b8a6;
+        transform: translateY(-2px);
+    }
+
+    .btn-subscribe i {
+        font-size: 0.9rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .contact-hero {
+            padding: 6rem 0 3rem 0;
+        }
+
+        .contact-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .form-row {
+            grid-template-columns: 1fr;
+        }
+
+        .form-wrapper,
+        .newsletter-card {
+            padding: 2.5rem 1.75rem;
+        }
+
+        .social-links {
+            gap: 1rem;
+        }
+
+        .social-links a {
+            width: 44px;
+            height: 44px;
+            font-size: 1.25rem;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .contact-hero h1 {
+            font-size: 2.5rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+        }
+
+        .address-card {
+            padding: 2rem 1.5rem;
+        }
+
+        .form-wrapper h2,
+        .newsletter-card h2 {
+            font-size: 1.5rem;
+        }
+    }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Contact Form Validation
+    const contactForm = document.querySelector('.contact-form');
+    if (contactForm) {
+        const nameInput = contactForm.querySelector('input[name="name"]');
+        const emailInput = contactForm.querySelector('input[name="email"]');
+        const messageInput = contactForm.querySelector('textarea[name="message"]');
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+        const honeypot = contactForm.querySelector('input[name="website"]');
+
+        function showError(input, message) {
+            const errorEl = input.parentElement.querySelector('.error-message');
+            if (errorEl) {
+                errorEl.textContent = message;
+                errorEl.style.display = 'block';
+            }
+            input.classList.add('input-error');
+            input.setAttribute('aria-invalid', 'true');
+        }
+
+        function clearError(input) {
+            const errorEl = input.parentElement.querySelector('.error-message');
+            if (errorEl) {
+                errorEl.textContent = '';
+                errorEl.style.display = 'none';
+            }
+            input.classList.remove('input-error');
+            input.removeAttribute('aria-invalid');
+        }
+
+        function validateEmail(email) {
+            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+        }
+
+        function validateContactForm() {
+            let isValid = true;
+
+            // Check honeypot
+            if (honeypot && honeypot.value) {
+                return false; // Bot detected
+            }
+
+            // Validate name
+            if (!nameInput.value.trim() || nameInput.value.trim().length < 2) {
+                showError(nameInput, 'Please enter your name (at least 2 characters)');
+                isValid = false;
+            } else {
+                clearError(nameInput);
+            }
+
+            // Validate email
+            if (!emailInput.value.trim() || !validateEmail(emailInput.value)) {
+                showError(emailInput, 'Please enter a valid email address');
+                isValid = false;
+            } else {
+                clearError(emailInput);
+            }
+
+            // Validate message
+            if (!messageInput.value.trim() || messageInput.value.trim().length < 10) {
+                showError(messageInput, 'Please enter a message (at least 10 characters)');
+                isValid = false;
+            } else {
+                clearError(messageInput);
+            }
+
+            return isValid;
+        }
+
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            if (validateContactForm()) {
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+
+                // Simulate form submission (replace with actual submission logic)
+                setTimeout(function() {
+                    const formWrapper = contactForm.closest('.form-wrapper');
+                    formWrapper.innerHTML = '<div class="success-message"><i class="fas fa-check-circle"></i><h3>Message Sent!</h3><p>Thank you for reaching out. We\'ll get back to you within 24 hours.</p></div>';
+                }, 1500);
+            }
+        });
+
+        // Real-time validation on blur
+        [nameInput, emailInput, messageInput].forEach(function(input) {
+            input.addEventListener('blur', function() {
+                if (this.value.trim()) {
+                    validateContactForm();
+                }
+            });
+        });
+    }
+
+    // Newsletter Form Validation
+    const newsletterForm = document.querySelector('.newsletter-form');
+    if (newsletterForm) {
+        const firstNameInput = newsletterForm.querySelector('input[name="firstName"]');
+        const lastNameInput = newsletterForm.querySelector('input[name="lastName"]');
+        const newsletterEmailInput = newsletterForm.querySelector('input[name="email"]');
+        const subscribeBtn = newsletterForm.querySelector('button[type="submit"]');
+        const newsletterHoneypot = newsletterForm.querySelector('input[name="website"]');
+
+        function showNewsletterError(input, message) {
+            const errorEl = input.parentElement.querySelector('.error-message');
+            if (errorEl) {
+                errorEl.textContent = message;
+                errorEl.style.display = 'block';
+            }
+            input.classList.add('input-error');
+            input.setAttribute('aria-invalid', 'true');
+        }
+
+        function clearNewsletterError(input) {
+            const errorEl = input.parentElement.querySelector('.error-message');
+            if (errorEl) {
+                errorEl.textContent = '';
+                errorEl.style.display = 'none';
+            }
+            input.classList.remove('input-error');
+            input.removeAttribute('aria-invalid');
+        }
+
+        function validateNewsletterEmail(email) {
+            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+        }
+
+        function validateNewsletterForm() {
+            let isValid = true;
+
+            // Check honeypot
+            if (newsletterHoneypot && newsletterHoneypot.value) {
+                return false; // Bot detected
+            }
+
+            // Validate first name
+            if (!firstNameInput.value.trim() || firstNameInput.value.trim().length < 2) {
+                showNewsletterError(firstNameInput, 'Please enter your first name');
+                isValid = false;
+            } else {
+                clearNewsletterError(firstNameInput);
+            }
+
+            // Validate last name
+            if (!lastNameInput.value.trim() || lastNameInput.value.trim().length < 2) {
+                showNewsletterError(lastNameInput, 'Please enter your last name');
+                isValid = false;
+            } else {
+                clearNewsletterError(lastNameInput);
+            }
+
+            // Validate email
+            if (!newsletterEmailInput.value.trim() || !validateNewsletterEmail(newsletterEmailInput.value)) {
+                showNewsletterError(newsletterEmailInput, 'Please enter a valid email address');
+                isValid = false;
+            } else {
+                clearNewsletterError(newsletterEmailInput);
+            }
+
+            return isValid;
+        }
+
+        newsletterForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            if (validateNewsletterForm()) {
+                subscribeBtn.disabled = true;
+                subscribeBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Subscribing...';
+
+                // Simulate form submission (replace with actual submission logic)
+                setTimeout(function() {
+                    const newsletterCard = newsletterForm.closest('.newsletter-card');
+                    const cardContent = newsletterCard.innerHTML;
+                    newsletterCard.innerHTML = '<div class="success-message"><i class="fas fa-check-circle"></i><h3>You\'re Subscribed!</h3><p>Thank you for subscribing. You\'ll receive our latest updates in your inbox.</p></div>';
+                }, 1500);
+            }
+        });
+
+        // Real-time validation on blur
+        [firstNameInput, lastNameInput, newsletterEmailInput].forEach(function(input) {
+            input.addEventListener('blur', function() {
+                if (this.value.trim()) {
+                    validateNewsletterForm();
+                }
+            });
+        });
+    }
+});
+</script>
+</BaseLayout>

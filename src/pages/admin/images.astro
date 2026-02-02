@@ -1,0 +1,1276 @@
+---
+export const prerender = false;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin - Blog Image Generator | ReadyAimRetire</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    :root {
+      --color-primary: #14b8a6;
+      --color-primary-hover: #0d9488;
+      --color-dark: #1a1a2e;
+      --color-gray-50: #f9fafb;
+      --color-gray-100: #f3f4f6;
+      --color-gray-200: #e5e7eb;
+      --color-gray-300: #d1d5db;
+      --color-gray-400: #9ca3af;
+      --color-gray-500: #6b7280;
+      --color-gray-600: #4b5563;
+      --color-gray-700: #374151;
+      --color-gray-800: #1f2937;
+      --color-success: #10b981;
+      --color-warning: #f59e0b;
+      --color-error: #ef4444;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--color-gray-100);
+      color: var(--color-gray-800);
+      min-height: 100vh;
+    }
+
+    /* Login Screen */
+    .login-container {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+
+    .login-box {
+      background: white;
+      padding: 2.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .login-box h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--color-dark);
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .login-box h1 i {
+      color: var(--color-primary);
+    }
+
+    .login-box p {
+      color: var(--color-gray-500);
+      font-size: 0.9rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group {
+      margin-bottom: 1rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--color-gray-700);
+      margin-bottom: 0.5rem;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 1px solid var(--color-gray-300);
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .form-group input:focus {
+      outline: none;
+      border-color: var(--color-primary);
+      box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.1);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn-primary {
+      background: var(--color-primary);
+      color: white;
+      width: 100%;
+    }
+
+    .btn-primary:hover {
+      background: var(--color-primary-hover);
+    }
+
+    .btn-secondary {
+      background: var(--color-gray-200);
+      color: var(--color-gray-700);
+    }
+
+    .btn-secondary:hover {
+      background: var(--color-gray-300);
+    }
+
+    .btn-danger {
+      background: var(--color-error);
+      color: white;
+    }
+
+    .btn-danger:hover {
+      background: #dc2626;
+    }
+
+    .btn-sm {
+      padding: 0.5rem 1rem;
+      font-size: 0.85rem;
+    }
+
+    .btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    .error-message {
+      background: #fef2f2;
+      border: 1px solid #fecaca;
+      color: #dc2626;
+      padding: 0.75rem 1rem;
+      border-radius: 8px;
+      font-size: 0.875rem;
+      margin-bottom: 1rem;
+      display: none;
+    }
+
+    .error-message.show {
+      display: block;
+    }
+
+    /* Admin Panel */
+    .admin-container {
+      display: none;
+    }
+
+    .admin-container.show {
+      display: block;
+    }
+
+    .admin-header {
+      background: var(--color-dark);
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .admin-header h1 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .admin-header h1 i {
+      color: var(--color-primary);
+    }
+
+    .admin-content {
+      padding: 2rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    /* Stats Cards */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .stat-card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .stat-card h3 {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--color-gray-500);
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-card .stat-value {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--color-dark);
+    }
+
+    .stat-card.success .stat-value {
+      color: var(--color-success);
+    }
+
+    .stat-card.warning .stat-value {
+      color: var(--color-warning);
+    }
+
+    /* Posts Section */
+    .posts-section {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .posts-header {
+      padding: 1.5rem;
+      border-bottom: 1px solid var(--color-gray-200);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .posts-header h2 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--color-dark);
+    }
+
+    .posts-list {
+      padding: 1rem;
+    }
+
+    .post-card {
+      display: grid;
+      grid-template-columns: 120px 1fr auto;
+      gap: 1.5rem;
+      padding: 1rem;
+      border-radius: 8px;
+      transition: background 0.2s;
+      align-items: center;
+    }
+
+    .post-card:hover {
+      background: var(--color-gray-50);
+    }
+
+    .post-card + .post-card {
+      border-top: 1px solid var(--color-gray-200);
+    }
+
+    .post-thumbnail {
+      width: 120px;
+      height: 80px;
+      border-radius: 8px;
+      overflow: hidden;
+      background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-hover) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .post-thumbnail img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .post-thumbnail i {
+      font-size: 1.5rem;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .post-info h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--color-dark);
+      margin-bottom: 0.25rem;
+    }
+
+    .post-meta {
+      display: flex;
+      gap: 1rem;
+      font-size: 0.8rem;
+      color: var(--color-gray-500);
+    }
+
+    .post-meta span {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      padding: 0.25rem 0.75rem;
+      border-radius: 50px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      margin-top: 0.5rem;
+    }
+
+    .status-badge.has-image {
+      background: #d1fae5;
+      color: #059669;
+    }
+
+    .status-badge.needs-image {
+      background: #fef3c7;
+      color: #d97706;
+    }
+
+    .post-actions {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    /* Modal */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      padding: 1rem;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.2s;
+    }
+
+    .modal-overlay.show {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .modal {
+      background: white;
+      border-radius: 16px;
+      width: 100%;
+      max-width: 700px;
+      max-height: 90vh;
+      overflow-y: auto;
+      transform: scale(0.95);
+      transition: transform 0.2s;
+    }
+
+    .modal-overlay.show .modal {
+      transform: scale(1);
+    }
+
+    .modal-header {
+      padding: 1.5rem;
+      border-bottom: 1px solid var(--color-gray-200);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .modal-header h2 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--color-dark);
+    }
+
+    .modal-close {
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: var(--color-gray-400);
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+
+    .modal-close:hover {
+      color: var(--color-gray-600);
+    }
+
+    .modal-body {
+      padding: 1.5rem;
+    }
+
+    .modal-footer {
+      padding: 1rem 1.5rem;
+      border-top: 1px solid var(--color-gray-200);
+      display: flex;
+      justify-content: flex-end;
+      gap: 0.75rem;
+    }
+
+    /* Generation Steps */
+    .step-indicator {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .step-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--color-gray-300);
+    }
+
+    .step-dot.active {
+      background: var(--color-primary);
+    }
+
+    .step-dot.completed {
+      background: var(--color-success);
+    }
+
+    .step-content {
+      display: none;
+    }
+
+    .step-content.active {
+      display: block;
+    }
+
+    .loading-spinner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .loading-spinner i {
+      font-size: 2.5rem;
+      color: var(--color-primary);
+      animation: spin 1s linear infinite;
+      margin-bottom: 1rem;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    .loading-spinner p {
+      color: var(--color-gray-600);
+      font-size: 0.9rem;
+    }
+
+    .prompt-display {
+      background: var(--color-gray-50);
+      border: 1px solid var(--color-gray-200);
+      border-radius: 8px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .prompt-display label {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--color-gray-500);
+      margin-bottom: 0.5rem;
+    }
+
+    .prompt-display textarea {
+      width: 100%;
+      min-height: 120px;
+      border: 1px solid var(--color-gray-300);
+      border-radius: 6px;
+      padding: 0.75rem;
+      font-family: inherit;
+      font-size: 0.9rem;
+      resize: vertical;
+    }
+
+    .prompt-display textarea:focus {
+      outline: none;
+      border-color: var(--color-primary);
+    }
+
+    .reasoning-box {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 8px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .reasoning-box h4 {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #059669;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .reasoning-box p {
+      font-size: 0.875rem;
+      color: #047857;
+      line-height: 1.5;
+    }
+
+    .image-preview {
+      text-align: center;
+    }
+
+    .image-preview img {
+      max-width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .success-message {
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .success-message i {
+      font-size: 3rem;
+      color: var(--color-success);
+      margin-bottom: 1rem;
+    }
+
+    .success-message h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--color-dark);
+      margin-bottom: 0.5rem;
+    }
+
+    .success-message p {
+      color: var(--color-gray-600);
+    }
+
+    .cost-estimate {
+      background: #fffbeb;
+      border: 1px solid #fde68a;
+      border-radius: 8px;
+      padding: 0.75rem 1rem;
+      font-size: 0.85rem;
+      color: #92400e;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    /* Bulk Generation */
+    .bulk-progress {
+      margin-top: 1rem;
+    }
+
+    .bulk-progress-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.5rem 0;
+      font-size: 0.9rem;
+    }
+
+    .bulk-progress-item i.pending {
+      color: var(--color-gray-400);
+    }
+
+    .bulk-progress-item i.processing {
+      color: var(--color-primary);
+      animation: spin 1s linear infinite;
+    }
+
+    .bulk-progress-item i.success {
+      color: var(--color-success);
+    }
+
+    .bulk-progress-item i.error {
+      color: var(--color-error);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .post-card {
+        grid-template-columns: 1fr;
+      }
+
+      .post-thumbnail {
+        width: 100%;
+        height: 150px;
+      }
+
+      .post-actions {
+        justify-content: flex-start;
+      }
+
+      .admin-header {
+        padding: 1rem;
+      }
+
+      .admin-content {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Login Screen -->
+  <div id="login-screen" class="login-container">
+    <div class="login-box">
+      <h1><i class="fas fa-image"></i> Admin Panel</h1>
+      <p>Enter your admin password to access the blog image generator.</p>
+
+      <div id="login-error" class="error-message"></div>
+
+      <form id="login-form">
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required autocomplete="current-password">
+        </div>
+        <button type="submit" class="btn btn-primary">
+          <i class="fas fa-sign-in-alt"></i> Login
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Admin Panel -->
+  <div id="admin-panel" class="admin-container">
+    <header class="admin-header">
+      <h1><i class="fas fa-image"></i> Blog Image Generator</h1>
+      <button id="logout-btn" class="btn btn-secondary btn-sm">
+        <i class="fas fa-sign-out-alt"></i> Logout
+      </button>
+    </header>
+
+    <main class="admin-content">
+      <!-- Stats Cards -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <h3>Total Posts</h3>
+          <div class="stat-value" id="stat-total">-</div>
+        </div>
+        <div class="stat-card success">
+          <h3>With Images</h3>
+          <div class="stat-value" id="stat-with-images">-</div>
+        </div>
+        <div class="stat-card warning">
+          <h3>Need Images</h3>
+          <div class="stat-value" id="stat-need-images">-</div>
+        </div>
+      </div>
+
+      <!-- Posts Section -->
+      <div class="posts-section">
+        <div class="posts-header">
+          <h2>Blog Posts</h2>
+          <button id="bulk-generate-btn" class="btn btn-primary btn-sm">
+            <i class="fas fa-magic"></i> Generate All Missing
+          </button>
+        </div>
+        <div class="posts-list" id="posts-list">
+          <div class="loading-spinner">
+            <i class="fas fa-spinner"></i>
+            <p>Loading blog posts...</p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Generation Modal -->
+  <div id="generation-modal" class="modal-overlay">
+    <div class="modal">
+      <div class="modal-header">
+        <h2 id="modal-title">Generate Image</h2>
+        <button class="modal-close" id="modal-close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <!-- Step Indicator -->
+        <div class="step-indicator">
+          <div class="step-dot" data-step="1"></div>
+          <div class="step-dot" data-step="2"></div>
+          <div class="step-dot" data-step="3"></div>
+          <div class="step-dot" data-step="4"></div>
+          <div class="step-dot" data-step="5"></div>
+        </div>
+
+        <!-- Step 1: Generating Prompt -->
+        <div class="step-content" data-step="1">
+          <div class="loading-spinner">
+            <i class="fas fa-spinner"></i>
+            <p>Analyzing blog content with AI...</p>
+          </div>
+        </div>
+
+        <!-- Step 2: Review Prompt -->
+        <div class="step-content" data-step="2">
+          <div class="reasoning-box" id="reasoning-box">
+            <h4><i class="fas fa-lightbulb"></i> AI Reasoning</h4>
+            <p id="prompt-reasoning"></p>
+          </div>
+          <div class="prompt-display">
+            <label>Generated DALL-E Prompt (editable)</label>
+            <textarea id="prompt-text"></textarea>
+          </div>
+          <div class="cost-estimate">
+            <i class="fas fa-info-circle"></i>
+            Estimated cost: ~$0.02 (GPT-4 prompt) + Gemini image generation (free tier)
+          </div>
+        </div>
+
+        <!-- Step 3: Generating Image -->
+        <div class="step-content" data-step="3">
+          <div class="loading-spinner">
+            <i class="fas fa-spinner"></i>
+            <p>Generating image with Gemini Nano Banana Pro...</p>
+          </div>
+        </div>
+
+        <!-- Step 4: Preview Image -->
+        <div class="step-content" data-step="4">
+          <div class="image-preview">
+            <img id="preview-image" src="" alt="Generated image preview">
+          </div>
+        </div>
+
+        <!-- Step 5: Success -->
+        <div class="step-content" data-step="5">
+          <div class="success-message">
+            <i class="fas fa-check-circle"></i>
+            <h3>Image Saved Successfully!</h3>
+            <p id="success-path">The image has been saved and the blog post has been updated.</p>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer" id="modal-footer">
+        <!-- Dynamic buttons -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Bulk Generation Modal -->
+  <div id="bulk-modal" class="modal-overlay">
+    <div class="modal">
+      <div class="modal-header">
+        <h2>Bulk Generate Images</h2>
+        <button class="modal-close" id="bulk-modal-close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div id="bulk-confirm">
+          <div class="cost-estimate">
+            <i class="fas fa-exclamation-triangle"></i>
+            <span id="bulk-cost-warning">This will generate images for X posts. Estimated cost: ~$X.XX</span>
+          </div>
+          <p style="margin-top: 1rem; color: var(--color-gray-600);">
+            This process may take several minutes. Do not close this window during generation.
+          </p>
+        </div>
+        <div id="bulk-progress" class="bulk-progress" style="display: none;"></div>
+        <div id="bulk-complete" style="display: none;">
+          <div class="success-message">
+            <i class="fas fa-check-circle"></i>
+            <h3>Bulk Generation Complete!</h3>
+            <p id="bulk-result"></p>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer" id="bulk-modal-footer">
+        <button class="btn btn-secondary" id="bulk-cancel">Cancel</button>
+        <button class="btn btn-primary" id="bulk-start">
+          <i class="fas fa-play"></i> Start Generation
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // State
+    let adminPassword = '';
+    let posts = [];
+    let currentSlug = '';
+    let currentPrompt = '';
+    let currentPreviewUrl = '';
+    let currentStep = 1;
+
+    // Cookie helpers
+    function setCookie(name, value, days = 7) {
+      const expires = new Date(Date.now() + days * 864e5).toUTCString();
+      document.cookie = `${name}=${encodeURIComponent(value)}; expires=${expires}; path=/admin; SameSite=Strict`;
+    }
+
+    function getCookie(name) {
+      const match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+      return match ? decodeURIComponent(match[2]) : null;
+    }
+
+    function deleteCookie(name) {
+      document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/admin`;
+    }
+
+    // DOM Elements
+    const loginScreen = document.getElementById('login-screen');
+    const adminPanel = document.getElementById('admin-panel');
+    const loginForm = document.getElementById('login-form');
+    const loginError = document.getElementById('login-error');
+    const logoutBtn = document.getElementById('logout-btn');
+    const postsList = document.getElementById('posts-list');
+    const generationModal = document.getElementById('generation-modal');
+    const bulkModal = document.getElementById('bulk-modal');
+
+    // Check for existing session on page load
+    async function checkExistingSession() {
+      const savedPassword = getCookie('admin_session');
+      if (savedPassword) {
+        try {
+          const response = await fetch('/api/admin/posts', {
+            headers: { 'X-Admin-Password': savedPassword }
+          });
+
+          if (response.ok) {
+            adminPassword = savedPassword;
+            loginScreen.style.display = 'none';
+            adminPanel.classList.add('show');
+            loadPosts();
+            return;
+          } else {
+            // Invalid saved session, clear it
+            deleteCookie('admin_session');
+          }
+        } catch (error) {
+          // Network error, keep login screen
+        }
+      }
+    }
+
+    // Run session check on load
+    checkExistingSession();
+
+    // Login
+    loginForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const password = document.getElementById('password').value;
+
+      try {
+        const response = await fetch('/api/admin/posts', {
+          headers: { 'X-Admin-Password': password }
+        });
+
+        if (response.ok) {
+          adminPassword = password;
+          setCookie('admin_session', password); // Save session
+          loginScreen.style.display = 'none';
+          adminPanel.classList.add('show');
+          loadPosts();
+        } else {
+          const data = await response.json();
+          showLoginError(data.error || 'Invalid password');
+        }
+      } catch (error) {
+        showLoginError('Connection error. Please try again.');
+      }
+    });
+
+    function showLoginError(message) {
+      loginError.textContent = message;
+      loginError.classList.add('show');
+    }
+
+    // Logout
+    logoutBtn.addEventListener('click', () => {
+      adminPassword = '';
+      deleteCookie('admin_session'); // Clear session
+      adminPanel.classList.remove('show');
+      loginScreen.style.display = 'flex';
+      document.getElementById('password').value = '';
+      loginError.classList.remove('show');
+    });
+
+    // Load Posts
+    async function loadPosts() {
+      try {
+        const response = await fetch('/api/admin/posts', {
+          headers: { 'X-Admin-Password': adminPassword }
+        });
+
+        if (!response.ok) throw new Error('Failed to load posts');
+
+        const data = await response.json();
+        posts = data.posts;
+
+        // Update stats
+        document.getElementById('stat-total').textContent = data.stats.total;
+        document.getElementById('stat-with-images').textContent = data.stats.withImages;
+        document.getElementById('stat-need-images').textContent = data.stats.needImages;
+
+        // Render posts
+        renderPosts();
+      } catch (error) {
+        postsList.innerHTML = `<div class="error-message show" style="margin: 1rem;">${error.message}</div>`;
+      }
+    }
+
+    function renderPosts() {
+      postsList.innerHTML = posts.map(post => `
+        <div class="post-card" data-slug="${post.slug}">
+          <div class="post-thumbnail">
+            ${post.hasImage
+              ? `<img src="${post.image}" alt="${post.title}">`
+              : `<i class="fas fa-image"></i>`
+            }
+          </div>
+          <div class="post-info">
+            <h3>${post.title}</h3>
+            <div class="post-meta">
+              <span><i class="fas fa-folder"></i> ${post.category}</span>
+              <span><i class="fas fa-calendar"></i> ${new Date(post.date).toLocaleDateString()}</span>
+            </div>
+            <span class="status-badge ${post.hasImage ? 'has-image' : 'needs-image'}">
+              <i class="fas ${post.hasImage ? 'fa-check' : 'fa-exclamation-circle'}"></i>
+              ${post.hasImage ? 'Has Image' : 'Needs Image'}
+            </span>
+          </div>
+          <div class="post-actions">
+            <button class="btn btn-primary btn-sm generate-btn" data-slug="${post.slug}">
+              <i class="fas fa-magic"></i> ${post.hasImage ? 'Regenerate' : 'Generate'}
+            </button>
+            ${post.hasImage ? `
+              <a href="/blog/${post.slug}" target="_blank" class="btn btn-secondary btn-sm">
+                <i class="fas fa-external-link-alt"></i> View
+              </a>
+            ` : ''}
+          </div>
+        </div>
+      `).join('');
+
+      // Add event listeners
+      document.querySelectorAll('.generate-btn').forEach(btn => {
+        btn.addEventListener('click', () => openGenerationModal(btn.dataset.slug));
+      });
+    }
+
+    // Generation Modal
+    function openGenerationModal(slug) {
+      currentSlug = slug;
+      currentStep = 1;
+      const post = posts.find(p => p.slug === slug);
+      document.getElementById('modal-title').textContent = `Generate Image: ${post?.title || slug}`;
+      updateStep(1);
+      generationModal.classList.add('show');
+      startPromptGeneration();
+    }
+
+    function closeGenerationModal() {
+      generationModal.classList.remove('show');
+      currentSlug = '';
+      currentPrompt = '';
+      currentPreviewUrl = '';
+    }
+
+    document.getElementById('modal-close').addEventListener('click', closeGenerationModal);
+    generationModal.addEventListener('click', (e) => {
+      if (e.target === generationModal) closeGenerationModal();
+    });
+
+    function updateStep(step) {
+      currentStep = step;
+      document.querySelectorAll('.step-dot').forEach(dot => {
+        const dotStep = parseInt(dot.dataset.step);
+        dot.classList.remove('active', 'completed');
+        if (dotStep === step) dot.classList.add('active');
+        if (dotStep < step) dot.classList.add('completed');
+      });
+
+      document.querySelectorAll('.step-content').forEach(content => {
+        content.classList.remove('active');
+        if (parseInt(content.dataset.step) === step) content.classList.add('active');
+      });
+
+      updateModalFooter();
+    }
+
+    function updateModalFooter() {
+      const footer = document.getElementById('modal-footer');
+
+      switch (currentStep) {
+        case 1:
+        case 3:
+          footer.innerHTML = `
+            <button class="btn btn-secondary" onclick="closeGenerationModal()">Cancel</button>
+          `;
+          break;
+        case 2:
+          footer.innerHTML = `
+            <button class="btn btn-secondary" onclick="closeGenerationModal()">Cancel</button>
+            <button class="btn btn-primary" onclick="startImageGeneration()">
+              <i class="fas fa-image"></i> Generate Image
+            </button>
+          `;
+          break;
+        case 4:
+          footer.innerHTML = `
+            <button class="btn btn-secondary" onclick="startPromptGeneration()">
+              <i class="fas fa-redo"></i> Try Again
+            </button>
+            <button class="btn btn-primary" onclick="saveImage()">
+              <i class="fas fa-save"></i> Save Image
+            </button>
+          `;
+          break;
+        case 5:
+          footer.innerHTML = `
+            <button class="btn btn-primary" onclick="closeGenerationModal()">Done</button>
+          `;
+          break;
+      }
+    }
+
+    async function startPromptGeneration() {
+      updateStep(1);
+
+      try {
+        const response = await fetch('/api/admin/generate-prompt', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'X-Admin-Password': adminPassword
+          },
+          body: JSON.stringify({ slug: currentSlug })
+        });
+
+        if (!response.ok) {
+          const data = await response.json();
+          throw new Error(data.error || 'Failed to generate prompt');
+        }
+
+        const data = await response.json();
+        currentPrompt = data.prompt;
+        document.getElementById('prompt-text').value = data.prompt;
+        document.getElementById('prompt-reasoning').textContent = data.reasoning;
+
+        updateStep(2);
+      } catch (error) {
+        alert('Error: ' + error.message);
+        closeGenerationModal();
+      }
+    }
+
+    async function startImageGeneration() {
+      currentPrompt = document.getElementById('prompt-text').value;
+      updateStep(3);
+
+      try {
+        const response = await fetch('/api/admin/generate-image', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'X-Admin-Password': adminPassword
+          },
+          body: JSON.stringify({ slug: currentSlug, prompt: currentPrompt })
+        });
+
+        if (!response.ok) {
+          const data = await response.json();
+          throw new Error(data.error || 'Failed to generate image');
+        }
+
+        const data = await response.json();
+        currentPreviewUrl = data.previewUrl;
+        document.getElementById('preview-image').src = data.previewUrl;
+
+        updateStep(4);
+      } catch (error) {
+        alert('Error: ' + error.message);
+        updateStep(2);
+      }
+    }
+
+    async function saveImage() {
+      updateStep(3); // Show loading
+
+      try {
+        const response = await fetch('/api/admin/save-image', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'X-Admin-Password': adminPassword
+          },
+          body: JSON.stringify({ slug: currentSlug, imageUrl: currentPreviewUrl })
+        });
+
+        if (!response.ok) {
+          const data = await response.json();
+          throw new Error(data.error || 'Failed to save image');
+        }
+
+        const data = await response.json();
+        document.getElementById('success-path').textContent = `Saved to: ${data.imagePath}`;
+
+        updateStep(5);
+        loadPosts(); // Refresh the list
+      } catch (error) {
+        alert('Error: ' + error.message);
+        updateStep(4);
+      }
+    }
+
+    // Bulk Generation
+    document.getElementById('bulk-generate-btn').addEventListener('click', openBulkModal);
+    document.getElementById('bulk-modal-close').addEventListener('click', closeBulkModal);
+    document.getElementById('bulk-cancel').addEventListener('click', closeBulkModal);
+    bulkModal.addEventListener('click', (e) => {
+      if (e.target === bulkModal) closeBulkModal();
+    });
+
+    function openBulkModal() {
+      const needImages = posts.filter(p => !p.hasImage);
+      const count = needImages.length;
+      const cost = (count * 0.02).toFixed(2); // GPT-4 prompt cost only, Gemini images are free tier
+
+      document.getElementById('bulk-cost-warning').textContent =
+        `This will generate images for ${count} posts. Estimated cost: ~$${cost} (GPT-4 prompts)`;
+
+      document.getElementById('bulk-confirm').style.display = 'block';
+      document.getElementById('bulk-progress').style.display = 'none';
+      document.getElementById('bulk-complete').style.display = 'none';
+      document.getElementById('bulk-modal-footer').style.display = 'flex';
+
+      bulkModal.classList.add('show');
+    }
+
+    function closeBulkModal() {
+      bulkModal.classList.remove('show');
+    }
+
+    document.getElementById('bulk-start').addEventListener('click', startBulkGeneration);
+
+    async function startBulkGeneration() {
+      const needImages = posts.filter(p => !p.hasImage);
+
+      document.getElementById('bulk-confirm').style.display = 'none';
+      document.getElementById('bulk-modal-footer').style.display = 'none';
+
+      const progressContainer = document.getElementById('bulk-progress');
+      progressContainer.style.display = 'block';
+      progressContainer.innerHTML = needImages.map(post => `
+        <div class="bulk-progress-item" data-slug="${post.slug}">
+          <i class="fas fa-circle pending"></i>
+          <span>${post.title}</span>
+        </div>
+      `).join('');
+
+      let successCount = 0;
+      let failCount = 0;
+
+      for (const post of needImages) {
+        const item = progressContainer.querySelector(`[data-slug="${post.slug}"]`);
+        const icon = item.querySelector('i');
+
+        icon.className = 'fas fa-spinner processing';
+
+        try {
+          // Generate prompt
+          const promptRes = await fetch('/api/admin/generate-prompt', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'X-Admin-Password': adminPassword
+            },
+            body: JSON.stringify({ slug: post.slug })
+          });
+
+          if (!promptRes.ok) throw new Error('Prompt generation failed');
+
+          const promptData = await promptRes.json();
+
+          // Generate image
+          const imageRes = await fetch('/api/admin/generate-image', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'X-Admin-Password': adminPassword
+            },
+            body: JSON.stringify({ slug: post.slug, prompt: promptData.prompt })
+          });
+
+          if (!imageRes.ok) throw new Error('Image generation failed');
+
+          const imageData = await imageRes.json();
+
+          // Save image
+          const saveRes = await fetch('/api/admin/save-image', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'X-Admin-Password': adminPassword
+            },
+            body: JSON.stringify({ slug: post.slug, imageUrl: imageData.previewUrl })
+          });
+
+          if (!saveRes.ok) throw new Error('Save failed');
+
+          icon.className = 'fas fa-check-circle success';
+          successCount++;
+        } catch (error) {
+          icon.className = 'fas fa-times-circle error';
+          failCount++;
+        }
+
+        // Small delay between requests to avoid rate limiting
+        await new Promise(resolve => setTimeout(resolve, 1000));
+      }
+
+      document.getElementById('bulk-complete').style.display = 'block';
+      document.getElementById('bulk-result').textContent =
+        `Successfully generated ${successCount} images. ${failCount > 0 ? `${failCount} failed.` : ''}`;
+      document.getElementById('bulk-modal-footer').style.display = 'flex';
+      document.getElementById('bulk-modal-footer').innerHTML = `
+        <button class="btn btn-primary" onclick="closeBulkModal(); loadPosts();">Done</button>
+      `;
+    }
+
+    // Expose functions to global scope for onclick handlers in dynamic HTML
+    window.closeGenerationModal = closeGenerationModal;
+    window.startImageGeneration = startImageGeneration;
+    window.startPromptGeneration = startPromptGeneration;
+    window.saveImage = saveImage;
+    window.closeBulkModal = closeBulkModal;
+    window.loadPosts = loadPosts;
+  </script>
+</body>
+</html>

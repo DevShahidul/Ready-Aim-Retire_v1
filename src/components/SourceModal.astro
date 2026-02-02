@@ -1,0 +1,233 @@
+---
+// SourceModal - A modal component for displaying testimonial source images
+// This component is initialized via JavaScript and controlled by TestimonialCard buttons
+---
+
+<div id="source-modal" class="source-modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-backdrop"></div>
+    <div class="modal-container">
+        <div class="modal-header">
+            <span class="modal-title">Original Testimonial</span>
+            <button class="modal-close" aria-label="Close modal">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        <div class="modal-body">
+            <div class="modal-image-container">
+                <img id="modal-source-image" src="" alt="Original testimonial" />
+            </div>
+            <div class="modal-caption">
+                <span id="modal-source-type" class="source-badge">Email</span>
+                <span id="modal-source-name" class="source-name"></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .source-modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 10000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    .source-modal.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .modal-backdrop {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.75);
+        backdrop-filter: blur(4px);
+    }
+
+    .modal-container {
+        position: relative;
+        background: #ffffff;
+        border-radius: 12px;
+        max-width: 90vw;
+        max-height: 90vh;
+        overflow: hidden;
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        transform: scale(0.95) translateY(20px);
+        transition: transform 0.3s ease;
+    }
+
+    .source-modal.active .modal-container {
+        transform: scale(1) translateY(0);
+    }
+
+    .modal-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 1.25rem;
+        border-bottom: 1px solid #e5e5e5;
+        background: #f8f9fa;
+    }
+
+    .modal-title {
+        font-weight: 600;
+        font-size: 1rem;
+        color: #1a1a2e;
+    }
+
+    .modal-close {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0.25rem;
+        color: #666;
+        border-radius: 4px;
+        transition: background 0.2s ease, color 0.2s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .modal-close:hover {
+        background: #e5e5e5;
+        color: #333;
+    }
+
+    .modal-body {
+        padding: 0;
+    }
+
+    .modal-image-container {
+        max-height: calc(90vh - 120px);
+        overflow-y: auto;
+        background: #f5f5f5;
+    }
+
+    .modal-image-container img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .modal-caption {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.75rem 1.25rem;
+        background: #f8f9fa;
+        border-top: 1px solid #e5e5e5;
+    }
+
+    .source-badge {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.25rem 0.6rem;
+        background: #14b8a6;
+        color: #ffffff;
+        font-size: 0.7rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        border-radius: 4px;
+    }
+
+    .source-badge.reddit {
+        background: #ff4500;
+    }
+
+    .source-badge.review {
+        background: #6366f1;
+    }
+
+    .source-name {
+        font-size: 0.85rem;
+        color: #666;
+    }
+
+    /* Mobile adjustments */
+    @media (max-width: 768px) {
+        .modal-container {
+            max-width: 95vw;
+            max-height: 95vh;
+            margin: 1rem;
+        }
+
+        .modal-image-container {
+            max-height: calc(95vh - 140px);
+        }
+    }
+</style>
+
+<script>
+    // Initialize modal functionality
+    document.addEventListener('DOMContentLoaded', () => {
+        const modal = document.getElementById('source-modal');
+        const modalImage = document.getElementById('modal-source-image') as HTMLImageElement;
+        const modalSourceType = document.getElementById('modal-source-type');
+        const modalSourceName = document.getElementById('modal-source-name');
+        const modalClose = modal?.querySelector('.modal-close');
+        const modalBackdrop = modal?.querySelector('.modal-backdrop');
+
+        // Function to open modal
+        function openModal(imageSrc: string, sourceType: string, name: string) {
+            if (!modal || !modalImage || !modalSourceType || !modalSourceName) return;
+
+            modalImage.src = imageSrc;
+            modalSourceName.textContent = `From ${name}`;
+
+            // Update source type badge
+            modalSourceType.textContent = sourceType.charAt(0).toUpperCase() + sourceType.slice(1);
+            modalSourceType.className = 'source-badge';
+            if (sourceType === 'reddit') modalSourceType.classList.add('reddit');
+            if (sourceType === 'review') modalSourceType.classList.add('review');
+
+            modal.classList.add('active');
+            modal.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Function to close modal
+        function closeModal() {
+            if (!modal) return;
+            modal.classList.remove('active');
+            modal.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+        }
+
+        // Add click handlers to all view source buttons
+        document.querySelectorAll('.view-source-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const button = e.currentTarget as HTMLElement;
+                const imageSrc = button.dataset.sourceImage || '';
+                const sourceType = button.dataset.sourceType || 'email';
+                const name = button.dataset.testimonialName || '';
+                openModal(imageSrc, sourceType, name);
+            });
+        });
+
+        // Close modal handlers
+        modalClose?.addEventListener('click', closeModal);
+        modalBackdrop?.addEventListener('click', closeModal);
+
+        // Close on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal?.classList.contains('active')) {
+                closeModal();
+            }
+        });
+    });
+</script>

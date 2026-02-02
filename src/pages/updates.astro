@@ -1,0 +1,592 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTABanner from '../components/CTABanner.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+---
+
+<BaseLayout
+    title="Latest Updates – ReadyAimRetire"
+    description="See what's new at ReadyAimRetire. Latest features, improvements, and updates to our retirement planning tools."
+    solidHeader={true}
+>
+    <!-- Hero Section -->
+    <section class="updates-hero">
+        <div class="container" data-aos="fade-up">
+            <Breadcrumbs items={[{ label: "Latest Updates" }]} />
+            <h1>Latest Updates</h1>
+            <p>See what's new with ReadyAimRetire and OnTarget™</p>
+        </div>
+    </section>
+
+    <!-- Updates Timeline Section -->
+    <section class="updates-section">
+        <div class="container">
+            <div class="updates-timeline">
+
+                <!-- Update Item: Additional Charts -->
+                <div class="update-item" data-aos="fade-up">
+                    <div class="update-date">
+                        <span class="month">Jan</span>
+                        <span class="day">18</span>
+                        <span class="year">2026</span>
+                    </div>
+                    <div class="update-content">
+                        <div class="update-header">
+                            <span class="badge badge-feature">Feature</span>
+                            <span class="version">v2.8.0</span>
+                        </div>
+                        <h3>Additional Charts Dropdown</h3>
+                        <p>New dropdown menu provides instant access to specialized visualizations including Portfolio Returns vs Benchmark, Part-Time Income, Real Estate Equity, and One-Time Benefits charts. Explore your financial plan from multiple perspectives without cluttering the main interface.</p>
+                        <ul class="update-details">
+                            <li>4 new specialized chart types</li>
+                            <li>Clean dropdown interface design</li>
+                            <li>Seamless integration with existing chart system</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Update Item: Retirement Age Comparison -->
+                <div class="update-item" data-aos="fade-up">
+                    <div class="update-date">
+                        <span class="month">Jan</span>
+                        <span class="day">12</span>
+                        <span class="year">2026</span>
+                    </div>
+                    <div class="update-content">
+                        <div class="update-header">
+                            <span class="badge badge-feature">Feature</span>
+                            <span class="version">v2.7.0</span>
+                        </div>
+                        <h3>Test Retirement Ages Tool</h3>
+                        <p>Compare multiple retirement ages side-by-side to make informed decisions about when to retire. Visual comparisons show projected portfolio values, total spending, and withdrawal patterns across different retirement age scenarios.</p>
+                        <ul class="update-details">
+                            <li>Compare up to 4 retirement ages simultaneously</li>
+                            <li>Interactive visual comparison charts</li>
+                            <li>Instantly see financial impact of retiring earlier or later</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Update Item: Equity Returns Adjuster -->
+                <div class="update-item" data-aos="fade-up">
+                    <div class="update-date">
+                        <span class="month">Dec</span>
+                        <span class="day">28</span>
+                        <span class="year">2025</span>
+                    </div>
+                    <div class="update-content">
+                        <div class="update-header">
+                            <span class="badge badge-feature">Feature</span>
+                            <span class="version">v2.6.0</span>
+                        </div>
+                        <h3>Inline Equity Returns Adjuster</h3>
+                        <p>Adjust expected market returns directly on the Portfolio Returns chart with our new inline adjuster. Test different market scenarios instantly with preset options (Conservative, Moderate, Optimistic) or create custom return assumptions.</p>
+                        <ul class="update-details">
+                            <li>Inline chart interface for quick adjustments</li>
+                            <li>Preset return scenarios</li>
+                            <li>Custom equity/bond return configuration</li>
+                            <li>Real-time portfolio impact visualization</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Update Item: Chart Tooltips -->
+                <div class="update-item" data-aos="fade-up">
+                    <div class="update-date">
+                        <span class="month">Dec</span>
+                        <span class="day">15</span>
+                        <span class="year">2025</span>
+                    </div>
+                    <div class="update-content">
+                        <div class="update-header">
+                            <span class="badge badge-improvement">Improvement</span>
+                        </div>
+                        <h3>Enhanced Chart Tooltips</h3>
+                        <p>Completely redesigned chart tooltips with improved formatting, better data organization, and consistent styling across all charts. Tooltips now provide clearer, more actionable information when exploring your financial projections.</p>
+                        <ul class="update-details">
+                            <li>Unified tooltip builder component</li>
+                            <li>Improved number formatting and readability</li>
+                            <li>Better positioning and alignment</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Update Item: Tax Calculator -->
+                <div class="update-item" data-aos="fade-up">
+                    <div class="update-date">
+                        <span class="month">Nov</span>
+                        <span class="day">30</span>
+                        <span class="year">2025</span>
+                    </div>
+                    <div class="update-content">
+                        <div class="update-header">
+                            <span class="badge badge-improvement">Improvement</span>
+                        </div>
+                        <h3>Tax Calculation Enhancements</h3>
+                        <p>Updated tax calculation engine with improved accuracy for complex scenarios including capital gains, RMDs, and Social Security taxation. New detailed tax breakdown popup helps you understand exactly where your tax liability comes from each year.</p>
+                        <ul class="update-details">
+                            <li>More accurate tax projections</li>
+                            <li>Enhanced capital gains calculations</li>
+                            <li>Detailed tax breakdown view</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Update Item: Allocation Adjuster -->
+                <div class="update-item" data-aos="fade-up">
+                    <div class="update-date">
+                        <span class="month">Nov</span>
+                        <span class="day">18</span>
+                        <span class="year">2025</span>
+                    </div>
+                    <div class="update-content">
+                        <div class="update-header">
+                            <span class="badge badge-feature">Feature</span>
+                            <span class="version">v2.5.0</span>
+                        </div>
+                        <h3>Inline Allocation Adjuster</h3>
+                        <p>Adjust your portfolio allocation strategy directly on charts with the new inline allocation adjuster. Choose from preset glide paths or create custom allocation strategies and see the impact on your portfolio immediately.</p>
+                        <ul class="update-details">
+                            <li>Quick-access allocation presets</li>
+                            <li>Custom glide path configuration</li>
+                            <li>Visual feedback on portfolio impact</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Update Item: Performance -->
+                <div class="update-item" data-aos="fade-up">
+                    <div class="update-date">
+                        <span class="month">Nov</span>
+                        <span class="day">05</span>
+                        <span class="year">2025</span>
+                    </div>
+                    <div class="update-content">
+                        <div class="update-header">
+                            <span class="badge badge-improvement">Improvement</span>
+                        </div>
+                        <h3>Calculation Performance Boost</h3>
+                        <p>Implemented parallel calculation engine for significantly faster scenario modeling. Complex retirement plans now calculate up to 3x faster, making real-time exploration even more responsive.</p>
+                        <ul class="update-details">
+                            <li>Parallel processing architecture</li>
+                            <li>Optimized rendering pipeline</li>
+                            <li>Reduced memory usage</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Update Item: Bug Fix -->
+                <div class="update-item" data-aos="fade-up">
+                    <div class="update-date">
+                        <span class="month">Oct</span>
+                        <span class="day">22</span>
+                        <span class="year">2025</span>
+                    </div>
+                    <div class="update-content">
+                        <div class="update-header">
+                            <span class="badge badge-fix">Bug Fix</span>
+                        </div>
+                        <h3>Social Security Calculation Fix</h3>
+                        <p>Fixed edge case where Social Security benefits were incorrectly calculated for couples with significantly different earning histories. All affected accounts have been automatically recalculated.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Subscribe Section -->
+    <section class="subscribe-section">
+        <div class="container">
+            <div class="subscribe-card" data-aos="fade-up">
+                <div class="subscribe-icon">
+                    <i class="fas fa-bell"></i>
+                </div>
+                <h2>Stay Updated</h2>
+                <p>Want to be notified about new features, improvements, and updates? Follow us on social media or check back here regularly.</p>
+                <div class="subscribe-actions">
+                    <a href="https://twitter.com/readyaimretire" class="btn-social" target="_blank" rel="noopener">
+                        <i class="fab fa-twitter"></i>
+                        Follow on Twitter
+                    </a>
+                    <a href="https://linkedin.com/company/readyaimretire" class="btn-social" target="_blank" rel="noopener">
+                        <i class="fab fa-linkedin"></i>
+                        Follow on LinkedIn
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <CTABanner />
+</BaseLayout>
+
+<style>
+    /* Hero Section */
+    .updates-hero {
+        background: var(--color-bg-light);
+        padding: 8rem 0 3rem 0;
+        text-align: left;
+    }
+
+    .updates-hero h1 {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-size: clamp(2.5rem, 5vw, 3.5rem);
+        font-weight: 400;
+        color: #1a1a2e;
+        margin: 0;
+        line-height: 1.2;
+    }
+
+    .updates-hero p {
+        font-size: 1rem;
+        color: #4a5568;
+        max-width: 600px;
+        margin: 1rem 0 0 0;
+        line-height: 1.6;
+    }
+
+    /* Updates Section */
+    .updates-section {
+        padding: 5rem 0;
+        background: #f6f6f4;
+    }
+
+    .updates-timeline {
+        max-width: 900px;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    /* Timeline line */
+    .updates-timeline::before {
+        content: '';
+        position: absolute;
+        left: 80px;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: linear-gradient(to bottom, #cbd5e1, #e2e8f0);
+    }
+
+    /* Update Item */
+    .update-item {
+        display: grid;
+        grid-template-columns: 160px 1fr;
+        gap: 2rem;
+        margin-bottom: 3rem;
+        position: relative;
+    }
+
+    /* Update Date */
+    .update-date {
+        text-align: right;
+        padding-right: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        position: relative;
+    }
+
+    .update-date::after {
+        content: '';
+        position: absolute;
+        right: -11px;
+        top: 8px;
+        width: 20px;
+        height: 20px;
+        background: #ffffff;
+        border: 3px solid #41bab4;
+        border-radius: 50%;
+        z-index: 2;
+    }
+
+    .update-date .month {
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: #41bab4;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
+    .update-date .day {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #1a1a2e;
+        line-height: 1;
+        margin: 0.25rem 0;
+    }
+
+    .update-date .year {
+        font-size: 0.9rem;
+        color: #64748b;
+    }
+
+    /* Update Content */
+    .update-content {
+        background: #ffffff;
+        border-radius: 12px;
+        padding: 2rem;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        border: 1px solid #e5e7eb;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .update-content:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .update-header {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        margin-bottom: 1rem;
+    }
+
+    /* Badges */
+    .badge {
+        display: inline-block;
+        padding: 0.35rem 0.75rem;
+        border-radius: 50px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
+    .badge-feature {
+        background: #d1fae5;
+        color: #065f46;
+    }
+
+    .badge-improvement {
+        background: #dbeafe;
+        color: #1e40af;
+    }
+
+    .badge-fix {
+        background: #fed7aa;
+        color: #9a3412;
+    }
+
+    .version {
+        font-size: 0.85rem;
+        color: #64748b;
+        font-weight: 500;
+    }
+
+    /* Update Title and Content */
+    .update-content h3 {
+        font-family: 'Inter', sans-serif;
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #1a1a2e;
+        margin: 0 0 0.75rem 0;
+        line-height: 1.3;
+    }
+
+    .update-content > p {
+        font-size: 1rem;
+        line-height: 1.7;
+        color: #4b5563;
+        margin: 0 0 1rem 0;
+    }
+
+    .update-details {
+        list-style: none;
+        padding: 0;
+        margin: 1rem 0 0 0;
+    }
+
+    .update-details li {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.5rem;
+        padding: 0.35rem 0;
+        font-size: 0.95rem;
+        color: #64748b;
+    }
+
+    .update-details li::before {
+        content: '→';
+        color: #41bab4;
+        font-weight: 600;
+        flex-shrink: 0;
+    }
+
+    /* Subscribe Section */
+    .subscribe-section {
+        padding: 5rem 0;
+        background: #ffffff;
+    }
+
+    .subscribe-card {
+        max-width: 700px;
+        margin: 0 auto;
+        text-align: center;
+        background: linear-gradient(135deg, #415776 0%, #1a1a2e 100%);
+        border-radius: 20px;
+        padding: 3rem 2rem;
+        color: #ffffff;
+    }
+
+    .subscribe-icon {
+        width: 60px;
+        height: 60px;
+        background: rgba(255, 255, 255, 0.15);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1.5rem;
+    }
+
+    .subscribe-icon i {
+        font-size: 1.75rem;
+        color: #41bab4;
+    }
+
+    .subscribe-card h2 {
+        font-family: 'Inter', sans-serif;
+        font-size: 2rem;
+        font-weight: 600;
+        color: #ffffff;
+        margin: 0 0 1rem 0;
+    }
+
+    .subscribe-card p {
+        font-size: 1.05rem;
+        line-height: 1.7;
+        color: rgba(255, 255, 255, 0.85);
+        margin: 0 0 2rem 0;
+    }
+
+    .subscribe-actions {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .btn-social {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: rgba(255, 255, 255, 0.15);
+        color: #ffffff;
+        padding: 0.75rem 1.5rem;
+        font-size: 0.95rem;
+        font-weight: 500;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: background 0.2s ease, transform 0.2s ease;
+        backdrop-filter: blur(10px);
+    }
+
+    .btn-social:hover {
+        background: rgba(255, 255, 255, 0.25);
+        transform: translateY(-2px);
+    }
+
+    .btn-social i {
+        font-size: 1.1rem;
+    }
+
+    /* Responsive: Tablet */
+    @media (max-width: 768px) {
+        .updates-timeline::before {
+            left: 60px;
+        }
+
+        .update-item {
+            grid-template-columns: 120px 1fr;
+            gap: 1.5rem;
+        }
+
+        .update-date {
+            padding-right: 1.5rem;
+        }
+
+        .update-date::after {
+            right: -12px;
+        }
+
+        .update-content {
+            padding: 1.5rem;
+        }
+    }
+
+    /* Responsive: Mobile */
+    @media (max-width: 600px) {
+        .updates-hero {
+            padding: 6rem 0 2rem 0;
+        }
+
+        .updates-section {
+            padding: 3rem 0;
+        }
+
+        .updates-timeline::before {
+            left: 20px;
+        }
+
+        .update-item {
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .update-date {
+            text-align: left;
+            padding: 0;
+            flex-direction: row;
+            align-items: center;
+            gap: 0.5rem;
+            padding-left: 3rem;
+        }
+
+        .update-date::after {
+            left: 11px;
+            right: auto;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .update-date .month {
+            order: 2;
+        }
+
+        .update-date .day {
+            order: 1;
+            font-size: 1.5rem;
+            margin: 0;
+        }
+
+        .update-date .year {
+            order: 3;
+        }
+
+        .update-content {
+            padding: 1.25rem;
+        }
+
+        .update-content h3 {
+            font-size: 1.25rem;
+        }
+
+        .subscribe-card {
+            padding: 2rem 1.5rem;
+        }
+
+        .subscribe-actions {
+            flex-direction: column;
+        }
+
+        .btn-social {
+            width: 100%;
+            justify-content: center;
+        }
+    }
+</style>
+</BaseLayout>

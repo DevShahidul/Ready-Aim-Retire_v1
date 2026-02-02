@@ -1,0 +1,592 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTABanner from '../components/CTABanner.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+---
+
+<BaseLayout
+    title="Net Worth Tracker – Track Your Financial Progress | ReadyAimRetire"
+    description="Track your net worth over time with visual progress charts. Take snapshots, see trends, and monitor your journey to financial independence."
+    solidHeader={true}
+>
+    <!-- Hero Section -->
+    <section class="networth-hero">
+        <div class="container">
+            <Breadcrumbs items={[{ label: "Net Worth Tracker" }]} />
+            <div class="networth-hero-content" data-aos="fade">
+                <p class="networth-hero-eyebrow">OnTarget™ Feature</p>
+                <h1>Track Your Progress Toward <span class="text-primary">Financial Freedom</span></h1>
+                <p class="networth-hero-subtitle">Watch your wealth grow over time. Take snapshots, visualize trends, and see exactly how far you've come on your journey to retirement.</p>
+            </div>
+            <div class="networth-hero-image" data-aos="fade-up" data-aos-delay="200">
+                <img src="/images/new_colors.png" alt="Net Worth Tracking Chart">
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="networth-problem-section">
+        <div class="container">
+            <div class="networth-problem-grid" data-aos="fade-up">
+                <div class="networth-problem-content">
+                    <h2>Are you actually <span class="text-teal">making progress?</span></h2>
+                    <p>You're saving money. You're investing. But is it working? Without tracking your net worth over time, you're flying blind.</p>
+                    <p>Did your net worth go up last month? Last year? By how much? Are you on track for your goals?</p>
+                    <p class="text-italic">You can't improve what you don't measure.</p>
+                </div>
+                <div class="networth-problem-visual">
+                    <div class="networth-question-card">
+                        <div class="question-item">
+                            <span class="question-icon">❓</span>
+                            <span>What's my net worth today?</span>
+                        </div>
+                        <div class="question-item">
+                            <span class="question-icon">📈</span>
+                            <span>How much did it change this month?</span>
+                        </div>
+                        <div class="question-item">
+                            <span class="question-icon">🎯</span>
+                            <span>Am I on track for my goals?</span>
+                        </div>
+                        <div class="question-item">
+                            <span class="question-icon">📊</span>
+                            <span>What's the trend over time?</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Snapshots Section -->
+    <section class="section-gray">
+        <div class="container feature" data-aos="fade-right">
+            <div class="feature-img">
+                <img src="/images/accounts.png" alt="Net worth snapshots">
+            </div>
+            <div class="feature-text">
+                <h2>Capture your net worth at <span class="text-teal">any point</span></h2>
+                <p>Take point-in-time snapshots of your complete financial picture. Track changes month-over-month and year-over-year.</p>
+                <ul class="feature-checklist">
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        One-click snapshot of total assets, liabilities, net worth
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        Custom date selection for historical tracking
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        See change from previous (amount + percentage)
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        Full account breakdown preserved with each snapshot
+                    </li>
+                </ul>
+                <a href={`${import.meta.env.PUBLIC_APP_URL}/signup`} class="btn-dark" style="margin-top: 1.5rem;">Start Tracking <span class="arrow">→</span></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visualization Section -->
+    <section>
+        <div class="container feature" data-aos="fade-left">
+            <div class="feature-text">
+                <h2>See your journey <span class="text-teal">visualized</span></h2>
+                <p>Charts and graphs bring your financial progress to life. See trends, identify patterns, and celebrate milestones.</p>
+                <div class="viz-features-grid">
+                    <div class="viz-feature">
+                        <div class="viz-feature-icon">📈</div>
+                        <div class="viz-feature-info">
+                            <div class="viz-feature-name">Net Worth Trend</div>
+                            <div class="viz-feature-desc">Watch your wealth grow over time</div>
+                        </div>
+                    </div>
+                    <div class="viz-feature">
+                        <div class="viz-feature-icon">📊</div>
+                        <div class="viz-feature-info">
+                            <div class="viz-feature-name">Assets vs. Liabilities</div>
+                            <div class="viz-feature-desc">See the composition breakdown</div>
+                        </div>
+                    </div>
+                    <div class="viz-feature">
+                        <div class="viz-feature-icon">🔺</div>
+                        <div class="viz-feature-info">
+                            <div class="viz-feature-name">Delta Tracking</div>
+                            <div class="viz-feature-desc">Change from previous snapshot</div>
+                        </div>
+                    </div>
+                    <div class="viz-feature">
+                        <div class="viz-feature-icon">📉</div>
+                        <div class="viz-feature-info">
+                            <div class="viz-feature-name">Trend Lines</div>
+                            <div class="viz-feature-desc">Project where you're heading</div>
+                        </div>
+                    </div>
+                </div>
+                <a href={`${import.meta.env.PUBLIC_APP_URL}/signup`} class="btn-dark" style="margin-top: 1.5rem;">See Your Progress <span class="arrow">→</span></a>
+            </div>
+            <div class="feature-img">
+                <img src="/images/taxes.png" alt="Net worth visualization">
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard Section -->
+    <section class="section-gray">
+        <div class="container feature" data-aos="fade-right">
+            <div class="feature-img">
+                <img src="/images/model_real_life.jpg" alt="Dashboard KPIs">
+            </div>
+            <div class="feature-text">
+                <h2>Four numbers that <span class="text-teal">matter</span></h2>
+                <p>Your financial dashboard shows the metrics that count - at a glance, anytime.</p>
+                <div class="kpi-grid">
+                    <div class="kpi-card">
+                        <div class="kpi-label">Total Investments</div>
+                        <div class="kpi-value">$847,500</div>
+                        <div class="kpi-desc">All retirement accounts</div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-label">Total Assets</div>
+                        <div class="kpi-value">$1,245,000</div>
+                        <div class="kpi-desc">Everything you own</div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-label">Total Liabilities</div>
+                        <div class="kpi-value">$312,000</div>
+                        <div class="kpi-desc">Everything you owe</div>
+                    </div>
+                    <div class="kpi-card kpi-card-highlight">
+                        <div class="kpi-label">Net Worth</div>
+                        <div class="kpi-value">$933,000</div>
+                        <div class="kpi-desc">The bottom line</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Integration Section -->
+    <section>
+        <div class="container feature" data-aos="fade-left">
+            <div class="feature-text">
+                <h2>Connected to your <span class="text-teal">retirement plan</span></h2>
+                <p>Your net worth isn't just a number - it's the foundation of your retirement projections. Everything is connected.</p>
+                <ul class="feature-list">
+                    <li><strong>Account balances</strong> feed into retirement simulations</li>
+                    <li><strong>Tax buckets</strong> determine withdrawal strategies</li>
+                    <li><strong>Monte Carlo</strong> tests your actual portfolio</li>
+                    <li><strong>Projections</strong> show how net worth grows to retirement</li>
+                    <li><strong>Real-time updates</strong> as you adjust your plan</li>
+                </ul>
+                <a href={`${import.meta.env.PUBLIC_APP_URL}/signup`} class="btn-dark" style="margin-top: 1.5rem;">Connect Your Plan <span class="arrow">→</span></a>
+            </div>
+            <div class="feature-img">
+                <img src="/images/landing/stock/couple_laptop.jpg" alt="Retirement integration">
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="networth-steps-section">
+        <div class="container">
+            <h2 class="networth-section-heading" data-aos="fade-up">How it <span class="text-teal">works</span></h2>
+            <div class="networth-steps-grid" data-aos="fade-up" data-aos-delay="100">
+                <div class="networth-step">
+                    <div class="networth-step-number">1</div>
+                    <h3>Add Your Accounts</h3>
+                    <p>Enter your investments, assets, and liabilities in the Accounts & Assets dashboard.</p>
+                </div>
+                <div class="networth-step">
+                    <div class="networth-step-number">2</div>
+                    <h3>Take a Snapshot</h3>
+                    <p>Capture your net worth at this moment with one click. Choose today or a past date.</p>
+                </div>
+                <div class="networth-step">
+                    <div class="networth-step-number">3</div>
+                    <h3>Track Over Time</h3>
+                    <p>Take monthly snapshots to build a history of your financial progress.</p>
+                </div>
+                <div class="networth-step">
+                    <div class="networth-step-number">4</div>
+                    <h3>Visualize & Plan</h3>
+                    <p>Use charts and trends to understand your trajectory and adjust your strategy.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="clearer-plan-section-v2">
+        <div class="container">
+            <div class="clearer-plan-card" data-aos="fade-up">
+                <div class="clearer-plan-text">
+                    <h2>Know where you stand. See where you're <span class="text-teal">going.</span></h2>
+                    <p>Track your net worth over time and watch your progress toward financial freedom unfold.</p>
+                    <p class="text-bold">Progress you can see. Goals you can reach.</p>
+                </div>
+                <div class="clearer-plan-image">
+                    <img src="/images/landing/stock/couple_water.jpg" alt="Financial progress">
+                    <div class="clearer-plan-stat-overlay">
+                        <div class="stat-number">87%</div>
+                        <div class="stat-headline">People who track net worth feel more confident about retirement.</div>
+                        <div class="stat-subtext">Measurement drives progress.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="clearer-plan-benefits" data-aos="fade-up" data-aos-delay="100">
+                <div class="benefit-pill">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>Point-in-time snapshots</span>
+                </div>
+                <div class="benefit-pill">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>Visual trend charts</span>
+                </div>
+                <div class="benefit-pill">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>Delta tracking</span>
+                </div>
+                <div class="benefit-pill">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>Retirement integration</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Banner -->
+    <CTABanner />
+
+    <!-- Page-specific scripts -->
+    <script is:inline>
+    document.addEventListener('DOMContentLoaded', function() {
+        gsap.registerPlugin(ScrollTrigger);
+
+        const featureSections = document.querySelectorAll('.feature');
+        featureSections.forEach((section, index) => {
+            const img = section.querySelector('.feature-img');
+            const text = section.querySelector('.feature-text');
+            const isEven = index % 2 === 1;
+            gsap.set(img, { opacity: 0, x: isEven ? 100 : -100 });
+            gsap.set(text, { opacity: 0, x: isEven ? -100 : 100 });
+            gsap.timeline({
+                scrollTrigger: {
+                    trigger: section,
+                    start: 'top 80%',
+                    toggleActions: 'play none none none'
+                }
+            })
+            .to(img, { opacity: 1, x: 0, duration: 0.8, ease: 'power3.out' })
+            .to(text, { opacity: 1, x: 0, duration: 0.8, ease: 'power3.out' }, '-=0.6');
+        });
+    });
+    </script>
+
+    <!-- Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "ReadyAimRetire Net Worth Tracker",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Web",
+        "description": "Track your net worth over time with visual progress charts, snapshots, and trend analysis.",
+        "url": "https://readyaimretire.com/networth",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        }
+    }
+    </script>
+</BaseLayout>
+
+<style>
+    /* Hero Section */
+    .networth-hero {
+        background: #ffffff;
+        padding: 8rem 0 3rem 0;
+        text-align: center;
+    }
+
+    .networth-hero-content {
+        max-width: 800px;
+        margin: 0 auto 3rem auto;
+    }
+
+    .networth-hero-eyebrow {
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: #14b8a6;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        margin-bottom: 1rem;
+    }
+
+    .networth-hero h1 {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-size: clamp(2.25rem, 5vw, 3.25rem);
+        font-weight: 700;
+        color: #1a1a2e;
+        line-height: 1.1;
+        margin: 0 0 1.5rem 0;
+    }
+
+    .networth-hero .text-primary {
+        color: #14b8a6;
+    }
+
+    .networth-hero-subtitle {
+        font-size: 1.125rem;
+        color: #444;
+        line-height: 1.7;
+        margin: 0;
+    }
+
+    .networth-hero-image img {
+        max-width: 100%;
+        border-radius: 12px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Problem Section */
+    .networth-problem-section {
+        padding: 5rem 0;
+        background: #f8fafc;
+    }
+
+    .networth-problem-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+    }
+
+    .networth-problem-content h2 {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-size: clamp(1.75rem, 3vw, 2.25rem);
+        font-weight: 700;
+        color: #1a1a2e;
+        line-height: 1.2;
+        margin: 0 0 1.5rem 0;
+    }
+
+    .networth-problem-content p {
+        font-size: 1.05rem;
+        line-height: 1.8;
+        color: #444;
+        margin-bottom: 1rem;
+    }
+
+    .networth-question-card {
+        background: #ffffff;
+        border-radius: 16px;
+        padding: 2rem;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .question-item {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 0.75rem 1rem;
+        background: #f8fafc;
+        border-radius: 8px;
+        font-size: 1rem;
+        color: #1a1a2e;
+    }
+
+    .question-icon {
+        font-size: 1.25rem;
+    }
+
+    /* Viz Features Grid */
+    .viz-features-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        margin-top: 1.5rem;
+    }
+
+    .viz-feature {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.75rem;
+        background: #f8fafc;
+        border-radius: 8px;
+    }
+
+    .viz-feature-icon {
+        font-size: 1.5rem;
+    }
+
+    .viz-feature-name {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: #1a1a2e;
+    }
+
+    .viz-feature-desc {
+        font-size: 0.8rem;
+        color: #666;
+    }
+
+    /* KPI Grid */
+    .kpi-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        margin-top: 1.5rem;
+    }
+
+    .kpi-card {
+        background: #f8fafc;
+        border-radius: 12px;
+        padding: 1.25rem;
+        text-align: center;
+    }
+
+    .kpi-card-highlight {
+        background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);
+        color: #ffffff;
+    }
+
+    .kpi-label {
+        font-size: 0.75rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: #666;
+        margin-bottom: 0.25rem;
+    }
+
+    .kpi-card-highlight .kpi-label {
+        color: rgba(255, 255, 255, 0.9);
+    }
+
+    .kpi-value {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #1a1a2e;
+        margin-bottom: 0.25rem;
+    }
+
+    .kpi-card-highlight .kpi-value {
+        color: #ffffff;
+    }
+
+    .kpi-desc {
+        font-size: 0.8rem;
+        color: #888;
+    }
+
+    .kpi-card-highlight .kpi-desc {
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    /* Steps Section */
+    .networth-steps-section {
+        padding: 5rem 0;
+        background: #f8fafc;
+    }
+
+    .networth-section-heading {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-size: clamp(1.75rem, 3vw, 2.25rem);
+        font-weight: 700;
+        color: #1a1a2e;
+        text-align: center;
+        margin: 0 0 3rem 0;
+    }
+
+    .networth-steps-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+    }
+
+    .networth-step {
+        text-align: center;
+        padding: 1.5rem;
+    }
+
+    .networth-step-number {
+        width: 48px;
+        height: 48px;
+        background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);
+        color: #ffffff;
+        font-size: 1.25rem;
+        font-weight: 700;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1rem auto;
+    }
+
+    .networth-step h3 {
+        font-family: 'Inter', sans-serif;
+        font-size: 1.125rem;
+        font-weight: 600;
+        color: #1a1a2e;
+        margin: 0 0 0.75rem 0;
+    }
+
+    .networth-step p {
+        font-size: 0.95rem;
+        color: #666;
+        line-height: 1.6;
+        margin: 0;
+    }
+
+    /* Utility */
+    .text-teal { color: #14b8a6; }
+    .text-italic { font-style: italic; color: #666; }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+        .networth-problem-grid {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .networth-steps-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .networth-steps-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .viz-features-grid,
+        .kpi-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
