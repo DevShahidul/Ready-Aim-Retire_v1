@@ -1914,7 +1914,10 @@ footer .disclaimer {
    Responsive: Mobile (max-width: 768px)
    ---------------------------------------- */
 @media (max-width: 768px) {
-    html {
+    html,
+    body,
+    section,
+    div {
         overflow-x: hidden;
     }
     .hero {
