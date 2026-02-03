@@ -1,3 +1,5 @@
+
 [build]
-  command = "npm run build"
-  functions = "src/functions"
+  command = "npm run build"  # Ensure this matches your local build command
+  functions = ""  # Remove or set to your serverless functions path if needed
+  publish = "client,server"  # Tell Netlify to publish both folders
