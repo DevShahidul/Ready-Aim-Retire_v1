@@ -334,8 +334,10 @@ nav ul li a:hover {
 .hero-screenshot .hero-img {
     max-width: 95%;
     width: 1105px;
-    border-radius: 0;
-    box-shadow: none;
+    border-radius: 10px;
+    box-shadow: -11px 15px 29px -17px rgba(128, 128, 128, 0.82);
+    -webkit-box-shadow: -11px 15px 29px -17px rgba(128, 128, 128, 0.82);
+    -moz-box-shadow: -11px 15px 29px -17px rgba(128, 128, 128, 0.82);
     height: auto;
     margin-left: auto;
     margin-right: auto;
