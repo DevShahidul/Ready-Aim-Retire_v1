@@ -1,7 +1,7 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import CTABanner from '../components/CTABanner.astro';
-import Breadcrumbs from '../components/Breadcrumbs.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CTABanner from "../components/CTABanner.astro";
+import Breadcrumbs from "../components/Breadcrumbs.astro";
 ---
 
 <BaseLayout
@@ -15,11 +15,22 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
             <Breadcrumbs items={[{ label: "Retirement Budget" }]} />
             <div class="budget-hero-content" data-aos="fade">
                 <p class="budget-hero-eyebrow">OnTarget™ Feature</p>
-                <h1>Build a Budget That Powers Your <span class="text-primary">Retirement Plan</span></h1>
-                <p class="budget-hero-subtitle">Every expense. Every category. Connected directly to your retirement projections. Know what retirement will actually cost - because you've mapped it out.</p>
+                <h1>
+                    Build a Budget That Powers Your <span class="text-primary"
+                        >Retirement Plan</span>
+                </h1>
+                <p class="budget-hero-subtitle">
+                    Every expense. Every category. Connected directly to your
+                    retirement projections. Know what retirement will actually
+                    cost - because you've mapped it out.
+                </p>
             </div>
-            <div class="budget-hero-image" data-aos="fade-up" data-aos-delay="200">
-                <img src="/images/new_colors.png" alt="Budget Dashboard">
+            <div
+                class="budget-hero-image"
+                data-aos="fade-up"
+                data-aos-delay="200"
+            >
+                <img src="/images/new_colors.png" alt="Budget Dashboard" />
             </div>
         </div>
     </section>
@@ -29,29 +40,54 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
         <div class="container">
             <div class="budget-problem-grid" data-aos="fade-up">
                 <div class="budget-problem-content">
-                    <h2>Retirement calculators ask the <span class="text-teal">wrong question</span></h2>
-                    <p>"What's your annual spending?" That's what most retirement calculators ask. One number. As if your mortgage, groceries, healthcare, and travel all cost the same and never change.</p>
-                    <p>But your mortgage pays off at 62. Medicare starts at 65. Healthcare costs rise faster than groceries. Travel is heavy early in retirement, then slows down.</p>
-                    <p class="text-italic">You need a real budget - not a guess.</p>
+                    <h2>
+                        Retirement calculators ask the <span class="text-teal"
+                            >wrong question</span>
+                    </h2>
+                    <p>
+                        "What's your annual spending?" That's what most
+                        retirement calculators ask. One number. As if your
+                        mortgage, groceries, healthcare, and travel all cost the
+                        same and never change.
+                    </p>
+                    <p>
+                        But your mortgage pays off at 62. Medicare starts at 65.
+                        Healthcare costs rise faster than groceries. Travel is
+                        heavy early in retirement, then slows down.
+                    </p>
+                    <p class="text-italic">
+                        You need a real budget - not a guess.
+                    </p>
                 </div>
                 <div class="budget-problem-visual">
                     <div class="budget-comparison-card">
                         <div class="comparison-simple">
-                            <div class="comparison-label">Simple Calculator</div>
+                            <div class="comparison-label">
+                                Simple Calculator
+                            </div>
                             <div class="comparison-input">
-                                <span class="input-label">Annual Spending:</span>
+                                <span class="input-label">Annual Spending:</span
+                                >
                                 <span class="input-value">$72,000</span>
                             </div>
-                            <div class="comparison-note">That's it. One number.</div>
+                            <div class="comparison-note">
+                                That's it. One number.
+                            </div>
                         </div>
                         <div class="comparison-vs">vs</div>
                         <div class="comparison-detailed">
                             <div class="comparison-label">ReadyAimRetire</div>
                             <div class="mini-budget">
-                                <div class="mini-item">🏠 Housing: $2,100/mo</div>
-                                <div class="mini-item">⚕️ Healthcare: $800/mo</div>
+                                <div class="mini-item">
+                                    🏠 Housing: $2,100/mo
+                                </div>
+                                <div class="mini-item">
+                                    ⚕️ Healthcare: $800/mo
+                                </div>
                                 <div class="mini-item">🍽️ Food: $600/mo</div>
-                                <div class="mini-item">+ 6 more categories...</div>
+                                <div class="mini-item">
+                                    + 6 more categories...
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -64,17 +100,27 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
     <section class="section-gray">
         <div class="container feature" data-aos="fade-right">
             <div class="feature-img">
-                <img src="/images/accounts.png" alt="Budget categories">
+                <img src="/images/accounts.png" alt="Budget categories" />
             </div>
             <div class="feature-text">
-                <h2>Track every type of <span class="text-teal">expense</span></h2>
-                <p>Nine categories cover your complete spending picture. Classify each expense as a Need, Want, or Splurge to understand your true essentials.</p>
+                <h2>
+                    Track every type of <span class="text-teal">expense</span>
+                </h2>
+                <p>
+                    Nine categories cover your complete spending picture.
+                    Classify each expense as a Need, Want, or Splurge to
+                    understand your true essentials.
+                </p>
                 <div class="categories-grid">
                     <div class="category-item"><span>🏠</span> Housing</div>
-                    <div class="category-item"><span>🚗</span> Transportation</div>
+                    <div class="category-item">
+                        <span>🚗</span> Transportation
+                    </div>
                     <div class="category-item"><span>⚡</span> Utilities</div>
                     <div class="category-item"><span>🍽️</span> Food</div>
-                    <div class="category-item"><span>🎬</span> Entertainment</div>
+                    <div class="category-item">
+                        <span>🎬</span> Entertainment
+                    </div>
                     <div class="category-item"><span>☂️</span> Insurance</div>
                     <div class="category-item"><span>⚕️</span> Healthcare</div>
                     <div class="category-item"><span>🛒</span> Shopping</div>
@@ -99,20 +145,48 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
     <section>
         <div class="container feature" data-aos="fade-left">
             <div class="feature-text">
-                <h2>Expenses change <span class="text-teal">over time</span></h2>
-                <p>Your budget at 55 won't match your budget at 75. ReadyAimRetire lets you specify when each expense starts and ends.</p>
+                <h2>
+                    Expenses change <span class="text-teal">over time</span>
+                </h2>
+                <p>
+                    Your budget at 55 won't match your budget at 75.
+                    ReadyAimRetire lets you specify when each expense starts and
+                    ends.
+                </p>
                 <ul class="feature-list">
-                    <li><strong>Mortgage:</strong> Starts now, ends at 62 (paid off)</li>
-                    <li><strong>Medicare premiums:</strong> Start at 65, continue for life</li>
+                    <li>
+                        <strong>Mortgage:</strong> Starts now, ends at 62 (paid off)
+                    </li>
+                    <li>
+                        <strong>Medicare premiums:</strong> Start at 65, continue
+                        for life
+                    </li>
                     <li><strong>Kids' college:</strong> Ages 48-52 only</li>
-                    <li><strong>Travel budget:</strong> Heavy at 65, decreases after 80</li>
-                    <li><strong>Long-term care:</strong> Starts at 80, ends at plan end</li>
+                    <li>
+                        <strong>Travel budget:</strong> Heavy at 65, decreases after
+                        80
+                    </li>
+                    <li>
+                        <strong>Long-term care:</strong> Starts at 80, ends at plan
+                        end
+                    </li>
                 </ul>
-                <p style="margin-top: 1rem;">Every expense has a start age and end age. Your projections reflect reality - not a static number that never changes.</p>
-                <a href={`${import.meta.env.PUBLIC_APP_URL}/signup`} class="btn-dark" style="margin-top: 1.5rem;">Build Your Budget <span class="arrow">→</span></a>
+                <p style="margin-top: 1rem;">
+                    Every expense has a start age and end age. Your projections
+                    reflect reality - not a static number that never changes.
+                </p>
+                <a
+                    href={`${import.meta.env.PUBLIC_APP_URL}/signup`}
+                    class="btn-dark"
+                    style="margin-top: 1.5rem;"
+                    >Build Your Budget <span class="arrow">→</span></a
+                >
             </div>
             <div class="feature-img">
-                <img src="/images/model_real_life.jpg" alt="Age-based expense projections">
+                <img
+                    src="/images/model_real_life.jpg"
+                    alt="Age-based expense projections"
+                />
             </div>
         </div>
     </section>
@@ -121,14 +195,23 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
     <section class="section-gray">
         <div class="container feature" data-aos="fade-right">
             <div class="feature-img">
-                <img src="/images/taxes.png" alt="Inflation adjustments">
+                <img src="/images/taxes.png" alt="Inflation adjustments" />
             </div>
             <div class="feature-text">
-                <h2>Different costs, <span class="text-teal">different inflation</span></h2>
-                <p>Healthcare doesn't inflate at the same rate as groceries. ReadyAimRetire lets you set inflation rates per expense for realistic projections.</p>
+                <h2>
+                    Different costs, <span class="text-teal"
+                        >different inflation</span>
+                </h2>
+                <p>
+                    Healthcare doesn't inflate at the same rate as groceries.
+                    ReadyAimRetire lets you set inflation rates per expense for
+                    realistic projections.
+                </p>
                 <div class="inflation-example">
                     <div class="inflation-card">
-                        <div class="inflation-header">$500/month Healthcare Today</div>
+                        <div class="inflation-header">
+                            $500/month Healthcare Today
+                        </div>
                         <div class="inflation-row">
                             <span>In 10 years (5% inflation):</span>
                             <span class="inflation-value">$814/mo</span>
@@ -145,19 +228,49 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
                 </div>
                 <ul class="feature-checklist" style="margin-top: 1.5rem;">
                     <li>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
                             <polyline points="20 6 9 17 4 12"></polyline>
                         </svg>
                         Use global inflation rate or customize per expense
                     </li>
                     <li>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
                             <polyline points="20 6 9 17 4 12"></polyline>
                         </svg>
                         Healthcare at 5%, general expenses at 3%
                     </li>
                     <li>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
                             <polyline points="20 6 9 17 4 12"></polyline>
                         </svg>
                         Projections show true future costs
@@ -171,8 +284,15 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
     <section>
         <div class="container feature" data-aos="fade-left">
             <div class="feature-text">
-                <h2>Your budget drives your <span class="text-teal">retirement plan</span></h2>
-                <p>This isn't just a budgeting tool. Your budget connects directly to retirement simulations. Withdrawal calculations use your actual spending - not a guess.</p>
+                <h2>
+                    Your budget drives your <span class="text-teal"
+                        >retirement plan</span>
+                </h2>
+                <p>
+                    This isn't just a budgeting tool. Your budget connects
+                    directly to retirement simulations. Withdrawal calculations
+                    use your actual spending - not a guess.
+                </p>
                 <div class="integration-flow">
                     <div class="flow-step">
                         <div class="flow-icon">📝</div>
@@ -194,11 +314,22 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
                         <div class="flow-label">Success Rate</div>
                     </div>
                 </div>
-                <p style="margin-top: 1.5rem;">Change an expense in your budget and watch your retirement projections update instantly. Everything is connected.</p>
-                <a href={`${import.meta.env.PUBLIC_APP_URL}/signup`} class="btn-dark" style="margin-top: 1.5rem;">Connect Your Budget <span class="arrow">→</span></a>
+                <p style="margin-top: 1.5rem;">
+                    Change an expense in your budget and watch your retirement
+                    projections update instantly. Everything is connected.
+                </p>
+                <a
+                    href={`${import.meta.env.PUBLIC_APP_URL}/signup`}
+                    class="btn-dark"
+                    style="margin-top: 1.5rem;"
+                    >Connect Your Budget <span class="arrow">→</span></a
+                >
             </div>
             <div class="feature-img">
-                <img src="/images/landing/stock/couple_laptop.jpg" alt="Budget integration">
+                <img
+                    src="/images/landing/stock/couple_laptop.jpg"
+                    alt="Budget integration"
+                />
             </div>
         </div>
     </section>
@@ -207,29 +338,49 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
     <section class="section-gray">
         <div class="container feature" data-aos="fade-right">
             <div class="feature-img">
-                <img src="/images/landing/stock/older_couple_laptop.jpg" alt="Budget scenarios">
+                <img
+                    src="/images/landing/stock/older_couple_laptop.jpg"
+                    alt="Budget scenarios"
+                />
             </div>
             <div class="feature-text">
-                <h2>Model different <span class="text-teal">lifestyles</span></h2>
-                <p>What if you only spent on essentials? What if you traveled more? Save multiple budget scenarios and compare how each affects your retirement success.</p>
+                <h2>
+                    Model different <span class="text-teal">lifestyles</span>
+                </h2>
+                <p>
+                    What if you only spent on essentials? What if you traveled
+                    more? Save multiple budget scenarios and compare how each
+                    affects your retirement success.
+                </p>
                 <div class="scenarios-grid">
                     <div class="scenario-card">
                         <div class="scenario-name">Lean Retirement</div>
                         <div class="scenario-desc">Needs only: $4,200/mo</div>
-                        <div class="scenario-rate scenario-high">94% success</div>
+                        <div class="scenario-rate scenario-high">
+                            94% success
+                        </div>
                     </div>
                     <div class="scenario-card">
                         <div class="scenario-name">Comfortable</div>
-                        <div class="scenario-desc">Needs + Wants: $6,500/mo</div>
-                        <div class="scenario-rate scenario-medium">82% success</div>
+                        <div class="scenario-desc">
+                            Needs + Wants: $6,500/mo
+                        </div>
+                        <div class="scenario-rate scenario-medium">
+                            82% success
+                        </div>
                     </div>
                     <div class="scenario-card">
                         <div class="scenario-name">Dream Retirement</div>
                         <div class="scenario-desc">Everything: $8,800/mo</div>
-                        <div class="scenario-rate scenario-low">71% success</div>
+                        <div class="scenario-rate scenario-low">
+                            71% success
+                        </div>
                     </div>
                 </div>
-                <p style="margin-top: 1rem;">See exactly how your lifestyle choices affect your chance of success. Make informed trade-offs.</p>
+                <p style="margin-top: 1rem;">
+                    See exactly how your lifestyle choices affect your chance of
+                    success. Make informed trade-offs.
+                </p>
             </div>
         </div>
     </section>
@@ -237,8 +388,15 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
     <!-- Benefits Section -->
     <section class="budget-benefits-section">
         <div class="container">
-            <h2 class="budget-section-heading" data-aos="fade-up">A budget built for <span class="text-teal">retirement planning</span></h2>
-            <div class="budget-benefits-grid" data-aos="fade-up" data-aos-delay="100">
+            <h2 class="budget-section-heading" data-aos="fade-up">
+                A budget built for <span class="text-teal"
+                    >retirement planning</span>
+            </h2>
+            <div
+                class="budget-benefits-grid"
+                data-aos="fade-up"
+                data-aos-delay="100"
+            >
                 <div class="budget-benefit-card">
                     <div class="budget-benefit-icon">📋</div>
                     <h3>9 Categories</h3>
@@ -266,27 +424,46 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
     <!-- How It Works Section -->
     <section class="budget-steps-section">
         <div class="container">
-            <h2 class="budget-section-heading-dark" data-aos="fade-up">How it <span class="text-teal">works</span></h2>
-            <div class="budget-steps-grid" data-aos="fade-up" data-aos-delay="100">
+            <h2 class="budget-section-heading-dark" data-aos="fade-up">
+                How it <span class="text-teal">works</span>
+            </h2>
+            <div
+                class="budget-steps-grid"
+                data-aos="fade-up"
+                data-aos-delay="100"
+            >
                 <div class="budget-step">
                     <div class="budget-step-number">1</div>
                     <h3>Add Your Expenses</h3>
-                    <p>Enter each expense with amount, category, and frequency. Use our pre-configured list of 70+ common expenses for quick setup.</p>
+                    <p>
+                        Enter each expense with amount, category, and frequency.
+                        Use our pre-configured list of 70+ common expenses for
+                        quick setup.
+                    </p>
                 </div>
                 <div class="budget-step">
                     <div class="budget-step-number">2</div>
                     <h3>Set Age Ranges</h3>
-                    <p>Define when each expense starts and ends. Mortgage payoff? College tuition? Medicare? Set the timing.</p>
+                    <p>
+                        Define when each expense starts and ends. Mortgage
+                        payoff? College tuition? Medicare? Set the timing.
+                    </p>
                 </div>
                 <div class="budget-step">
                     <div class="budget-step-number">3</div>
                     <h3>Customize Inflation</h3>
-                    <p>Apply different inflation rates to different expenses. Healthcare grows faster than groceries.</p>
+                    <p>
+                        Apply different inflation rates to different expenses.
+                        Healthcare grows faster than groceries.
+                    </p>
                 </div>
                 <div class="budget-step">
                     <div class="budget-step-number">4</div>
                     <h3>Link to Retirement</h3>
-                    <p>Connect your budget to retirement simulations. Watch projections update with your real spending.</p>
+                    <p>
+                        Connect your budget to retirement simulations. Watch
+                        projections update with your real spending.
+                    </p>
                 </div>
             </div>
         </div>
@@ -297,40 +474,101 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
         <div class="container">
             <div class="clearer-plan-card" data-aos="fade-up">
                 <div class="clearer-plan-text">
-                    <h2>Know what retirement will <span class="text-teal">actually cost.</span></h2>
-                    <p>Build a detailed budget that powers realistic retirement projections. Every expense, every category, every year - all connected.</p>
-                    <p class="text-bold">Your budget. Your retirement. Connected.</p>
+                    <h2>
+                        Know what retirement will <span class="text-teal"
+                            >actually cost.</span>
+                    </h2>
+                    <p>
+                        Build a detailed budget that powers realistic retirement
+                        projections. Every expense, every category, every year -
+                        all connected.
+                    </p>
+                    <p class="text-bold">
+                        Your budget. Your retirement. Connected.
+                    </p>
                 </div>
                 <div class="clearer-plan-image">
-                    <img src="/images/landing/stock/couple_water.jpg" alt="Retirement budget planning">
+                    <img
+                        src="/images/landing/stock/couple_water.jpg"
+                        alt="Retirement budget planning"
+                    />
                     <div class="clearer-plan-stat-overlay">
                         <div class="stat-number">70+</div>
-                        <div class="stat-headline">Pre-configured common expenses for quick budget setup.</div>
-                        <div class="stat-subtext">From mortgage to Netflix - we've got you covered.</div>
+                        <div class="stat-headline">
+                            Pre-configured common expenses for quick budget
+                            setup.
+                        </div>
+                        <div class="stat-subtext">
+                            From mortgage to Netflix - we've got you covered.
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="clearer-plan-benefits" data-aos="fade-up" data-aos-delay="100">
+            <div
+                class="clearer-plan-benefits"
+                data-aos="fade-up"
+                data-aos-delay="100"
+            >
                 <div class="benefit-pill">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    >
                         <polyline points="20 6 9 17 4 12"></polyline>
                     </svg>
                     <span>Detailed categories</span>
                 </div>
                 <div class="benefit-pill">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    >
                         <polyline points="20 6 9 17 4 12"></polyline>
                     </svg>
                     <span>Age-based projections</span>
                 </div>
                 <div class="benefit-pill">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    >
                         <polyline points="20 6 9 17 4 12"></polyline>
                     </svg>
                     <span>Smart inflation</span>
                 </div>
                 <div class="benefit-pill">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    >
                         <polyline points="20 6 9 17 4 12"></polyline>
                     </svg>
                     <span>Retirement integration</span>
@@ -344,45 +582,54 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
 
     <!-- Page-specific scripts -->
     <script is:inline>
-    document.addEventListener('DOMContentLoaded', function() {
-        gsap.registerPlugin(ScrollTrigger);
+        document.addEventListener("DOMContentLoaded", function () {
+            gsap.registerPlugin(ScrollTrigger);
 
-        const featureSections = document.querySelectorAll('.feature');
-        featureSections.forEach((section, index) => {
-            const img = section.querySelector('.feature-img');
-            const text = section.querySelector('.feature-text');
-            const isEven = index % 2 === 1;
-            gsap.set(img, { opacity: 0, x: isEven ? 100 : -100 });
-            gsap.set(text, { opacity: 0, x: isEven ? -100 : 100 });
-            gsap.timeline({
-                scrollTrigger: {
-                    trigger: section,
-                    start: 'top 80%',
-                    toggleActions: 'play none none none'
-                }
-            })
-            .to(img, { opacity: 1, x: 0, duration: 0.8, ease: 'power3.out' })
-            .to(text, { opacity: 1, x: 0, duration: 0.8, ease: 'power3.out' }, '-=0.6');
+            const featureSections = document.querySelectorAll(".feature");
+            featureSections.forEach((section, index) => {
+                const img = section.querySelector(".feature-img");
+                const text = section.querySelector(".feature-text");
+                const isEven = index % 2 === 1;
+                gsap.set(img, { opacity: 0, x: isEven ? 100 : -100 });
+                gsap.set(text, { opacity: 0, x: isEven ? -100 : 100 });
+                gsap.timeline({
+                    scrollTrigger: {
+                        trigger: section,
+                        start: "top 80%",
+                        toggleActions: "play none none none",
+                    },
+                })
+                    .to(img, {
+                        opacity: 1,
+                        x: 0,
+                        duration: 0.8,
+                        ease: "power3.out",
+                    })
+                    .to(
+                        text,
+                        { opacity: 1, x: 0, duration: 0.8, ease: "power3.out" },
+                        "-=0.6",
+                    );
+            });
         });
-    });
     </script>
 
     <!-- Schema -->
     <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
-        "name": "ReadyAimRetire Retirement Budget Planner",
-        "applicationCategory": "FinanceApplication",
-        "operatingSystem": "Web",
-        "description": "Detailed retirement budget planner with 9 categories, age-based expenses, per-item inflation, and direct integration with retirement simulations.",
-        "url": "https://readyaimretire.com/budget",
-        "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "USD"
+        {
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "ReadyAimRetire Retirement Budget Planner",
+            "applicationCategory": "FinanceApplication",
+            "operatingSystem": "Web",
+            "description": "Detailed retirement budget planner with 9 categories, age-based expenses, per-item inflation, and direct integration with retirement simulations.",
+            "url": "https://readyaimretire.com/budget",
+            "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD"
+            }
         }
-    }
     </script>
 </BaseLayout>
 
@@ -409,7 +656,7 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
     }
 
     .budget-hero h1 {
-        font-family: 'Playfair Display', Georgia, serif;
+        font-family: "Tobias", Georgia, serif;
         font-size: clamp(2.25rem, 5vw, 3.25rem);
         font-weight: 700;
         color: #1a1a2e;
@@ -448,7 +695,7 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
     }
 
     .budget-problem-content h2 {
-        font-family: 'Playfair Display', Georgia, serif;
+        font-family: "Tobias", Georgia, serif;
         font-size: clamp(1.75rem, 3vw, 2.25rem);
         font-weight: 700;
         color: #1a1a2e;
@@ -474,7 +721,8 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
         align-items: center;
     }
 
-    .comparison-simple, .comparison-detailed {
+    .comparison-simple,
+    .comparison-detailed {
         width: 100%;
         padding: 1.25rem;
         border-radius: 12px;
@@ -712,7 +960,7 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
     }
 
     .budget-section-heading {
-        font-family: 'Playfair Display', Georgia, serif;
+        font-family: "Tobias", Georgia, serif;
         font-size: clamp(1.75rem, 3vw, 2.25rem);
         font-weight: 700;
         color: #ffffff;
@@ -760,7 +1008,7 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
     }
 
     .budget-section-heading-dark {
-        font-family: 'Playfair Display', Georgia, serif;
+        font-family: "Tobias", Georgia, serif;
         font-size: clamp(1.75rem, 3vw, 2.25rem);
         font-weight: 700;
         color: #1a1a2e;
@@ -794,7 +1042,7 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
     }
 
     .budget-step h3 {
-        font-family: 'Inter', sans-serif;
+        font-family: "Inter", sans-serif;
         font-size: 1.125rem;
         font-weight: 600;
         color: #1a1a2e;
@@ -809,8 +1057,13 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
     }
 
     /* Utility */
-    .text-teal { color: #14b8a6; }
-    .text-italic { font-style: italic; color: #666; }
+    .text-teal {
+        color: #14b8a6;
+    }
+    .text-italic {
+        font-style: italic;
+        color: #666;
+    }
 
     /* Responsive */
     @media (max-width: 1024px) {

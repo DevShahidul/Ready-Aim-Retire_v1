@@ -1,17 +1,22 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import CTABanner from '../../components/CTABanner.astro';
-import Breadcrumbs from '../../components/Breadcrumbs.astro';
-import { getCollection } from 'astro:content';
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTABanner from "../../components/CTABanner.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import { getCollection } from "astro:content";
 
 export const prerender = true;
 
 // Get all blog posts and sort by date (newest first)
-const allPosts = await getCollection('blog');
-const sortedPosts = allPosts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+const allPosts = await getCollection("blog");
+const sortedPosts = allPosts.sort(
+    (a, b) => b.data.date.getTime() - a.data.date.getTime(),
+);
 
 // Get unique categories from all posts
-const categories = ['All', ...new Set(allPosts.map(post => post.data.category))];
+const categories = [
+    "All",
+    ...new Set(allPosts.map((post) => post.data.category)),
+];
 ---
 
 <BaseLayout
@@ -24,7 +29,10 @@ const categories = ['All', ...new Set(allPosts.map(post => post.data.category))]
         <div class="container" data-aos="fade-up">
             <Breadcrumbs theme="light" items={[{ label: "Blog" }]} />
             <h1>Retirement Insights</h1>
-            <p>Expert insights, practical strategies, and the latest news to help you master your retirement planning journey.</p>
+            <p>
+                Expert insights, practical strategies, and the latest news to
+                help you master your retirement planning journey.
+            </p>
         </div>
     </section>
 
@@ -32,14 +40,16 @@ const categories = ['All', ...new Set(allPosts.map(post => post.data.category))]
     <section class="filter-section">
         <div class="container">
             <div class="category-filters" data-aos="fade-up">
-                {categories.map((category) => (
-                    <button
-                        class={`filter-btn ${category === 'All' ? 'active' : ''}`}
-                        data-category={category}
-                    >
-                        {category}
-                    </button>
-                ))}
+                {
+                    categories.map((category) => (
+                        <button
+                            class={`filter-btn ${category === "All" ? "active" : ""}`}
+                            data-category={category}
+                        >
+                            {category}
+                        </button>
+                    ))
+                }
             </div>
         </div>
     </section>
@@ -48,53 +58,70 @@ const categories = ['All', ...new Set(allPosts.map(post => post.data.category))]
     <section class="blog-grid-section">
         <div class="container">
             <div class="blog-grid">
-                {sortedPosts.map((post, index) => (
-                    <article
-                        class="blog-card"
-                        data-category={post.data.category}
-                        data-aos="fade-up"
-                        data-aos-delay={index < 6 ? index * 100 : 0}
-                    >
-                        <a href={`/blog/${post.slug}`} class="card-link">
-                            <div class="card-image">
-                                {post.data.image ? (
-                                    <img src={post.data.image} alt={post.data.title} />
-                                ) : (
-                                    <div class="placeholder-image">
-                                        <i class="fas fa-newspaper"></i>
-                                    </div>
-                                )}
-                                <span class="category-badge">{post.data.category}</span>
-                            </div>
-                            <div class="card-content">
-                                <h2>{post.data.title}</h2>
-                                <p class="excerpt">{post.data.description}</p>
-                                <div class="card-meta">
-                                    <span class="date">
-                                        <i class="far fa-calendar"></i>
-                                        {post.data.date.toLocaleDateString('en-US', {
-                                            year: 'numeric',
-                                            month: 'long',
-                                            day: 'numeric'
-                                        })}
-                                    </span>
-                                    <span class="read-time">
-                                        <i class="far fa-clock"></i>
-                                        {post.data.readTime}
+                {
+                    sortedPosts.map((post, index) => (
+                        <article
+                            class="blog-card"
+                            data-category={post.data.category}
+                            data-aos="fade-up"
+                            data-aos-delay={index < 6 ? index * 100 : 0}
+                        >
+                            <a href={`/blog/${post.slug}`} class="card-link">
+                                <div class="card-image">
+                                    {post.data.image ? (
+                                        <img
+                                            src={post.data.image}
+                                            alt={post.data.title}
+                                        />
+                                    ) : (
+                                        <div class="placeholder-image">
+                                            <i class="fas fa-newspaper" />
+                                        </div>
+                                    )}
+                                    <span class="category-badge">
+                                        {post.data.category}
                                     </span>
                                 </div>
-                            </div>
-                        </a>
-                    </article>
-                ))}
+                                <div class="card-content">
+                                    <h2>{post.data.title}</h2>
+                                    <p class="excerpt">
+                                        {post.data.description}
+                                    </p>
+                                    <div class="card-meta">
+                                        <span class="date">
+                                            <i class="far fa-calendar" />
+                                            {post.data.date.toLocaleDateString(
+                                                "en-US",
+                                                {
+                                                    year: "numeric",
+                                                    month: "long",
+                                                    day: "numeric",
+                                                },
+                                            )}
+                                        </span>
+                                        <span class="read-time">
+                                            <i class="far fa-clock" />
+                                            {post.data.readTime}
+                                        </span>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
+                    ))
+                }
             </div>
 
-            {sortedPosts.length === 0 && (
-                <div class="no-posts" data-aos="fade-up">
-                    <i class="fas fa-inbox"></i>
-                    <p>No blog posts available yet. Check back soon for expert retirement planning insights!</p>
-                </div>
-            )}
+            {
+                sortedPosts.length === 0 && (
+                    <div class="no-posts" data-aos="fade-up">
+                        <i class="fas fa-inbox" />
+                        <p>
+                            No blog posts available yet. Check back soon for
+                            expert retirement planning insights!
+                        </p>
+                    </div>
+                )
+            }
         </div>
     </section>
 
@@ -110,7 +137,7 @@ const categories = ['All', ...new Set(allPosts.map(post => post.data.category))]
     }
 
     .blog-hero h1 {
-        font-family: 'Playfair Display', Georgia, serif;
+        font-family: "Tobias", Georgia, serif;
         font-size: clamp(2.5rem, 5vw, 3.5rem);
         font-weight: 400;
         color: #1a1a2e;
@@ -179,7 +206,9 @@ const categories = ['All', ...new Set(allPosts.map(post => post.data.category))]
         border-radius: 12px;
         overflow: hidden;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        transition:
+            transform 0.3s ease,
+            box-shadow 0.3s ease;
         display: none;
     }
 
@@ -251,7 +280,7 @@ const categories = ['All', ...new Set(allPosts.map(post => post.data.category))]
     }
 
     .card-content h2 {
-        font-family: 'Inter', sans-serif;
+        font-family: "Inter", sans-serif;
         font-size: 1.35rem;
         font-weight: 700;
         color: #1a1a2e;
@@ -353,28 +382,28 @@ const categories = ['All', ...new Set(allPosts.map(post => post.data.category))]
 
 <script>
     // Category filtering functionality
-    document.addEventListener('DOMContentLoaded', () => {
-        const filterBtns = document.querySelectorAll('.filter-btn');
-        const blogCards = document.querySelectorAll('.blog-card');
+    document.addEventListener("DOMContentLoaded", () => {
+        const filterBtns = document.querySelectorAll(".filter-btn");
+        const blogCards = document.querySelectorAll(".blog-card");
 
         // Show all cards initially
-        blogCards.forEach(card => card.classList.add('visible'));
+        blogCards.forEach((card) => card.classList.add("visible"));
 
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
+        filterBtns.forEach((btn) => {
+            btn.addEventListener("click", () => {
                 const category = btn.dataset.category;
 
                 // Update active state
-                filterBtns.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
+                filterBtns.forEach((b) => b.classList.remove("active"));
+                btn.classList.add("active");
 
                 // Filter cards
-                blogCards.forEach(card => {
+                blogCards.forEach((card) => {
                     const cardCategory = card.dataset.category;
-                    if (category === 'All' || cardCategory === category) {
-                        card.classList.add('visible');
+                    if (category === "All" || cardCategory === category) {
+                        card.classList.add("visible");
                     } else {
-                        card.classList.remove('visible');
+                        card.classList.remove("visible");
                     }
                 });
             });
