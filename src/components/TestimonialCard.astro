@@ -5,17 +5,35 @@ interface Props {
     date: string;
     quote: string;
     sourceImage?: string;
-    sourceType?: 'email' | 'reddit' | 'review' | 'other';
+    sourceType?: "email" | "reddit" | "review" | "other";
 }
 
-const { id, name, date, quote, sourceImage, sourceType = 'email' } = Astro.props;
+const {
+    id,
+    name,
+    date,
+    quote,
+    sourceImage,
+    sourceType = "email",
+} = Astro.props;
 
 // Generate initials for avatar
 const initials = name.charAt(0).toUpperCase();
 
 // Generate a consistent color based on the name
-const colors = ['#3b7eff', '#14b8a6', '#8b5cf6', '#f59e0b', '#ef4444', '#10b981', '#6366f1', '#ec4899'];
-const colorIndex = name.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0) % colors.length;
+const colors = [
+    "#3b7eff",
+    "#14b8a6",
+    "#8b5cf6",
+    "#f59e0b",
+    "#ef4444",
+    "#10b981",
+    "#6366f1",
+    "#ec4899",
+];
+const colorIndex =
+    name.split("").reduce((acc, char) => acc + char.charCodeAt(0), 0) %
+    colors.length;
 const avatarColor = colors[colorIndex];
 ---
 
@@ -23,7 +41,10 @@ const avatarColor = colors[colorIndex];
     <p class="quote">"{quote}"</p>
     <div class="card-footer">
         <div class="author">
-            <div class="avatar-initials" style={`background-color: ${avatarColor}`}>
+            <div
+                class="avatar-initials"
+                style={`background-color: ${avatarColor}`}
+            >
                 {initials}
             </div>
             <div class="author-info">
@@ -31,7 +52,7 @@ const avatarColor = colors[colorIndex];
                 <div class="date">{date}</div>
             </div>
         </div>
-        {sourceImage && (
+        <!-- {sourceImage && (
             <button
                 class="view-source-btn"
                 data-source-image={`/images/reviews/${sourceImage}`}
@@ -46,12 +67,12 @@ const avatarColor = colors[colorIndex];
                 </svg>
                 View Source
             </button>
-        )}
+        )} -->
     </div>
 </div>
 
 <style>
-    .testimonial-card-v2 {
+    .testimonial-card .testimonial-card-v2 {
         background: #ffffff;
         border-radius: 12px;
         padding: 1.75rem;
@@ -71,7 +92,7 @@ const avatarColor = colors[colorIndex];
 
     .card-footer {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
         gap: 1rem;
         margin-top: auto;
