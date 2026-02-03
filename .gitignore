@@ -3,6 +3,7 @@ node_modules/
 dist/
 # Astro-specific files
 astro/
+.astro/
 _site/
 # Build and cache files
 *.tsbuildinfo
