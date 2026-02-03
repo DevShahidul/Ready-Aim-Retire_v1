@@ -1,7 +1,8 @@
-import { c as createComponent, r as renderComponent, a as renderTemplate, e as renderScript, b as addAttribute, m as maybeRenderHead } from '../chunks/astro/server_DZIuF2pX.mjs';
+import { f as createComponent, k as renderComponent, r as renderTemplate, l as renderScript, h as addAttribute, m as maybeRenderHead } from '../chunks/astro/server_C1KXtyjF.mjs';
 import 'piccolore';
-import { $ as $$BaseLayout } from '../chunks/BaseLayout_DfJoK4e4.mjs';
-import { $ as $$CTABanner } from '../chunks/CTABanner_Dh_FC_zC.mjs';
+import { $ as $$BaseLayout } from '../chunks/BaseLayout_wN0cFeTq.mjs';
+import { $ as $$CTABanner } from '../chunks/CTABanner_BX4k0jEI.mjs';
+import { $ as $$Breadcrumbs } from '../chunks/Breadcrumbs_def4KfHx.mjs';
 /* empty css                                */
 export { renderers } from '../renderers.mjs';
 
@@ -10,96 +11,363 @@ var __defProp = Object.defineProperty;
 var __template = (cooked, raw) => __freeze(__defProp(cooked, "raw", { value: __freeze(cooked.slice()) }));
 var _a;
 const $$Faqs = createComponent(($$result, $$props, $$slots) => {
-  return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, { "title": "FAQs – ReadyAimRetire", "description": "Find answers to common questions about ReadyAimRetire's retirement planning tools, features, and pricing.", "solidHeader": true, "data-astro-cid-tkjepyjs": true }, { "default": ($$result2) => renderTemplate(_a || (_a = __template(["  ", `<section class="faqs-hero" data-astro-cid-tkjepyjs> <div class="container" data-astro-cid-tkjepyjs> <h1 class="faqs-hero-title" data-astro-cid-tkjepyjs>Frequently Asked Questions</h1> <p class="faqs-hero-subtitle" data-astro-cid-tkjepyjs>We're here to help</p> </div> </section>  <section class="faqs-intro" data-astro-cid-tkjepyjs> <div class="container" data-astro-cid-tkjepyjs> <div class="intro-grid" data-astro-cid-tkjepyjs> <div class="intro-main" data-astro-cid-tkjepyjs> <h2 data-astro-cid-tkjepyjs>What is Ready Aim Retire?</h2> <p data-astro-cid-tkjepyjs>Ready Aim Retire offers the retirement planning and visualization tool, OnTarget™, for DIY planners who want clarity and confidence in their financial future.</p> <p data-astro-cid-tkjepyjs>It helps you model your entire financial life – income, spending, assets, taxes, and retirement withdrawals – so you can see how today's decisions affect the years ahead.</p> </div> <div class="intro-cards" data-astro-cid-tkjepyjs> <div class="intro-info-card" data-astro-cid-tkjepyjs> <h3 data-astro-cid-tkjepyjs>Who is OnTarget™ for?</h3> <p data-astro-cid-tkjepyjs>OnTarget™ is for people who:</p> <ul data-astro-cid-tkjepyjs> <li data-astro-cid-tkjepyjs>Care about their financial future</li> <li data-astro-cid-tkjepyjs>Want to understand their retirement plan — not just outsource it</li> <li data-astro-cid-tkjepyjs>Are planning for retirement or already retired</li> <li data-astro-cid-tkjepyjs>Prefer clarity and flexibility over rigid "one-answer" tools</li> </ul> <p class="intro-card-note" data-astro-cid-tkjepyjs>You don't need to be a financial expert — just engaged and curious.</p> </div> <div class="intro-info-card" data-astro-cid-tkjepyjs> <h3 data-astro-cid-tkjepyjs>Do I need financial experience to use this?</h3> <p class="intro-card-answer" data-astro-cid-tkjepyjs>No.</p> <p data-astro-cid-tkjepyjs>The platform is designed to be approachable for beginners while still powerful enough for more experienced planners. Everything is presented in plain English with intuitive visuals.</p> <p data-astro-cid-tkjepyjs>If you can explain your finances, you can model them.</p> </div> </div> </div> </div> </section>  <section class="faq-category-section" data-astro-cid-tkjepyjs> <div class="container" data-astro-cid-tkjepyjs> <div class="faq-category-grid" data-astro-cid-tkjepyjs> <div class="category-title-wrapper" data-astro-cid-tkjepyjs> <h2 class="category-title" data-astro-cid-tkjepyjs>Getting Started</h2> </div> <div class="faq-accordion" data-astro-cid-tkjepyjs> <div class="faq-item" data-astro-cid-tkjepyjs> <button class="faq-question" data-astro-cid-tkjepyjs> <span data-astro-cid-tkjepyjs>What is OnTarget?</span> <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-tkjepyjs> <polyline points="6 9 12 15 18 9" data-astro-cid-tkjepyjs></polyline> </svg> </button> <div class="faq-answer" data-astro-cid-tkjepyjs> <p data-astro-cid-tkjepyjs>OnTarget™ is our flagship retirement planning tool that combines powerful financial modeling with an intuitive interface. It analyzes your income sources, expenses, investments, and tax situation to project your retirement outcomes with remarkable accuracy. Unlike simple retirement calculators, OnTarget accounts for the complex interplay of taxes, inflation, Social Security, portfolio returns, and hundreds of other variables to give you a realistic picture of your retirement future.</p> </div> </div> <div class="faq-item" data-astro-cid-tkjepyjs> <button class="faq-question" data-astro-cid-tkjepyjs> <span data-astro-cid-tkjepyjs>Is OnTarget made for me?</span> <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-tkjepyjs> <polyline points="6 9 12 15 18 9" data-astro-cid-tkjepyjs></polyline> </svg> </button> <div class="faq-answer" data-astro-cid-tkjepyjs> <p data-astro-cid-tkjepyjs>OnTarget is designed for anyone serious about retirement planning. Whether you're a DIY investor managing your own portfolio, someone working with a financial advisor, or a professional advisor managing multiple clients, OnTarget provides the insights you need. It's particularly valuable if you want to understand the tax implications of your retirement decisions, optimize Social Security claiming strategies, or explore various what-if scenarios.</p> </div> </div> <div class="faq-item" data-astro-cid-tkjepyjs> <button class="faq-question" data-astro-cid-tkjepyjs> <span data-astro-cid-tkjepyjs>How is OnTarget different from other retirement calculators?</span> <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-tkjepyjs> <polyline points="6 9 12 15 18 9" data-astro-cid-tkjepyjs></polyline> </svg> </button> <div class="faq-answer" data-astro-cid-tkjepyjs> <p data-astro-cid-tkjepyjs>Most retirement calculators provide oversimplified projections that ignore critical factors like taxes, Social Security optimization, and the sequence of returns. OnTarget performs comprehensive tax calculations including federal and state taxes, capital gains, RMDs, IRMAA surcharges, and the taxation of Social Security benefits. It also runs Monte Carlo simulations and historical scenario testing to help you understand the range of possible outcomes, not just a single optimistic projection.</p> </div> </div> <div class="faq-item" data-astro-cid-tkjepyjs> <button class="faq-question" data-astro-cid-tkjepyjs> <span data-astro-cid-tkjepyjs>Do I need to be a financial expert to use OnTarget?</span> <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-tkjepyjs> <polyline points="6 9 12 15 18 9" data-astro-cid-tkjepyjs></polyline> </svg> </button> <div class="faq-answer" data-astro-cid-tkjepyjs> <p data-astro-cid-tkjepyjs>No financial expertise required. OnTarget is designed to be both powerful and accessible. We provide sensible defaults based on research and best practices, helpful explanations throughout the interface, and educational resources to help you understand key concepts. You can start with the basics and gradually explore more advanced features as you become comfortable with the tool.</p> </div> </div> </div> </div> </div> </section>  <section class="faq-category-section" data-astro-cid-tkjepyjs> <div class="container" data-astro-cid-tkjepyjs> <div class="faq-category-grid" data-astro-cid-tkjepyjs> <div class="category-title-wrapper" data-astro-cid-tkjepyjs> <h2 class="category-title" data-astro-cid-tkjepyjs>Planning & Modeling</h2> </div> <div class="faq-accordion" data-astro-cid-tkjepyjs> <div class="faq-item" data-astro-cid-tkjepyjs> <button class="faq-question" data-astro-cid-tkjepyjs> <span data-astro-cid-tkjepyjs>What kind of scenarios can I model with OnTarget?</span> <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-tkjepyjs> <polyline points="6 9 12 15 18 9" data-astro-cid-tkjepyjs></polyline> </svg> </button> <div class="faq-answer" data-astro-cid-tkjepyjs> <p data-astro-cid-tkjepyjs>OnTarget allows you to model virtually any retirement scenario you can imagine. Compare retiring at different ages, test various Social Security claiming strategies, explore the impact of part-time work in retirement, model healthcare costs before Medicare, analyze Roth conversion strategies, evaluate downsizing your home, and much more. You can save multiple scenarios and compare them side-by-side to see which approach works best for your situation.</p> </div> </div> <div class="faq-item" data-astro-cid-tkjepyjs> <button class="faq-question" data-astro-cid-tkjepyjs> <span data-astro-cid-tkjepyjs>How accurate are OnTarget's projections?</span> <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-tkjepyjs> <polyline points="6 9 12 15 18 9" data-astro-cid-tkjepyjs></polyline> </svg> </button> <div class="faq-answer" data-astro-cid-tkjepyjs> <p data-astro-cid-tkjepyjs>OnTarget's calculations are mathematically precise based on current tax laws and the assumptions you provide. However, no one can predict the future with certainty. That's why we use Monte Carlo simulations and historical scenario testing to show you a range of possible outcomes rather than a single projection. This helps you understand the probability of success and plan for different market conditions. Our tax calculations are updated regularly to reflect current federal and state tax laws.</p> </div> </div> <div class="faq-item" data-astro-cid-tkjepyjs> <button class="faq-question" data-astro-cid-tkjepyjs> <span data-astro-cid-tkjepyjs>Can I test what-if scenarios without losing my original plan?</span> <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-tkjepyjs> <polyline points="6 9 12 15 18 9" data-astro-cid-tkjepyjs></polyline> </svg> </button> <div class="faq-answer" data-astro-cid-tkjepyjs> <p data-astro-cid-tkjepyjs>Absolutely! OnTarget makes it easy to save and manage multiple scenarios. You can create variations of your plan to explore different possibilities, then compare them side-by-side. This allows you to experiment freely without worrying about losing your baseline plan. Many users maintain a "current plan" along with several "what-if" scenarios to understand their options.</p> </div> </div> <div class="faq-item" data-astro-cid-tkjepyjs> <button class="faq-question" data-astro-cid-tkjepyjs> <span data-astro-cid-tkjepyjs>How does OnTarget handle uncertainty in retirement planning?</span> <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-tkjepyjs> <polyline points="6 9 12 15 18 9" data-astro-cid-tkjepyjs></polyline> </svg> </button> <div class="faq-answer" data-astro-cid-tkjepyjs> <p data-astro-cid-tkjepyjs>OnTarget uses two complementary approaches to address uncertainty. Monte Carlo analysis runs thousands of simulations with randomized returns to show you the probability of different outcomes. Historical scenario testing shows how your plan would have performed if you retired in different historical periods, including challenging scenarios like retiring just before the 2008 financial crisis. Together, these tools help you understand both the likelihood of success and the potential risks you face.</p> </div> </div> </div> </div> </div> </section>  <section class="faq-category-section" data-astro-cid-tkjepyjs> <div class="container" data-astro-cid-tkjepyjs> <div class="faq-category-grid" data-astro-cid-tkjepyjs> <div class="category-title-wrapper" data-astro-cid-tkjepyjs> <h2 class="category-title" data-astro-cid-tkjepyjs>Taxes & Income</h2> </div> <div class="faq-accordion" data-astro-cid-tkjepyjs> <div class="faq-item" data-astro-cid-tkjepyjs> <button class="faq-question" data-astro-cid-tkjepyjs> <span data-astro-cid-tkjepyjs>How does OnTarget calculate my taxes in retirement?</span> <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-tkjepyjs> <polyline points="6 9 12 15 18 9" data-astro-cid-tkjepyjs></polyline> </svg> </button> <div class="faq-answer" data-astro-cid-tkjepyjs> <p data-astro-cid-tkjepyjs>OnTarget performs comprehensive year-by-year tax calculations that include federal income tax (with graduated brackets), state income tax, capital gains tax (both short and long-term), the taxation of Social Security benefits, required minimum distributions (RMDs), IRMAA Medicare surcharges, and the Net Investment Income Tax (NIIT). It accounts for standard or itemized deductions, tax-loss harvesting opportunities, and the tax implications of Roth conversions. This level of detail ensures your retirement projections reflect your real after-tax cash flow.</p> </div> </div> <div class="faq-item" data-astro-cid-tkjepyjs> <button class="faq-question" data-astro-cid-tkjepyjs> <span data-astro-cid-tkjepyjs>Can OnTarget help me optimize my Social Security claiming strategy?</span> <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-tkjepyjs> <polyline points="6 9 12 15 18 9" data-astro-cid-tkjepyjs></polyline> </svg> </button> <div class="faq-answer" data-astro-cid-tkjepyjs> <p data-astro-cid-tkjepyjs>Yes! OnTarget makes it easy to compare different Social Security claiming ages and see the total lifetime impact on your retirement. It factors in not just the monthly benefit differences, but also the tax implications, the impact on Medicare IRMAA surcharges, and how delaying Social Security affects your overall retirement success rate. You can model single or married couple scenarios, including survivor benefits.</p> </div> </div> <div class="faq-item" data-astro-cid-tkjepyjs> <button class="faq-question" data-astro-cid-tkjepyjs> <span data-astro-cid-tkjepyjs>Does OnTarget account for Required Minimum Distributions (RMDs)?</span> <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-tkjepyjs> <polyline points="6 9 12 15 18 9" data-astro-cid-tkjepyjs></polyline> </svg> </button> <div class="faq-answer" data-astro-cid-tkjepyjs> <p data-astro-cid-tkjepyjs>Absolutely. OnTarget automatically calculates RMDs from your traditional IRA and 401(k) accounts starting at the required age (currently 73, rising to 75 for those born in 1960 or later). It includes these distributions in your taxable income calculations and shows you how RMDs can create unexpected tax burdens in later retirement years. This helps you evaluate strategies like Roth conversions to potentially reduce future RMD requirements.</p> </div> </div> <div class="faq-item" data-astro-cid-tkjepyjs> <button class="faq-question" data-astro-cid-tkjepyjs> <span data-astro-cid-tkjepyjs>What is a Roth conversion and should I do one?</span> <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-tkjepyjs> <polyline points="6 9 12 15 18 9" data-astro-cid-tkjepyjs></polyline> </svg> </button> <div class="faq-answer" data-astro-cid-tkjepyjs> <p data-astro-cid-tkjepyjs>A Roth conversion involves moving money from a traditional IRA or 401(k) to a Roth IRA. You pay taxes on the converted amount now, but future withdrawals are tax-free. OnTarget helps you model different conversion strategies to see if converting makes sense for your situation. It shows you the upfront tax cost, the long-term tax savings, and the impact on your overall retirement success. Roth conversions can be particularly valuable in years when your income is lower or before RMDs begin.</p> </div> </div> </div> </div> </div> </section>  <section class="advisor-banner" data-astro-cid-tkjepyjs> <div class="container" data-astro-cid-tkjepyjs> <div class="advisor-banner-grid" data-astro-cid-tkjepyjs> <div class="advisor-banner-left" data-astro-cid-tkjepyjs> <div class="advisor-banner-icon" data-astro-cid-tkjepyjs> <i class="fa-solid fa-arrow-right-arrow-left" data-astro-cid-tkjepyjs></i> </div> <h3 data-astro-cid-tkjepyjs>Using OnTarget™ with an Advisor</h3> </div> <div class="advisor-banner-right" data-astro-cid-tkjepyjs> <h4 data-astro-cid-tkjepyjs>Is this a replacement for a financial advisor?</h4> <p class="advisor-answer" data-astro-cid-tkjepyjs>No - and it's not meant to be.</p> <p data-astro-cid-tkjepyjs>OnTarget™ is designed to help you understand your plan, ask better questions, and stay engaged - whether you work with an advisor or not.</p> <p data-astro-cid-tkjepyjs>Many users find it makes conversations with professionals more productive.</p> </div> </div> </div> </section>  <section class="faq-category-section" data-astro-cid-tkjepyjs> <div class="container" data-astro-cid-tkjepyjs> <div class="faq-category-grid" data-astro-cid-tkjepyjs> <div class="category-title-wrapper" data-astro-cid-tkjepyjs> <h2 class="category-title" data-astro-cid-tkjepyjs>Privacy & Security</h2> </div> <div class="faq-accordion" data-astro-cid-tkjepyjs> <div class="faq-item" data-astro-cid-tkjepyjs> <button class="faq-question" data-astro-cid-tkjepyjs> <span data-astro-cid-tkjepyjs>Is my financial data secure?</span> <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-tkjepyjs> <polyline points="6 9 12 15 18 9" data-astro-cid-tkjepyjs></polyline> </svg> </button> <div class="faq-answer" data-astro-cid-tkjepyjs> <p data-astro-cid-tkjepyjs>Absolutely. We use bank-level 256-bit AES encryption to protect your data both in transit and at rest. All connections to our servers use TLS 1.3 encryption, the same security protocol used by financial institutions. We employ multiple layers of security including intrusion detection, regular security audits, and strict access controls. Your data is stored in secure, redundant data centers with 24/7 monitoring.</p> </div> </div> <div class="faq-item" data-astro-cid-tkjepyjs> <button class="faq-question" data-astro-cid-tkjepyjs> <span data-astro-cid-tkjepyjs>Do you sell my data to third parties?</span> <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-tkjepyjs> <polyline points="6 9 12 15 18 9" data-astro-cid-tkjepyjs></polyline> </svg> </button> <div class="faq-answer" data-astro-cid-tkjepyjs> <p data-astro-cid-tkjepyjs>Never. Your financial information belongs to you, period. We don't sell, rent, or share your personal data with third parties for marketing purposes. Our business model is based on subscriptions, not data monetization. We only share data when legally required or with your explicit permission (such as when you choose to work with a financial advisor through our platform).</p> </div> </div> <div class="faq-item" data-astro-cid-tkjepyjs> <button class="faq-question" data-astro-cid-tkjepyjs> <span data-astro-cid-tkjepyjs>What data do you collect and why?</span> <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-tkjepyjs> <polyline points="6 9 12 15 18 9" data-astro-cid-tkjepyjs></polyline> </svg> </button> <div class="faq-answer" data-astro-cid-tkjepyjs> <p data-astro-cid-tkjepyjs>We collect only the information necessary to provide our services: your account information (email, name), your retirement planning data (income, expenses, accounts), and basic usage analytics to improve our product. We use anonymous, aggregated data to enhance OnTarget's features and performance. You can view, export, or delete your data at any time from your account settings.</p> </div> </div> <div class="faq-item" data-astro-cid-tkjepyjs> <button class="faq-question" data-astro-cid-tkjepyjs> <span data-astro-cid-tkjepyjs>Can I export or delete my data?</span> <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-tkjepyjs> <polyline points="6 9 12 15 18 9" data-astro-cid-tkjepyjs></polyline> </svg> </button> <div class="faq-answer" data-astro-cid-tkjepyjs> <p data-astro-cid-tkjepyjs>Yes, absolutely. You can export all of your retirement planning data at any time in standard formats (JSON, CSV). If you decide to close your account, you can permanently delete all your data from our systems. We provide transparent data portability because your financial information belongs to you.</p> </div> </div> </div> </div> </div> </section>  <section class="faq-category-section" data-astro-cid-tkjepyjs> <div class="container" data-astro-cid-tkjepyjs> <div class="faq-category-grid" data-astro-cid-tkjepyjs> <div class="category-title-wrapper" data-astro-cid-tkjepyjs> <h2 class="category-title" data-astro-cid-tkjepyjs>Pricing & Billing</h2> </div> <div class="faq-accordion" data-astro-cid-tkjepyjs> <div class="faq-item" data-astro-cid-tkjepyjs> <button class="faq-question" data-astro-cid-tkjepyjs> <span data-astro-cid-tkjepyjs>Is there a free trial?</span> <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-tkjepyjs> <polyline points="6 9 12 15 18 9" data-astro-cid-tkjepyjs></polyline> </svg> </button> <div class="faq-answer" data-astro-cid-tkjepyjs> <p data-astro-cid-tkjepyjs>Yes! Our Basic plan is completely free with no credit card required. You can use it indefinitely to explore core retirement planning features. For Pro and Premium plans, we offer a 14-day free trial so you can experience the full power of OnTarget before committing. If you're not satisfied, you can cancel anytime during the trial period with no charge.</p> </div> </div> <div class="faq-item" data-astro-cid-tkjepyjs> <button class="faq-question" data-astro-cid-tkjepyjs> <span data-astro-cid-tkjepyjs>Can I switch between monthly and annual billing?</span> <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-tkjepyjs> <polyline points="6 9 12 15 18 9" data-astro-cid-tkjepyjs></polyline> </svg> </button> <div class="faq-answer" data-astro-cid-tkjepyjs> <p data-astro-cid-tkjepyjs>Absolutely. You can change your billing frequency anytime from your account settings. When switching from monthly to annual, you'll receive a prorated credit for your remaining monthly subscription and save 25% going forward. Switching from annual to monthly takes effect at your next renewal date. We make it easy to choose the billing schedule that works best for you.</p> </div> </div> <div class="faq-item" data-astro-cid-tkjepyjs> <button class="faq-question" data-astro-cid-tkjepyjs> <span data-astro-cid-tkjepyjs>What happens if I cancel my subscription?</span> <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-tkjepyjs> <polyline points="6 9 12 15 18 9" data-astro-cid-tkjepyjs></polyline> </svg> </button> <div class="faq-answer" data-astro-cid-tkjepyjs> <p data-astro-cid-tkjepyjs>You can cancel anytime, and you'll continue to have access to your paid features until the end of your current billing period. After that, your account will revert to the free Basic plan. Your data is never deleted when you downgrade - all your plans and scenarios remain saved in your account. You can upgrade again at any time to regain access to premium features.</p> </div> </div> <div class="faq-item" data-astro-cid-tkjepyjs> <button class="faq-question" data-astro-cid-tkjepyjs> <span data-astro-cid-tkjepyjs>Do you offer refunds?</span> <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-tkjepyjs> <polyline points="6 9 12 15 18 9" data-astro-cid-tkjepyjs></polyline> </svg> </button> <div class="faq-answer" data-astro-cid-tkjepyjs> <p data-astro-cid-tkjepyjs>We offer a 30-day money-back guarantee on all new subscriptions. If you're not completely satisfied with OnTarget for any reason, contact our support team within 30 days of your initial purchase for a full refund. For annual subscriptions, we provide prorated refunds if you cancel within the first 60 days. Our goal is to ensure you're completely satisfied with your investment in retirement planning.</p> </div> </div> </div> </div> </div> </section>  <section class="faq-bottom-cards" data-astro-cid-tkjepyjs> <div class="container" data-astro-cid-tkjepyjs> <div class="bottom-cards-grid" data-astro-cid-tkjepyjs> <div class="info-card" data-astro-cid-tkjepyjs> <div class="info-card-icon" data-astro-cid-tkjepyjs> <i class="fa-solid fa-shield-halved" data-astro-cid-tkjepyjs></i> </div> <h3 data-astro-cid-tkjepyjs>Why should I trust OnTarget™?</h3> <p data-astro-cid-tkjepyjs>Because it was built by people who use it themselves. We don't sell products, push investments, or benefit from specific outcomes. Our success depends on helping you understand your plan better.</p> </div> <div class="info-card" data-astro-cid-tkjepyjs> <div class="info-card-icon" data-astro-cid-tkjepyjs> <i class="fa-solid fa-paper-plane" data-astro-cid-tkjepyjs></i> </div> <h3 data-astro-cid-tkjepyjs>How do I get started?</h3> <p data-astro-cid-tkjepyjs>Create a free account and start building your plan. No credit card required.</p> <a`, ' class="info-card-cta" data-astro-cid-tkjepyjs>Start Planning for Free <i class="fa-solid fa-arrow-right" data-astro-cid-tkjepyjs></i></a> </div> </div> </div> </section>  ', " ", `  <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-            {
-                "@type": "Question",
-                "name": "What is OnTarget?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "OnTarget™ is our flagship retirement planning tool that combines powerful financial modeling with an intuitive interface. It analyzes your income sources, expenses, investments, and tax situation to project your retirement outcomes with remarkable accuracy. Unlike simple retirement calculators, OnTarget accounts for the complex interplay of taxes, inflation, Social Security, portfolio returns, and hundreds of other variables to give you a realistic picture of your retirement future."
+  return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, { "title": "FAQs – ReadyAimRetire", "description": "Find answers to common questions about ReadyAimRetire's retirement planning tools, features, and pricing.", "solidHeader": true, "data-astro-cid-tkjepyjs": true }, { "default": ($$result2) => renderTemplate(_a || (_a = __template(["  ", '<section class="faqs-hero" data-astro-cid-tkjepyjs> <div class="container" data-astro-cid-tkjepyjs> ', ` <h1 class="faqs-hero-title" data-astro-cid-tkjepyjs>Frequently Asked Questions</h1> <p class="faqs-hero-subtitle" data-astro-cid-tkjepyjs>We're here to help</p> </div> </section>  <section class="faqs-intro" data-astro-cid-tkjepyjs> <div class="container" data-astro-cid-tkjepyjs> <div class="intro-grid" data-astro-cid-tkjepyjs> <div class="intro-main" data-astro-cid-tkjepyjs> <h2 data-astro-cid-tkjepyjs>What is Ready Aim Retire?</h2> <p data-astro-cid-tkjepyjs>
+Ready Aim Retire offers the retirement planning and
+                        visualization tool, OnTarget™, for DIY planners who want
+                        clarity and confidence in their financial future.
+</p> <p data-astro-cid-tkjepyjs>
+It helps you model your entire financial life – income,
+                        spending, assets, taxes, and retirement withdrawals – so
+                        you can see how today's decisions affect the years
+                        ahead.
+</p> </div> <div class="intro-cards" data-astro-cid-tkjepyjs> <div class="intro-info-card" data-astro-cid-tkjepyjs> <h3 data-astro-cid-tkjepyjs>Who is OnTarget™ for?</h3> <p data-astro-cid-tkjepyjs>OnTarget™ is for people who:</p> <ul data-astro-cid-tkjepyjs> <li data-astro-cid-tkjepyjs>Care about their financial future</li> <li data-astro-cid-tkjepyjs>
+Want to understand their retirement plan — not
+                                just outsource it
+</li> <li data-astro-cid-tkjepyjs>
+Are planning for retirement or already retired
+</li> <li data-astro-cid-tkjepyjs>
+Prefer clarity and flexibility over rigid
+                                "one-answer" tools
+</li> </ul> <p class="intro-card-note" data-astro-cid-tkjepyjs>
+You don't need to be a financial expert — just
+                            engaged and curious.
+</p> </div> <div class="intro-info-card" data-astro-cid-tkjepyjs> <h3 data-astro-cid-tkjepyjs>Do I need financial experience to use this?</h3> <p class="intro-card-answer" data-astro-cid-tkjepyjs>No.</p> <p data-astro-cid-tkjepyjs>
+The platform is designed to be approachable for
+                            beginners while still powerful enough for more
+                            experienced planners. Everything is presented in
+                            plain English with intuitive visuals.
+</p> <p data-astro-cid-tkjepyjs>
+If you can explain your finances, you can model
+                            them.
+</p> </div> </div> </div> </div> </section>  <section class="faq-category-section" data-astro-cid-tkjepyjs> <div class="container" data-astro-cid-tkjepyjs> <div class="faq-category-grid" data-astro-cid-tkjepyjs> <div class="category-title-wrapper" data-astro-cid-tkjepyjs> <h2 class="category-title" data-astro-cid-tkjepyjs>Getting Started</h2> </div> <div class="faq-accordion" data-astro-cid-tkjepyjs> <div class="faq-item" data-astro-cid-tkjepyjs> <button class="faq-question" data-astro-cid-tkjepyjs> <span data-astro-cid-tkjepyjs>What is OnTarget?</span> <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-tkjepyjs> <polyline points="6 9 12 15 18 9" data-astro-cid-tkjepyjs></polyline> </svg> </button> <div class="faq-answer" data-astro-cid-tkjepyjs> <p data-astro-cid-tkjepyjs>
+OnTarget™ is our flagship retirement planning
+                                tool that combines powerful financial modeling
+                                with an intuitive interface. It analyzes your
+                                income sources, expenses, investments, and tax
+                                situation to project your retirement outcomes
+                                with remarkable accuracy. Unlike simple
+                                retirement calculators, OnTarget accounts for
+                                the complex interplay of taxes, inflation,
+                                Social Security, portfolio returns, and hundreds
+                                of other variables to give you a realistic
+                                picture of your retirement future.
+</p> </div> </div> <div class="faq-item" data-astro-cid-tkjepyjs> <button class="faq-question" data-astro-cid-tkjepyjs> <span data-astro-cid-tkjepyjs>Is OnTarget made for me?</span> <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-tkjepyjs> <polyline points="6 9 12 15 18 9" data-astro-cid-tkjepyjs></polyline> </svg> </button> <div class="faq-answer" data-astro-cid-tkjepyjs> <p data-astro-cid-tkjepyjs>
+OnTarget is designed for anyone serious about
+                                retirement planning. Whether you're a DIY
+                                investor managing your own portfolio, someone
+                                working with a financial advisor, or a
+                                professional advisor managing multiple clients,
+                                OnTarget provides the insights you need. It's
+                                particularly valuable if you want to understand
+                                the tax implications of your retirement
+                                decisions, optimize Social Security claiming
+                                strategies, or explore various what-if
+                                scenarios.
+</p> </div> </div> <div class="faq-item" data-astro-cid-tkjepyjs> <button class="faq-question" data-astro-cid-tkjepyjs> <span data-astro-cid-tkjepyjs>How is OnTarget different from other retirement
+                                calculators?</span> <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-tkjepyjs> <polyline points="6 9 12 15 18 9" data-astro-cid-tkjepyjs></polyline> </svg> </button> <div class="faq-answer" data-astro-cid-tkjepyjs> <p data-astro-cid-tkjepyjs>
+Most retirement calculators provide
+                                oversimplified projections that ignore critical
+                                factors like taxes, Social Security
+                                optimization, and the sequence of returns.
+                                OnTarget performs comprehensive tax calculations
+                                including federal and state taxes, capital
+                                gains, RMDs, IRMAA surcharges, and the taxation
+                                of Social Security benefits. It also runs Monte
+                                Carlo simulations and historical scenario
+                                testing to help you understand the range of
+                                possible outcomes, not just a single optimistic
+                                projection.
+</p> </div> </div> <div class="faq-item" data-astro-cid-tkjepyjs> <button class="faq-question" data-astro-cid-tkjepyjs> <span data-astro-cid-tkjepyjs>Do I need to be a financial expert to use
+                                OnTarget?</span> <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-tkjepyjs> <polyline points="6 9 12 15 18 9" data-astro-cid-tkjepyjs></polyline> </svg> </button> <div class="faq-answer" data-astro-cid-tkjepyjs> <p data-astro-cid-tkjepyjs>
+No financial expertise required. OnTarget is
+                                designed to be both powerful and accessible. We
+                                provide sensible defaults based on research and
+                                best practices, helpful explanations throughout
+                                the interface, and educational resources to help
+                                you understand key concepts. You can start with
+                                the basics and gradually explore more advanced
+                                features as you become comfortable with the
+                                tool.
+</p> </div> </div> </div> </div> </div> </section>  <section class="faq-category-section" data-astro-cid-tkjepyjs> <div class="container" data-astro-cid-tkjepyjs> <div class="faq-category-grid" data-astro-cid-tkjepyjs> <div class="category-title-wrapper" data-astro-cid-tkjepyjs> <h2 class="category-title" data-astro-cid-tkjepyjs>Planning & Modeling</h2> </div> <div class="faq-accordion" data-astro-cid-tkjepyjs> <div class="faq-item" data-astro-cid-tkjepyjs> <button class="faq-question" data-astro-cid-tkjepyjs> <span data-astro-cid-tkjepyjs>What kind of scenarios can I model with
+                                OnTarget?</span> <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-tkjepyjs> <polyline points="6 9 12 15 18 9" data-astro-cid-tkjepyjs></polyline> </svg> </button> <div class="faq-answer" data-astro-cid-tkjepyjs> <p data-astro-cid-tkjepyjs>
+OnTarget allows you to model virtually any
+                                retirement scenario you can imagine. Compare
+                                retiring at different ages, test various Social
+                                Security claiming strategies, explore the impact
+                                of part-time work in retirement, model
+                                healthcare costs before Medicare, analyze Roth
+                                conversion strategies, evaluate downsizing your
+                                home, and much more. You can save multiple
+                                scenarios and compare them side-by-side to see
+                                which approach works best for your situation.
+</p> </div> </div> <div class="faq-item" data-astro-cid-tkjepyjs> <button class="faq-question" data-astro-cid-tkjepyjs> <span data-astro-cid-tkjepyjs>How accurate are OnTarget's projections?</span> <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-tkjepyjs> <polyline points="6 9 12 15 18 9" data-astro-cid-tkjepyjs></polyline> </svg> </button> <div class="faq-answer" data-astro-cid-tkjepyjs> <p data-astro-cid-tkjepyjs>
+OnTarget's calculations are mathematically
+                                precise based on current tax laws and the
+                                assumptions you provide. However, no one can
+                                predict the future with certainty. That's why we
+                                use Monte Carlo simulations and historical
+                                scenario testing to show you a range of possible
+                                outcomes rather than a single projection. This
+                                helps you understand the probability of success
+                                and plan for different market conditions. Our
+                                tax calculations are updated regularly to
+                                reflect current federal and state tax laws.
+</p> </div> </div> <div class="faq-item" data-astro-cid-tkjepyjs> <button class="faq-question" data-astro-cid-tkjepyjs> <span data-astro-cid-tkjepyjs>Can I test what-if scenarios without losing my
+                                original plan?</span> <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-tkjepyjs> <polyline points="6 9 12 15 18 9" data-astro-cid-tkjepyjs></polyline> </svg> </button> <div class="faq-answer" data-astro-cid-tkjepyjs> <p data-astro-cid-tkjepyjs>
+Absolutely! OnTarget makes it easy to save and
+                                manage multiple scenarios. You can create
+                                variations of your plan to explore different
+                                possibilities, then compare them side-by-side.
+                                This allows you to experiment freely without
+                                worrying about losing your baseline plan. Many
+                                users maintain a "current plan" along with
+                                several "what-if" scenarios to understand their
+                                options.
+</p> </div> </div> <div class="faq-item" data-astro-cid-tkjepyjs> <button class="faq-question" data-astro-cid-tkjepyjs> <span data-astro-cid-tkjepyjs>How does OnTarget handle uncertainty in
+                                retirement planning?</span> <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-tkjepyjs> <polyline points="6 9 12 15 18 9" data-astro-cid-tkjepyjs></polyline> </svg> </button> <div class="faq-answer" data-astro-cid-tkjepyjs> <p data-astro-cid-tkjepyjs>
+OnTarget uses two complementary approaches to
+                                address uncertainty. Monte Carlo analysis runs
+                                thousands of simulations with randomized returns
+                                to show you the probability of different
+                                outcomes. Historical scenario testing shows how
+                                your plan would have performed if you retired in
+                                different historical periods, including
+                                challenging scenarios like retiring just before
+                                the 2008 financial crisis. Together, these tools
+                                help you understand both the likelihood of
+                                success and the potential risks you face.
+</p> </div> </div> </div> </div> </div> </section>  <section class="faq-category-section" data-astro-cid-tkjepyjs> <div class="container" data-astro-cid-tkjepyjs> <div class="faq-category-grid" data-astro-cid-tkjepyjs> <div class="category-title-wrapper" data-astro-cid-tkjepyjs> <h2 class="category-title" data-astro-cid-tkjepyjs>Taxes & Income</h2> </div> <div class="faq-accordion" data-astro-cid-tkjepyjs> <div class="faq-item" data-astro-cid-tkjepyjs> <button class="faq-question" data-astro-cid-tkjepyjs> <span data-astro-cid-tkjepyjs>How does OnTarget calculate my taxes in
+                                retirement?</span> <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-tkjepyjs> <polyline points="6 9 12 15 18 9" data-astro-cid-tkjepyjs></polyline> </svg> </button> <div class="faq-answer" data-astro-cid-tkjepyjs> <p data-astro-cid-tkjepyjs>
+OnTarget performs comprehensive year-by-year tax
+                                calculations that include federal income tax
+                                (with graduated brackets), state income tax,
+                                capital gains tax (both short and long-term),
+                                the taxation of Social Security benefits,
+                                required minimum distributions (RMDs), IRMAA
+                                Medicare surcharges, and the Net Investment
+                                Income Tax (NIIT). It accounts for standard or
+                                itemized deductions, tax-loss harvesting
+                                opportunities, and the tax implications of Roth
+                                conversions. This level of detail ensures your
+                                retirement projections reflect your real
+                                after-tax cash flow.
+</p> </div> </div> <div class="faq-item" data-astro-cid-tkjepyjs> <button class="faq-question" data-astro-cid-tkjepyjs> <span data-astro-cid-tkjepyjs>Can OnTarget help me optimize my Social
+                                Security claiming strategy?</span> <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-tkjepyjs> <polyline points="6 9 12 15 18 9" data-astro-cid-tkjepyjs></polyline> </svg> </button> <div class="faq-answer" data-astro-cid-tkjepyjs> <p data-astro-cid-tkjepyjs>
+Yes! OnTarget makes it easy to compare different
+                                Social Security claiming ages and see the total
+                                lifetime impact on your retirement. It factors
+                                in not just the monthly benefit differences, but
+                                also the tax implications, the impact on
+                                Medicare IRMAA surcharges, and how delaying
+                                Social Security affects your overall retirement
+                                success rate. You can model single or married
+                                couple scenarios, including survivor benefits.
+</p> </div> </div> <div class="faq-item" data-astro-cid-tkjepyjs> <button class="faq-question" data-astro-cid-tkjepyjs> <span data-astro-cid-tkjepyjs>Does OnTarget account for Required Minimum
+                                Distributions (RMDs)?</span> <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-tkjepyjs> <polyline points="6 9 12 15 18 9" data-astro-cid-tkjepyjs></polyline> </svg> </button> <div class="faq-answer" data-astro-cid-tkjepyjs> <p data-astro-cid-tkjepyjs>
+Absolutely. OnTarget automatically calculates
+                                RMDs from your traditional IRA and 401(k)
+                                accounts starting at the required age (currently
+                                73, rising to 75 for those born in 1960 or
+                                later). It includes these distributions in your
+                                taxable income calculations and shows you how
+                                RMDs can create unexpected tax burdens in later
+                                retirement years. This helps you evaluate
+                                strategies like Roth conversions to potentially
+                                reduce future RMD requirements.
+</p> </div> </div> <div class="faq-item" data-astro-cid-tkjepyjs> <button class="faq-question" data-astro-cid-tkjepyjs> <span data-astro-cid-tkjepyjs>What is a Roth conversion and should I do one?</span> <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-tkjepyjs> <polyline points="6 9 12 15 18 9" data-astro-cid-tkjepyjs></polyline> </svg> </button> <div class="faq-answer" data-astro-cid-tkjepyjs> <p data-astro-cid-tkjepyjs>
+A Roth conversion involves moving money from a
+                                traditional IRA or 401(k) to a Roth IRA. You pay
+                                taxes on the converted amount now, but future
+                                withdrawals are tax-free. OnTarget helps you
+                                model different conversion strategies to see if
+                                converting makes sense for your situation. It
+                                shows you the upfront tax cost, the long-term
+                                tax savings, and the impact on your overall
+                                retirement success. Roth conversions can be
+                                particularly valuable in years when your income
+                                is lower or before RMDs begin.
+</p> </div> </div> </div> </div> </div> </section>  <section class="advisor-banner" data-astro-cid-tkjepyjs> <div class="container" data-astro-cid-tkjepyjs> <div class="advisor-banner-grid" data-astro-cid-tkjepyjs> <div class="advisor-banner-left" data-astro-cid-tkjepyjs> <div class="advisor-banner-icon" data-astro-cid-tkjepyjs> <i class="fa-solid fa-arrow-right-arrow-left" data-astro-cid-tkjepyjs></i> </div> <h3 data-astro-cid-tkjepyjs>Using OnTarget™ with an Advisor</h3> </div> <div class="advisor-banner-right" data-astro-cid-tkjepyjs> <h4 data-astro-cid-tkjepyjs>Is this a replacement for a financial advisor?</h4> <p class="advisor-answer" data-astro-cid-tkjepyjs>No - and it's not meant to be.</p> <p data-astro-cid-tkjepyjs>
+OnTarget™ is designed to help you understand your plan,
+                        ask better questions, and stay engaged - whether you
+                        work with an advisor or not.
+</p> <p data-astro-cid-tkjepyjs>
+Many users find it makes conversations with
+                        professionals more productive.
+</p> </div> </div> </div> </section>  <section class="faq-category-section" data-astro-cid-tkjepyjs> <div class="container" data-astro-cid-tkjepyjs> <div class="faq-category-grid" data-astro-cid-tkjepyjs> <div class="category-title-wrapper" data-astro-cid-tkjepyjs> <h2 class="category-title" data-astro-cid-tkjepyjs>Privacy & Security</h2> </div> <div class="faq-accordion" data-astro-cid-tkjepyjs> <div class="faq-item" data-astro-cid-tkjepyjs> <button class="faq-question" data-astro-cid-tkjepyjs> <span data-astro-cid-tkjepyjs>Is my financial data secure?</span> <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-tkjepyjs> <polyline points="6 9 12 15 18 9" data-astro-cid-tkjepyjs></polyline> </svg> </button> <div class="faq-answer" data-astro-cid-tkjepyjs> <p data-astro-cid-tkjepyjs>
+Absolutely. We use bank-level 256-bit AES
+                                encryption to protect your data both in transit
+                                and at rest. All connections to our servers use
+                                TLS 1.3 encryption, the same security protocol
+                                used by financial institutions. We employ
+                                multiple layers of security including intrusion
+                                detection, regular security audits, and strict
+                                access controls. Your data is stored in secure,
+                                redundant data centers with 24/7 monitoring.
+</p> </div> </div> <div class="faq-item" data-astro-cid-tkjepyjs> <button class="faq-question" data-astro-cid-tkjepyjs> <span data-astro-cid-tkjepyjs>Do you sell my data to third parties?</span> <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-tkjepyjs> <polyline points="6 9 12 15 18 9" data-astro-cid-tkjepyjs></polyline> </svg> </button> <div class="faq-answer" data-astro-cid-tkjepyjs> <p data-astro-cid-tkjepyjs>
+Never. Your financial information belongs to
+                                you, period. We don't sell, rent, or share your
+                                personal data with third parties for marketing
+                                purposes. Our business model is based on
+                                subscriptions, not data monetization. We only
+                                share data when legally required or with your
+                                explicit permission (such as when you choose to
+                                work with a financial advisor through our
+                                platform).
+</p> </div> </div> <div class="faq-item" data-astro-cid-tkjepyjs> <button class="faq-question" data-astro-cid-tkjepyjs> <span data-astro-cid-tkjepyjs>What data do you collect and why?</span> <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-tkjepyjs> <polyline points="6 9 12 15 18 9" data-astro-cid-tkjepyjs></polyline> </svg> </button> <div class="faq-answer" data-astro-cid-tkjepyjs> <p data-astro-cid-tkjepyjs>
+We collect only the information necessary to
+                                provide our services: your account information
+                                (email, name), your retirement planning data
+                                (income, expenses, accounts), and basic usage
+                                analytics to improve our product. We use
+                                anonymous, aggregated data to enhance OnTarget's
+                                features and performance. You can view, export,
+                                or delete your data at any time from your
+                                account settings.
+</p> </div> </div> <div class="faq-item" data-astro-cid-tkjepyjs> <button class="faq-question" data-astro-cid-tkjepyjs> <span data-astro-cid-tkjepyjs>Can I export or delete my data?</span> <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-tkjepyjs> <polyline points="6 9 12 15 18 9" data-astro-cid-tkjepyjs></polyline> </svg> </button> <div class="faq-answer" data-astro-cid-tkjepyjs> <p data-astro-cid-tkjepyjs>
+Yes, absolutely. You can export all of your
+                                retirement planning data at any time in standard
+                                formats (JSON, CSV). If you decide to close your
+                                account, you can permanently delete all your
+                                data from our systems. We provide transparent
+                                data portability because your financial
+                                information belongs to you.
+</p> </div> </div> </div> </div> </div> </section>  <section class="faq-category-section" data-astro-cid-tkjepyjs> <div class="container" data-astro-cid-tkjepyjs> <div class="faq-category-grid" data-astro-cid-tkjepyjs> <div class="category-title-wrapper" data-astro-cid-tkjepyjs> <h2 class="category-title" data-astro-cid-tkjepyjs>Pricing & Billing</h2> </div> <div class="faq-accordion" data-astro-cid-tkjepyjs> <div class="faq-item" data-astro-cid-tkjepyjs> <button class="faq-question" data-astro-cid-tkjepyjs> <span data-astro-cid-tkjepyjs>Is there a free trial?</span> <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-tkjepyjs> <polyline points="6 9 12 15 18 9" data-astro-cid-tkjepyjs></polyline> </svg> </button> <div class="faq-answer" data-astro-cid-tkjepyjs> <p data-astro-cid-tkjepyjs>
+Yes! Our Basic plan is completely free with no
+                                credit card required. You can use it
+                                indefinitely to explore core retirement planning
+                                features. For Pro and Premium plans, we offer a
+                                14-day free trial so you can experience the full
+                                power of OnTarget before committing. If you're
+                                not satisfied, you can cancel anytime during the
+                                trial period with no charge.
+</p> </div> </div> <div class="faq-item" data-astro-cid-tkjepyjs> <button class="faq-question" data-astro-cid-tkjepyjs> <span data-astro-cid-tkjepyjs>Can I switch between monthly and annual
+                                billing?</span> <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-tkjepyjs> <polyline points="6 9 12 15 18 9" data-astro-cid-tkjepyjs></polyline> </svg> </button> <div class="faq-answer" data-astro-cid-tkjepyjs> <p data-astro-cid-tkjepyjs>
+Absolutely. You can change your billing
+                                frequency anytime from your account settings.
+                                When switching from monthly to annual, you'll
+                                receive a prorated credit for your remaining
+                                monthly subscription and save 25% going forward.
+                                Switching from annual to monthly takes effect at
+                                your next renewal date. We make it easy to
+                                choose the billing schedule that works best for
+                                you.
+</p> </div> </div> <div class="faq-item" data-astro-cid-tkjepyjs> <button class="faq-question" data-astro-cid-tkjepyjs> <span data-astro-cid-tkjepyjs>What happens if I cancel my subscription?</span> <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-tkjepyjs> <polyline points="6 9 12 15 18 9" data-astro-cid-tkjepyjs></polyline> </svg> </button> <div class="faq-answer" data-astro-cid-tkjepyjs> <p data-astro-cid-tkjepyjs>
+You can cancel anytime, and you'll continue to
+                                have access to your paid features until the end
+                                of your current billing period. After that, your
+                                account will revert to the free Basic plan. Your
+                                data is never deleted when you downgrade - all
+                                your plans and scenarios remain saved in your
+                                account. You can upgrade again at any time to
+                                regain access to premium features.
+</p> </div> </div> <div class="faq-item" data-astro-cid-tkjepyjs> <button class="faq-question" data-astro-cid-tkjepyjs> <span data-astro-cid-tkjepyjs>Do you offer refunds?</span> <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-tkjepyjs> <polyline points="6 9 12 15 18 9" data-astro-cid-tkjepyjs></polyline> </svg> </button> <div class="faq-answer" data-astro-cid-tkjepyjs> <p data-astro-cid-tkjepyjs>
+We offer a 30-day money-back guarantee on all
+                                new subscriptions. If you're not completely
+                                satisfied with OnTarget for any reason, contact
+                                our support team within 30 days of your initial
+                                purchase for a full refund. For annual
+                                subscriptions, we provide prorated refunds if
+                                you cancel within the first 60 days. Our goal is
+                                to ensure you're completely satisfied with your
+                                investment in retirement planning.
+</p> </div> </div> </div> </div> </div> </section>  <section class="faq-bottom-cards" data-astro-cid-tkjepyjs> <div class="container" data-astro-cid-tkjepyjs> <div class="bottom-cards-grid" data-astro-cid-tkjepyjs> <div class="info-card" data-astro-cid-tkjepyjs> <div class="info-card-icon" data-astro-cid-tkjepyjs> <i class="fa-solid fa-shield-halved" data-astro-cid-tkjepyjs></i> </div> <h3 data-astro-cid-tkjepyjs>Why should I trust OnTarget™?</h3> <p data-astro-cid-tkjepyjs>
+Because it was built by people who use it themselves. We
+                        don't sell products, push investments, or benefit from
+                        specific outcomes. Our success depends on helping you
+                        understand your plan better.
+</p> </div> <div class="info-card" data-astro-cid-tkjepyjs> <div class="info-card-icon" data-astro-cid-tkjepyjs> <i class="fa-solid fa-paper-plane" data-astro-cid-tkjepyjs></i> </div> <h3 data-astro-cid-tkjepyjs>How do I get started?</h3> <p data-astro-cid-tkjepyjs>
+Create a free account and start building your plan. No
+                        credit card required.
+</p> <a`, ' class="info-card-cta" data-astro-cid-tkjepyjs>Start Planning for Free <i class="fa-solid fa-arrow-right" data-astro-cid-tkjepyjs></i></a> </div> </div> </div> </section>  ', " ", `  <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "What is OnTarget?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "OnTarget™ is our flagship retirement planning tool that combines powerful financial modeling with an intuitive interface. It analyzes your income sources, expenses, investments, and tax situation to project your retirement outcomes with remarkable accuracy. Unlike simple retirement calculators, OnTarget accounts for the complex interplay of taxes, inflation, Social Security, portfolio returns, and hundreds of other variables to give you a realistic picture of your retirement future."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How is OnTarget different from other retirement calculators?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Most retirement calculators provide oversimplified projections that ignore critical factors like taxes, Social Security optimization, and the sequence of returns. OnTarget performs comprehensive tax calculations including federal and state taxes, capital gains, RMDs, IRMAA surcharges, and the taxation of Social Security benefits. It also runs Monte Carlo simulations and historical scenario testing to help you understand the range of possible outcomes, not just a single optimistic projection."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Do I need to be a financial expert to use OnTarget?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "No financial expertise required. OnTarget is designed to be both powerful and accessible. We provide sensible defaults based on research and best practices, helpful explanations throughout the interface, and educational resources to help you understand key concepts. You can start with the basics and gradually explore more advanced features as you become comfortable with the tool."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How accurate are OnTarget's projections?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "OnTarget's calculations are mathematically precise based on current tax laws and the assumptions you provide. However, no one can predict the future with certainty. That's why we use Monte Carlo simulations and historical scenario testing to show you a range of possible outcomes rather than a single projection. This helps you understand the probability of success and plan for different market conditions. Our tax calculations are updated regularly to reflect current federal and state tax laws."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How does OnTarget calculate my taxes in retirement?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "OnTarget performs comprehensive year-by-year tax calculations that include federal income tax (with graduated brackets), state income tax, capital gains tax (both short and long-term), the taxation of Social Security benefits, required minimum distributions (RMDs), IRMAA Medicare surcharges, and the Net Investment Income Tax (NIIT). It accounts for standard or itemized deductions, tax-loss harvesting opportunities, and the tax implications of Roth conversions."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Can OnTarget help me optimize my Social Security claiming strategy?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes! OnTarget makes it easy to compare different Social Security claiming ages and see the total lifetime impact on your retirement. It factors in not just the monthly benefit differences, but also the tax implications, the impact on Medicare IRMAA surcharges, and how delaying Social Security affects your overall retirement success rate. You can model single or married couple scenarios, including survivor benefits."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Is my financial data secure?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Absolutely. We use bank-level 256-bit AES encryption to protect your data both in transit and at rest. All connections to our servers use TLS 1.3 encryption, the same security protocol used by financial institutions. We employ multiple layers of security including intrusion detection, regular security audits, and strict access controls. Your data is stored in secure, redundant data centers with 24/7 monitoring."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Do you sell my data to third parties?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Never. Your financial information belongs to you, period. We don't sell, rent, or share your personal data with third parties for marketing purposes. Our business model is based on subscriptions, not data monetization. We only share data when legally required or with your explicit permission (such as when you choose to work with a financial advisor through our platform)."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Is there a free trial?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes! Our Basic plan is completely free with no credit card required. You can use it indefinitely to explore core retirement planning features. For Pro and Premium plans, we offer a 14-day free trial so you can experience the full power of OnTarget before committing. If you're not satisfied, you can cancel anytime during the trial period with no charge."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "What happens if I cancel my subscription?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "You can cancel anytime, and you'll continue to have access to your paid features until the end of your current billing period. After that, your account will revert to the free Basic plan. Your data is never deleted when you downgrade - all your plans and scenarios remain saved in your account. You can upgrade again at any time to regain access to premium features."
+                    }
                 }
-            },
-            {
-                "@type": "Question",
-                "name": "How is OnTarget different from other retirement calculators?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Most retirement calculators provide oversimplified projections that ignore critical factors like taxes, Social Security optimization, and the sequence of returns. OnTarget performs comprehensive tax calculations including federal and state taxes, capital gains, RMDs, IRMAA surcharges, and the taxation of Social Security benefits. It also runs Monte Carlo simulations and historical scenario testing to help you understand the range of possible outcomes, not just a single optimistic projection."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Do I need to be a financial expert to use OnTarget?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "No financial expertise required. OnTarget is designed to be both powerful and accessible. We provide sensible defaults based on research and best practices, helpful explanations throughout the interface, and educational resources to help you understand key concepts. You can start with the basics and gradually explore more advanced features as you become comfortable with the tool."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "How accurate are OnTarget's projections?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "OnTarget's calculations are mathematically precise based on current tax laws and the assumptions you provide. However, no one can predict the future with certainty. That's why we use Monte Carlo simulations and historical scenario testing to show you a range of possible outcomes rather than a single projection. This helps you understand the probability of success and plan for different market conditions. Our tax calculations are updated regularly to reflect current federal and state tax laws."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "How does OnTarget calculate my taxes in retirement?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "OnTarget performs comprehensive year-by-year tax calculations that include federal income tax (with graduated brackets), state income tax, capital gains tax (both short and long-term), the taxation of Social Security benefits, required minimum distributions (RMDs), IRMAA Medicare surcharges, and the Net Investment Income Tax (NIIT). It accounts for standard or itemized deductions, tax-loss harvesting opportunities, and the tax implications of Roth conversions."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Can OnTarget help me optimize my Social Security claiming strategy?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Yes! OnTarget makes it easy to compare different Social Security claiming ages and see the total lifetime impact on your retirement. It factors in not just the monthly benefit differences, but also the tax implications, the impact on Medicare IRMAA surcharges, and how delaying Social Security affects your overall retirement success rate. You can model single or married couple scenarios, including survivor benefits."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Is my financial data secure?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Absolutely. We use bank-level 256-bit AES encryption to protect your data both in transit and at rest. All connections to our servers use TLS 1.3 encryption, the same security protocol used by financial institutions. We employ multiple layers of security including intrusion detection, regular security audits, and strict access controls. Your data is stored in secure, redundant data centers with 24/7 monitoring."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Do you sell my data to third parties?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Never. Your financial information belongs to you, period. We don't sell, rent, or share your personal data with third parties for marketing purposes. Our business model is based on subscriptions, not data monetization. We only share data when legally required or with your explicit permission (such as when you choose to work with a financial advisor through our platform)."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Is there a free trial?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Yes! Our Basic plan is completely free with no credit card required. You can use it indefinitely to explore core retirement planning features. For Pro and Premium plans, we offer a 14-day free trial so you can experience the full power of OnTarget before committing. If you're not satisfied, you can cancel anytime during the trial period with no charge."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "What happens if I cancel my subscription?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "You can cancel anytime, and you'll continue to have access to your paid features until the end of your current billing period. After that, your account will revert to the free Basic plan. Your data is never deleted when you downgrade - all your plans and scenarios remain saved in your account. You can upgrade again at any time to regain access to premium features."
-                }
-            }
-        ]
-    }
-    </script> `])), maybeRenderHead(), addAttribute(`${"https://app.readyaimretire.com"}/signup`, "href"), renderComponent($$result2, "CTABanner", $$CTABanner, { "data-astro-cid-tkjepyjs": true }), renderScript($$result2, "C:/ProjectsSteve/calculator-www/src/pages/faqs.astro?astro&type=script&index=0&lang.ts")) })} `;
-}, "C:/ProjectsSteve/calculator-www/src/pages/faqs.astro", void 0);
-const $$file = "C:/ProjectsSteve/calculator-www/src/pages/faqs.astro";
+            ]
+        }
+    </script> `])), maybeRenderHead(), renderComponent($$result2, "Breadcrumbs", $$Breadcrumbs, { "items": [{ label: "FAQs" }], "data-astro-cid-tkjepyjs": true }), addAttribute(`${undefined                              }/signup`, "href"), renderComponent($$result2, "CTABanner", $$CTABanner, { "data-astro-cid-tkjepyjs": true }), renderScript($$result2, "/run/media/dev-ahad-ali/Work-Station/_Development/Work/Projects/ready-aim-retire/src/pages/faqs.astro?astro&type=script&index=0&lang.ts")) })} `;
+}, "/run/media/dev-ahad-ali/Work-Station/_Development/Work/Projects/ready-aim-retire/src/pages/faqs.astro", void 0);
+const $$file = "/run/media/dev-ahad-ali/Work-Station/_Development/Work/Projects/ready-aim-retire/src/pages/faqs.astro";
 const $$url = "/faqs";
 
 const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({

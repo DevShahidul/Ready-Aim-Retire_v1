@@ -1,8 +1,8 @@
-import { c as createComponent, r as renderComponent, a as renderTemplate, m as maybeRenderHead } from '../chunks/astro/server_DZIuF2pX.mjs';
+import { f as createComponent, k as renderComponent, r as renderTemplate, m as maybeRenderHead } from '../chunks/astro/server_C1KXtyjF.mjs';
 import 'piccolore';
-import { $ as $$BaseLayout } from '../chunks/BaseLayout_DfJoK4e4.mjs';
-import { $ as $$CTABanner } from '../chunks/CTABanner_Dh_FC_zC.mjs';
-import { $ as $$Breadcrumbs } from '../chunks/Breadcrumbs_Du_J8KwA.mjs';
+import { $ as $$BaseLayout } from '../chunks/BaseLayout_wN0cFeTq.mjs';
+import { $ as $$CTABanner } from '../chunks/CTABanner_BX4k0jEI.mjs';
+import { $ as $$Breadcrumbs } from '../chunks/Breadcrumbs_def4KfHx.mjs';
 /* empty css                                   */
 export { renderers } from '../renderers.mjs';
 
@@ -19,9 +19,9 @@ Attn: Privacy Team<br data-astro-cid-6xh23lug>
 San Francisco, CA 94104<br data-astro-cid-6xh23lug>
 United States
 </p> </div> </div> <div class="contact-method" data-astro-cid-6xh23lug> <i class="fa-solid fa-phone" data-astro-cid-6xh23lug></i> <div data-astro-cid-6xh23lug> <h4 data-astro-cid-6xh23lug>Phone</h4> <p data-astro-cid-6xh23lug>(555) 123-4567<br data-astro-cid-6xh23lug>Monday - Friday, 9:00 AM - 5:00 PM PT</p> </div> </div> </div> <p data-astro-cid-6xh23lug>We are committed to resolving any concerns you may have about our use of cookies and protecting your privacy. We will respond to all inquiries within 30 days.</p> </div> </div> </section>  ${renderComponent($$result2, "CTABanner", $$CTABanner, { "data-astro-cid-6xh23lug": true })} ` })} `;
-}, "C:/ProjectsSteve/calculator-www/src/pages/cookies.astro", void 0);
+}, "/run/media/dev-ahad-ali/Work-Station/_Development/Work/Projects/ready-aim-retire/src/pages/cookies.astro", void 0);
 
-const $$file = "C:/ProjectsSteve/calculator-www/src/pages/cookies.astro";
+const $$file = "/run/media/dev-ahad-ali/Work-Station/_Development/Work/Projects/ready-aim-retire/src/pages/cookies.astro";
 const $$url = "/cookies";
 
 const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({

@@ -1,16 +1,17 @@
-import { c as createComponent, r as renderComponent, a as renderTemplate, m as maybeRenderHead, b as addAttribute } from '../chunks/astro/server_DZIuF2pX.mjs';
+import { f as createComponent, k as renderComponent, r as renderTemplate, m as maybeRenderHead, h as addAttribute } from '../chunks/astro/server_C1KXtyjF.mjs';
 import 'piccolore';
-import { $ as $$BaseLayout } from '../chunks/BaseLayout_DfJoK4e4.mjs';
-import { $ as $$CTABanner } from '../chunks/CTABanner_Dh_FC_zC.mjs';
+import { $ as $$BaseLayout } from '../chunks/BaseLayout_wN0cFeTq.mjs';
+import { $ as $$CTABanner } from '../chunks/CTABanner_BX4k0jEI.mjs';
+import { $ as $$Breadcrumbs } from '../chunks/Breadcrumbs_def4KfHx.mjs';
 /* empty css                                */
 export { renderers } from '../renderers.mjs';
 
 const $$Fire = createComponent(($$result, $$props, $$slots) => {
   const pageTitle = "FIRE Planning – ReadyAimRetire";
   const pageDescription = "Retire early with confidence. ReadyAimRetire helps FIRE seekers plan their path to financial independence.";
-  return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, { "title": pageTitle, "description": pageDescription, "solidHeader": true, "data-astro-cid-tefvrjfj": true }, { "default": ($$result2) => renderTemplate`  ${maybeRenderHead()}<section class="fire-hero" data-astro-cid-tefvrjfj> <div class="container" data-astro-cid-tefvrjfj> <div class="fire-hero-content" data-aos="fade-up" data-astro-cid-tefvrjfj> <h1 data-astro-cid-tefvrjfj>Retire Early with Confidence</h1> <p class="fire-hero-subheadline" data-astro-cid-tefvrjfj>
+  return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, { "title": pageTitle, "description": pageDescription, "solidHeader": true, "data-astro-cid-tefvrjfj": true }, { "default": ($$result2) => renderTemplate`  ${maybeRenderHead()}<section class="fire-hero" data-astro-cid-tefvrjfj> <div class="container" data-astro-cid-tefvrjfj> ${renderComponent($$result2, "Breadcrumbs", $$Breadcrumbs, { "items": [{ label: "FIRE Planning" }], "data-astro-cid-tefvrjfj": true })} <div class="fire-hero-content" data-aos="fade-up" data-astro-cid-tefvrjfj> <h1 data-astro-cid-tefvrjfj>Retire Early with Confidence</h1> <p class="fire-hero-subheadline" data-astro-cid-tefvrjfj>
 ReadyAimRetire gives FIRE seekers the tools to plan, test, and optimize their path to financial independence.
-</p> <a${addAttribute(`${"https://app.readyaimretire.com"}/signup`, "href")} class="cta-button primary-cta" data-astro-cid-tefvrjfj>
+</p> <a${addAttribute(`${undefined                              }/signup`, "href")} class="cta-button primary-cta" data-astro-cid-tefvrjfj>
 Start Your FIRE Journey
 <i class="fas fa-arrow-right" data-astro-cid-tefvrjfj></i> </a> </div> </div> </section>  <section class="fire-benefits" data-astro-cid-tefvrjfj> <div class="container" data-astro-cid-tefvrjfj> <h2 data-aos="fade-up" data-astro-cid-tefvrjfj>Built for FIRE Seekers</h2> <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100" data-astro-cid-tefvrjfj>
 Everything you need to plan and execute your early retirement strategy
@@ -38,11 +39,11 @@ Yes! ReadyAimRetire excels at modeling partial FIRE strategies. You can set up C
 Is ReadyAimRetire suitable for international FIRE seekers?
 </h3> <p data-astro-cid-tefvrjfj>
 While ReadyAimRetire is optimized for U.S. tax laws and retirement accounts, many international FIRE seekers use the platform for general retirement planning and portfolio modeling. The Monte Carlo simulations, withdrawal strategies, and basic planning features work regardless of location. However, specific tax optimization features are currently U.S.-focused.
-</p> </div> </div> </div> </section>  <section class="final-cta" data-astro-cid-tefvrjfj> <div class="container" data-astro-cid-tefvrjfj> <div class="cta-content" data-aos="zoom-in" data-astro-cid-tefvrjfj> <h2 data-astro-cid-tefvrjfj>Join Thousands of FIRE Seekers Planning Their Early Retirement</h2> <p data-astro-cid-tefvrjfj>Start modeling your path to financial independence today. No credit card required.</p> <a${addAttribute(`${"https://app.readyaimretire.com"}/signup`, "href")} class="cta-button primary-cta large" data-astro-cid-tefvrjfj>
+</p> </div> </div> </div> </section>  <section class="final-cta" data-astro-cid-tefvrjfj> <div class="container" data-astro-cid-tefvrjfj> <div class="cta-content" data-aos="zoom-in" data-astro-cid-tefvrjfj> <h2 data-astro-cid-tefvrjfj>Join Thousands of FIRE Seekers Planning Their Early Retirement</h2> <p data-astro-cid-tefvrjfj>Start modeling your path to financial independence today. No credit card required.</p> <a${addAttribute(`${undefined                              }/signup`, "href")} class="cta-button primary-cta large" data-astro-cid-tefvrjfj>
 Start Your FIRE Journey
 <i class="fas fa-arrow-right" data-astro-cid-tefvrjfj></i> </a> </div> </div> </section>  ${renderComponent($$result2, "CTABanner", $$CTABanner, { "data-astro-cid-tefvrjfj": true })} ` })} `;
-}, "C:/ProjectsSteve/calculator-www/src/pages/fire.astro", void 0);
-const $$file = "C:/ProjectsSteve/calculator-www/src/pages/fire.astro";
+}, "/run/media/dev-ahad-ali/Work-Station/_Development/Work/Projects/ready-aim-retire/src/pages/fire.astro", void 0);
+const $$file = "/run/media/dev-ahad-ali/Work-Station/_Development/Work/Projects/ready-aim-retire/src/pages/fire.astro";
 const $$url = "/fire";
 
 const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({

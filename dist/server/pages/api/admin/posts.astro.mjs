@@ -1,4 +1,4 @@
-import { v as validateRequest } from '../../../chunks/auth_CeA7DTJX.mjs';
+import { v as validateRequest } from '../../../chunks/auth_vVaSFFbT.mjs';
 import { a as getAllBlogPosts } from '../../../chunks/filesystem_C7jewRaT.mjs';
 export { renderers } from '../../../renderers.mjs';
 

@@ -1,15 +1,14 @@
-import { v as validateRequest } from '../../../chunks/auth_CeA7DTJX.mjs';
+import { v as validateRequest } from '../../../chunks/auth_vVaSFFbT.mjs';
 import { g as getBlogPostContent } from '../../../chunks/filesystem_C7jewRaT.mjs';
-import OpenAI from 'openai';
+import 'openai';
 export { renderers } from '../../../renderers.mjs';
 
-let openaiClient = null;
 function getOpenAIClient() {
-  if (!openaiClient) {
-    const apiKey = "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";
-    openaiClient = new OpenAI({ apiKey });
+  {
+    {
+      throw new Error("OPENAI_API_KEY environment variable is not set");
+    }
   }
-  return openaiClient;
 }
 async function generateImagePrompt(title, description, content, category) {
   const client = getOpenAIClient();
