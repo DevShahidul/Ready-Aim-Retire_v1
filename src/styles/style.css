@@ -912,11 +912,13 @@ section:last-of-type {
     border-radius: 12px;
     padding: 0.85rem 1.75rem;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s ease-in-out;
 }
 
 .ontarget-card h3 {
     font-family: "Inter", sans-serif;
     font-size: 1rem;
+    transition: all 0.3s ease-in-out;
     font-weight: 600;
     color: #1a1a2e;
     margin: 0 0 0.75rem 0;
@@ -924,9 +926,20 @@ section:last-of-type {
 
 .ontarget-card p {
     font-size: 0.85rem;
+    transition: all 0.3s ease-in-out;
     line-height: 1.6;
     color: #555;
     margin: 0;
+}
+
+.ontarget-card:hover {
+    background-color: var(--color-primary);
+    h3 {
+        color: #ffffff;
+    }
+    p {
+        color: #ffffff;
+    }
 }
 
 .ontarget-card-highlight {
