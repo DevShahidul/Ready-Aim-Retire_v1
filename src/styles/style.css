@@ -41,6 +41,10 @@ body {
     background-color: var(--color-bg-light); /* #f7f6f4 */
 }
 
+section {
+    overflow: hidden;
+}
+
 /* ----------------------------------------
    Typography - Reusable Classes
    ---------------------------------------- */
@@ -232,23 +236,23 @@ nav ul li a:hover {
 .hero {
     display: flex;
 
-    align-items: center;
+    /*align-items: center;*/
     text-align: center;
+    padding-top: 177px;
+    padding-bottom: 27.6%;
 
     background: url("/images/hero-bg.svg") center top no-repeat;
     background-size: min(100%, 1000px) auto;
     background-color: #415776;
     background-position: left;
     position: relative;
-
-    min-height: 733px;
 }
 
 .hero h1 {
     font-family: "Tobias", Georgia, serif;
     font-size: 6.125rem;
     font-weight: 400;
-    margin: -80px 0 1.5rem 0;
+    margin: 0 0 11px;
     max-width: 1200px;
     color: #ffffff;
     line-height: 1.2;
@@ -261,7 +265,7 @@ nav ul li a:hover {
 .hero p {
     font-size: 1.2rem;
     max-width: 750px;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     color: rgba(255, 255, 255, 0.9);
 }
 
@@ -312,6 +316,7 @@ nav ul li a:hover {
         transform 0.2s,
         box-shadow 0.2s;
     animation: subtle-pulse 3s ease-in-out infinite;
+    margin-top: 30px;
 }
 
 .hero .btn-hero:hover {
@@ -333,7 +338,7 @@ nav ul li a:hover {
 
 .hero-screenshot {
     position: relative;
-    margin-top: -200px;
+    margin-top: calc((27.6% - 183px) * -1);
     padding-top: 0;
     text-align: center;
     border-bottom: none;
@@ -447,7 +452,7 @@ nav ul li a:hover {
    Sections (General)
    ---------------------------------------- */
 section {
-    padding: 4rem 0;
+    padding: 5rem 0;
     border-bottom: 1px solid #ddd;
 }
 
@@ -1237,7 +1242,7 @@ section:last-of-type {
    ---------------------------------------- */
 .clearer-plan-section-v2 {
     background-color: #d4e8e4;
-    padding: 5rem 0;
+    padding: 6rem 0;
 }
 
 .clearer-plan-section-v2 .clearer-plan-card {
@@ -1914,12 +1919,9 @@ footer .disclaimer {
    Responsive: Mobile (max-width: 768px)
    ---------------------------------------- */
 @media (max-width: 768px) {
-    section {
-        overflow-x: hidden;
-    }
     .hero {
         padding: 8rem 0 4rem 0;
-        min-height: 70vh;
+        /*min-height: 70vh;*/
     }
 
     .hero h1 {
