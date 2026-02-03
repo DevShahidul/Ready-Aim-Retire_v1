@@ -1,9 +1,7 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import Testimonials from '../components/Testimonials.astro';
-import CTABanner from '../components/CTABanner.astro';
-import MonthlySpendingAnimation from '../components/MonthlySpendingAnimationNew.astro';
-import SpaghettiAnimation from '../components/SpaghettiAnimation.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Testimonials from "../components/Testimonials.astro";
+import CTABanner from "../components/CTABanner.astro";
 ---
 
 <BaseLayout
@@ -13,17 +11,39 @@ import SpaghettiAnimation from '../components/SpaghettiAnimation.astro';
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="container" data-aos="fade" data-aos-delay="200">
-            <h1 id="hero-title">Visualize your<br>retirement</h1>
-            <p class="hero-tagline-text">Clearly, confidently, all in one place</p>
-            <p id="hero-subtitle">Ready Aim Retire offers the easiest way to model, visualize, and stress-test your retirement plan – whether you're just starting to think about retirement or fine-tuning a detailed plan. Take aim at your retirement with OnTarget™.</p>
-            <a href={`${import.meta.env.PUBLIC_APP_URL}/signup`} id="hero-btn" class="btn btn-hero" style="margin-bottom: 2rem;">Start Your Plan <span class="arrow">→</span></a>
+            <h1 id="hero-title">Visualize your<br />retirement</h1>
+            <p class="hero-tagline-text">
+                Clearly, confidently, all in one place
+            </p>
+            <p id="hero-subtitle">
+                Ready Aim Retire offers the easiest way to model, visualize, and
+                stress-test your retirement plan – whether you're just starting
+                to think about retirement or fine-tuning a detailed plan. Take
+                aim at your retirement with OnTarget™.
+            </p>
+            <a
+                href={`${import.meta.env.PUBLIC_APP_URL}/signup`}
+                id="hero-btn"
+                class="btn btn-hero"
+                style="margin-bottom: 2rem;"
+                >Start Your Plan <span class="arrow">→</span></a
+            >
         </div>
     </section>
 
     <!-- Hero App Screenshot -->
     <section class="hero-screenshot">
-        <div class="container" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1200">
-            <img class="hero-img" src="/images/landingapp.png" alt="ReadyAimRetire app screenshot">
+        <div
+            class="container"
+            data-aos="fade-up"
+            data-aos-delay="400"
+            data-aos-duration="1200"
+        >
+            <img
+                class="hero-img"
+                src="/images/landingapp.png"
+                alt="ReadyAimRetire app screenshot"
+            />
         </div>
     </section>
 
@@ -31,28 +51,48 @@ import SpaghettiAnimation from '../components/SpaghettiAnimation.astro';
     <section class="ontarget-section">
         <div class="container">
             <div class="ontarget-header" data-aos="fade-up">
-                <img src="/images/logos/ontarget/ontarget_black_green.png" alt="OnTarget™ by Ready Aim Retire" class="ontarget-logo">
+                <img
+                    src="/images/logos/ontarget/ontarget_black_green.png"
+                    alt="OnTarget™ by Ready Aim Retire"
+                    class="ontarget-logo"
+                />
             </div>
             <div class="ontarget-cards" data-aos="fade-up" data-aos-delay="100">
                 <div class="ontarget-card ontarget-card-highlight">
                     <h3>Holistic Timeline</h3>
-                    <p>Watch your financial life unfold year by year – accumulation, retirement, and beyond.</p>
+                    <p>
+                        Watch your financial life unfold year by year –
+                        accumulation, retirement, and beyond.
+                    </p>
                 </div>
                 <div class="ontarget-card">
                     <h3>Scenario Planning</h3>
-                    <p>What if you retire earlier? Spend more? Markets underperform? Adjust assumptions and instantly see the long and short term impact.</p>
+                    <p>
+                        What if you retire earlier? Spend more? Markets
+                        underperform? Adjust assumptions and instantly see the
+                        long and short term impact.
+                    </p>
                 </div>
                 <div class="ontarget-card">
                     <h3>Income & Spending Clarity</h3>
-                    <p>Understand where your money comes from and where it goes – before and after retirement.</p>
+                    <p>
+                        Understand where your money comes from and where it goes
+                        – before and after retirement.
+                    </p>
                 </div>
                 <div class="ontarget-card">
                     <h3>Stress Test Your Plan</h3>
-                    <p>Run your plan through historical market data. More certainty comes from better insight.</p>
+                    <p>
+                        Run your plan through historical market data. More
+                        certainty comes from better insight.
+                    </p>
                 </div>
                 <div class="ontarget-card">
                     <h3>Maximize Taxes & Benefits</h3>
-                    <p>See taxes and social security as part of the plan – that fits into long-term sustainability.</p>
+                    <p>
+                        See taxes and social security as part of the plan – that
+                        fits into long-term sustainability.
+                    </p>
                 </div>
             </div>
 
@@ -67,19 +107,42 @@ import SpaghettiAnimation from '../components/SpaghettiAnimation.astro';
     <section class="complete-system-section">
         <div class="container feature" data-aos="fade-up">
             <div class="feature-text">
-                <h2>Complete retirement planning system – built to show the <span class="text-teal">full picture</span></h2>
-                <p>OnTarget™ isn't a collection of disconnected accounts and assumptions. It's a holistic planning environment that models your entire financial life – before, during, and throughout retirement.</p>
-                <p class="text-italic">Everything connects. Nothing lives in isolation.</p>
-                <a href={`${import.meta.env.PUBLIC_APP_URL}/signup`} class="btn-dark">
+                <h2>
+                    Complete retirement planning system – built to show the <span
+                        class="text-teal">full picture</span>
+                </h2>
+                <p>
+                    OnTarget™ isn't a collection of disconnected accounts and
+                    assumptions. It's a holistic planning environment that
+                    models your entire financial life – before, during, and
+                    throughout retirement.
+                </p>
+                <p class="text-italic">
+                    Everything connects. Nothing lives in isolation.
+                </p>
+                <a
+                    href={`${import.meta.env.PUBLIC_APP_URL}/signup`}
+                    class="btn-dark"
+                >
                     Start Planning
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    >
                         <line x1="5" y1="12" x2="19" y2="12"></line>
                         <polyline points="12 5 19 12 12 19"></polyline>
                     </svg>
                 </a>
             </div>
             <div class="feature-img">
-                <img src="/images/taxes.png" alt="Tax strategy chart">
+                <img src="/images/taxes.png" alt="Tax strategy chart" />
             </div>
         </div>
     </section>
@@ -88,7 +151,7 @@ import SpaghettiAnimation from '../components/SpaghettiAnimation.astro';
     <section id="features" class="section-gray">
         <div class="container feature" data-aos="fade-right">
             <div class="feature-img">
-                <img src="/images/taxes.png" alt="Tax strategy chart">
+                <img src="/images/taxes.png" alt="Tax strategy chart" />
                 <!-- Scrolling Sliders Window Overlay (commented out) -->
                 <!-- <div class="scrolling-window" style="position: absolute; top: 50%; left: -70px; transform: translateY(-50%); width: 54%; height: 420px; overflow: hidden; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
                     <div class="scrolling-content">
@@ -98,8 +161,16 @@ import SpaghettiAnimation from '../components/SpaghettiAnimation.astro';
                 </div> -->
             </div>
             <div class="feature-text">
-                <h2>Unlimited scenarios, unlimited <span class="text-teal">flexibility</span></h2>
-                <p>Model real life – not perfect assumptions. Life changes, your plan should be able to change with it. OnTarget™ allows you to create, save, and compare unlimited scenarios, such as:</p>
+                <h2>
+                    Unlimited scenarios, unlimited <span class="text-teal"
+                        >flexibility</span>
+                </h2>
+                <p>
+                    Model real life – not perfect assumptions. Life changes,
+                    your plan should be able to change with it. OnTarget™ allows
+                    you to create, save, and compare unlimited scenarios, such
+                    as:
+                </p>
                 <ul class="feature-list">
                     <li>Retiring earlier or later</li>
                     <li>Spending more or less</li>
@@ -107,8 +178,16 @@ import SpaghettiAnimation from '../components/SpaghettiAnimation.astro';
                     <li>Major purchases or windfalls</li>
                     <li>Health events or lifestyle changes</li>
                 </ul>
-                <p class="text-italic">Explore "what if?" scenarios without fear of breaking your plan.</p>
-                <a href={`${import.meta.env.PUBLIC_APP_URL}/signup`} class="btn-dark" style="margin-top: 1.5rem;">Try for free <span class="arrow">→</span></a>
+                <p class="text-italic">
+                    Explore "what if?" scenarios without fear of breaking your
+                    plan.
+                </p>
+                <a
+                    href={`${import.meta.env.PUBLIC_APP_URL}/signup`}
+                    class="btn-dark"
+                    style="margin-top: 1.5rem;"
+                    >Try for free <span class="arrow">→</span></a
+                >
             </div>
         </div>
     </section>
@@ -117,19 +196,38 @@ import SpaghettiAnimation from '../components/SpaghettiAnimation.astro';
     <section>
         <div class="container feature" data-aos="fade-left">
             <div class="feature-text">
-                <h2>Build a detailed retirement budget with <span class="text-teal">smarter</span> retirement withdrawals</h2>
-                <p>Know what retirement actually costs. Create a detailed, <strong>realistic budget</strong> for your retirement years – and adjust it as life evolves. Strategize how and when to withdraw from your accounts to support <strong>long-term longevity</strong>.</p>
+                <h2>
+                    Build a detailed retirement budget with <span
+                        class="text-teal">smarter</span
+                    > retirement withdrawals
+                </h2>
+                <p>
+                    Know what retirement actually costs. Create a detailed, <strong
+                        >realistic budget</strong
+                    > for your retirement years – and adjust it as life evolves. Strategize
+                    how and when to withdraw from your accounts to support <strong
+                        >long-term longevity</strong
+                    >.
+                </p>
                 <ul class="feature-list">
                     <li>Different withdrawal strategies</li>
                     <li>Account sequencing</li>
                     <li>The impact of taxes and timing</li>
                     <li>Make your money last – Intentionally</li>
                 </ul>
-                <p class="text-italic">Small decisions can have large long-term consequences. OnTarget™ helps you see them clearly.</p>
-                <a href={`${import.meta.env.PUBLIC_APP_URL}/signup`} class="btn-dark" style="margin-top: 1.5rem;">Start Planning <span class="arrow">→</span></a>
+                <p class="text-italic">
+                    Small decisions can have large long-term consequences.
+                    OnTarget™ helps you see them clearly.
+                </p>
+                <a
+                    href={`${import.meta.env.PUBLIC_APP_URL}/signup`}
+                    class="btn-dark"
+                    style="margin-top: 1.5rem;"
+                    >Start Planning <span class="arrow">→</span></a
+                >
             </div>
             <div class="feature-img">
-                <img src="/images/taxes.png" alt="Tax strategy chart">
+                <img src="/images/taxes.png" alt="Tax strategy chart" />
             </div>
         </div>
     </section>
@@ -138,33 +236,79 @@ import SpaghettiAnimation from '../components/SpaghettiAnimation.astro';
     <section class="section-gray">
         <div class="container feature" data-aos="fade-right">
             <div class="feature-img">
-                <img src="/images/accounts.png" alt="Stress testing visualization">
+                <img
+                    src="/images/accounts.png"
+                    alt="Stress testing visualization"
+                />
             </div>
             <div class="feature-text">
-                <h2><span class="text-teal">Confidence</span> comes from pressure-testing</h2>
-                <p>Explore how your retirement plan could perform under various economic conditions. OnTarget™ uses <strong>Monte Carlo simulations</strong> to model thousands of scenarios, delivering realistic insights rather than misleading presumptions.</p>
+                <h2>
+                    <span class="text-teal">Confidence</span> comes from pressure-testing
+                </h2>
+                <p>
+                    Explore how your retirement plan could perform under various
+                    economic conditions. OnTarget™ uses <strong
+                        >Monte Carlo simulations</strong
+                    > to model thousands of scenarios, delivering realistic insights
+                    rather than misleading presumptions.
+                </p>
                 <p>Stress testing helps you:</p>
                 <ul class="feature-checklist">
                     <li>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
                             <polyline points="20 6 9 17 4 12"></polyline>
                         </svg>
                         Understand risk, not fear it
                     </li>
                     <li>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
                             <polyline points="20 6 9 17 4 12"></polyline>
                         </svg>
                         See potential weak points
                     </li>
                     <li>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
                             <polyline points="20 6 9 17 4 12"></polyline>
                         </svg>
                         Make adjustments before compromising
                     </li>
                 </ul>
-                <a href={`${import.meta.env.PUBLIC_APP_URL}/signup`} class="btn-dark" style="margin-top: 1.5rem;">Try for free <span class="arrow">→</span></a>
+                <a
+                    href={`${import.meta.env.PUBLIC_APP_URL}/signup`}
+                    class="btn-dark"
+                    style="margin-top: 1.5rem;"
+                    >Try for free <span class="arrow">→</span></a
+                >
             </div>
         </div>
     </section>
@@ -173,13 +317,31 @@ import SpaghettiAnimation from '../components/SpaghettiAnimation.astro';
     <section>
         <div class="container feature" data-aos="fade-left">
             <div class="feature-text">
-                <h2>Navigate taxes with <span class="text-teal">clarity</span> and <span class="text-teal">plan</span> for Social Security with confidence</h2>
-                <p><strong>Taxes matter</strong> – especially in retirement. OnTarget™ helps you plan across all major account types, including tax-deferred, tax-free, and taxable accounts.</p>
-                <p>Model Social Security collection strategies and see how <strong>timing</strong> impacts your retirement income and overall plan. Uncover how benefits integrate with other income sources and the tradeoffs of claiming earlier vs later.</p>
-                <a href={`${import.meta.env.PUBLIC_APP_URL}/signup`} class="btn-dark" style="margin-top: 1.5rem;">Start Planning <span class="arrow">→</span></a>
+                <h2>
+                    Navigate taxes with <span class="text-teal">clarity</span> and
+                    <span class="text-teal">plan</span> for Social Security with confidence
+                </h2>
+                <p>
+                    <strong>Taxes matter</strong> – especially in retirement. OnTarget™
+                    helps you plan across all major account types, including tax-deferred,
+                    tax-free, and taxable accounts.
+                </p>
+                <p>
+                    Model Social Security collection strategies and see how <strong
+                        >timing</strong
+                    > impacts your retirement income and overall plan. Uncover how
+                    benefits integrate with other income sources and the tradeoffs
+                    of claiming earlier vs later.
+                </p>
+                <a
+                    href={`${import.meta.env.PUBLIC_APP_URL}/signup`}
+                    class="btn-dark"
+                    style="margin-top: 1.5rem;"
+                    >Start Planning <span class="arrow">→</span></a
+                >
             </div>
             <div class="feature-img">
-                <img src="/images/taxes.png" alt="Tax strategy chart">
+                <img src="/images/taxes.png" alt="Tax strategy chart" />
             </div>
         </div>
     </section>
@@ -198,40 +360,104 @@ import SpaghettiAnimation from '../components/SpaghettiAnimation.astro';
         <div class="container">
             <div class="clearer-plan-card" data-aos="fade-up">
                 <div class="clearer-plan-text">
-                    <h2>A clearer way to plan retirement – built for <span class="text-teal">real people</span></h2>
-                    <p>OnTarget™ helps you model your entire financial life, not just a single number or projection. Visualize income, spending, taxes, and assets over time. Explore endless "what-if" scenarios without breaking anything. Understand how today's decisions affect decades of retirement.</p>
-                    <p class="text-bold">Adjust as life changes – because it always does.</p>
+                    <h2>
+                        A clearer way to plan retirement – built for <span
+                            class="text-teal">real people</span>
+                    </h2>
+                    <p>
+                        OnTarget™ helps you model your entire financial life,
+                        not just a single number or projection. Visualize
+                        income, spending, taxes, and assets over time. Explore
+                        endless "what-if" scenarios without breaking anything.
+                        Understand how today's decisions affect decades of
+                        retirement.
+                    </p>
+                    <p class="text-bold">
+                        Adjust as life changes – because it always does.
+                    </p>
                 </div>
                 <div class="clearer-plan-image">
-                    <img src="/images/landing/stock/couple_water.jpg" alt="People with a retirement plan feel more confident about their future">
+                    <img
+                        src="/images/landing/stock/couple_water.jpg"
+                        alt="People with a retirement plan feel more confident about their future"
+                    />
                     <div class="clearer-plan-stat-overlay">
                         <div class="stat-number">87%</div>
-                        <div class="stat-headline">People with a retirement plan feel more confident about their future.</div>
-                        <div class="stat-subtext">Confidence comes from planning, not guessing.</div>
+                        <div class="stat-headline">
+                            People with a retirement plan feel more confident
+                            about their future.
+                        </div>
+                        <div class="stat-subtext">
+                            Confidence comes from planning, not guessing.
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="clearer-plan-benefits" data-aos="fade-up" data-aos-delay="100">
+            <div
+                class="clearer-plan-benefits"
+                data-aos="fade-up"
+                data-aos-delay="100"
+            >
                 <div class="benefit-pill">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    >
                         <polyline points="20 6 9 17 4 12"></polyline>
                     </svg>
                     <span>Spot risks early</span>
                 </div>
                 <div class="benefit-pill">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    >
                         <polyline points="20 6 9 17 4 12"></polyline>
                     </svg>
                     <span>Understand trade-offs</span>
                 </div>
                 <div class="benefit-pill">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    >
                         <polyline points="20 6 9 17 4 12"></polyline>
                     </svg>
                     <span>Prepare for the unexpected</span>
                 </div>
                 <div class="benefit-pill">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    >
                         <polyline points="20 6 9 17 4 12"></polyline>
                     </svg>
                     <span>Everything works together</span>
@@ -248,9 +474,9 @@ import SpaghettiAnimation from '../components/SpaghettiAnimation.astro';
 
     <!-- Page-specific scripts for landing page animations -->
     <script is:inline>
-    document.addEventListener('DOMContentLoaded', function() {
-        // Scrolling sliders animation (commented out)
-        /*
+        document.addEventListener("DOMContentLoaded", function () {
+            // Scrolling sliders animation (commented out)
+            /*
         const scrollingContent = document.querySelector('.scrolling-content');
         if (scrollingContent) {
             scrollingContent.style.animationPlayState = 'running';
@@ -277,106 +503,155 @@ import SpaghettiAnimation from '../components/SpaghettiAnimation.astro';
         }
         */
 
-        // GSAP animations
-        const heroTitleEl = document.getElementById('hero-title');
-        const originalTitleHTML = heroTitleEl ? heroTitleEl.innerHTML : '';
+            // GSAP animations
+            const heroTitleEl = document.getElementById("hero-title");
+            const originalTitleHTML = heroTitleEl ? heroTitleEl.innerHTML : "";
 
-        function splitWordsToSpans(element) {
-            const html = element.innerHTML;
-            const words = html.replace(/<br[^>]*>/gi, ' __BR__ ').split(' ');
-            element.innerHTML = '';
-            words.forEach((word, i) => {
-                if (word === '__BR__') {
-                    element.appendChild(document.createElement('br'));
-                } else if (word) {
-                    const span = document.createElement('span');
-                    span.textContent = word;
-                    span.style.display = 'inline-block';
-                    span.style.marginRight = '0.3em';
-                    if (word.toLowerCase() === 'retirement') {
-                        span.classList.add('text-primary');
+            function splitWordsToSpans(element) {
+                const html = element.innerHTML;
+                const words = html
+                    .replace(/<br[^>]*>/gi, " __BR__ ")
+                    .split(" ");
+                element.innerHTML = "";
+                words.forEach((word, i) => {
+                    if (word === "__BR__") {
+                        element.appendChild(document.createElement("br"));
+                    } else if (word) {
+                        const span = document.createElement("span");
+                        span.textContent = word;
+                        span.style.display = "inline-block";
+                        span.style.marginRight = "0.3em";
+                        if (word.toLowerCase() === "retirement") {
+                            span.classList.add("text-primary");
+                        }
+                        element.appendChild(span);
                     }
-                    element.appendChild(span);
-                }
-            });
-            return element.querySelectorAll('span');
-        }
+                });
+                return element.querySelectorAll("span");
+            }
 
-        // Hero animation on page load
-        if (heroTitleEl) {
-            heroTitleEl.style.visibility = 'hidden';
-            const heroSubtitleEl = document.getElementById('hero-subtitle');
-            const heroBtnEl = document.getElementById('hero-btn');
-            gsap.set([heroSubtitleEl, heroBtnEl], { opacity: 0, y: 20 });
+            // Hero animation on page load
+            if (heroTitleEl) {
+                heroTitleEl.style.visibility = "hidden";
+                const heroSubtitleEl = document.getElementById("hero-subtitle");
+                const heroBtnEl = document.getElementById("hero-btn");
+                gsap.set([heroSubtitleEl, heroBtnEl], { opacity: 0, y: 20 });
 
-            setTimeout(function() {
-                heroTitleEl.style.visibility = 'visible';
-                heroTitleEl.innerHTML = originalTitleHTML;
-                const words = splitWordsToSpans(heroTitleEl);
-                gsap.fromTo(words, { opacity: 0, filter: 'blur(20px)' }, { opacity: 1, filter: 'blur(0px)', duration: 0.8, stagger: 0.1, ease: 'power2.out' });
+                setTimeout(function () {
+                    heroTitleEl.style.visibility = "visible";
+                    heroTitleEl.innerHTML = originalTitleHTML;
+                    const words = splitWordsToSpans(heroTitleEl);
+                    gsap.fromTo(
+                        words,
+                        { opacity: 0, filter: "blur(20px)" },
+                        {
+                            opacity: 1,
+                            filter: "blur(0px)",
+                            duration: 0.8,
+                            stagger: 0.1,
+                            ease: "power2.out",
+                        },
+                    );
 
-                setTimeout(function() {
-                    gsap.to(heroSubtitleEl, { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out' });
-                    gsap.to(heroBtnEl, { opacity: 1, y: 0, duration: 0.6, delay: 0.15, ease: 'power2.out' });
-                }, 750);
-            }, 300);
-        }
+                    setTimeout(function () {
+                        gsap.to(heroSubtitleEl, {
+                            opacity: 1,
+                            y: 0,
+                            duration: 0.6,
+                            ease: "power2.out",
+                        });
+                        gsap.to(heroBtnEl, {
+                            opacity: 1,
+                            y: 0,
+                            duration: 0.6,
+                            delay: 0.15,
+                            ease: "power2.out",
+                        });
+                    }, 750);
+                }, 300);
+            }
 
-        // Section Animations with GSAP ScrollTrigger
-        gsap.registerPlugin(ScrollTrigger);
+            // Section Animations with GSAP ScrollTrigger
+            gsap.registerPlugin(ScrollTrigger);
 
-        const featureSections = document.querySelectorAll('.feature');
-        let currentSectionTriggers = [];
+            const featureSections = document.querySelectorAll(".feature");
+            let currentSectionTriggers = [];
 
-        function applySectionAnimations() {
-            featureSections.forEach((section, index) => {
-                const img = section.querySelector('.feature-img');
-                const text = section.querySelector('.feature-text');
-                const isEven = index % 2 === 1;
-                gsap.set(img, { opacity: 0, x: isEven ? 100 : -100 });
-                gsap.set(text, { opacity: 0, x: isEven ? -100 : 100 });
-                const tl = gsap.timeline({ scrollTrigger: { trigger: section, start: 'top 80%', end: 'top 30%', toggleActions: 'play none none none' }});
-                tl.to(img, { opacity: 1, x: 0, duration: 0.8, ease: 'power3.out' }).to(text, { opacity: 1, x: 0, duration: 0.8, ease: 'power3.out' }, '-=0.6');
-                currentSectionTriggers.push(tl.scrollTrigger);
-            });
-        }
+            function applySectionAnimations() {
+                featureSections.forEach((section, index) => {
+                    const img = section.querySelector(".feature-img");
+                    const text = section.querySelector(".feature-text");
+                    const isEven = index % 2 === 1;
+                    gsap.set(img, { opacity: 0, x: isEven ? 100 : -100 });
+                    gsap.set(text, { opacity: 0, x: isEven ? -100 : 100 });
+                    const tl = gsap.timeline({
+                        scrollTrigger: {
+                            trigger: section,
+                            start: "top 80%",
+                            end: "top 30%",
+                            toggleActions: "play none none none",
+                        },
+                    });
+                    tl.to(img, {
+                        opacity: 1,
+                        x: 0,
+                        duration: 0.8,
+                        ease: "power3.out",
+                    }).to(
+                        text,
+                        { opacity: 1, x: 0, duration: 0.8, ease: "power3.out" },
+                        "-=0.6",
+                    );
+                    currentSectionTriggers.push(tl.scrollTrigger);
+                });
+            }
 
-        applySectionAnimations();
+            applySectionAnimations();
 
-        // Testimonial cards elastic bounce animation
-        const testimonialCards = document.querySelectorAll('.testimonial-card-v2');
-        testimonialCards.forEach((card, index) => {
-            gsap.set(card, { opacity: 0, y: 60, scale: 0.8 });
-            gsap.to(card, {
-                opacity: 1, y: 0, scale: 1, duration: 1, ease: 'elastic.out(1, 0.5)',
-                scrollTrigger: { trigger: card, start: 'top 85%', toggleActions: 'play none none none' },
-                delay: (index % 3) * 0.1
+            // Testimonial cards elastic bounce animation
+            const testimonialCards = document.querySelectorAll(
+                ".testimonial-card-v2",
+            );
+            testimonialCards.forEach((card, index) => {
+                gsap.set(card, { opacity: 0, y: 60, scale: 0.8 });
+                gsap.to(card, {
+                    opacity: 1,
+                    y: 0,
+                    scale: 1,
+                    duration: 1,
+                    ease: "elastic.out(1, 0.5)",
+                    scrollTrigger: {
+                        trigger: card,
+                        start: "top 85%",
+                        toggleActions: "play none none none",
+                    },
+                    delay: (index % 3) * 0.1,
+                });
             });
         });
-    });
     </script>
 
     <!-- Organization Schema for SEO -->
     <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "ReadyAimRetire",
-        "description": "Retirement planning software that helps you visualize your financial future with powerful scenario modeling and tax optimization tools.",
-        "url": "https://readyaimretire.com",
-        "logo": "https://readyaimretire.com/images/logos/rar/rar_white_black_bg.png",
-        "sameAs": [
-            "https://linkedin.com/company/readyaimretire",
-            "https://x.com/readyaimretire",
-            "https://facebook.com/readyaimretire",
-            "https://youtube.com/@readyaimretire",
-            "https://instagram.com/readyaimretire"
-        ],
-        "contactPoint": {
-            "@type": "ContactPoint",
-            "contactType": "customer support",
-            "email": "support@readyaimretire.com"
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "ReadyAimRetire",
+            "description": "Retirement planning software that helps you visualize your financial future with powerful scenario modeling and tax optimization tools.",
+            "url": "https://readyaimretire.com",
+            "logo": "https://readyaimretire.com/images/logos/rar/rar_white_black_bg.png",
+            "sameAs": [
+                "https://linkedin.com/company/readyaimretire",
+                "https://x.com/readyaimretire",
+                "https://facebook.com/readyaimretire",
+                "https://youtube.com/@readyaimretire",
+                "https://instagram.com/readyaimretire"
+            ],
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "contactType": "customer support",
+                "email": "support@readyaimretire.com"
+            }
         }
-    }
     </script>
 </BaseLayout>
