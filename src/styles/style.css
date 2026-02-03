@@ -7,27 +7,27 @@
    ---------------------------------------- */
 :root {
     /* Brand Colors */
-    --color-primary: #41bab4;           /* Primary teal - buttons, accents */
-    --color-primary-hover: #3aa8a3;     /* Primary hover state */
-    --color-secondary: #415776;         /* Slate blue - footer, CTA backgrounds */
-    --color-accent: #14b8a6;            /* Accent teal - highlights, links */
-    --color-teal: #41bab4;              /* Teal - price badges, highlights */
-    --color-professional: #415776;      /* Professional card background */
+    --color-primary: #41bab4; /* Primary teal - buttons, accents */
+    --color-primary-hover: #3aa8a3; /* Primary hover state */
+    --color-secondary: #415776; /* Slate blue - footer, CTA backgrounds */
+    --color-accent: #14b8a6; /* Accent teal - highlights, links */
+    --color-teal: #41bab4; /* Teal - price badges, highlights */
+    --color-professional: #415776; /* Professional card background */
 
     /* Text Colors */
-    --color-text-dark: #1a1a2e;         /* Dark text */
-    --color-text-light: #ffffff;        /* Light text */
-    --color-text-muted: #94a3b8;        /* Muted/secondary text */
-    --color-text-soft: #cbd5e1;         /* Soft light text for footers */
-    --color-text-body: #333333;         /* Body text */
+    --color-text-dark: #1a1a2e; /* Dark text */
+    --color-text-light: #ffffff; /* Light text */
+    --color-text-muted: #94a3b8; /* Muted/secondary text */
+    --color-text-soft: #cbd5e1; /* Soft light text for footers */
+    --color-text-body: #333333; /* Body text */
 
     /* Background Colors */
-    --color-bg-light: #f7f6f4;          /* Light background - main page bg */
-    --color-bg-dark: #1a1a2e;           /* Dark background */
+    --color-bg-light: #f7f6f4; /* Light background - main page bg */
+    --color-bg-dark: #1a1a2e; /* Dark background */
     --color-bg-header: rgba(15, 23, 42, 0.95); /* Header scrolled state */
 
     /* UI Colors */
-    --color-border: rgba(255, 255, 255, 0.1);  /* Subtle borders */
+    --color-border: rgba(255, 255, 255, 0.1); /* Subtle borders */
 }
 
 /* ----------------------------------------
@@ -35,17 +35,17 @@
    ---------------------------------------- */
 body {
     margin: 0;
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: var(--color-bg-light);  /* #f7f6f4 */
+    background-color: var(--color-bg-light); /* #f7f6f4 */
 }
 
 /* ----------------------------------------
    Typography - Reusable Classes
    ---------------------------------------- */
 .heading-serif {
-    font-family: 'Playfair Display', Georgia, serif;
+    font-family: "Playfair Display", Georgia, serif;
 }
 
 .text-primary {
@@ -80,7 +80,9 @@ header {
     background: transparent;
     box-shadow: none;
     z-index: 1000;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    transition:
+        background-color 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
 header.scrolled,
@@ -182,7 +184,9 @@ nav ul li a:hover {
     font-weight: 500;
     border-radius: 50px;
     border: none;
-    transition: background-color 0.2s, transform 0.2s;
+    transition:
+        background-color 0.2s,
+        transform 0.2s;
 }
 
 .btn-dark:hover {
@@ -224,17 +228,17 @@ nav ul li a:hover {
     align-items: center;
     text-align: center;
 
-    background: url('/images/landingbackground_new.png') center top no-repeat;
-    background-size: min(100%, 1650px) auto;
+    background: url("/images/hero-bg.svg") center top no-repeat;
+    background-size: min(100%, 1000px) auto;
     background-color: #415776;
+    background-position: left;
     position: relative;
-  
-    min-height: 733px;
 
+    min-height: 733px;
 }
 
 .hero h1 {
-    font-family: 'Playfair Display', Georgia, serif;
+    font-family: "Playfair Display", Georgia, serif;
     font-size: 4.125rem;
     font-weight: 400;
     margin: -80px 0 1.5rem 0;
@@ -268,9 +272,14 @@ nav ul li a:hover {
     font-weight: 600;
     border-radius: 50px;
     border: none;
-    transition: background-color 0.2s, transform 0.2s, box-shadow 0.2s;
+    transition:
+        background-color 0.2s,
+        transform 0.2s,
+        box-shadow 0.2s;
     opacity: 0;
-    animation: buttonReveal 0.8s ease-out 1s forwards, buttonPulse 2s ease-in-out 2s infinite;
+    animation:
+        buttonReveal 0.8s ease-out 1s forwards,
+        buttonPulse 2s ease-in-out 2s infinite;
 }
 
 .hero .btn-primary:hover {
@@ -291,7 +300,10 @@ nav ul li a:hover {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    transition: background-color 0.2s, transform 0.2s, box-shadow 0.2s;
+    transition:
+        background-color 0.2s,
+        transform 0.2s,
+        box-shadow 0.2s;
     animation: subtle-pulse 3s ease-in-out infinite;
 }
 
@@ -303,7 +315,8 @@ nav ul li a:hover {
 }
 
 @keyframes subtle-pulse {
-    0%, 100% {
+    0%,
+    100% {
         transform: scale(1);
     }
     50% {
@@ -341,7 +354,8 @@ nav ul li a:hover {
 }
 
 @keyframes buttonPulse {
-    0%, 100% {
+    0%,
+    100% {
         box-shadow: 0 0 0 0 rgba(26, 26, 46, 0.4);
     }
     50% {
@@ -362,7 +376,9 @@ nav ul li a:hover {
 .highlight-style-2 {
     color: #ffffff;
     -webkit-text-fill-color: #ffffff;
-    text-shadow: 0 0 20px rgba(255, 255, 255, 0.5), 0 0 40px rgba(255, 255, 255, 0.3);
+    text-shadow:
+        0 0 20px rgba(255, 255, 255, 0.5),
+        0 0 40px rgba(255, 255, 255, 0.3);
 }
 
 /* Style 3: White with Underline */
@@ -374,7 +390,7 @@ nav ul li a:hover {
 }
 
 .highlight-style-3::after {
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     bottom: 0.05em;
@@ -412,7 +428,9 @@ nav ul li a:hover {
 .highlight-style-7 {
     color: #ffffff;
     -webkit-text-fill-color: #ffffff;
-    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2), 4px 4px 0 rgba(0, 0, 0, 0.1);
+    text-shadow:
+        2px 2px 0 rgba(0, 0, 0, 0.2),
+        4px 4px 0 rgba(0, 0, 0, 0.1);
 }
 
 /* ----------------------------------------
@@ -461,7 +479,7 @@ section:last-of-type {
 }
 
 .feature-card h3 {
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 1.25rem;
     font-weight: 600;
     margin: 0 0 0.75rem 0;
@@ -487,14 +505,14 @@ section:last-of-type {
    Pricing Section
    ---------------------------------------- */
 .pricing-section {
-    background: var(--color-bg-light);  /* Use default page background */
+    background: var(--color-bg-light); /* Use default page background */
     padding: 8rem 0 3rem 0;
 }
 
 /* Pricing Title */
 .pricing-title {
     font-size: clamp(2rem, 4vw, 2.75rem);
-    font-weight: 400;  /* Light weight for serif font */
+    font-weight: 400; /* Light weight for serif font */
     text-align: left;
     color: #1a1a2e;
     margin: 0 0 1.5rem 0;
@@ -553,7 +571,9 @@ section:last-of-type {
     font-size: 0.85rem;
     font-weight: 500;
     cursor: pointer;
-    transition: background 0.2s ease, color 0.2s ease;
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
 }
 
 .toggle-pill:hover {
@@ -578,14 +598,16 @@ section:last-of-type {
     background: #ffffff;
     border: none;
     border-radius: 20px;
-    padding: 0 1.75rem 1.75rem 1.75rem;  /* No top padding - badge sits flush */
+    padding: 0 1.75rem 1.75rem 1.75rem; /* No top padding - badge sits flush */
     display: flex;
     flex-direction: column;
     position: relative;
     box-shadow: 0 30px 30px -25px rgba(0, 38, 255, 0.205);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    overflow: visible;  /* Allow badge to extend to edge */
-    min-width: 250px;  /* Make cards wider */
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+    overflow: visible; /* Allow badge to extend to edge */
+    min-width: 250px; /* Make cards wider */
 }
 
 .pricing-card-v2:hover {
@@ -631,7 +653,7 @@ section:last-of-type {
 
 /* Professional variant - uses slate blue background (#415776) */
 .pricing-card-v2.professional {
-    background: var(--color-professional);  /* #415776 */
+    background: var(--color-professional); /* #415776 */
 }
 
 .pricing-card-v2.professional .plan-name {
@@ -651,7 +673,7 @@ section:last-of-type {
 }
 
 .pricing-card-v2.professional .plan-features li i {
-    color: var(--color-teal);  /* Teal checkmarks */
+    color: var(--color-teal); /* Teal checkmarks */
 }
 
 .pricing-card-v2.professional .btn-choose-plan {
@@ -667,7 +689,7 @@ section:last-of-type {
 
 /* Card Header Row - Title only */
 .card-header-row {
-    margin-top: 85px;  /* Push headers down to clear price badge */
+    margin-top: 85px; /* Push headers down to clear price badge */
     margin-bottom: 0.75rem;
 }
 
@@ -676,12 +698,12 @@ section:last-of-type {
     position: absolute;
     top: 0;
     right: 0;
-    background-color: var(--color-teal);  /* #41bab4 teal */
-    border-radius: 50px 20px 0 50px;  /* Rounded left, match card corner on right */
+    background-color: var(--color-teal); /* #41bab4 teal */
+    border-radius: 50px 20px 0 50px; /* Rounded left, match card corner on right */
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0.75em 1.25em 0.75em 1.5em;  /* No extra right padding */
+    padding: 0.75em 1.25em 0.75em 1.5em; /* No extra right padding */
     font-size: 1.25rem;
     font-weight: 600;
     color: #ffffff;
@@ -703,7 +725,7 @@ section:last-of-type {
 
 /* Plan Name */
 .plan-name {
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 1.35rem;
     font-weight: 700;
     color: #4a4a8a;
@@ -716,7 +738,7 @@ section:last-of-type {
     line-height: 1.55;
     color: #7a8a9a;
     margin: 0 0 0.5rem 0;
-    min-height: 4.2em;  /* Fixed height for 3 lines to align buttons */
+    min-height: 4.2em; /* Fixed height for 3 lines to align buttons */
 }
 
 /* Billing Note */
@@ -813,7 +835,10 @@ section:last-of-type {
     border: 2px solid #1a1a2e;
     border-radius: 10px;
     cursor: pointer;
-    transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
     text-decoration: none;
     box-sizing: border-box;
     margin-bottom: 1.25rem;
@@ -880,7 +905,7 @@ section:last-of-type {
 }
 
 .ontarget-card h3 {
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 1rem;
     font-weight: 600;
     color: #1a1a2e;
@@ -960,7 +985,7 @@ section:last-of-type {
 }
 
 .clearer-plan-content h2 {
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: clamp(1.75rem, 3vw, 2.25rem);
     font-weight: 600;
     color: #ffffff;
@@ -984,7 +1009,9 @@ section:last-of-type {
     font-weight: 600;
     border-radius: 50px;
     border: none;
-    transition: background-color 0.2s, transform 0.2s;
+    transition:
+        background-color 0.2s,
+        transform 0.2s;
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
@@ -1096,7 +1123,7 @@ section:last-of-type {
 }
 
 .complete-system-content h2 {
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: clamp(1.5rem, 3vw, 2rem);
     font-weight: 600;
     color: #1a1a2e;
@@ -1211,7 +1238,7 @@ section:last-of-type {
 }
 
 .clearer-plan-section-v2 .clearer-plan-text h2 {
-    font-family: 'Playfair Display', Georgia, serif;
+    font-family: "Playfair Display", Georgia, serif;
     font-size: clamp(1.75rem, 3vw, 2.25rem);
     font-weight: 400;
     color: #1a1a2e;
@@ -1254,7 +1281,12 @@ section:last-of-type {
     bottom: 0;
     right: 0;
     left: 0;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.5) 70%, transparent 100%);
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.75) 0%,
+        rgba(0, 0, 0, 0.5) 70%,
+        transparent 100%
+    );
     color: #ffffff;
     padding: 2rem;
     text-align: right;
@@ -1376,7 +1408,7 @@ section:last-of-type {
 }
 
 .feature-text h2 {
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: clamp(1.25rem, 3vw, 2.125rem);
     font-weight: 600;
     margin-bottom: 1rem;
@@ -1418,7 +1450,7 @@ section:last-of-type {
 .feature-img img {
     width: 100%;
     border-radius: 8px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
 }
 
 /* ----------------------------------------
@@ -1443,7 +1475,7 @@ section:last-of-type {
 }
 
 .resources-header h2 {
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 1.75rem;
     font-weight: 600;
     color: #1a1a2e;
@@ -1491,7 +1523,7 @@ section:last-of-type {
 }
 
 .resource-card h3 {
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 1.25rem;
     font-weight: 600;
     color: #1a1a2e;
@@ -1536,7 +1568,7 @@ section:last-of-type {
 }
 
 .testimonials-header h2 {
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: clamp(1.75rem, 4vw, 2.5rem);
     font-weight: 600;
     color: #1a1a2e;
@@ -1617,13 +1649,21 @@ section:last-of-type {
 }
 
 @keyframes scrollLeft {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
 }
 
 @keyframes scrollRight {
-    0% { transform: translateX(-50%); }
-    100% { transform: translateX(0); }
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0);
+    }
 }
 
 .testimonial-card {
@@ -1633,7 +1673,7 @@ section:last-of-type {
     min-width: 300px;
     max-width: 350px;
     min-height: 120px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
     border: 1px solid #e5e7eb;
     display: flex;
     flex-direction: column;
@@ -1671,13 +1711,15 @@ section:last-of-type {
     background: #ffffff;
     border-radius: 8px;
     padding: 1.5rem;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
 .card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .card h3 {
@@ -1706,7 +1748,7 @@ section:last-of-type {
     background: #ffffff;
     border-radius: 8px;
     padding: 1.5rem;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     position: relative;
 }
 
@@ -1748,8 +1790,12 @@ section:last-of-type {
 }
 
 @keyframes scrollUp {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-50%); }
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-50%);
+    }
 }
 
 .scrolling-window:hover .scrolling-content {
@@ -1934,7 +1980,7 @@ footer .disclaimer {
 }
 
 .abt-hero-title {
-    font-family: 'Playfair Display', Georgia, serif;
+    font-family: "Playfair Display", Georgia, serif;
     font-size: clamp(2.5rem, 5vw, 3.5rem);
     font-weight: 500;
     color: #1a1a2e;
@@ -1977,7 +2023,9 @@ footer .disclaimer {
     font-weight: 500;
     border-radius: 6px;
     text-decoration: none;
-    transition: background-color 0.2s ease, transform 0.2s ease;
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
 }
 
 .abt-hero-btn:hover {
@@ -2022,7 +2070,7 @@ footer .disclaimer {
 }
 
 .abt-story-heading {
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 1.5rem;
     font-weight: 600;
     color: #1a1a2e;
@@ -2082,7 +2130,7 @@ footer .disclaimer {
 }
 
 .abt-founders-title {
-    font-family: 'Playfair Display', Georgia, serif;
+    font-family: "Playfair Display", Georgia, serif;
     font-size: clamp(2rem, 4vw, 2.75rem);
     font-weight: 400;
     color: #1a1a2e;
@@ -2136,7 +2184,7 @@ footer .disclaimer {
 }
 
 .abt-founder-text h3 {
-    font-family: 'Playfair Display', Georgia, serif;
+    font-family: "Playfair Display", Georgia, serif;
     font-size: 1.75rem;
     font-weight: 400;
     color: #1a1a2e;
@@ -2189,7 +2237,7 @@ footer .disclaimer {
 }
 
 .abt-col h3 {
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 1.1rem;
     font-weight: 700;
     color: #1a1a2e;
@@ -2254,7 +2302,9 @@ footer .disclaimer {
     font-weight: 500;
     border-radius: 4px;
     text-decoration: none;
-    transition: background-color 0.2s ease, transform 0.2s ease;
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
     margin-top: 1rem;
 }
 
