@@ -1,7 +1,7 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import CTABanner from '../components/CTABanner.astro';
-import Breadcrumbs from '../components/Breadcrumbs.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CTABanner from "../components/CTABanner.astro";
+import Breadcrumbs from "../components/Breadcrumbs.astro";
 ---
 
 <BaseLayout
@@ -15,11 +15,26 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
             <Breadcrumbs items={[{ label: "Accounts & Assets" }]} />
             <div class="accounts-hero-content" data-aos="fade">
                 <p class="accounts-hero-eyebrow">OnTarget™ Feature</p>
-                <h1>Every Account. Every Asset. <span class="text-primary">One Dashboard.</span></h1>
-                <p class="accounts-hero-subtitle">Organize your complete financial picture in one place. Track investments, cash, real estate, and liabilities - all connected to your retirement plan.</p>
+                <h1>
+                    Every Account. Every Asset. <span class="text-primary"
+                        >One Dashboard.</span
+                    >
+                </h1>
+                <p class="accounts-hero-subtitle">
+                    Organize your complete financial picture in one place. Track
+                    investments, cash, real estate, and liabilities - all
+                    connected to your retirement plan.
+                </p>
             </div>
-            <div class="accounts-hero-image" data-aos="fade-up" data-aos-delay="200">
-                <img src="/images/accounts.png" alt="Accounts & Assets Dashboard">
+            <div
+                class="accounts-hero-image"
+                data-aos="fade-up"
+                data-aos-delay="200"
+            >
+                <img
+                    src="/images/accounts.png"
+                    alt="Accounts & Assets Dashboard"
+                />
             </div>
         </div>
     </section>
@@ -29,10 +44,25 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
         <div class="container">
             <div class="accounts-problem-grid" data-aos="fade-up">
                 <div class="accounts-problem-content">
-                    <h2>Scattered accounts make <span class="text-teal">planning impossible</span></h2>
-                    <p>Your 401(k) is at Fidelity. Your IRA is at Vanguard. Your spouse has accounts at Schwab. You have a brokerage account, an HSA, maybe some crypto. Real estate equity. Car loans. Credit cards.</p>
-                    <p>How can you plan for retirement when you can't even see the full picture?</p>
-                    <p class="text-italic">You need everything in one place - organized, categorized, and connected.</p>
+                    <h2>
+                        Scattered accounts make <span class="text-teal"
+                            >planning impossible</span
+                        >
+                    </h2>
+                    <p>
+                        Your 401(k) is at Fidelity. Your IRA is at Vanguard.
+                        Your spouse has accounts at Schwab. You have a brokerage
+                        account, an HSA, maybe some crypto. Real estate equity.
+                        Car loans. Credit cards.
+                    </p>
+                    <p>
+                        How can you plan for retirement when you can't even see
+                        the full picture?
+                    </p>
+                    <p class="text-italic">
+                        You need everything in one place - organized,
+                        categorized, and connected.
+                    </p>
                 </div>
                 <div class="accounts-problem-visual">
                     <div class="accounts-scattered-card">
@@ -75,11 +105,20 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
     <section class="section-gray">
         <div class="container feature" data-aos="fade-right">
             <div class="feature-img">
-                <img src="/images/new_colors.png" alt="Account types and categories">
+                <img
+                    src="/images/new_colors.png"
+                    alt="Account types and categories"
+                />
             </div>
             <div class="feature-text">
-                <h2>Track every type of <span class="text-teal">account</span></h2>
-                <p>From tax-advantaged retirement accounts to everyday checking, ReadyAimRetire supports the full spectrum of financial accounts.</p>
+                <h2>
+                    Track every type of <span class="text-teal">account</span>
+                </h2>
+                <p>
+                    From tax-advantaged retirement accounts to everyday
+                    checking, ReadyAimRetire supports the full spectrum of
+                    financial accounts.
+                </p>
                 <div class="account-types-grid">
                     <div class="account-type-card">
                         <div class="account-type-header">Investment</div>
@@ -126,43 +165,65 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
     <section>
         <div class="container feature" data-aos="fade-left">
             <div class="feature-text">
-                <h2>Understand your <span class="text-teal">tax buckets</span></h2>
-                <p>Not all retirement savings are taxed the same. ReadyAimRetire tracks your accounts by tax treatment so you can plan smarter withdrawals.</p>
+                <h2>
+                    Understand your <span class="text-teal">tax buckets</span>
+                </h2>
+                <p>
+                    Not all retirement savings are taxed the same.
+                    ReadyAimRetire tracks your accounts by tax treatment so you
+                    can plan smarter withdrawals.
+                </p>
                 <div class="tax-buckets-grid">
                     <div class="tax-bucket">
                         <div class="tax-bucket-color tax-bucket-pretax"></div>
                         <div class="tax-bucket-info">
                             <div class="tax-bucket-name">Pre-Tax</div>
-                            <div class="tax-bucket-desc">Traditional 401(k), IRA - taxed on withdrawal</div>
+                            <div class="tax-bucket-desc">
+                                Traditional 401(k), IRA - taxed on withdrawal
+                            </div>
                         </div>
                     </div>
                     <div class="tax-bucket">
                         <div class="tax-bucket-color tax-bucket-roth"></div>
                         <div class="tax-bucket-info">
                             <div class="tax-bucket-name">Tax-Free (Roth)</div>
-                            <div class="tax-bucket-desc">Roth 401(k), Roth IRA - tax-free withdrawals</div>
+                            <div class="tax-bucket-desc">
+                                Roth 401(k), Roth IRA - tax-free withdrawals
+                            </div>
                         </div>
                     </div>
                     <div class="tax-bucket">
                         <div class="tax-bucket-color tax-bucket-hsa"></div>
                         <div class="tax-bucket-info">
                             <div class="tax-bucket-name">HSA</div>
-                            <div class="tax-bucket-desc">Triple tax-advantaged for healthcare</div>
+                            <div class="tax-bucket-desc">
+                                Triple tax-advantaged for healthcare
+                            </div>
                         </div>
                     </div>
                     <div class="tax-bucket">
                         <div class="tax-bucket-color tax-bucket-taxable"></div>
                         <div class="tax-bucket-info">
                             <div class="tax-bucket-name">Taxable</div>
-                            <div class="tax-bucket-desc">Brokerage accounts - capital gains taxed</div>
+                            <div class="tax-bucket-desc">
+                                Brokerage accounts - capital gains taxed
+                            </div>
                         </div>
                     </div>
                 </div>
-                <p style="margin-top: 1.5rem;">Knowing your bucket breakdown helps you optimize withdrawals and minimize lifetime taxes.</p>
-                <a href={`${import.meta.env.PUBLIC_APP_URL}/signup`} class="btn-dark" style="margin-top: 1.5rem;">Organize Your Accounts <span class="arrow">→</span></a>
+                <p style="margin-top: 1.5rem;">
+                    Knowing your bucket breakdown helps you optimize withdrawals
+                    and minimize lifetime taxes.
+                </p>
+                <a
+                    href={`${import.meta.env.PUBLIC_APP_URL}/signup`}
+                    class="btn-dark"
+                    style="margin-top: 1.5rem;"
+                    >Organize Your Accounts <span class="arrow">→</span></a
+                >
             </div>
             <div class="feature-img">
-                <img src="/images/taxes.png" alt="Tax bucket breakdown">
+                <img src="/images/taxes.png" alt="Tax bucket breakdown" />
             </div>
         </div>
     </section>
@@ -171,44 +232,107 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
     <section class="section-gray">
         <div class="container feature" data-aos="fade-right">
             <div class="feature-img">
-                <img src="/images/landing/stock/couple_laptop.jpg" alt="Real estate tracking">
+                <img
+                    src="/images/landing/stock/couple_laptop.jpg"
+                    alt="Real estate tracking"
+                />
             </div>
             <div class="feature-text">
-                <h2>Real estate, <span class="text-teal">properly tracked</span></h2>
-                <p>Your home is likely your biggest asset. ReadyAimRetire tracks real estate with the detail it deserves.</p>
+                <h2>
+                    Real estate, <span class="text-teal">properly tracked</span>
+                </h2>
+                <p>
+                    Your home is likely your biggest asset. ReadyAimRetire
+                    tracks real estate with the detail it deserves.
+                </p>
                 <ul class="feature-checklist">
                     <li>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
                             <polyline points="20 6 9 17 4 12"></polyline>
                         </svg>
                         Track property value and equity separately
                     </li>
                     <li>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
                             <polyline points="20 6 9 17 4 12"></polyline>
                         </svg>
                         Model appreciation over time
                     </li>
                     <li>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
                             <polyline points="20 6 9 17 4 12"></polyline>
                         </svg>
                         Plan future purchases or sales at specific ages
                     </li>
                     <li>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
                             <polyline points="20 6 9 17 4 12"></polyline>
                         </svg>
                         Calculate capital gains with Section 121 exclusion
                     </li>
                     <li>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
                             <polyline points="20 6 9 17 4 12"></polyline>
                         </svg>
                         Include property taxes and insurance in projections
                     </li>
                 </ul>
-                <a href={`${import.meta.env.PUBLIC_APP_URL}/signup`} class="btn-dark" style="margin-top: 1.5rem;">Track Your Real Estate <span class="arrow">→</span></a>
+                <a
+                    href={`${import.meta.env.PUBLIC_APP_URL}/signup`}
+                    class="btn-dark"
+                    style="margin-top: 1.5rem;"
+                    >Track Your Real Estate <span class="arrow">→</span></a
+                >
             </div>
         </div>
     </section>
@@ -218,18 +342,41 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
         <div class="container feature" data-aos="fade-left">
             <div class="feature-text">
                 <h2>Built for <span class="text-teal">couples</span></h2>
-                <p>Retirement planning is a team sport. ReadyAimRetire supports full dual-owner tracking for married couples and partners.</p>
+                <p>
+                    Retirement planning is a team sport. ReadyAimRetire supports
+                    full dual-owner tracking for married couples and partners.
+                </p>
                 <ul class="feature-list">
-                    <li><strong>Separate tracking:</strong> Each person's accounts listed individually</li>
-                    <li><strong>Combined view:</strong> See total household net worth</li>
-                    <li><strong>Contribution limits:</strong> Respected per person</li>
-                    <li><strong>Withdrawal strategies:</strong> Coordinate across both owners</li>
-                    <li><strong>Social Security:</strong> Optimize timing for both</li>
+                    <li>
+                        <strong>Separate tracking:</strong> Each person's accounts
+                        listed individually
+                    </li>
+                    <li>
+                        <strong>Combined view:</strong> See total household net worth
+                    </li>
+                    <li>
+                        <strong>Contribution limits:</strong> Respected per person
+                    </li>
+                    <li>
+                        <strong>Withdrawal strategies:</strong> Coordinate across
+                        both owners
+                    </li>
+                    <li>
+                        <strong>Social Security:</strong> Optimize timing for both
+                    </li>
                 </ul>
-                <a href={`${import.meta.env.PUBLIC_APP_URL}/signup`} class="btn-dark" style="margin-top: 1.5rem;">Plan Together <span class="arrow">→</span></a>
+                <a
+                    href={`${import.meta.env.PUBLIC_APP_URL}/signup`}
+                    class="btn-dark"
+                    style="margin-top: 1.5rem;"
+                    >Plan Together <span class="arrow">→</span></a
+                >
             </div>
             <div class="feature-img">
-                <img src="/images/model_real_life.jpg" alt="Couples financial planning">
+                <img
+                    src="/images/model_real_life.jpg"
+                    alt="Couples financial planning"
+                />
             </div>
         </div>
     </section>
@@ -237,17 +384,29 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
     <!-- Benefits Section -->
     <section class="accounts-benefits-section">
         <div class="container">
-            <h2 class="accounts-section-heading" data-aos="fade-up">Everything you need to <span class="text-teal">get organized</span></h2>
-            <div class="accounts-benefits-grid" data-aos="fade-up" data-aos-delay="100">
+            <h2 class="accounts-section-heading" data-aos="fade-up">
+                Everything you need to <span class="text-teal"
+                    >get organized</span
+                >
+            </h2>
+            <div
+                class="accounts-benefits-grid"
+                data-aos="fade-up"
+                data-aos-delay="100"
+            >
                 <div class="accounts-benefit-card">
                     <div class="accounts-benefit-icon">📊</div>
                     <h3>20+ Account Types</h3>
-                    <p>US and Canadian accounts supported, from 401(k) to TFSA</p>
+                    <p>
+                        US and Canadian accounts supported, from 401(k) to TFSA
+                    </p>
                 </div>
                 <div class="accounts-benefit-card">
                     <div class="accounts-benefit-icon">🔒</div>
                     <h3>No Account Linking</h3>
-                    <p>Manual entry keeps your credentials private and secure</p>
+                    <p>
+                        Manual entry keeps your credentials private and secure
+                    </p>
                 </div>
                 <div class="accounts-benefit-card">
                     <div class="accounts-benefit-icon">💰</div>
@@ -257,7 +416,9 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
                 <div class="accounts-benefit-card">
                     <div class="accounts-benefit-icon">🔗</div>
                     <h3>Retirement Integration</h3>
-                    <p>Accounts feed directly into your retirement projections</p>
+                    <p>
+                        Accounts feed directly into your retirement projections
+                    </p>
                 </div>
             </div>
         </div>
@@ -268,40 +429,99 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
         <div class="container">
             <div class="clearer-plan-card" data-aos="fade-up">
                 <div class="clearer-plan-text">
-                    <h2>See your complete financial <span class="text-teal">picture.</span></h2>
-                    <p>Organize every account, asset, and liability in one dashboard. The foundation of confident retirement planning.</p>
+                    <h2>
+                        See your complete financial <span class="text-teal"
+                            >picture.</span
+                        >
+                    </h2>
+                    <p>
+                        Organize every account, asset, and liability in one
+                        dashboard. The foundation of confident retirement
+                        planning.
+                    </p>
                     <p class="text-bold">Clarity comes from organization.</p>
                 </div>
                 <div class="clearer-plan-image">
-                    <img src="/images/landing/stock/couple_water.jpg" alt="Financial clarity">
+                    <img
+                        src="/images/landing/stock/couple_water.jpg"
+                        alt="Financial clarity"
+                    />
                     <div class="clearer-plan-stat-overlay">
                         <div class="stat-number">20+</div>
-                        <div class="stat-headline">Account types supported across US and Canada.</div>
-                        <div class="stat-subtext">From 401(k) to TFSA, we've got you covered.</div>
+                        <div class="stat-headline">
+                            Account types supported across US and Canada.
+                        </div>
+                        <div class="stat-subtext">
+                            From 401(k) to TFSA, we've got you covered.
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="clearer-plan-benefits" data-aos="fade-up" data-aos-delay="100">
+            <div
+                class="clearer-plan-benefits"
+                data-aos="fade-up"
+                data-aos-delay="100"
+            >
                 <div class="benefit-pill">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    >
                         <polyline points="20 6 9 17 4 12"></polyline>
                     </svg>
                     <span>Complete organization</span>
                 </div>
                 <div class="benefit-pill">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    >
                         <polyline points="20 6 9 17 4 12"></polyline>
                     </svg>
                     <span>Tax-smart tracking</span>
                 </div>
                 <div class="benefit-pill">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    >
                         <polyline points="20 6 9 17 4 12"></polyline>
                     </svg>
                     <span>Privacy-focused</span>
                 </div>
                 <div class="benefit-pill">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    >
                         <polyline points="20 6 9 17 4 12"></polyline>
                     </svg>
                     <span>Couples support</span>
@@ -315,322 +535,53 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
 
     <!-- Page-specific scripts -->
     <script is:inline>
-    document.addEventListener('DOMContentLoaded', function() {
-        gsap.registerPlugin(ScrollTrigger);
+        document.addEventListener("DOMContentLoaded", function () {
+            gsap.registerPlugin(ScrollTrigger);
 
-        const featureSections = document.querySelectorAll('.feature');
-        featureSections.forEach((section, index) => {
-            const img = section.querySelector('.feature-img');
-            const text = section.querySelector('.feature-text');
-            const isEven = index % 2 === 1;
-            gsap.set(img, { opacity: 0, x: isEven ? 100 : -100 });
-            gsap.set(text, { opacity: 0, x: isEven ? -100 : 100 });
-            gsap.timeline({
-                scrollTrigger: {
-                    trigger: section,
-                    start: 'top 80%',
-                    toggleActions: 'play none none none'
-                }
-            })
-            .to(img, { opacity: 1, x: 0, duration: 0.8, ease: 'power3.out' })
-            .to(text, { opacity: 1, x: 0, duration: 0.8, ease: 'power3.out' }, '-=0.6');
+            const featureSections = document.querySelectorAll(".feature");
+            featureSections.forEach((section, index) => {
+                const img = section.querySelector(".feature-img");
+                const text = section.querySelector(".feature-text");
+                const isEven = index % 2 === 1;
+                gsap.set(img, { opacity: 0, x: isEven ? 100 : -100 });
+                gsap.set(text, { opacity: 0, x: isEven ? -100 : 100 });
+                gsap.timeline({
+                    scrollTrigger: {
+                        trigger: section,
+                        start: "top 80%",
+                        toggleActions: "play none none none",
+                    },
+                })
+                    .to(img, {
+                        opacity: 1,
+                        x: 0,
+                        duration: 0.8,
+                        ease: "power3.out",
+                    })
+                    .to(
+                        text,
+                        { opacity: 1, x: 0, duration: 0.8, ease: "power3.out" },
+                        "-=0.6",
+                    );
+            });
         });
-    });
     </script>
 
     <!-- Schema -->
     <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
-        "name": "ReadyAimRetire Accounts & Assets Tracker",
-        "applicationCategory": "FinanceApplication",
-        "operatingSystem": "Web",
-        "description": "Comprehensive financial account organizer supporting 401(k), IRA, Roth, HSA, real estate, and more.",
-        "url": "https://readyaimretire.com/accounts",
-        "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "USD"
+        {
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "ReadyAimRetire Accounts & Assets Tracker",
+            "applicationCategory": "FinanceApplication",
+            "operatingSystem": "Web",
+            "description": "Comprehensive financial account organizer supporting 401(k), IRA, Roth, HSA, real estate, and more.",
+            "url": "https://readyaimretire.com/accounts",
+            "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD"
+            }
         }
-    }
     </script>
 </BaseLayout>
-
-<style>
-    /* Hero Section */
-    .accounts-hero {
-        background: #ffffff;
-        padding: 8rem 0 3rem 0;
-        text-align: center;
-    }
-
-    .accounts-hero-content {
-        max-width: 800px;
-        margin: 0 auto 3rem auto;
-    }
-
-    .accounts-hero-eyebrow {
-        font-size: 0.875rem;
-        font-weight: 600;
-        color: #14b8a6;
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
-        margin-bottom: 1rem;
-    }
-
-    .accounts-hero h1 {
-        font-family: 'Tobias', Georgia, serif;
-        font-size: clamp(2.25rem, 5vw, 3.25rem);
-        font-weight: 700;
-        color: #1a1a2e;
-        line-height: 1.1;
-        margin: 0 0 1.5rem 0;
-    }
-
-    .accounts-hero .text-primary {
-        color: #14b8a6;
-    }
-
-    .accounts-hero-subtitle {
-        font-size: 1.125rem;
-        color: #444;
-        line-height: 1.7;
-        margin: 0;
-    }
-
-    .accounts-hero-image img {
-        max-width: 100%;
-        border-radius: 12px;
-        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
-    }
-
-    /* Problem Section */
-    .accounts-problem-section {
-        padding: 5rem 0;
-        background: #f8fafc;
-    }
-
-    .accounts-problem-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 4rem;
-        align-items: center;
-    }
-
-    .accounts-problem-content h2 {
-        font-family: 'Tobias', Georgia, serif;
-        font-size: clamp(1.75rem, 3vw, 2.25rem);
-        font-weight: 700;
-        color: #1a1a2e;
-        line-height: 1.2;
-        margin: 0 0 1.5rem 0;
-    }
-
-    .accounts-problem-content p {
-        font-size: 1.05rem;
-        line-height: 1.8;
-        color: #444;
-        margin-bottom: 1rem;
-    }
-
-    .accounts-scattered-card {
-        background: #ffffff;
-        border-radius: 16px;
-        padding: 2rem;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.75rem;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .scattered-item {
-        background: #f1f5f9;
-        padding: 0.5rem 1rem;
-        border-radius: 20px;
-        font-size: 0.85rem;
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-    }
-
-    .scattered-icon {
-        font-size: 1rem;
-    }
-
-    .scattered-arrow {
-        font-size: 2rem;
-        color: #14b8a6;
-        margin: 0.5rem;
-    }
-
-    .organized-box {
-        background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);
-        color: #ffffff;
-        padding: 1rem 1.5rem;
-        border-radius: 12px;
-        text-align: center;
-    }
-
-    .organized-label {
-        font-size: 0.75rem;
-        opacity: 0.9;
-    }
-
-    .organized-value {
-        font-size: 1.1rem;
-        font-weight: 600;
-    }
-
-    /* Account Types Grid */
-    .account-types-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
-        margin-top: 1.5rem;
-    }
-
-    .account-type-card {
-        background: #f8fafc;
-        border-radius: 8px;
-        padding: 1rem;
-    }
-
-    .account-type-header {
-        font-size: 0.8rem;
-        font-weight: 600;
-        color: #14b8a6;
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
-        margin-bottom: 0.5rem;
-    }
-
-    .account-type-card ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-
-    .account-type-card ul li {
-        font-size: 0.9rem;
-        color: #444;
-        padding: 0.25rem 0;
-    }
-
-    /* Tax Buckets Grid */
-    .tax-buckets-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
-        margin-top: 1.5rem;
-    }
-
-    .tax-bucket {
-        display: flex;
-        align-items: center;
-        gap: 0.75rem;
-        padding: 0.75rem;
-        background: #f8fafc;
-        border-radius: 8px;
-    }
-
-    .tax-bucket-color {
-        width: 12px;
-        height: 12px;
-        border-radius: 50%;
-        flex-shrink: 0;
-    }
-
-    .tax-bucket-pretax { background: #6366f1; }
-    .tax-bucket-roth { background: #10b981; }
-    .tax-bucket-hsa { background: #f59e0b; }
-    .tax-bucket-taxable { background: #3b82f6; }
-
-    .tax-bucket-name {
-        font-size: 0.9rem;
-        font-weight: 600;
-        color: #1a1a2e;
-    }
-
-    .tax-bucket-desc {
-        font-size: 0.8rem;
-        color: #666;
-    }
-
-    /* Benefits Section */
-    .accounts-benefits-section {
-        padding: 5rem 0;
-        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-    }
-
-    .accounts-section-heading {
-        font-family: 'Tobias', Georgia, serif;
-        font-size: clamp(1.75rem, 3vw, 2.25rem);
-        font-weight: 700;
-        color: #ffffff;
-        text-align: center;
-        margin: 0 0 3rem 0;
-    }
-
-    .accounts-benefits-grid {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 2rem;
-    }
-
-    .accounts-benefit-card {
-        text-align: center;
-        padding: 2rem 1rem;
-        background: rgba(255, 255, 255, 0.05);
-        border-radius: 12px;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .accounts-benefit-icon {
-        font-size: 2.5rem;
-        margin-bottom: 1rem;
-    }
-
-    .accounts-benefit-card h3 {
-        font-size: 1.1rem;
-        font-weight: 600;
-        color: #ffffff;
-        margin: 0 0 0.5rem 0;
-    }
-
-    .accounts-benefit-card p {
-        font-size: 0.9rem;
-        color: rgba(255, 255, 255, 0.7);
-        margin: 0;
-        line-height: 1.5;
-    }
-
-    /* Utility */
-    .text-teal { color: #14b8a6; }
-    .text-italic { font-style: italic; color: #666; }
-
-    /* Responsive */
-    @media (max-width: 1024px) {
-        .accounts-problem-grid {
-            grid-template-columns: 1fr;
-            gap: 2rem;
-        }
-
-        .accounts-benefits-grid {
-            grid-template-columns: repeat(2, 1fr);
-        }
-    }
-
-    @media (max-width: 768px) {
-        .accounts-benefits-grid {
-            grid-template-columns: 1fr;
-        }
-
-        .account-types-grid,
-        .tax-buckets-grid {
-            grid-template-columns: 1fr;
-        }
-    }
-</style>

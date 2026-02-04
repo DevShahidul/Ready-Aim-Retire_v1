@@ -17,7 +17,8 @@ import Breadcrumbs from "../components/Breadcrumbs.astro";
                 <p class="budget-hero-eyebrow">OnTarget™ Feature</p>
                 <h1>
                     Build a Budget That Powers Your <span class="text-primary"
-                        >Retirement Plan</span>
+                        >Retirement Plan</span
+                    >
                 </h1>
                 <p class="budget-hero-subtitle">
                     Every expense. Every category. Connected directly to your
@@ -42,7 +43,8 @@ import Breadcrumbs from "../components/Breadcrumbs.astro";
                 <div class="budget-problem-content">
                     <h2>
                         Retirement calculators ask the <span class="text-teal"
-                            >wrong question</span>
+                            >wrong question</span
+                        >
                     </h2>
                     <p>
                         "What's your annual spending?" That's what most
@@ -200,7 +202,8 @@ import Breadcrumbs from "../components/Breadcrumbs.astro";
             <div class="feature-text">
                 <h2>
                     Different costs, <span class="text-teal"
-                        >different inflation</span>
+                        >different inflation</span
+                    >
                 </h2>
                 <p>
                     Healthcare doesn't inflate at the same rate as groceries.
@@ -286,7 +289,8 @@ import Breadcrumbs from "../components/Breadcrumbs.astro";
             <div class="feature-text">
                 <h2>
                     Your budget drives your <span class="text-teal"
-                        >retirement plan</span>
+                        >retirement plan</span
+                    >
                 </h2>
                 <p>
                     This isn't just a budgeting tool. Your budget connects
@@ -390,7 +394,8 @@ import Breadcrumbs from "../components/Breadcrumbs.astro";
         <div class="container">
             <h2 class="budget-section-heading" data-aos="fade-up">
                 A budget built for <span class="text-teal"
-                    >retirement planning</span>
+                    >retirement planning</span
+                >
             </h2>
             <div
                 class="budget-benefits-grid"
@@ -476,7 +481,8 @@ import Breadcrumbs from "../components/Breadcrumbs.astro";
                 <div class="clearer-plan-text">
                     <h2>
                         Know what retirement will <span class="text-teal"
-                            >actually cost.</span>
+                            >actually cost.</span
+                        >
                     </h2>
                     <p>
                         Build a detailed budget that powers realistic retirement
@@ -632,472 +638,3 @@ import Breadcrumbs from "../components/Breadcrumbs.astro";
         }
     </script>
 </BaseLayout>
-
-<style>
-    /* Hero Section */
-    .budget-hero {
-        background: #ffffff;
-        padding: 8rem 0 3rem 0;
-        text-align: center;
-    }
-
-    .budget-hero-content {
-        max-width: 800px;
-        margin: 0 auto 3rem auto;
-    }
-
-    .budget-hero-eyebrow {
-        font-size: 0.875rem;
-        font-weight: 600;
-        color: #14b8a6;
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
-        margin-bottom: 1rem;
-    }
-
-    .budget-hero h1 {
-        font-family: "Tobias", Georgia, serif;
-        font-size: clamp(2.25rem, 5vw, 3.25rem);
-        font-weight: 700;
-        color: #1a1a2e;
-        line-height: 1.1;
-        margin: 0 0 1.5rem 0;
-    }
-
-    .budget-hero .text-primary {
-        color: #14b8a6;
-    }
-
-    .budget-hero-subtitle {
-        font-size: 1.125rem;
-        color: #444;
-        line-height: 1.7;
-        margin: 0;
-    }
-
-    .budget-hero-image img {
-        max-width: 100%;
-        border-radius: 12px;
-        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
-    }
-
-    /* Problem Section */
-    .budget-problem-section {
-        padding: 5rem 0;
-        background: #f8fafc;
-    }
-
-    .budget-problem-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 4rem;
-        align-items: center;
-    }
-
-    .budget-problem-content h2 {
-        font-family: "Tobias", Georgia, serif;
-        font-size: clamp(1.75rem, 3vw, 2.25rem);
-        font-weight: 700;
-        color: #1a1a2e;
-        line-height: 1.2;
-        margin: 0 0 1.5rem 0;
-    }
-
-    .budget-problem-content p {
-        font-size: 1.05rem;
-        line-height: 1.8;
-        color: #444;
-        margin-bottom: 1rem;
-    }
-
-    .budget-comparison-card {
-        background: #ffffff;
-        border-radius: 16px;
-        padding: 2rem;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-        display: flex;
-        flex-direction: column;
-        gap: 1.5rem;
-        align-items: center;
-    }
-
-    .comparison-simple,
-    .comparison-detailed {
-        width: 100%;
-        padding: 1.25rem;
-        border-radius: 12px;
-        text-align: center;
-    }
-
-    .comparison-simple {
-        background: #fef2f2;
-        border: 2px solid #fecaca;
-    }
-
-    .comparison-detailed {
-        background: #f0fdfa;
-        border: 2px solid #99f6e4;
-    }
-
-    .comparison-label {
-        font-size: 0.75rem;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
-        color: #666;
-        margin-bottom: 0.75rem;
-    }
-
-    .comparison-input {
-        display: flex;
-        justify-content: center;
-        gap: 0.5rem;
-        font-size: 1rem;
-        margin-bottom: 0.5rem;
-    }
-
-    .input-label {
-        color: #666;
-    }
-
-    .input-value {
-        font-weight: 600;
-        color: #1a1a2e;
-    }
-
-    .comparison-note {
-        font-size: 0.85rem;
-        color: #999;
-        font-style: italic;
-    }
-
-    .comparison-vs {
-        font-size: 1rem;
-        font-weight: 600;
-        color: #999;
-    }
-
-    .mini-budget {
-        text-align: left;
-        font-size: 0.9rem;
-    }
-
-    .mini-item {
-        padding: 0.35rem 0;
-        color: #1a1a2e;
-    }
-
-    /* Categories Grid */
-    .categories-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 0.75rem;
-        margin: 1.5rem 0;
-    }
-
-    .category-item {
-        background: #f8fafc;
-        padding: 0.6rem 0.75rem;
-        border-radius: 8px;
-        font-size: 0.9rem;
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-    }
-
-    .category-item span {
-        font-size: 1.1rem;
-    }
-
-    /* Expense Types */
-    .expense-types {
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-        margin-top: 1rem;
-    }
-
-    .expense-type {
-        padding: 0.5rem 0.75rem;
-        border-radius: 6px;
-        font-size: 0.9rem;
-    }
-
-    .type-need {
-        background: #dbeafe;
-        color: #1e40af;
-    }
-
-    .type-want {
-        background: #fef3c7;
-        color: #92400e;
-    }
-
-    .type-splurge {
-        background: #fce7f3;
-        color: #9d174d;
-    }
-
-    /* Inflation Example */
-    .inflation-example {
-        margin: 1.5rem 0;
-    }
-
-    .inflation-card {
-        background: #f8fafc;
-        border-radius: 12px;
-        padding: 1.25rem;
-    }
-
-    .inflation-header {
-        font-weight: 600;
-        color: #1a1a2e;
-        margin-bottom: 1rem;
-        padding-bottom: 0.75rem;
-        border-bottom: 1px solid #e2e8f0;
-    }
-
-    .inflation-row {
-        display: flex;
-        justify-content: space-between;
-        padding: 0.5rem 0;
-        font-size: 0.95rem;
-    }
-
-    .inflation-value {
-        font-weight: 600;
-        color: #dc2626;
-    }
-
-    /* Integration Flow */
-    .integration-flow {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 0.5rem;
-        margin: 1.5rem 0;
-        flex-wrap: wrap;
-    }
-
-    .flow-step {
-        text-align: center;
-        padding: 1rem;
-        background: #f8fafc;
-        border-radius: 12px;
-        min-width: 100px;
-    }
-
-    .flow-icon {
-        font-size: 1.75rem;
-        margin-bottom: 0.5rem;
-    }
-
-    .flow-label {
-        font-size: 0.8rem;
-        font-weight: 600;
-        color: #1a1a2e;
-    }
-
-    .flow-arrow {
-        font-size: 1.5rem;
-        color: #14b8a6;
-    }
-
-    /* Scenarios Grid */
-    .scenarios-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1rem;
-        margin: 1.5rem 0;
-    }
-
-    .scenario-card {
-        background: #f8fafc;
-        border-radius: 12px;
-        padding: 1.25rem;
-        text-align: center;
-    }
-
-    .scenario-name {
-        font-weight: 600;
-        color: #1a1a2e;
-        margin-bottom: 0.25rem;
-    }
-
-    .scenario-desc {
-        font-size: 0.85rem;
-        color: #666;
-        margin-bottom: 0.75rem;
-    }
-
-    .scenario-rate {
-        font-weight: 700;
-        font-size: 1.1rem;
-        padding: 0.35rem 0.75rem;
-        border-radius: 20px;
-        display: inline-block;
-    }
-
-    .scenario-high {
-        background: #d1fae5;
-        color: #065f46;
-    }
-
-    .scenario-medium {
-        background: #fef3c7;
-        color: #92400e;
-    }
-
-    .scenario-low {
-        background: #fee2e2;
-        color: #991b1b;
-    }
-
-    /* Benefits Section */
-    .budget-benefits-section {
-        padding: 5rem 0;
-        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-    }
-
-    .budget-section-heading {
-        font-family: "Tobias", Georgia, serif;
-        font-size: clamp(1.75rem, 3vw, 2.25rem);
-        font-weight: 700;
-        color: #ffffff;
-        text-align: center;
-        margin: 0 0 3rem 0;
-    }
-
-    .budget-benefits-grid {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 2rem;
-    }
-
-    .budget-benefit-card {
-        text-align: center;
-        padding: 2rem 1rem;
-        background: rgba(255, 255, 255, 0.05);
-        border-radius: 12px;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .budget-benefit-icon {
-        font-size: 2.5rem;
-        margin-bottom: 1rem;
-    }
-
-    .budget-benefit-card h3 {
-        font-size: 1.1rem;
-        font-weight: 600;
-        color: #ffffff;
-        margin: 0 0 0.5rem 0;
-    }
-
-    .budget-benefit-card p {
-        font-size: 0.9rem;
-        color: rgba(255, 255, 255, 0.7);
-        margin: 0;
-        line-height: 1.5;
-    }
-
-    /* Steps Section */
-    .budget-steps-section {
-        padding: 5rem 0;
-        background: #f8fafc;
-    }
-
-    .budget-section-heading-dark {
-        font-family: "Tobias", Georgia, serif;
-        font-size: clamp(1.75rem, 3vw, 2.25rem);
-        font-weight: 700;
-        color: #1a1a2e;
-        text-align: center;
-        margin: 0 0 3rem 0;
-    }
-
-    .budget-steps-grid {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 2rem;
-    }
-
-    .budget-step {
-        text-align: center;
-        padding: 1.5rem;
-    }
-
-    .budget-step-number {
-        width: 48px;
-        height: 48px;
-        background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);
-        color: #ffffff;
-        font-size: 1.25rem;
-        font-weight: 700;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0 auto 1rem auto;
-    }
-
-    .budget-step h3 {
-        font-family: "Inter", sans-serif;
-        font-size: 1.125rem;
-        font-weight: 600;
-        color: #1a1a2e;
-        margin: 0 0 0.75rem 0;
-    }
-
-    .budget-step p {
-        font-size: 0.95rem;
-        color: #666;
-        line-height: 1.6;
-        margin: 0;
-    }
-
-    /* Utility */
-    .text-teal {
-        color: #14b8a6;
-    }
-    .text-italic {
-        font-style: italic;
-        color: #666;
-    }
-
-    /* Responsive */
-    @media (max-width: 1024px) {
-        .budget-problem-grid {
-            grid-template-columns: 1fr;
-            gap: 2rem;
-        }
-
-        .budget-benefits-grid,
-        .budget-steps-grid {
-            grid-template-columns: repeat(2, 1fr);
-        }
-
-        .scenarios-grid {
-            grid-template-columns: 1fr;
-        }
-    }
-
-    @media (max-width: 768px) {
-        .budget-benefits-grid,
-        .budget-steps-grid {
-            grid-template-columns: 1fr;
-        }
-
-        .categories-grid {
-            grid-template-columns: repeat(2, 1fr);
-        }
-
-        .integration-flow {
-            flex-direction: column;
-        }
-
-        .flow-arrow {
-            transform: rotate(90deg);
-        }
-    }
-</style>
