@@ -28,6 +28,35 @@
 
     /* UI Colors */
     --color-border: rgba(255, 255, 255, 0.1); /* Subtle borders */
+
+    /* Text sizes */
+    --text-xs: 12px;
+    --text-sm: 14px;
+    --text-base: 16px;
+    --text-md: 17px;
+    --text-lg: 18px;
+    --text-xl: 20px;
+    --text-2xl: 25px;
+    --text-display: 45px;
+
+    /* Text line heights */
+    --text-lh-tight: 18px;
+    --text-lh-normal: 28px;
+
+    /* Heading sizes */
+    --heading-xs: 25px;
+    --heading-sm: 28px;
+    --heading-md: 30px;
+    --heading-lg: 48px;
+    --heading-xl: 50px;
+    --heading-2xl: 80px;
+    --heading-hero: 100px;
+
+    /* Heading line heights */
+    --heading-lh-tight: 35px;
+    --heading-lh-md: 50px;
+    --heading-lh-lg: 85px;
+    --heading-lh-hero: 95px;
 }
 
 /* ----------------------------------------
