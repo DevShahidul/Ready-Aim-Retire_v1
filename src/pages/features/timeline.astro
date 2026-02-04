@@ -1,7 +1,7 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import CTABanner from '../../components/CTABanner.astro';
-import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTABanner from "../../components/CTABanner.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
 ---
 
 <BaseLayout
@@ -12,12 +12,18 @@ import Breadcrumbs from '../../components/Breadcrumbs.astro';
     <!-- Hero Section -->
     <section class="hero feature-detail-hero">
         <div class="container" data-aos="fade-up">
-            <Breadcrumbs theme="dark" items={[
-                { label: "Features", href: "/features" },
-                { label: "Holistic Timeline" }
-            ]} />
+            <Breadcrumbs
+                theme="dark"
+                items={[
+                    { label: "Features", href: "/features" },
+                    { label: "Holistic Timeline" },
+                ]}
+            />
             <h1>Watch Your Financial Life Unfold Year by Year</h1>
-            <p>See the complete picture of your retirement with a comprehensive timeline that connects every aspect of your financial plan.</p>
+            <p>
+                See the complete picture of your retirement with a comprehensive
+                timeline that connects every aspect of your financial plan.
+            </p>
         </div>
     </section>
 
@@ -27,42 +33,92 @@ import Breadcrumbs from '../../components/Breadcrumbs.astro';
             <div class="feature-content">
                 <div class="content-block" data-aos="fade-up">
                     <h2>Your Entire Financial Future in One View</h2>
-                    <p>Most retirement calculators give you a single number or percentage. ReadyAimRetire shows you year-by-year exactly what happens with your money—from today through age 100.</p>
-                    <p>Track every account balance, income source, expense, tax payment, and withdrawal across decades. Understand not just if your money will last, but how your financial life will evolve.</p>
+                    <p>
+                        Most retirement calculators give you a single number or
+                        percentage. ReadyAimRetire shows you year-by-year
+                        exactly what happens with your money—from today through
+                        age 100.
+                    </p>
+                    <p>
+                        Track every account balance, income source, expense, tax
+                        payment, and withdrawal across decades. Understand not
+                        just if your money will last, but how your financial
+                        life will evolve.
+                    </p>
                 </div>
 
-                <div class="benefits-grid" data-aos="fade-up" data-aos-delay="100">
+                <div
+                    class="benefits-grid"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                >
                     <div class="benefit-item">
                         <i class="fas fa-calendar-alt"></i>
                         <h3>Year-by-Year Clarity</h3>
-                        <p>See exactly what happens at ages 65, 72, 85, and every year in between.</p>
+                        <p>
+                            See exactly what happens at ages 65, 72, 85, and
+                            every year in between.
+                        </p>
                     </div>
                     <div class="benefit-item">
                         <i class="fas fa-link"></i>
                         <h3>Connected Planning</h3>
-                        <p>Watch how withdrawals affect taxes, how taxes affect Social Security, and how it all connects.</p>
+                        <p>
+                            Watch how withdrawals affect taxes, how taxes affect
+                            Social Security, and how it all connects.
+                        </p>
                     </div>
                     <div class="benefit-item">
                         <i class="fas fa-chart-area"></i>
                         <h3>Visual Insights</h3>
-                        <p>Rich charts and graphs make complex financial data easy to understand at a glance.</p>
+                        <p>
+                            Rich charts and graphs make complex financial data
+                            easy to understand at a glance.
+                        </p>
                     </div>
                     <div class="benefit-item">
                         <i class="fas fa-calculator"></i>
                         <h3>Detailed Tables</h3>
-                        <p>Drill down into the numbers with comprehensive data tables for every year.</p>
+                        <p>
+                            Drill down into the numbers with comprehensive data
+                            tables for every year.
+                        </p>
                     </div>
                 </div>
 
                 <div class="content-block" data-aos="fade-up">
                     <h2>Track Everything That Matters</h2>
                     <ul class="feature-list">
-                        <li><i class="fas fa-check-circle"></i> <strong>Account balances:</strong> Traditional IRA, Roth IRA, taxable accounts, 401(k)s, and more</li>
-                        <li><i class="fas fa-check-circle"></i> <strong>Income sources:</strong> Social Security, pensions, part-time work, rental income</li>
-                        <li><i class="fas fa-check-circle"></i> <strong>Spending patterns:</strong> Essential expenses, discretionary spending, healthcare costs</li>
-                        <li><i class="fas fa-check-circle"></i> <strong>Tax implications:</strong> Federal taxes, state taxes, IRMAA surcharges</li>
-                        <li><i class="fas fa-check-circle"></i> <strong>Required distributions:</strong> RMDs from traditional accounts starting at age 73</li>
-                        <li><i class="fas fa-check-circle"></i> <strong>Strategic moves:</strong> Roth conversions, tax-loss harvesting, withdrawal strategies</li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <strong>Account balances:</strong> Traditional IRA, Roth
+                            IRA, taxable accounts, 401(k)s, and more
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <strong>Income sources:</strong> Social Security, pensions,
+                            part-time work, rental income
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <strong>Spending patterns:</strong> Essential expenses,
+                            discretionary spending, healthcare costs
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <strong>Tax implications:</strong> Federal taxes, state
+                            taxes, IRMAA surcharges
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <strong>Required distributions:</strong> RMDs from traditional
+                            accounts starting at age 73
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <strong>Strategic moves:</strong> Roth conversions, tax-loss
+                            harvesting, withdrawal strategies
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -74,8 +130,14 @@ import Breadcrumbs from '../../components/Breadcrumbs.astro';
         <div class="container">
             <div class="cta-box" data-aos="fade-up">
                 <h2>See Your Complete Timeline Today</h2>
-                <p>Start planning with year-by-year clarity and watch your retirement strategy come to life.</p>
-                <a href={`${import.meta.env.PUBLIC_APP_URL}/signup`} class="btn btn-primary">Get Started Free</a>
+                <p>
+                    Start planning with year-by-year clarity and watch your
+                    retirement strategy come to life.
+                </p>
+                <a
+                    href={`${import.meta.env.PUBLIC_APP_URL}/signup`}
+                    class="btn btn-primary">Get Started Free</a
+                >
             </div>
         </div>
     </section>
@@ -85,189 +147,29 @@ import Breadcrumbs from '../../components/Breadcrumbs.astro';
 
     <!-- BreadcrumbList Schema for SEO -->
     <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-            {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://readyaimretire.com"
-            },
-            {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Features",
-                "item": "https://readyaimretire.com/features"
-            },
-            {
-                "@type": "ListItem",
-                "position": 3,
-                "name": "Holistic Timeline",
-                "item": "https://readyaimretire.com/features/timeline"
-            }
-        ]
-    }
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://readyaimretire.com"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Features",
+                    "item": "https://readyaimretire.com/features"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "Holistic Timeline",
+                    "item": "https://readyaimretire.com/features/timeline"
+                }
+            ]
+        }
     </script>
 </BaseLayout>
-
-<style>
-    .feature-detail-hero {
-        background: linear-gradient(135deg, #3b7eff 0%, #2563eb 100%);
-        padding: 8rem 0 3rem 0;
-        text-align: left;
-    }
-
-    .feature-detail-hero h1 {
-        font-family: 'Inter', sans-serif;
-        font-size: clamp(2rem, 5vw, 3rem);
-        font-weight: 700;
-        color: #ffffff;
-        margin: 0 0 1.5rem 0;
-        line-height: 1.2;
-        max-width: 900px;
-    }
-
-    .feature-detail-hero p {
-        font-size: clamp(1rem, 2vw, 1.25rem);
-        color: rgba(255, 255, 255, 0.9);
-        max-width: 800px;
-        line-height: 1.6;
-        margin: 0;
-    }
-
-    .feature-content {
-        max-width: 900px;
-        margin: 0 auto;
-    }
-
-    .content-block {
-        margin-bottom: 3rem;
-    }
-
-    .content-block h2 {
-        font-family: 'Inter', sans-serif;
-        font-size: clamp(1.5rem, 3vw, 2rem);
-        font-weight: 700;
-        color: #1a1a2e;
-        margin: 0 0 1.5rem 0;
-        line-height: 1.3;
-    }
-
-    .content-block p {
-        font-size: 1.05rem;
-        line-height: 1.8;
-        color: #444;
-        margin-bottom: 1rem;
-    }
-
-    .benefits-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-        gap: 2rem;
-        margin: 3rem 0;
-    }
-
-    .benefit-item {
-        text-align: center;
-        padding: 1.5rem;
-    }
-
-    .benefit-item i {
-        font-size: 2.5rem;
-        color: #3b7eff;
-        margin-bottom: 1rem;
-    }
-
-    .benefit-item h3 {
-        font-family: 'Inter', sans-serif;
-        font-size: 1.15rem;
-        font-weight: 600;
-        color: #1a1a2e;
-        margin: 0 0 0.75rem 0;
-    }
-
-    .benefit-item p {
-        font-size: 0.95rem;
-        line-height: 1.6;
-        color: #666;
-        margin: 0;
-    }
-
-    .feature-list {
-        list-style: none;
-        padding: 0;
-        margin: 2rem 0;
-    }
-
-    .feature-list li {
-        display: flex;
-        align-items: flex-start;
-        gap: 1rem;
-        margin-bottom: 1.25rem;
-        font-size: 1.05rem;
-        line-height: 1.7;
-        color: #444;
-    }
-
-    .feature-list li i {
-        color: #22c997;
-        font-size: 1.25rem;
-        margin-top: 0.25rem;
-        flex-shrink: 0;
-    }
-
-    .feature-list li strong {
-        color: #1a1a2e;
-        font-weight: 600;
-    }
-
-    .cta-box {
-        background: linear-gradient(135deg, #3b5998 0%, #415776 100%);
-        border-radius: 20px;
-        padding: 3rem;
-        text-align: center;
-        color: #ffffff;
-    }
-
-    .cta-box h2 {
-        font-family: 'Inter', sans-serif;
-        font-size: clamp(1.5rem, 3vw, 2rem);
-        font-weight: 700;
-        color: #ffffff;
-        margin: 0 0 1rem 0;
-    }
-
-    .cta-box p {
-        font-size: 1.1rem;
-        color: rgba(255, 255, 255, 0.9);
-        margin: 0 0 2rem 0;
-    }
-
-    .cta-box .btn-primary {
-        background-color: #14b8a6;
-        color: #ffffff;
-        padding: 0.85rem 2.5rem;
-        font-size: 1rem;
-        font-weight: 600;
-        border-radius: 50px;
-        border: none;
-        transition: background-color 0.2s, transform 0.2s;
-    }
-
-    .cta-box .btn-primary:hover {
-        background-color: #0d9488;
-        transform: translateY(-2px);
-    }
-
-    @media (max-width: 768px) {
-        .benefits-grid {
-            grid-template-columns: 1fr;
-        }
-
-        .cta-box {
-            padding: 2rem;
-        }
-    }
-</style>
