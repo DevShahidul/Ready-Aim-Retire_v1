@@ -2,7 +2,7 @@
 // Header component with dropdown menus
 ---
 
-<header>
+<header class="header">
     <div class="nav">
         <a href="/" class="logo">
             <img
@@ -203,12 +203,12 @@
             box-shadow 0.3s ease;
     }
 
-    header.scrolled,
-    .solid-header header {
+    /*header.scrolled,
+    body.solid-header header {
         background: var(--color-bg-header);
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
         backdrop-filter: blur(8px);
-    }
+    }*/
 
     header .nav {
         max-width: 1800px;
@@ -257,35 +257,30 @@
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     }
 
-    .solid-header header {
-        background: rgba(255, 255, 255, 0.98);
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    }
-
     header.scrolled .logo-text,
     header.scrolled nav ul li a,
     header.scrolled .nav-link,
-    .solid-header header .logo-text,
-    .solid-header header nav ul li a,
-    .solid-header header .nav-link {
+    body.solid-header header .logo-text,
+    body.solid-header header nav ul li a,
+    body.solid-header header .nav-link {
         color: #1a1a2e;
     }
 
     header.scrolled .btn-outline,
-    .solid-header header .btn-outline {
+    body.solid-header header .btn-outline {
         background-color: #1a1a2e;
         color: #ffffff;
     }
 
     header.scrolled .btn-outline:hover,
-    .solid-header header .btn-outline:hover {
+    body.solid-header header .btn-outline:hover {
         background-color: #2a2a3e;
         color: #ffffff;
     }
 
     /* Logo image - invert colors when scrolled */
     header.scrolled .logo img,
-    .solid-header header .logo img {
+    body.solid-header header .logo img {
         filter: brightness(0) saturate(100%);
     }
 
@@ -317,7 +312,7 @@
     }
 
     header.scrolled .main-nav ul li a:hover,
-    .solid-header header .main-nav ul li a:hover {
+    body.solid-header header .main-nav ul li a:hover {
         color: var(--color-primary);
     }
 
@@ -462,7 +457,7 @@
     }
 
     header.scrolled .mobile-menu-btn span,
-    .solid-header header .mobile-menu-btn span {
+    body.solid-header header .mobile-menu-btn span {
         background-color: #1a1a2e;
     }
 
