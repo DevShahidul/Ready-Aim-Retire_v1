@@ -1143,7 +1143,7 @@ section .feature {
 
 /* Clearer way to plan section*/
 .clearer-way {
-    background-color: var(--color-primary);
+    background-color: #bbe0d3;
     padding: 128px 0 114px;
 }
 .clearer-plan-benefits {
