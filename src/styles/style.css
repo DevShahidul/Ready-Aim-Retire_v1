@@ -2,9 +2,13 @@
    ReadyAimRetire Global Styles - Optimized
    ======================================== */
 
-/* ----------------------------------------
-   CSS Custom Properties (Design Tokens)
-   ---------------------------------------- */
+/* ---------------------------------------- Base Styles ---------------------------------------- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 :root {
     /* Brand Colors */
     --color-primary: #41bab4;
@@ -59,7 +63,7 @@
     --heading-lh-hero: 95px;
 }
 
-@media (max-width: 985px) {
+@media (max-width: 1400px) {
     :root {
         --text-md: 12px;
         --text-lg: 14px;
@@ -69,9 +73,7 @@
     }
 }
 
-/* ----------------------------------------
-   Base Styles
-   ---------------------------------------- */
+/* ---------------------------------------- Typography ---------------------------------------- */
 @font-face {
     font-family: "Tobias";
     src: url("/fonts/TobiasTRIAL-Medium.woff") format("woff");
@@ -80,15 +82,75 @@
     font-display: swap;
 }
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+body {
+    font-family: "Geist", sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: var(--color-bg-light);
 }
 
-/* ----------------------------------------
-   Section Backgrounds & Padding
-   ---------------------------------------- */
+.heading-serif {
+    font-family: "Tobias", serif;
+}
+
+.text-primary {
+    color: var(--color-primary);
+}
+
+.text-teal {
+    color: var(--color-primary);
+}
+
+.text-dark {
+    color: var(--color-text-dark);
+}
+
+.text-muted {
+    color: #888;
+}
+
+.text-light {
+    color: #ffffff;
+}
+
+.text-light-muted {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.text-italic {
+    font-style: italic;
+}
+
+.text-bold {
+    font-weight: 600;
+}
+
+.text-strong {
+    font-weight: 700;
+}
+
+h2 {
+    font-size: var(--text-display);
+    font-weight: 500;
+    line-height: 48px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+button,
+a {
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    color: inherit;
+    text-decoration: none;
+}
+
+/* ---------------------------------------- Section Backgrounds & Padding ---------------------------------------- */
+
 .section {
     overflow: hidden;
 }
@@ -128,9 +190,7 @@
     }
 }
 
-/* ----------------------------------------
-   Utility Classes
-   ---------------------------------------- */
+/* ---------------------------------------- Utility Classes ---------------------------------------- */
 .mt-0 {
     margin-top: 0;
 }
@@ -180,33 +240,7 @@
     border-bottom: 1px solid var(--color-muted-border);
 }
 
-body {
-    font-family: "Geist", sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: var(--color-bg-light);
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
-button,
-a {
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
-/* ----------------------------------------
-   Container & Layout
-   ---------------------------------------- */
+/* ---------------------------------------- Container & Layout ---------------------------------------- */
 .container {
     max-width: 1580px;
     margin: 0 auto;
@@ -219,52 +253,7 @@ a {
     }
 }
 
-/* ----------------------------------------
-   Typography
-   ---------------------------------------- */
-.heading-serif {
-    font-family: "Tobias", serif;
-}
-
-.text-primary {
-    color: var(--color-primary);
-}
-
-.text-teal {
-    color: var(--color-primary);
-}
-
-.text-dark {
-    color: var(--color-text-dark);
-}
-
-.text-muted {
-    color: #888;
-}
-
-.text-light {
-    color: #ffffff;
-}
-
-.text-light-muted {
-    color: rgba(255, 255, 255, 0.9);
-}
-
-.text-italic {
-    font-style: italic;
-}
-
-.text-bold {
-    font-weight: 600;
-}
-
-.text-strong {
-    font-weight: 700;
-}
-
-/* ----------------------------------------
-   Buttons - Consolidated
-   ---------------------------------------- */
+/* ---------------------------------------- Buttons - Consolidated ---------------------------------------- */
 .btn {
     display: inline-flex;
     align-items: center;
@@ -400,9 +389,7 @@ a {
     color: #fff;
 }
 
-/* ----------------------------------------
-   Cards - Consolidated
-   ---------------------------------------- */
+/* ---------------------------------------- Cards - Consolidated ---------------------------------------- */
 .card {
     background: #ffffff;
     border-radius: 12px;
@@ -596,9 +583,7 @@ a {
     }
 }
 
-/* ----------------------------------------
-   Lists
-   ---------------------------------------- */
+/* ---------------------------------------- Lists ---------------------------------------- */
 .checklist {
     list-style: none;
     padding: 0;
@@ -688,9 +673,7 @@ a {
     color: #555;
 }
 
-/* ----------------------------------------
-   Layout Components
-   ---------------------------------------- */
+/* ---------------------------------------- Layout Components ---------------------------------------- */
 .columns-section {
     background-color: #ffffff;
     padding: 4rem 0;
@@ -771,6 +754,113 @@ a {
     .columns-section,
     .columns-section-gray {
         padding: 3rem 0;
+    }
+}
+
+/* Split content section*/
+.split-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 58px;
+    gap: 5px;
+    background-color: var(--color-bg-light);
+    border: 20px solid #ffffff;
+    border-radius: 30px;
+}
+
+.split-content-text {
+    max-width: 595px;
+    p {
+        font-size: var(--text-xl);
+        margin-top: 20px;
+    }
+}
+
+.split-content-thumb {
+    position: relative;
+    img {
+        width: 100%;
+        max-width: 772px;
+        border-radius: 0px 20px 20px 0px;
+    }
+    .split-content-text-overlay {
+        position: absolute;
+        right: 60px;
+        bottom: 55px;
+        text-align: right;
+        color: #ffffff;
+        .stat-number {
+            font-size: calc(var(--heading-hero) + 20px);
+            line-height: 126px;
+        }
+        .stat-headline {
+            font-size: var(--text-lh-normal);
+            font-weight: 500;
+        }
+        .stat-subtext {
+            font-size: var(--text-xl);
+            margin-top: 10px;
+        }
+    }
+}
+
+@media (max-width: 1400px) {
+    .split-content {
+        padding-left: 10px;
+    }
+    .split-content-text {
+        max-width: 400px;
+        p {
+            font-size: 14px;
+            margin-top: 5px;
+        }
+    }
+
+    .split-content-thumb {
+        img {
+            max-width: 500px;
+        }
+        .split-content-text-overlay {
+            .stat-number {
+                font-size: 30px;
+                line-height: 36px;
+            }
+            .stat-headline {
+                font-size: 14px;
+            }
+            .stat-subtext {
+                font-size: 12px;
+                margin-top: 5px;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .split-content {
+        flex-direction: column;
+        padding-left: 0;
+    }
+
+    .split-content-text {
+        order: 2;
+        max-width: 100%;
+        padding: 5px;
+        h2 {
+            line-height: 30px;
+        }
+    }
+
+    .split-content-thumb {
+        img {
+            max-width: 100%;
+            border-radius: 20px;
+        }
+        .split-content-text-overlay {
+            right: 5px;
+            bottom: 10px;
+        }
     }
 }
 
@@ -972,11 +1062,6 @@ section .feature {
         color: var(--color-text-muted);
         margin-bottom: 20px;
     }
-    h2 {
-        font-size: var(--text-display);
-        font-weight: 500;
-        line-height: 48px;
-    }
     p {
         font-size: var(--text-lg);
         margin-top: 20px;
@@ -1054,6 +1139,12 @@ section .feature {
             margin-top: 10px;
         }
     }
+}
+
+/* Clearer way to plan section*/
+.clearer-way {
+    background-color: var(--color-primary);
+    padding: 128px 0 114px;
 }
 
 /* Home page styles end --------------------------------------------*/
