@@ -59,6 +59,16 @@
     --heading-lh-hero: 95px;
 }
 
+@media (max-width: 985px) {
+    :root {
+        --text-md: 12px;
+        --text-lg: 14px;
+        --text-xl: 18px;
+        --text-2xl: 16px;
+        --text-display: 22px;
+    }
+}
+
 /* ----------------------------------------
    Base Styles
    ---------------------------------------- */
@@ -950,7 +960,8 @@ section .feature {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
-    padding: 80px 0;
+    gap: 1rem;
+    padding: 80px 20px;
 }
 .feature-text {
     max-width: 720px;
@@ -1021,6 +1032,28 @@ section .feature {
 
 .feature-img {
     max-width: 705px;
+}
+
+@media (max-width: 985px) {
+    section .feature {
+        grid-template-columns: 1fr;
+        padding: 20px 20px;
+    }
+    .feature-text {
+        h3 {
+            line-height: 18px;
+            margin-bottom: 5px;
+        }
+        h2 {
+            line-height: 28px;
+        }
+        p {
+            margin-top: 10px;
+        }
+        .btn-dark {
+            margin-top: 10px;
+        }
+    }
 }
 
 /* Home page styles end --------------------------------------------*/
