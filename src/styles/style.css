@@ -1146,6 +1146,37 @@ section .feature {
     background-color: var(--color-primary);
     padding: 128px 0 114px;
 }
+.clearer-plan-benefits {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-grow: 1;
+    gap: 60px;
+    margin-top: 55px;
+}
+
+.benefit-pill {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    border-radius: 50px;
+    font-size: var(--text-xl);
+    padding: 14px 30px;
+    background-color: #ffffff;
+}
+
+@media (max-width: 767px) {
+    .clearer-way {
+        padding: 20px 0;
+    }
+    .clearer-plan-benefits {
+        margin-top: 10px;
+        gap: 10px;
+    }
+    .benefit-pill {
+        width: 100%;
+    }
+}
 
 /* Home page styles end --------------------------------------------*/
 
