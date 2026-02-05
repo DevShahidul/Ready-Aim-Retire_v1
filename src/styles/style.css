@@ -383,8 +383,7 @@ a {
     margin-bottom: 1rem;
 }
 
-/* Home page styles start --------------------------------------------*/
-/* Hero (home page)*/
+/* Common hero section style*/
 .hero-section {
     background-color: var(--color-bg-light);
     padding: 8rem 0 3rem 0;
@@ -481,16 +480,16 @@ a {
     }
 }
 
-/* Main hero with background */
+/* Home page styles start --------------------------------------------*/
+/* Hero (home page)*/
 .hero {
     display: flex;
     text-align: center;
     padding-top: 177px;
-    padding-bottom: 27.6%;
-    background: url("/images/hero-bg.svg") center top no-repeat;
-    background-size: min(100%, 1000px) auto;
+    padding-bottom: 21.6%;
+    background: url("/images/hero-bg.svg") left top no-repeat;
+    background-size: min(100%, 1350px) auto;
     background-color: var(--color-secondary);
-    background-position: left;
     position: relative;
 }
 
@@ -563,10 +562,7 @@ a {
 }
 
 .hero-screenshot .hero-img {
-    max-width: 95%;
-    width: 1105px;
     border-radius: 10px;
-    box-shadow: -11px 15px 29px -17px rgba(128, 128, 128, 0.82);
     height: auto;
     margin-left: auto;
     margin-right: auto;
@@ -574,7 +570,7 @@ a {
 
 @media (max-width: 768px) {
     .hero {
-        padding: 8rem 0 4rem 0;
+        padding: 8rem 0 0 0;
     }
 
     .hero h1 {
@@ -594,10 +590,6 @@ a {
 }
 
 /* Home page styles end --------------------------------------------*/
-
-/* ----------------------------------------
-   Hero Sections
-   ---------------------------------------- */
 
 /* ----------------------------------------
    Lists
