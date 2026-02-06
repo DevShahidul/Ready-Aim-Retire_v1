@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Breadcrumbs from "../components/Breadcrumbs.astro";
+import CommonHero from "../components/CommonHero.astro";
 ---
 
 <BaseLayout
@@ -9,14 +10,9 @@ import Breadcrumbs from "../components/Breadcrumbs.astro";
     solidHeader={true}
 >
     <!-- Pricing Section -->
+    <CommonHero title={"Simple, transparent pricing"} />
     <section class="pricing-section">
         <div class="container">
-            <Breadcrumbs items={[{ label: "Pricing" }]} />
-            <h1 class="pricing-title heading-serif" data-aos="fade-up">
-                Simple, transparent pricing
-            </h1>
-
-            <!-- Intro text and Billing Toggle on same row -->
             <div
                 class="pricing-subheader"
                 data-aos="fade-up"
