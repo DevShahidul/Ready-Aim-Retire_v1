@@ -1,9 +1,9 @@
 ---
-const { blog } = Astro.props;
+const { blog, serial } = Astro.props;
 ---
 
 <div class="blog-card-wrapper">
-    <div class="blog-card">
+    <div class={`blog-card ${serial === 1 ? "active" : ""}`}>
         <div class="blog-card-main">
             <div class="blog-card-image-wrapper">
                 <img src={blog.img} alt={blog.title} class="blog-card-image" />
@@ -38,6 +38,7 @@ const { blog } = Astro.props;
         flex-direction: column;
         height: 100%;
         transition: all 0.3s ease;
+        min-height: 500px;
     }
 
     .blog-card:hover {
@@ -45,7 +46,8 @@ const { blog } = Astro.props;
         transform: translateY(-4px);
     }
 
-    .blog-card:hover {
+    .blog-card:hover,
+    .blog-card.active {
         .blog-card-footer {
             display: none;
         }
@@ -69,16 +71,19 @@ const { blog } = Astro.props;
         z-index: 1;
     }
 
-    .blog-card:hover .blog-card-image-wrapper {
+    .blog-card:hover .blog-card-image-wrapper,
+    .blog-card.active .blog-card-image-wrapper {
         opacity: 1;
     }
 
     .blog-card-image {
         width: 100%;
-        height: 100%;
+        height: 50%;
         object-fit: cover;
         display: block;
         transition: transform 0.4s ease;
+        position: absolute;
+        bottom: 0;
     }
 
     .blog-card:hover .blog-card-image {
@@ -91,9 +96,10 @@ const { blog } = Astro.props;
         top: 0;
         left: 0;
         right: 0;
-        background: rgba(74, 95, 127, 0.95);
+        background: rgba(74, 95, 127);
         padding: 1.5rem;
         z-index: 2;
+        min-height: 50%;
     }
 
     .blog-card-title-overlay {
@@ -145,6 +151,7 @@ const { blog } = Astro.props;
         -webkit-line-clamp: 6;
         -webkit-box-orient: vertical;
         overflow: hidden;
+        margin-top: 20px;
     }
 
     /* Footer */
@@ -167,10 +174,6 @@ const { blog } = Astro.props;
         transition: color 0.3s ease;
     }
 
-    .blog-card-link:hover {
-        color: #4a5f7f;
-    }
-
     .blog-card-date {
         color: #95a5a6;
         font-size: 0.875rem;
@@ -186,6 +189,10 @@ const { blog } = Astro.props;
     @media (max-width: 768px) {
         .blog-card-main {
             min-height: 250px;
+        }
+
+        .blog-card {
+            min-height: auto;
         }
 
         .blog-card-title,
