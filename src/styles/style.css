@@ -63,8 +63,6 @@
     --heading-lh-hero: 95px;
 }
 
-
-
 /* ---------------------------------------- Typography ---------------------------------------- */
 @font-face {
     font-family: "Tobias";
@@ -171,8 +169,6 @@ a {
     padding-top: 0;
 }
 
-
-
 /* ---------------------------------------- Utility Classes ---------------------------------------- */
 .mt-0 {
     margin-top: 0;
@@ -229,8 +225,6 @@ a {
     margin: 0 auto;
     padding: 0 20px;
 }
-
-
 
 /* ---------------------------------------- Buttons - Consolidated ---------------------------------------- */
 .btn {
@@ -532,12 +526,6 @@ a {
     margin: 0;
 }
 
-
-
-
-
-
-
 /* ---------------------------------------- Lists ---------------------------------------- */
 .checklist {
     list-style: none;
@@ -685,10 +673,6 @@ a {
     font-style: italic;
 }
 
-
-
-
-
 /* Split content section*/
 .split-content {
     display: flex;
@@ -736,10 +720,6 @@ a {
         }
     }
 }
-
-
-
-
 
 /* Home page styles start --------------------------------------------*/
 /* Hero (home page)*/
@@ -829,10 +809,6 @@ a {
     margin-right: auto;
 }
 
-
-
-
-
 /* OnTarget Section */
 .ontarget-section {
     padding: 148px 0 90px;
@@ -888,10 +864,6 @@ a {
         color: #fff;
     }
 }
-
-
-
-
 
 /* Home Features section style*/
 section .feature {
@@ -967,8 +939,6 @@ section .feature {
     max-width: 705px;
 }
 
-
-
 /* Clearer way to plan section*/
 .clearer-way {
     background-color: #bbe0d3;
@@ -992,8 +962,6 @@ section .feature {
     padding: 14px 30px;
     background-color: #ffffff;
 }
-
-
 
 /* Home page styles end --------------------------------------------*/
 
@@ -1064,8 +1032,6 @@ footer .disclaimer {
     line-height: 1.4;
 }
 
-
-
 /* ----------------------------------------
    Email Links
    ---------------------------------------- */
@@ -1086,9 +1052,6 @@ footer .disclaimer {
 /* ----------------------------------------
    Responsive Breakpoints
    ---------------------------------------- */
-
-
-
 
 /* ----------------------------------------
    Component-Specific Styles (Essential only)
@@ -1204,10 +1167,6 @@ footer .disclaimer {
     box-shadow: 0 6px 20px rgba(26, 26, 46, 0.25);
 }
 
-
-
-
-
 /* Feature Cards */
 .feature-cards-grid {
     display: grid;
@@ -1253,10 +1212,6 @@ footer .disclaimer {
     color: rgba(255, 255, 255, 0.85);
 }
 
-
-
-
-
 /* Testimonials */
 .testimonials-masonry {
     column-count: 3;
@@ -1298,10 +1253,10 @@ footer .disclaimer {
     color: var(--color-text-dark);
 }
 
-    .testimonial-card-v2 .author-info .handle {
-        font-size: 0.85rem;
-        color: #888;
-    }
+.testimonial-card-v2 .author-info .handle {
+    font-size: 0.85rem;
+    color: #888;
+}
 
 /* ----------------------------------------
    Responsive Media Queries - Organized by Width
@@ -1320,7 +1275,7 @@ footer .disclaimer {
     .split-content {
         padding-left: 10px;
     }
-    
+
     .split-content-text {
         max-width: 400px;
         p {
@@ -1554,7 +1509,3 @@ footer .disclaimer {
         font-size: 2rem;
     }
 }
-
-
-
-

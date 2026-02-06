@@ -2,6 +2,8 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Testimonials from "../components/Testimonials.astro";
 import CTABanner from "../components/CTABanner.astro";
+import Blogs from "../components/Blogs.astro";
+import Newsletter from "../components/Newsletter.astro";
 ---
 
 <BaseLayout
@@ -480,6 +482,11 @@ import CTABanner from "../components/CTABanner.astro";
 
     <!-- Testimonials Section -->
     <Testimonials limit={28} heading="Our success stories" initialShow={10} />
+
+    <!-- Blog cards -->
+    <Blogs limit={4} />
+    <!-- Newsletter -->
+    <Newsletter />
 
     <!-- Call to Action Banner -->
     <CTABanner />
