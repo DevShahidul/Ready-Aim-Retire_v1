@@ -185,13 +185,19 @@ const { blog, serial } = Astro.props;
     }
 
     @media (max-width: 990px) {
-        .blog-card-wrapper {
+        .blog-card-wrapper:nth-child(2n) {
             padding-right: 0;
             border-right: none;
         }
     }
 
     @media (max-width: 768px) {
+        .blog-card-wrapper:not(:last-of-type) {
+            padding-right: 0;
+            border-right: none;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #d1d1d1;
+        }
         .blog-card-main {
             min-height: 15.625rem;
         }

@@ -111,15 +111,11 @@ const blogs = limit ? allBlogs.slice(0, limit) : allBlogs;
     /* Tablet breakpoint */
     @media (max-width: 1200px) {
         .blogs-container {
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr);
         }
     }
 
     @media (max-width: 992px) {
-        .blogs-container {
-            grid-template-columns: repeat(2, 1fr);
-        }
-
         .blogs-title {
             font-size: 1.75rem;
         }
