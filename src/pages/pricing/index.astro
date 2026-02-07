@@ -1,7 +1,9 @@
 ---
 import CommonHero from "../../components/CommonHero.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import PricingFaq from "./_component/PricingFaq.astro";
 import PricingPlans from "./_component/PricingPlans.astro";
+import WhyWeCharge from "./_component/WhyWeCharge.astro";
 ---
 
 <BaseLayout
@@ -16,7 +18,7 @@ import PricingPlans from "./_component/PricingPlans.astro";
     <PricingPlans />
 
     <!-- Why We Charge Section -->
-    <section class="why-charge-section">
+    <!-- <section class="why-charge-section">
         <div class="container">
             <div class="why-charge-content">
                 <div class="why-charge-logo">
@@ -103,11 +105,11 @@ import PricingPlans from "./_component/PricingPlans.astro";
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
+    <WhyWeCharge />
 
     <!-- FAQ Section -->
-    <section class="faq-section">
-        <div class="container">
+    <!-- <section class="faq-section"> <div class="container">
             <h2 class="faq-title">Frequently asked questions</h2>
             <div class="faq-list">
                 <div class="faq-item-static">
@@ -144,7 +146,8 @@ import PricingPlans from "./_component/PricingPlans.astro";
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
+    <PricingFaq />
 
     <!-- CTA Section with Image -->
     <section class="pricing-cta-section">

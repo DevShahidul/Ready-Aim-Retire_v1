@@ -1,0 +1,118 @@
+---
+const faqs = [
+    {
+        question: "Can I switch between monthly and annual plans?",
+        answer: "Yes - upgrade, downgrade, or switch billing at any time.",
+    },
+    {
+        question: "Is my data safe?",
+        answer: "Yes. Your plans are private and secure. We never sell or share your data.",
+    },
+    {
+        question: "Do I need Pro forever?",
+        answer: "No. You can cancel anytime. Your account remains accessible under the Free plan.",
+    },
+    {
+        question: "Is this a replacement for a financial advisor?",
+        answer: "OnTarget™ is designed to help you understand and engage with your plan - whether you work with an advisor or not.",
+    },
+];
+---
+
+<section class="faq-section container">
+    <h2 class="faq-title">Frequently asked questions</h2>
+
+    <div class="faq-list">
+        {
+            faqs.map((faq) => (
+                <div class="faq-item">
+                    <h3 class="faq-question">{faq.question}</h3>
+                    <p class="faq-answer">{faq.answer}</p>
+                </div>
+            ))
+        }
+    </div>
+</section>
+
+<style>
+    .faq-section {
+        padding: 4rem 0;
+        border-top: 1px solid #707070;
+    }
+
+    .faq-title {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #2c3e50;
+        margin: 0 0 2.5rem 0;
+    }
+
+    .faq-list {
+        max-width: 800px;
+    }
+
+    .faq-item {
+        margin-bottom: 2rem;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid #d0d0d0;
+    }
+
+    .faq-item:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .faq-question {
+        font-size: 1.125rem;
+        font-weight: 600;
+        color: #2c3e50;
+        margin: 0 0 0.75rem 0;
+        line-height: 1.4;
+    }
+
+    .faq-answer {
+        font-size: 0.9375rem;
+        color: #5a6c7d;
+        margin: 0;
+        line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+        .faq-section {
+            padding: 3rem 1rem;
+        }
+
+        .faq-title {
+            font-size: 1.75rem;
+            margin-bottom: 2rem;
+        }
+
+        .faq-item {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+        }
+
+        .faq-question {
+            font-size: 1rem;
+        }
+
+        .faq-answer {
+            font-size: 0.875rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .faq-section {
+            padding: 2rem 1rem;
+        }
+
+        .faq-title {
+            font-size: 1.5rem;
+        }
+
+        .faq-question {
+            font-size: 0.9375rem;
+        }
+    }
+</style>
