@@ -26,7 +26,7 @@ const { blog, serial } = Astro.props;
 </div>
 <style>
     .blog-card-wrapper {
-        padding-right: 30px;
+        padding-right: 1.875rem;
         border-right: 1px solid #d1d1d1;
     }
 
@@ -42,12 +42,12 @@ const { blog, serial } = Astro.props;
         flex-direction: column;
         height: 100%;
         transition: all 0.3s ease;
-        min-height: 500px;
+        min-height: 31.25rem;
     }
 
     .blog-card:hover {
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-        transform: translateY(-4px);
+        transform: translateY(-0.25rem);
     }
 
     .blog-card:hover,
@@ -60,7 +60,7 @@ const { blog, serial } = Astro.props;
     .blog-card-main {
         position: relative;
         flex: 1;
-        min-height: 300px;
+        min-height: 18.75rem;
     }
 
     /* Image wrapper - hidden by default */
@@ -155,7 +155,7 @@ const { blog, serial } = Astro.props;
         -webkit-line-clamp: 6;
         -webkit-box-orient: vertical;
         overflow: hidden;
-        margin-top: 20px;
+        margin-top: 1.25rem;
     }
 
     /* Footer */
@@ -192,7 +192,7 @@ const { blog, serial } = Astro.props;
 
     @media (max-width: 768px) {
         .blog-card-main {
-            min-height: 250px;
+            min-height: 15.625rem;
         }
 
         .blog-card {
