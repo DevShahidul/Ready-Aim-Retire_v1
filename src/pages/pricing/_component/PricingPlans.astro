@@ -1,0 +1,123 @@
+---
+const pricingPlans = [
+    {
+        id: 1,
+        name: "Basic",
+        price: 0,
+        period: "/y",
+        description:
+            "For exploring your retirement picture and getting oriented.",
+        buttonText: "Choose Plan",
+        buttonType: "primary",
+        features: [
+            "Build a basic retirement plan",
+            "Visualize your financial timeline",
+            "Track net worth at a high level",
+            "Run limited scenarios",
+            "Save your plan for a limited time",
+        ],
+        limitations: [
+            "Limited scenario creation",
+            "Plan saved for a limited time",
+            "Premium features locked",
+        ],
+        badge: null,
+        isComingSoon: false,
+    },
+    {
+        id: 2,
+        name: "Pro",
+        price: 115,
+        period: "/y",
+        description:
+            "For those ready to take aim, who want clarity, control, and confidence.",
+        buttonText: "Choose Plan",
+        buttonType: "primary",
+        features: [
+            "Save unlimited plans",
+            "Create and compare unlimited scenarios",
+            "Full historical stress testing",
+            "Advanced withdrawal strategy modeling",
+            "Detailed retirement budgeting",
+            "Tax-aware planning across all account types",
+            "Social Security planning tools",
+            "Plan for major life events, expected, and unexpected expenses",
+            "Ongoing updates as your life changes",
+        ],
+        featuresHeader: "Everything in Basic, plus:",
+        limitations: null,
+        badge: null,
+        isComingSoon: false,
+    },
+    {
+        id: 3,
+        name: "Lifetime",
+        price: 1199,
+        period: "/y",
+        description:
+            "Get all the great features of Pro with a single one-time payment.",
+        buttonText: "Choose Plan",
+        buttonType: "primary",
+        features: ["Everything in Pro", "One-time payment", "No subscriptions"],
+        featuresHeader: null,
+        limitations: null,
+        badge: null,
+        isComingSoon: false,
+    },
+    {
+        id: 4,
+        name: "Professional",
+        price: 549,
+        period: "/y",
+        description:
+            "Modern financial planning software for financial advisors and coaches.",
+        buttonText: "Coming Soon",
+        buttonType: "disabled",
+        features: [
+            "Everything in Premium",
+            "20 Client Seats",
+            "Plan team meetings",
+            "Advisor Dashboard",
+        ],
+        featuresHeader: null,
+        limitations: null,
+        badge: null,
+        isComingSoon: true,
+        backgroundColor: "#4a5f7f",
+    },
+];
+---
+
+<section class="container">
+    <div class="pricing-plan-description">
+        <h4>
+            OnTarget™ is free to start and powerful when you’re ready to go
+            deeper. Whether you’re just exploring or building a long-term plan,
+            you only pay for what you need.
+        </h4>
+        <div>
+            <button class="btn">Monthly</button>
+            <button class="btn btn-dark">Annual (Save 38%)</button>
+        </div>
+    </div>
+    <div class="pricing-card-container"></div>
+</section>
+
+<style>
+    .pricing-plan-description {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h4 {
+            max-width: 54.375rem;
+            font-size: 1.25rem;
+            font-weight: 400;
+        }
+        div {
+            display: flex;
+            gap: 1rem;
+        }
+    }
+</style>
+
+<script></script>
