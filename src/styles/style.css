@@ -139,7 +139,7 @@ a {
 
 /* ---------------------------------------- Section Backgrounds & Padding ---------------------------------------- */
 
-.section {
+section {
     overflow: hidden;
 }
 
@@ -1191,12 +1191,11 @@ footer .disclaimer {
     color: #888;
 }
 
-/* ----------------------------------------
-   Responsive Media Queries - Organized by Width
-   ---------------------------------------- */
+/* ---------------------------------------- Responsive Media Queries - Organized by Width ---------------------------------------- */
 
 /* Max-width: 1400px */
-@media (max-width: 87.5rem) { /* 1400px */
+@media (max-width: 87.5rem) {
+    /* 1400px */
     :root {
         --text-md: 0.75rem; /* 12px */
         --text-lg: 0.875rem; /* 14px */
@@ -1238,7 +1237,8 @@ footer .disclaimer {
 }
 
 /* Max-width: 1024px */
-@media (max-width: 64rem) { /* 1024px */
+@media (max-width: 64rem) {
+    /* 1024px */
     section {
         padding: 3rem 0;
     }
@@ -1293,7 +1293,8 @@ footer .disclaimer {
 }
 
 /* Max-width: 985px */
-@media (max-width: 61.5625rem) { /* 985px */
+@media (max-width: 61.5625rem) {
+    /* 985px */
     section .feature {
         grid-template-columns: 1fr;
         padding: 1.25rem 1.25rem; /* 20px 20px */
@@ -1316,7 +1317,8 @@ footer .disclaimer {
 }
 
 /* Max-width: 768px */
-@media (max-width: 48rem) { /* 768px */
+@media (max-width: 48rem) {
+    /* 768px */
     .section,
     .section-gray,
     .section-white,
@@ -1381,7 +1383,8 @@ footer .disclaimer {
 }
 
 /* Max-width: 767px */
-@media (max-width: 47.9375rem) { /* 767px */
+@media (max-width: 47.9375rem) {
+    /* 767px */
     .split-content {
         flex-direction: column;
         padding-left: 0;
@@ -1409,7 +1412,8 @@ footer .disclaimer {
 }
 
 /* Max-width: 600px */
-@media (max-width: 37.5rem) { /* 600px */
+@media (max-width: 37.5rem) {
+    /* 600px */
     .container {
         padding: 0 1.5rem;
     }
@@ -1437,7 +1441,8 @@ footer .disclaimer {
 }
 
 /* Max-width: 480px */
-@media (max-width: 30rem) { /* 480px */
+@media (max-width: 30rem) {
+    /* 480px */
     .hero h1 {
         font-size: 2rem;
     }
