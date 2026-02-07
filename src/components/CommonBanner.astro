@@ -1,0 +1,325 @@
+---
+// BannerSection.astro
+---
+
+<section class="banner-section">
+    <div class="banner-container">
+        <!-- Left Side - Image Placeholder -->
+        <div class="banner-image">
+            <div class="image-placeholder">
+                {/* Add your background image here */}
+                <span>Banner Image</span>
+            </div>
+        </div>
+
+        <!-- Right Side - Content -->
+        <div class="banner-content">
+            <!-- Logo Placeholder -->
+            <div class="banner-logo">
+                <div class="logo-circle">
+                    {/* Logo icon */}
+                </div>
+                <div class="logo-text">
+                    <h1 class="logo-title">OnTarget</h1>
+                    <p class="logo-subtitle">Ready Aim Retire</p>
+                </div>
+            </div>
+
+            <!-- Call to Action Badge -->
+            <div class="cta-badge">
+                <div class="badge-icon">
+                    <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                    >
+                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                    </svg>
+                </div>
+                <p class="badge-text">
+                    Ready to build your plan<br />with confidence?
+                </p>
+            </div>
+
+            <!-- Main Heading -->
+            <h2 class="banner-heading">
+                If you're serious about understanding your retirement, OnTarget™
+                Pro gives you the tools to explore everything that matters - no
+                guesswork.
+            </h2>
+
+            <!-- Get Started Button -->
+            <button class="get-started-btn">
+                Get Started
+                <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                >
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+</section>
+
+<style>
+    .banner-section {
+        width: 100%;
+        min-height: 600px;
+    }
+
+    .banner-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        min-height: 600px;
+    }
+
+    /* Left Side - Image */
+    .banner-image {
+        position: relative;
+        background: linear-gradient(
+            135deg,
+            #f5e6d3 0%,
+            #e8d4c0 50%,
+            #d4bfa8 100%
+        );
+    }
+
+    .image-placeholder {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #8b7355;
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+
+    /* Right Side - Content */
+    .banner-content {
+        background: linear-gradient(135deg, #5db9af 0%, #4da99f 100%);
+        padding: 3rem 4rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+    }
+
+    /* Logo */
+    .banner-logo {
+        position: absolute;
+        top: 2rem;
+        right: 3rem;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        color: white;
+    }
+
+    .logo-circle {
+        width: 40px;
+        height: 40px;
+        background: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .logo-text {
+        text-align: left;
+    }
+
+    .logo-title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin: 0;
+        line-height: 1;
+        color: white;
+    }
+
+    .logo-subtitle {
+        font-size: 0.875rem;
+        margin: 0.25rem 0 0 0;
+        color: white;
+        opacity: 0.95;
+    }
+
+    /* CTA Badge */
+    .cta-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 1rem;
+        background: white;
+        padding: 1rem 1.5rem;
+        border-radius: 50px;
+        margin-bottom: 2.5rem;
+        width: fit-content;
+    }
+
+    .badge-icon {
+        width: 40px;
+        height: 40px;
+        background: #5db9af;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        flex-shrink: 0;
+    }
+
+    .badge-text {
+        margin: 0;
+        color: #2c3e50;
+        font-size: 0.9375rem;
+        line-height: 1.4;
+        font-weight: 500;
+    }
+
+    /* Main Heading */
+    .banner-heading {
+        font-size: 2rem;
+        font-weight: 600;
+        color: white;
+        line-height: 1.4;
+        margin: 0 0 2.5rem 0;
+        max-width: 600px;
+    }
+
+    /* Get Started Button */
+    .get-started-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.75rem;
+        background: white;
+        color: #2c3e50;
+        padding: 0.875rem 2rem;
+        border: none;
+        border-radius: 6px;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        width: fit-content;
+    }
+
+    .get-started-btn:hover {
+        background: #f8f9fa;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .get-started-btn svg {
+        transition: transform 0.3s ease;
+    }
+
+    .get-started-btn:hover svg {
+        transform: translateX(4px);
+    }
+
+    /* Tablet breakpoint */
+    @media (max-width: 1024px) {
+        .banner-container {
+            grid-template-columns: 1fr;
+        }
+
+        .banner-image {
+            min-height: 400px;
+        }
+
+        .banner-content {
+            padding: 3rem 2.5rem;
+        }
+
+        .banner-logo {
+            right: 2rem;
+        }
+
+        .banner-heading {
+            font-size: 1.75rem;
+        }
+    }
+
+    /* Mobile breakpoint */
+    @media (max-width: 768px) {
+        .banner-container {
+            min-height: auto;
+        }
+
+        .banner-image {
+            min-height: 300px;
+        }
+
+        .banner-content {
+            padding: 2.5rem 2rem;
+        }
+
+        .banner-logo {
+            position: static;
+            margin-bottom: 2rem;
+        }
+
+        .logo-title {
+            font-size: 1.25rem;
+        }
+
+        .logo-subtitle {
+            font-size: 0.8125rem;
+        }
+
+        .cta-badge {
+            padding: 0.875rem 1.25rem;
+            margin-bottom: 2rem;
+        }
+
+        .badge-icon {
+            width: 36px;
+            height: 36px;
+        }
+
+        .badge-text {
+            font-size: 0.875rem;
+        }
+
+        .banner-heading {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .get-started-btn {
+            width: 100%;
+            justify-content: center;
+            padding: 1rem 2rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .banner-image {
+            min-height: 250px;
+        }
+
+        .banner-content {
+            padding: 2rem 1.5rem;
+        }
+
+        .banner-heading {
+            font-size: 1.25rem;
+        }
+
+        .cta-badge {
+            flex-direction: column;
+            text-align: center;
+            gap: 0.75rem;
+            padding: 1rem;
+        }
+    }
+</style>

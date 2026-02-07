@@ -128,6 +128,54 @@ const pricingPlans = [
         gap: 3.25rem;
         margin-top: 3.875rem;
     }
+
+    @media (max-width: 1200px) {
+        .pricing-card-container {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .pricing-plan-description {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 2rem;
+            h4 {
+                max-width: 100%;
+                font-size: 1.125rem;
+            }
+            div {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+        .pricing-card-container {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-top: 2.5rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .pricing-plan-description {
+            h4 {
+                font-size: 1rem;
+            }
+            div {
+                gap: 0.75rem;
+                .btn {
+                    padding: 0.75rem 1.5rem;
+                    font-size: 0.875rem;
+                }
+            }
+        }
+        .pricing-card-container {
+            grid-template-columns: 1fr;
+            gap: 1.25rem;
+            margin-top: 2rem;
+        }
+    }
 </style>
 
 <script></script>

@@ -5,6 +5,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import PricingFaq from "./_component/PricingFaq.astro";
 import PricingPlans from "./_component/PricingPlans.astro";
 import WhyWeCharge from "./_component/WhyWeCharge.astro";
+import CommonBanner from "../../components/CommonBanner.astro";
 ---
 
 <BaseLayout
@@ -150,45 +151,8 @@ import WhyWeCharge from "./_component/WhyWeCharge.astro";
     </section> -->
     <PricingFaq />
 
-    <!-- CTA Section with Image -->
-    <section class="pricing-cta-section">
-        <div class="pricing-cta-wrapper">
-            <div class="pricing-cta-image">
-                <img
-                    src="/images/landing/pricing/Screenshot 2026-01-19 192629.png"
-                    alt="Couple walking together planning their retirement"
-                />
-            </div>
-            <div
-                class="pricing-cta-text"
-                style="background-image: url('/images/landing/pricing/arrow_background.png');"
-            >
-                <div class="pricing-cta-logo">
-                    <img
-                        src="/images/landing/ontargetlogo_white.png"
-                        alt="OnTarget"
-                        class="ontarget-white-logo"
-                    />
-                </div>
-                <div class="pricing-cta-badge">
-                    <span class="cta-arrow-icon">→</span>
-                    <span class="cta-badge-text"
-                        >Ready to build your plan<br />with confidence?</span
-                    >
-                </div>
-                <h3 class="pricing-cta-heading">
-                    If you're serious about understanding your retirement,
-                    OnTarget™ Pro gives you the tools to explore everything that
-                    matters - no guesswork.
-                </h3>
-                <a
-                    href={`${import.meta.env.PUBLIC_APP_URL}/signup`}
-                    class="btn-cta-white"
-                    >Get Started <span class="arrow">→</span></a
-                >
-            </div>
-        </div>
-    </section>
+    <!-- Common Banner -->
+    <!-- <CommonBanner /> -->
 
     <!-- CTA Banner -->
     <CTABanner />

@@ -141,9 +141,21 @@
         margin-bottom: 0;
     }
 
+    @media (max-width: 1024px) {
+        .why-charge-inner {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 2rem;
+        }
+
+        .why-charge-content {
+            max-width: 100%;
+        }
+    }
+
     @media (max-width: 768px) {
         .why-charge-section {
-            padding: 3rem 1rem;
+            padding: 3rem 0;
         }
 
         .why-charge-content {
@@ -152,6 +164,7 @@
 
         .why-charge-title {
             font-size: 1.5rem;
+            margin-bottom: 1.25rem;
         }
 
         .why-charge-intro,
@@ -163,15 +176,62 @@
         .pro-features-list li {
             font-size: 0.875rem;
         }
+
+        .trust-statements {
+            padding-top: 1.25rem;
+        }
     }
 
     @media (max-width: 480px) {
+        .why-charge-section {
+            padding: 2rem 0.75rem;
+        }
+
+        .why-charge-inner {
+            gap: 1.5rem;
+        }
+
         .why-charge-content {
             padding: 1.5rem 1rem;
         }
 
         .why-charge-title {
             font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .why-charge-intro,
+        .why-charge-description {
+            font-size: 0.875rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .why-charge-description {
+            margin-bottom: 1.5rem;
+        }
+
+        .pro-subscription {
+            margin-bottom: 2rem;
+        }
+
+        .pro-subscription-title {
+            font-size: 0.875rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .pro-features-list li {
+            font-size: 0.8125rem;
+            margin-bottom: 0.375rem;
+            padding-left: 1.25rem;
+        }
+
+        .trust-statements p {
+            font-size: 0.875rem;
+            margin-bottom: 0.375rem;
+        }
+
+        .trust-statements {
+            padding-top: 1rem;
         }
     }
 </style>

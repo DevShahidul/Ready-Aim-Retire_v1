@@ -41,6 +41,7 @@ const { plan } = Astro.props;
     .pricing-card {
         background-color: #fff;
         border-radius: 0.625rem;
+        position: relative;
     }
     .pricing-card.coming-soon {
         color: #fff;
@@ -50,8 +51,9 @@ const { plan } = Astro.props;
         font-size: 2rem;
         font-weight: 600;
         max-width: 11.25rem;
-        position: relative;
-        left: 10.4rem;
+        position: absolute;
+        right: 0;
+        top: 0;
         border-radius: 50px 0.625rem 0rem 50px;
         color: #fff;
         background-color: #41bab4;
@@ -59,6 +61,7 @@ const { plan } = Astro.props;
     }
 
     .pricing-card-label {
+        margin-top: 4.5rem;
         h3 {
             font-size: 1.75rem;
             font-weight: 500rem;
