@@ -667,9 +667,9 @@ section {
     display: flex;
     text-align: center;
     padding-top: 11.0625rem; /* 177px */
-    padding-bottom: 21.6%;
+    padding-bottom: 23.6%;
     background: url("/images/hero-bg.svg") left top no-repeat;
-    background-size: min(100%, 84.375rem) auto; /* 1350px */
+    background-size: min(100%, 70.375rem) auto; /* 1350px */
     background-color: var(--color-secondary);
     position: relative;
 }
@@ -678,17 +678,21 @@ section {
     font-family: "Tobias", Georgia, serif;
     font-size: 6.125rem;
     font-weight: 400;
-    margin: 0 0 0.6875rem; /* 11px */
     max-width: 75rem; /* 1200px */
     color: #ffffff;
-    line-height: 1.2;
+    line-height: 1;
 }
 
 .hero p {
     font-size: 1.2rem;
-    max-width: 46.875rem; /* 750px */
-    margin-bottom: 1rem;
+    max-width: 43.875rem; /* 750px */
+    margin-top: 1.7rem;
+    line-height: 1.4;
     color: rgba(255, 255, 255, 0.9);
+}
+.hero-tagline-text {
+    font-weight: 700;
+    margin-bottom: 1.5rem;
 }
 
 .hero .container {
@@ -714,7 +718,7 @@ section {
         transform 0.2s,
         box-shadow 0.2s;
     animation: subtle-pulse 3s ease-in-out infinite;
-    margin-top: 1.875rem; /* 30px */
+    margin-top: 1.875rem;
 }
 
 .hero .btn-hero:hover {
@@ -736,7 +740,7 @@ section {
 
 .hero-screenshot {
     position: relative;
-    margin-top: calc((27.6% - 11.4375rem) * -1); /* 183px */
+    margin-top: calc((31.6% - 11.4375rem) * -1); /* 183px */
     padding-top: 0;
     text-align: center;
     border-bottom: none;
@@ -770,6 +774,7 @@ section {
     box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.04); /* 0 2px 8px */
     transition: all 0.3s ease-in-out;
     padding: 3.375rem 1.25rem; /* 54px 20px */
+    max-height: 12.5rem;
 }
 
 .ontarget-card.ontarget-card-highlight {
@@ -809,9 +814,11 @@ section {
 section .feature {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    /*max-width: ;*/
     align-items: center;
     gap: 1rem;
-    padding: 5rem 1.25rem; /* 80px 20px */
+    padding-top: 5.625rem;
+    padding-bottom: 5.3125rem;
 }
 .feature-text {
     max-width: 45rem; /* 720px */
@@ -883,6 +890,7 @@ section .feature {
 .clearer-way {
     background-color: #bbe0d3;
     padding: 8rem 0 7.125rem; /* 128px 0 114px */
+    margin-top: 8rem;
 }
 .clearer-plan-benefits {
     display: flex;
@@ -1206,6 +1214,9 @@ footer .disclaimer {
         .btn-dark {
             margin-top: 0.625rem; /* 10px */
         }
+    }
+    .clearer-way {
+        margin-top: 1rem;
     }
 }
 
