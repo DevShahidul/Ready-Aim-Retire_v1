@@ -1225,6 +1225,9 @@ footer .disclaimer {
     .hero-section-white {
         padding: 6rem 0 3rem 0;
     }
+    .hero-screenshot {
+        margin-top: calc((36.6% - 11.4375rem) * -1);
+    }
 
     .hero-title {
         font-size: 2rem;
