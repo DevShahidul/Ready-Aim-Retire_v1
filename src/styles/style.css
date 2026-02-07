@@ -671,8 +671,8 @@ section {
     text-align: center;
     padding-top: 11.0625rem; /* 177px */
     padding-bottom: var(--hero-image-scaled-margin);
-    background: url("/images/hero-bg.svg") left top no-repeat;
-    background-size: min(100%, 70.375rem) auto; /* 1350px */
+    background: url("/images/hero-bg.svg") left bottom no-repeat;
+    background-size: min(100%, 78.375rem) auto; /* 1350px */
     background-color: var(--color-secondary);
     position: relative;
 }
