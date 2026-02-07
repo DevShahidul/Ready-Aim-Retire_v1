@@ -1,4 +1,6 @@
 ---
+import PricingCard from "./PricingCard.astro";
+
 const pricingPlans = [
     {
         id: 1,
@@ -100,7 +102,9 @@ const pricingPlans = [
             <button class="btn btn-dark">Annual (Save 38%)</button>
         </div>
     </div>
-    <div class="pricing-card-container"></div>
+    <div class="pricing-card-container">
+        {pricingPlans.map((plan) => <PricingCard plan={plan} />)}
+    </div>
 </section>
 
 <style>
@@ -117,6 +121,12 @@ const pricingPlans = [
             display: flex;
             gap: 1rem;
         }
+    }
+    .pricing-card-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 3.25rem;
+        margin-top: 3.875rem;
     }
 </style>
 
