@@ -900,10 +900,9 @@ section .feature {
     margin-top: 8rem;
 }
 .clearer-plan-benefits {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     justify-content: space-between;
-    flex-grow: 1;
     gap: 3.75rem; /* 60px */
     margin-top: 3.4375rem; /* 55px */
 }
@@ -911,10 +910,10 @@ section .feature {
 .benefit-pill {
     display: flex;
     align-items: center;
-    gap: 1rem; /* 16px */
+    gap: 0.8rem; /* 16px */
     border-radius: 3.125rem; /* 50px */
-    font-size: var(--text-xl);
-    padding: 0.875rem 1.875rem; /* 14px 30px */
+    font-size: clamp(0.875rem, 0.8rem + 0.375vw, 1.25rem);
+    padding: 0.875rem 1.675rem;
     background-color: #ffffff;
 }
 
@@ -1141,6 +1140,10 @@ footer .disclaimer {
                 margin-top: 0.3125rem; /* 5px */
             }
         }
+    }
+    .clearer-plan-benefits {
+        display: flex;
+        flex-wrap: wrap;
     }
 }
 
