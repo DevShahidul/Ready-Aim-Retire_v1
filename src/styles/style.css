@@ -65,13 +65,13 @@
 }
 
 /* ---------------------------------------- Typography ---------------------------------------- */
-@font-face {
-    font-family: "Tobias";
-    src: url("/fonts/TobiasTRIAL-Medium.woff") format("woff");
+/*@font-face {
+    font-family: "Playfair Display";
+    src: url("/fonts/Playfair DisplayTRIAL-Medium.woff") format("woff");
     font-weight: medium;
     font-style: normal;
     font-display: swap;
-}
+}*/
 
 body {
     font-family: "Geist", sans-serif;
@@ -81,7 +81,7 @@ body {
 }
 
 .heading-serif {
-    font-family: "Tobias", serif;
+    font-family: "Playfair Display", serif;
 }
 
 .text-primary {
@@ -685,7 +685,7 @@ section {
 }
 
 .hero h1 {
-    font-family: "Tobias", Georgia, serif;
+    font-family: "Playfair Display", Georgia, serif;
     font-size: 6.125rem;
     font-weight: 400;
     max-width: 75rem; /* 1200px */
