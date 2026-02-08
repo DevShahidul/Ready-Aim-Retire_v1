@@ -487,6 +487,12 @@ import Newsletter from "../components/Newsletter.astro";
 
             function scrollToFeature(event) {
                 const hastClassHighlight = event.currentTarget.classList[1];
+                const section = document.querySelector(
+                    `#${event.currentTarget.dataset.id}`,
+                );
+                const notSticky =
+                    document.querySelector(".ontarget-section").classList[1] !==
+                    "sticky";
 
                 if (!hastClassHighlight) {
                     cards.forEach((card) =>
@@ -497,14 +503,17 @@ import Newsletter from "../components/Newsletter.astro";
                     );
                 }
 
-                const section = document.querySelector(
-                    `#${event.currentTarget.dataset.id}`,
-                );
-
-                window.scrollTo({
-                    top: section.offsetTop - 155,
-                    behavior: "smooth",
-                });
+                if (notSticky) {
+                    window.scrollTo({
+                        top: section.offsetTop - 500,
+                        behavior: "smooth",
+                    });
+                } else {
+                    window.scrollTo({
+                        top: section.offsetTop - 155,
+                        behavior: "smooth",
+                    });
+                }
             }
 
             cards.forEach((card) => {
