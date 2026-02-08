@@ -50,281 +50,302 @@ import Newsletter from "../components/Newsletter.astro";
         </div>
     </section>
 
-    <!-- OnTarget Section -->
-    <section class="ontarget-section">
-        <div class="container">
-            <div class="ontarget-header" data-aos="fade-up">
-                <img
-                    src="/images/logos/ontarget/ontarget_black_green.png"
-                    alt="OnTarget™ by Ready Aim Retire"
-                    class="ontarget-logo"
-                />
-            </div>
-            <div class="ontarget-cards" data-aos="fade-up" data-aos-delay="100">
+    <div>
+        <!-- OnTarget Section -->
+        <section class="ontarget-section">
+            <div class="container">
+                <div class="ontarget-header" data-aos="fade-up">
+                    <img
+                        src="/images/logos/ontarget/ontarget_black_green.png"
+                        alt="OnTarget™ by Ready Aim Retire"
+                        class="ontarget-logo"
+                    />
+                </div>
                 <div
-                    class="ontarget-card ontarget-card-highlight"
-                    data-id="holistic"
+                    class="ontarget-cards"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
                 >
+                    <div
+                        class="ontarget-card ontarget-card-highlight"
+                        data-id="holistic"
+                    >
+                        <h3>Holistic Timeline</h3>
+                        <p>
+                            Watch your financial life unfold year by year –
+                            accumulation, retirement, and beyond.
+                        </p>
+                    </div>
+                    <div class="ontarget-card" data-id="scenario">
+                        <h3>Scenario Planning</h3>
+                        <p>
+                            What if you retire earlier? Spend more? Markets
+                            underperform? Adjust assumptions and instantly see
+                            the long and short term impact.
+                        </p>
+                    </div>
+                    <div class="ontarget-card" data-id="income">
+                        <h3>Income & Spending Clarity</h3>
+                        <p>
+                            Understand where your money comes from and where it
+                            goes – before and after retirement.
+                        </p>
+                    </div>
+                    <div class="ontarget-card" data-id="stress">
+                        <h3>Stress Test Your Plan</h3>
+                        <p>
+                            Run your plan through historical market data. More
+                            certainty comes from better insight.
+                        </p>
+                    </div>
+                    <div class="ontarget-card" data-id="taxes">
+                        <h3>Maximize Taxes & Benefits</h3>
+                        <p>
+                            See taxes and social security as part of the plan –
+                            that fits into long-term sustainability.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Interactive Animation Demo (commented out) -->
+                <!-- <div class="animation-demo" data-aos="fade-up" data-aos-delay="200">
+                   <MonthlySpendingAnimation />
+               </div> -->
+            </div>
+        </section>
+
+        <!-- Complete Retirement Planning System Section -->
+        <section class="complete-system-section muted-border" id="holistic">
+            <div class="container feature" data-aos="fade-up">
+                <div class="feature-text">
                     <h3>Holistic Timeline</h3>
+                    <h2>
+                        Complete retirement planning system – built to show the <span
+                            class="text-teal">full picture</span
+                        >
+                    </h2>
                     <p>
-                        Watch your financial life unfold year by year –
-                        accumulation, retirement, and beyond.
+                        OnTarget™ isn't a collection of disconnected accounts
+                        and assumptions. It's a <strong
+                            >holistic planning</strong
+                        > environment that models your entire financial life – before,
+                        during, and throughout retirement.
                     </p>
+                    <p>Everything connects. Nothing lives in isolation.</p>
+                    <a
+                        href={`${import.meta.env.PUBLIC_APP_URL}/signup`}
+                        class="btn btn-dark"
+                    >
+                        Start Planning
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
                 </div>
-                <div class="ontarget-card" data-id="scenario">
+                <div class="feature-img">
+                    <img
+                        src="/images/feature-img1.jpg"
+                        alt="Tax strategy chart"
+                    />
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section 1 - Unlimited Scenarios -->
+        <section class="section-gray muted-border" id="scenario">
+            <div class="container feature" data-aos="fade-right">
+                <div class="feature-img">
+                    <img
+                        src="/images/feature-img2.png"
+                        alt="Tax strategy chart"
+                    />
+                </div>
+                <div class="feature-text">
                     <h3>Scenario Planning</h3>
+                    <h2>
+                        Unlimited scenarios, unlimited <span class="text-teal"
+                            >flexibility</span
+                        >
+                    </h2>
                     <p>
-                        What if you retire earlier? Spend more? Markets
-                        underperform? Adjust assumptions and instantly see the
-                        long and short term impact.
+                        Model real life – not perfect assumptions. Life changes,
+                        your plan should be able to change with it. OnTarget™
+                        allows you to create, save, and compare <strong
+                            >unlimited scenarios</strong
+                        >, such as:
                     </p>
+                    <ul class="feature-list">
+                        <li>Retiring earlier or later</li>
+                        <li>Spending more or less</li>
+                        <li>Market underperformance or outperformance</li>
+                        <li>Major purchases or windfalls</li>
+                        <li>Health events or lifestyle changes</li>
+                    </ul>
+                    <p class="">
+                        Explore "what if?" scenarios without fear of breaking
+                        your plan.
+                    </p>
+                    <a
+                        href={`${import.meta.env.PUBLIC_APP_URL}/signup`}
+                        class="btn btn-dark"
+                        style="margin-top: 1.5rem;"
+                        >Try for free <span class="arrow">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </span></a
+                    >
                 </div>
-                <div class="ontarget-card" data-id="income">
+            </div>
+        </section>
+
+        <!-- Features Section 2 - Budget Planning -->
+        <section class="muted-border" id="income">
+            <div class="container feature" data-aos="fade-left">
+                <div class="feature-text">
                     <h3>Income & Spending Clarity</h3>
+                    <h2>
+                        Build a detailed retirement budget with <span
+                            class="text-teal">smarter</span
+                        > retirement withdrawals
+                    </h2>
                     <p>
-                        Understand where your money comes from and where it goes
-                        – before and after retirement.
+                        Know what retirement actually costs. Create a detailed, <strong
+                            >realistic budget</strong
+                        > for your retirement years – and adjust it as life evolves.
+                        Strategize how and when to withdraw from your accounts to
+                        support <strong>long-term longevity</strong>.
                     </p>
+                    <ul class="feature-checklist">
+                        <li>
+                            <img src="/images/icons/feature-list-check.svg" />
+                            Different withdrawal strategies
+                        </li>
+                        <li>
+                            <img src="/images/icons/feature-list-check.svg" />
+                            Account sequencing
+                        </li>
+                        <li>
+                            <img src="/images/icons/feature-list-check.svg" />
+                            The impact of taxes and timing
+                        </li>
+                        <li>
+                            <img src="/images/icons/feature-list-check.svg" />
+                            Make your money last – Intentionally
+                        </li>
+                    </ul>
+                    <p class="">
+                        Small decisions can have large long-term consequences.
+                        OnTarget™ helps you see them clearly.
+                    </p>
+                    <a
+                        href={`${import.meta.env.PUBLIC_APP_URL}/signup`}
+                        class="btn btn-dark"
+                        style="margin-top: 1.5rem;"
+                        >Start Planning <span class="arrow">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </span></a
+                    >
                 </div>
-                <div class="ontarget-card" data-id="stress">
-                    <h3>Stress Test Your Plan</h3>
+                <div class="feature-img">
+                    <img
+                        src="/images/feature-img1.jpg"
+                        alt="Tax strategy chart"
+                    />
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section 3 - Confidence from Pressure Testing -->
+        <section class="section-gray muted-border" id="stress">
+            <div class="container feature" data-aos="fade-right">
+                <div class="feature-img">
+                    <img
+                        src="/images/feature-img2.png"
+                        alt="Stress testing visualization"
+                    />
+                </div>
+                <div class="feature-text">
+                    <h3>Stress-Test Your Plan</h3>
+                    <h2>
+                        <span class="text-teal">Confidence</span> comes from pressure-testing
+                    </h2>
                     <p>
-                        Run your plan through historical market data. More
-                        certainty comes from better insight.
+                        Explore how your retirement plan could perform under
+                        various economic conditions. OnTarget™ uses <strong
+                            >Monte Carlo simulations</strong
+                        > to model thousands of scenarios, delivering realistic insights
+                        rather than misleading presumptions.
                     </p>
+                    <p>Stress testing helps you:</p>
+                    <ul class="feature-list">
+                        <li>Understand risk, not fear it</li>
+                        <li>See potential weak points</li>
+                        <li>Make adjustments before compromising</li>
+                    </ul>
+                    <a
+                        href={`${import.meta.env.PUBLIC_APP_URL}/signup`}
+                        class="btn btn-dark"
+                        style="margin-top: 1.5rem;"
+                        >Try for free <span class="arrow">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </span></a
+                    >
                 </div>
-                <div class="ontarget-card" data-id="taxes">
-                    <h3>Maximize Taxes & Benefits</h3>
+            </div>
+        </section>
+
+        <!-- Features Section 4 - Tax Strategy -->
+        <section id="taxes">
+            <div class="container feature" data-aos="fade-left">
+                <div class="feature-text">
+                    <h3>Maximise Taxes & Benefits</h3>
+                    <h2>
+                        Navigate taxes with <span class="text-teal"
+                            >clarity</span
+                        > and
+                        <span class="text-teal">plan</span> for Social Security with
+                        confidence
+                    </h2>
                     <p>
-                        See taxes and social security as part of the plan – that
-                        fits into long-term sustainability.
+                        <strong>Taxes matter</strong> – especially in retirement.
+                        OnTarget™ helps you plan across all major account types, including
+                        tax-deferred, tax-free, and taxable accounts.
                     </p>
+                    <p>
+                        Model Social Security collection strategies and see how <strong
+                            >timing</strong
+                        > impacts your retirement income and overall plan. Uncover
+                        how benefits integrate with other income sources and the tradeoffs
+                        of claiming earlier vs later.
+                    </p>
+                    <a
+                        href={`${import.meta.env.PUBLIC_APP_URL}/signup`}
+                        class="btn btn-dark"
+                        style="margin-top: 1.5rem;"
+                        >Start Planning <span class="arrow">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </span></a
+                    >
+                </div>
+                <div class="feature-img">
+                    <img
+                        src="/images/feature-img1.jpg"
+                        alt="Tax strategy chart"
+                    />
                 </div>
             </div>
-
-            <!-- Interactive Animation Demo (commented out) -->
-            <!-- <div class="animation-demo" data-aos="fade-up" data-aos-delay="200">
-                <MonthlySpendingAnimation />
-            </div> -->
-        </div>
-    </section>
-
-    <!-- Complete Retirement Planning System Section -->
-    <section class="complete-system-section muted-border" id="holistic">
-        <div class="container feature" data-aos="fade-up">
-            <div class="feature-text">
-                <h3>Holistic Timeline</h3>
-                <h2>
-                    Complete retirement planning system – built to show the <span
-                        class="text-teal">full picture</span
-                    >
-                </h2>
-                <p>
-                    OnTarget™ isn't a collection of disconnected accounts and
-                    assumptions. It's a <strong>holistic planning</strong> environment
-                    that models your entire financial life – before, during, and throughout
-                    retirement.
-                </p>
-                <p>Everything connects. Nothing lives in isolation.</p>
-                <a
-                    href={`${import.meta.env.PUBLIC_APP_URL}/signup`}
-                    class="btn btn-dark"
-                >
-                    Start Planning
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                    >
-                        <line x1="5" y1="12" x2="19" y2="12"></line>
-                        <polyline points="12 5 19 12 12 19"></polyline>
-                    </svg>
-                </a>
-            </div>
-            <div class="feature-img">
-                <img src="/images/feature-img1.jpg" alt="Tax strategy chart" />
-            </div>
-        </div>
-    </section>
-
-    <!-- Features Section 1 - Unlimited Scenarios -->
-    <section class="section-gray muted-border" id="scenario">
-        <div class="container feature" data-aos="fade-right">
-            <div class="feature-img">
-                <img src="/images/feature-img2.png" alt="Tax strategy chart" />
-            </div>
-            <div class="feature-text">
-                <h3>Scenario Planning</h3>
-                <h2>
-                    Unlimited scenarios, unlimited <span class="text-teal"
-                        >flexibility</span
-                    >
-                </h2>
-                <p>
-                    Model real life – not perfect assumptions. Life changes,
-                    your plan should be able to change with it. OnTarget™ allows
-                    you to create, save, and compare <strong
-                        >unlimited scenarios</strong
-                    >, such as:
-                </p>
-                <ul class="feature-list">
-                    <li>Retiring earlier or later</li>
-                    <li>Spending more or less</li>
-                    <li>Market underperformance or outperformance</li>
-                    <li>Major purchases or windfalls</li>
-                    <li>Health events or lifestyle changes</li>
-                </ul>
-                <p class="">
-                    Explore "what if?" scenarios without fear of breaking your
-                    plan.
-                </p>
-                <a
-                    href={`${import.meta.env.PUBLIC_APP_URL}/signup`}
-                    class="btn btn-dark"
-                    style="margin-top: 1.5rem;"
-                    >Try for free <span class="arrow">
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </span></a
-                >
-            </div>
-        </div>
-    </section>
-
-    <!-- Features Section 2 - Budget Planning -->
-    <section class="muted-border" id="income">
-        <div class="container feature" data-aos="fade-left">
-            <div class="feature-text">
-                <h3>Income & Spending Clarity</h3>
-                <h2>
-                    Build a detailed retirement budget with <span
-                        class="text-teal">smarter</span
-                    > retirement withdrawals
-                </h2>
-                <p>
-                    Know what retirement actually costs. Create a detailed, <strong
-                        >realistic budget</strong
-                    > for your retirement years – and adjust it as life evolves. Strategize
-                    how and when to withdraw from your accounts to support <strong
-                        >long-term longevity</strong
-                    >.
-                </p>
-                <ul class="feature-checklist">
-                    <li>
-                        <img src="/images/icons/feature-list-check.svg" />
-                        Different withdrawal strategies
-                    </li>
-                    <li>
-                        <img src="/images/icons/feature-list-check.svg" />
-                        Account sequencing
-                    </li>
-                    <li>
-                        <img src="/images/icons/feature-list-check.svg" />
-                        The impact of taxes and timing
-                    </li>
-                    <li>
-                        <img src="/images/icons/feature-list-check.svg" />
-                        Make your money last – Intentionally
-                    </li>
-                </ul>
-                <p class="">
-                    Small decisions can have large long-term consequences.
-                    OnTarget™ helps you see them clearly.
-                </p>
-                <a
-                    href={`${import.meta.env.PUBLIC_APP_URL}/signup`}
-                    class="btn btn-dark"
-                    style="margin-top: 1.5rem;"
-                    >Start Planning <span class="arrow">
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </span></a
-                >
-            </div>
-            <div class="feature-img">
-                <img src="/images/feature-img1.jpg" alt="Tax strategy chart" />
-            </div>
-        </div>
-    </section>
-
-    <!-- Features Section 3 - Confidence from Pressure Testing -->
-    <section class="section-gray muted-border" id="stress">
-        <div class="container feature" data-aos="fade-right">
-            <div class="feature-img">
-                <img
-                    src="/images/feature-img2.png"
-                    alt="Stress testing visualization"
-                />
-            </div>
-            <div class="feature-text">
-                <h3>Stress-Test Your Plan</h3>
-                <h2>
-                    <span class="text-teal">Confidence</span> comes from pressure-testing
-                </h2>
-                <p>
-                    Explore how your retirement plan could perform under various
-                    economic conditions. OnTarget™ uses <strong
-                        >Monte Carlo simulations</strong
-                    > to model thousands of scenarios, delivering realistic insights
-                    rather than misleading presumptions.
-                </p>
-                <p>Stress testing helps you:</p>
-                <ul class="feature-list">
-                    <li>Understand risk, not fear it</li>
-                    <li>See potential weak points</li>
-                    <li>Make adjustments before compromising</li>
-                </ul>
-                <a
-                    href={`${import.meta.env.PUBLIC_APP_URL}/signup`}
-                    class="btn btn-dark"
-                    style="margin-top: 1.5rem;"
-                    >Try for free <span class="arrow">
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </span></a
-                >
-            </div>
-        </div>
-    </section>
-
-    <!-- Features Section 4 - Tax Strategy -->
-    <section id="taxes">
-        <div class="container feature" data-aos="fade-left">
-            <div class="feature-text">
-                <h3>Maximise Taxes & Benefits</h3>
-                <h2>
-                    Navigate taxes with <span class="text-teal">clarity</span> and
-                    <span class="text-teal">plan</span> for Social Security with confidence
-                </h2>
-                <p>
-                    <strong>Taxes matter</strong> – especially in retirement. OnTarget™
-                    helps you plan across all major account types, including tax-deferred,
-                    tax-free, and taxable accounts.
-                </p>
-                <p>
-                    Model Social Security collection strategies and see how <strong
-                        >timing</strong
-                    > impacts your retirement income and overall plan. Uncover how
-                    benefits integrate with other income sources and the tradeoffs
-                    of claiming earlier vs later.
-                </p>
-                <a
-                    href={`${import.meta.env.PUBLIC_APP_URL}/signup`}
-                    class="btn btn-dark"
-                    style="margin-top: 1.5rem;"
-                    >Start Planning <span class="arrow">
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </span></a
-                >
-            </div>
-            <div class="feature-img">
-                <img src="/images/feature-img1.jpg" alt="Tax strategy chart" />
-            </div>
-        </div>
-    </section>
+        </section>
+    </div>
 
     <!-- Spaghetti Animation (commented out) -->
     <!-- <section class="animation-section">
@@ -442,10 +463,40 @@ import Newsletter from "../components/Newsletter.astro";
         }
         */
 
+            // Sticky on target section functionalities
+            const stickySection = document.querySelector(".ontarget-section");
+            const sentinel = document.createElement("div");
+            sentinel.className = "sticky-sentinel";
+            stickySection.parentNode.insertBefore(sentinel, stickySection);
+
+            const observer = new IntersectionObserver(
+                ([entry]) => {
+                    if (entry.isIntersecting) {
+                        stickySection.classList.remove("sticky");
+                    } else {
+                        stickySection.classList.add("sticky");
+                    }
+                },
+                { threshold: [1] },
+            );
+
+            observer.observe(sentinel);
+
             // Scroll to the specific feature section when clicking the on target cards
             const cards = document.querySelectorAll(".ontarget-card");
 
             function scrollToFeature(event) {
+                const hastClassHighlight = event.currentTarget.classList[1];
+
+                if (!hastClassHighlight) {
+                    cards.forEach((card) =>
+                        card.classList.remove("ontarget-card-highlight"),
+                    );
+                    event.currentTarget.classList.add(
+                        "ontarget-card-highlight",
+                    );
+                }
+
                 const section = document.querySelector(
                     `#${event.currentTarget.dataset.id}`,
                 );
