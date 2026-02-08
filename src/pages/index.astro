@@ -62,14 +62,17 @@ import Newsletter from "../components/Newsletter.astro";
                 />
             </div>
             <div class="ontarget-cards" data-aos="fade-up" data-aos-delay="100">
-                <div class="ontarget-card ontarget-card-highlight">
+                <div
+                    class="ontarget-card ontarget-card-highlight"
+                    data-id="holistic"
+                >
                     <h3>Holistic Timeline</h3>
                     <p>
                         Watch your financial life unfold year by year –
                         accumulation, retirement, and beyond.
                     </p>
                 </div>
-                <div class="ontarget-card">
+                <div class="ontarget-card" data-id="scenario">
                     <h3>Scenario Planning</h3>
                     <p>
                         What if you retire earlier? Spend more? Markets
@@ -77,21 +80,21 @@ import Newsletter from "../components/Newsletter.astro";
                         long and short term impact.
                     </p>
                 </div>
-                <div class="ontarget-card">
+                <div class="ontarget-card" data-id="income">
                     <h3>Income & Spending Clarity</h3>
                     <p>
                         Understand where your money comes from and where it goes
                         – before and after retirement.
                     </p>
                 </div>
-                <div class="ontarget-card">
+                <div class="ontarget-card" data-id="stress">
                     <h3>Stress Test Your Plan</h3>
                     <p>
                         Run your plan through historical market data. More
                         certainty comes from better insight.
                     </p>
                 </div>
-                <div class="ontarget-card">
+                <div class="ontarget-card" data-id="taxes">
                     <h3>Maximize Taxes & Benefits</h3>
                     <p>
                         See taxes and social security as part of the plan – that
@@ -108,7 +111,7 @@ import Newsletter from "../components/Newsletter.astro";
     </section>
 
     <!-- Complete Retirement Planning System Section -->
-    <section class="complete-system-section muted-border">
+    <section class="complete-system-section muted-border" id="holistic">
         <div class="container feature" data-aos="fade-up">
             <div class="feature-text">
                 <h3>Holistic Timeline</h3>
@@ -152,7 +155,7 @@ import Newsletter from "../components/Newsletter.astro";
     </section>
 
     <!-- Features Section 1 - Unlimited Scenarios -->
-    <section id="features" class="section-gray muted-border">
+    <section class="section-gray muted-border" id="scenario">
         <div class="container feature" data-aos="fade-right">
             <div class="feature-img">
                 <img src="/images/feature-img2.png" alt="Tax strategy chart" />
@@ -195,7 +198,7 @@ import Newsletter from "../components/Newsletter.astro";
     </section>
 
     <!-- Features Section 2 - Budget Planning -->
-    <section class="muted-border">
+    <section class="muted-border" id="income">
         <div class="container feature" data-aos="fade-left">
             <div class="feature-text">
                 <h3>Income & Spending Clarity</h3>
@@ -250,7 +253,7 @@ import Newsletter from "../components/Newsletter.astro";
     </section>
 
     <!-- Features Section 3 - Confidence from Pressure Testing -->
-    <section class="section-gray muted-border">
+    <section class="section-gray muted-border" id="stress">
         <div class="container feature" data-aos="fade-right">
             <div class="feature-img">
                 <img
@@ -289,7 +292,7 @@ import Newsletter from "../components/Newsletter.astro";
     </section>
 
     <!-- Features Section 4 - Tax Strategy -->
-    <section>
+    <section id="taxes">
         <div class="container feature" data-aos="fade-left">
             <div class="feature-text">
                 <h3>Maximise Taxes & Benefits</h3>
@@ -439,6 +442,24 @@ import Newsletter from "../components/Newsletter.astro";
             }, 1000);
         }
         */
+
+            // Scroll to the specific feature section when clicking the on target cards
+            const cards = document.querySelectorAll(".ontarget-card");
+
+            function scrollToFeature(event) {
+                const section = document.querySelector(
+                    `#${event.currentTarget.dataset.id}`,
+                );
+
+                window.scrollTo({
+                    top: section.offsetTop - 100,
+                    behavior: "smooth",
+                });
+            }
+
+            cards.forEach((card) => {
+                card.addEventListener("click", scrollToFeature);
+            });
 
             // GSAP animations
             const heroTitleEl = document.getElementById("hero-title");
