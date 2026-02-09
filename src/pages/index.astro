@@ -457,23 +457,105 @@ import Newsletter from "../components/Newsletter.astro";
         */
 
             // Sticky on target section functionalities
+            // const stickySection = document.querySelector(".ontarget-section");
+            // const sentinel = document.createElement("div");
+            // sentinel.className = "sticky-sentinel";
+            // stickySection.parentNode.insertBefore(sentinel, stickySection);
+
+            // const observer = new IntersectionObserver(
+            //     ([entry]) => {
+            //         if (entry.isIntersecting) {
+            //             stickySection.classList.remove("sticky");
+            //         } else {
+            //             stickySection.classList.add("sticky");
+            //         }
+            //     },
+            //     { threshold: [1] },
+            // );
+
+            // observer.observe(sentinel);
             const stickySection = document.querySelector(".ontarget-section");
-            const sentinel = document.createElement("div");
-            sentinel.className = "sticky-sentinel";
-            stickySection.parentNode.insertBefore(sentinel, stickySection);
 
-            const observer = new IntersectionObserver(
-                ([entry]) => {
-                    if (entry.isIntersecting) {
-                        stickySection.classList.remove("sticky");
-                    } else {
-                        stickySection.classList.add("sticky");
+            if (stickySection) {
+                const parent = stickySection.parentNode;
+                if (getComputedStyle(parent).position === "static") {
+                    parent.style.position = "relative";
+                }
+
+                let sentinel = null;
+                let observer = null;
+                let isSticky = false;
+
+                function setupObserver() {
+                    // Cleanup existing
+                    if (observer) {
+                        observer.disconnect();
                     }
-                },
-                { threshold: [1] },
-            );
+                    if (sentinel) {
+                        sentinel.remove();
+                    }
 
-            observer.observe(sentinel);
+                    // Create new sentinel
+                    sentinel = document.createElement("div");
+                    sentinel.className = "sticky-sentinel";
+
+                    Object.assign(sentinel.style, {
+                        position: "absolute",
+                        top: "0",
+                        left: "0",
+                        width: "100%",
+                        height: "1px",
+                        visibility: "hidden",
+                        pointerEvents: "none",
+                    });
+
+                    parent.insertBefore(sentinel, stickySection);
+
+                    // Create new observer
+                    observer = new IntersectionObserver(
+                        ([entry]) => {
+                            const shouldBeSticky = !entry.isIntersecting;
+
+                            if (shouldBeSticky !== isSticky) {
+                                isSticky = shouldBeSticky;
+
+                                requestAnimationFrame(() => {
+                                    if (entry.isIntersecting) {
+                                        stickySection.classList.remove(
+                                            "sticky",
+                                        );
+                                    } else {
+                                        stickySection.classList.add("sticky");
+                                    }
+                                });
+                            }
+                        },
+                        { threshold: [1] },
+                    );
+
+                    observer.observe(sentinel);
+                }
+
+                // Initialize
+                setupObserver();
+
+                // Recreate on resize
+                let resizeTimeout;
+                window.addEventListener("resize", () => {
+                    clearTimeout(resizeTimeout);
+                    resizeTimeout = setTimeout(() => {
+                        setupObserver();
+                    }, 150);
+                });
+            }
+
+            let resizeTimeout;
+            window.addEventListener("resize", () => {
+                clearTimeout(resizeTimeout);
+                resizeTimeout = setTimeout(() => {
+                    location.reload();
+                }, 100); // Waits 500ms after resize stops
+            });
 
             // Scroll to the specific feature section when clicking the on target cards
             const cards = document.querySelectorAll(".ontarget-card");
