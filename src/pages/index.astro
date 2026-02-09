@@ -504,7 +504,6 @@ import Newsletter from "../components/Newsletter.astro";
                 return { observer, sentinel };
             }
 
-            // Initialize
             let stickyObserver = initStickyObserver();
 
             // Reinitialize on resize
@@ -512,14 +511,11 @@ import Newsletter from "../components/Newsletter.astro";
             window.addEventListener("resize", () => {
                 clearTimeout(resizeTimeout);
                 resizeTimeout = setTimeout(() => {
-                    // Cleanup old observer and sentinel
                     stickyObserver.observer.disconnect();
                     stickyObserver.sentinel.remove();
 
-                    // Remove sticky class
                     stickySection.classList.remove("sticky");
 
-                    // Reinitialize
                     stickyObserver = initStickyObserver();
                 }, 150);
             });
@@ -561,6 +557,21 @@ import Newsletter from "../components/Newsletter.astro";
             cards.forEach((card) => {
                 card.addEventListener("click", scrollToFeature);
             });
+
+            const AOS_BREAKPOINT = 992;
+
+            function toggleAOS() {
+                const elements = document.querySelectorAll("[data-aos]");
+
+                if (window.innerWidth < AOS_BREAKPOINT) {
+                    elements.forEach((el) => {
+                        el.removeAttribute("data-aos");
+                    });
+                }
+            }
+
+            toggleAOS();
+            window.addEventListener("resize", toggleAOS);
 
             // GSAP animations
             const heroTitleEl = document.getElementById("hero-title");
