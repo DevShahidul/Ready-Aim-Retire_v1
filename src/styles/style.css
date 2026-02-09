@@ -1398,6 +1398,10 @@ footer .disclaimer {
         margin: 0.4rem 0;
     }
 
+    #hero-subtitle {
+        font-size: 1rem;
+    }
+
     .feature-text p {
         font-size: 0.875rem;
     }
