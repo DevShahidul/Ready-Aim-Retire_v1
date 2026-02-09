@@ -630,8 +630,10 @@ section {
 
 .split-content-text {
     h2 {
-        max-width: 32.1875rem;
+        max-width: 23.1875rem;
         margin-bottom: 3rem;
+        font-size: 2.25rem;
+        font-weight: 500;
     }
     p {
         max-width: 37.1875rem;
@@ -649,12 +651,12 @@ section {
     }
     .split-content-text-overlay {
         position: absolute;
-        right: 3.75rem; /* 60px */
+        right: 3rem; /* 60px */
         bottom: 2.4375rem; /* 55px */
         text-align: right;
         color: #ffffff;
         .stat-number {
-            font-size: calc(var(--heading-hero) + 1.25rem); /* 20px */
+            font-size: var(--heading-hero);
             font-weight: 400;
             line-height: 7.875rem;
         }
@@ -662,12 +664,12 @@ section {
             font-size: 1.875rem;
             max-width: 40rem;
             line-height: 2.1875rem;
-            font-weight: 600;
+            font-weight: 500;
             margin-top: 1rem;
         }
         .stat-subtext {
             font-size: 1.375rem;
-            font-weight: 500;
+            font-weight: 400;
             margin-top: 0.625rem;
             margin-top: 1rem;
         }
@@ -704,8 +706,13 @@ section {
     color: rgba(255, 255, 255, 0.9);
 }
 .hero-tagline-text {
-    font-weight: 600;
+    font-weight: 500;
     margin-bottom: 1.5rem;
+}
+
+#hero-subtitle {
+    font-size: 1.125rem;
+    font-weight: 400;
 }
 
 .hero .container {
