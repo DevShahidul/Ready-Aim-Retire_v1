@@ -115,7 +115,10 @@ const blogs = limit ? allBlogs.slice(0, limit) : allBlogs;
         }
     }
 
-    @media (max-width: 992px) {
+    @media (max-width: 1024px) {
+        .blogs-section {
+            padding: 2rem 0;
+        }
         .blogs-title {
             font-size: 1.75rem;
         }
@@ -124,7 +127,7 @@ const blogs = limit ? allBlogs.slice(0, limit) : allBlogs;
     /* Mobile breakpoint */
     @media (max-width: 768px) {
         .blogs-section {
-            padding: 3rem 0;
+            padding: 2rem 0;
         }
 
         .container {
