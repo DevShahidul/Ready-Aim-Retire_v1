@@ -758,8 +758,8 @@ section {
 /* OnTarget Section */
 .sticky-sentinel {
     position: absolute;
-    height: 1px;
-    width: 1px;
+    height: 150px;
+    width: 100%;
     visibility: hidden;
 }
 
