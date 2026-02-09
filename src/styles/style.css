@@ -777,6 +777,9 @@ section {
     border-bottom: none;
     .ontarget-cards {
         margin-top: 0;
+        display: flex;
+        overflow-x: scroll;
+        scrollbar-width: thin;
     }
     .container {
         border-radius: 6px;
@@ -788,6 +791,7 @@ section {
     }
     .ontarget-card {
         padding: 0.5rem 1rem;
+        min-width: fit-content;
         border-radius: 6px;
         h3 {
             margin-bottom: 0;
@@ -800,7 +804,6 @@ section {
 
 @media (max-width: 768px) {
     .ontarget-section.sticky {
-        top: 3rem;
         .ontarget-cards {
             grid-template-columns: repeat(1, 1fr);
             gap: 0.5rem;
@@ -1234,9 +1237,9 @@ footer .disclaimer {
         grid-template-columns: repeat(3, 1fr);
     }
 
-    .ontarget-section {
+    /*.ontarget-section {
         padding: 30px 0;
-    }
+    }*/
 
     .pricing-cards {
         grid-template-columns: repeat(2, 1fr);
