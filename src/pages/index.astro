@@ -457,30 +457,71 @@ import Newsletter from "../components/Newsletter.astro";
         */
 
             // Sticky on target section functionalities
+            // const stickySection = document.querySelector(".ontarget-section");
+            // const sentinel = document.createElement("div");
+            // sentinel.className = "sticky-sentinel";
+            // stickySection.parentNode.insertBefore(sentinel, stickySection);
+
+            // const observer = new IntersectionObserver(
+            //     ([entry]) => {
+            //         if (entry.isIntersecting) {
+            //             stickySection.classList.remove("sticky");
+            //         } else {
+            //             stickySection.classList.add("sticky");
+            //         }
+            //     },
+            //     { threshold: [1] },
+            // );
+
+            // observer.observe(sentinel);
+
+            // let resizeTimeout;
+            // window.addEventListener("resize", () => {
+            //     clearTimeout(resizeTimeout);
+            //     resizeTimeout = setTimeout(() => {
+            //         location.reload();
+            //     }, 200);
+            // });
+
             const stickySection = document.querySelector(".ontarget-section");
-            const sentinel = document.createElement("div");
-            sentinel.className = "sticky-sentinel";
-            stickySection.parentNode.insertBefore(sentinel, stickySection);
 
-            const observer = new IntersectionObserver(
-                ([entry]) => {
-                    if (entry.isIntersecting) {
-                        stickySection.classList.remove("sticky");
-                    } else {
-                        stickySection.classList.add("sticky");
-                    }
-                },
-                { threshold: [1] },
-            );
+            function initStickyObserver() {
+                const sentinel = document.createElement("div");
+                sentinel.className = "sticky-sentinel";
+                stickySection.parentNode.insertBefore(sentinel, stickySection);
+                const observer = new IntersectionObserver(
+                    ([entry]) => {
+                        if (entry.isIntersecting) {
+                            stickySection.classList.remove("sticky");
+                        } else {
+                            stickySection.classList.add("sticky");
+                        }
+                    },
+                    { threshold: [1] },
+                );
+                observer.observe(sentinel);
 
-            observer.observe(sentinel);
+                return { observer, sentinel };
+            }
 
+            // Initialize
+            let stickyObserver = initStickyObserver();
+
+            // Reinitialize on resize
             let resizeTimeout;
             window.addEventListener("resize", () => {
                 clearTimeout(resizeTimeout);
                 resizeTimeout = setTimeout(() => {
-                    location.reload();
-                }, 200);
+                    // Cleanup old observer and sentinel
+                    stickyObserver.observer.disconnect();
+                    stickyObserver.sentinel.remove();
+
+                    // Remove sticky class
+                    stickySection.classList.remove("sticky");
+
+                    // Reinitialize
+                    stickyObserver = initStickyObserver();
+                }, 150);
             });
 
             // Scroll to the specific feature section when clicking the on target cards
