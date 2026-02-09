@@ -303,49 +303,42 @@ import Newsletter from "../components/Newsletter.astro";
                 </div>
             </div>
         </section>
-
-        <!-- Features Section 4 - Tax Strategy -->
-        <section id="taxes">
-            <div class="container feature" data-aos="fade-left">
-                <div class="feature-text">
-                    <h3>Maximise Taxes & Benefits</h3>
-                    <h2>
-                        Navigate taxes with <span class="text-teal"
-                            >clarity</span
-                        > and
-                        <span class="text-teal">plan</span> for Social Security with
-                        confidence
-                    </h2>
-                    <p>
-                        <strong>Taxes matter</strong> – especially in retirement.
-                        OnTarget™ helps you plan across all major account types, including
-                        tax-deferred, tax-free, and taxable accounts.
-                    </p>
-                    <p>
-                        Model Social Security collection strategies and see how <strong
-                            >timing</strong
-                        > impacts your retirement income and overall plan. Uncover
-                        how benefits integrate with other income sources and the tradeoffs
-                        of claiming earlier vs later.
-                    </p>
-                    <a
-                        href={`${import.meta.env.PUBLIC_APP_URL}/signup`}
-                        class="btn btn-dark"
-                        style="margin-top: 1.5rem;"
-                        >Start Planning <span class="arrow">
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </span></a
-                    >
-                </div>
-                <div class="feature-img">
-                    <img
-                        src="/images/feature-img1.jpg"
-                        alt="Tax strategy chart"
-                    />
-                </div>
-            </div>
-        </section>
     </div>
+    <!-- Features Section 4 - Tax Strategy -->
+    <section id="taxes">
+        <div class="container feature" data-aos="fade-left">
+            <div class="feature-text">
+                <h3>Maximise Taxes & Benefits</h3>
+                <h2>
+                    Navigate taxes with <span class="text-teal">clarity</span> and
+                    <span class="text-teal">plan</span> for Social Security with confidence
+                </h2>
+                <p>
+                    <strong>Taxes matter</strong> – especially in retirement. OnTarget™
+                    helps you plan across all major account types, including tax-deferred,
+                    tax-free, and taxable accounts.
+                </p>
+                <p>
+                    Model Social Security collection strategies and see how <strong
+                        >timing</strong
+                    > impacts your retirement income and overall plan. Uncover how
+                    benefits integrate with other income sources and the tradeoffs
+                    of claiming earlier vs later.
+                </p>
+                <a
+                    href={`${import.meta.env.PUBLIC_APP_URL}/signup`}
+                    class="btn btn-dark"
+                    style="margin-top: 1.5rem;"
+                    >Start Planning <span class="arrow">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </span></a
+                >
+            </div>
+            <div class="feature-img">
+                <img src="/images/feature-img1.jpg" alt="Tax strategy chart" />
+            </div>
+        </div>
+    </section>
 
     <!-- Spaghetti Animation (commented out) -->
     <!-- <section class="animation-section">
@@ -505,7 +498,7 @@ import Newsletter from "../components/Newsletter.astro";
 
                 if (notSticky) {
                     window.scrollTo({
-                        top: section.offsetTop - 500,
+                        top: section.offsetTop - 400,
                         behavior: "smooth",
                     });
                 } else {
