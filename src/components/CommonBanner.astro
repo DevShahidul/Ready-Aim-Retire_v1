@@ -17,32 +17,7 @@ const { banner } = Astro.props;
         <h3>{banner.subtitle}</h3>
         <button class="btn btn-outline-dark"
             >{banner.buttonText}
-
-            <svg
-                width="17"
-                height="17"
-                viewBox="0 0 17 17"
-                xmlns="http://www.w3.org/2000/svg"
-            >
-                <mask
-                    id="mask0_1_1674"
-                    style="mask-type:alpha"
-                    maskUnits="userSpaceOnUse"
-                    x="-1"
-                    y="-1"
-                    width="19"
-                    height="19"
-                >
-                    <path d="M0 0H17V17H0V0Z" fill="black" stroke="#2E2E2E"
-                    ></path>
-                </mask>
-                <g mask="url(#mask0_1_1674)">
-                    <path
-                        d="M15.2071 8.09542L9.29637 1.81532C9.15303 1.66607 8.90885 1.66496 8.77106 1.79795C8.63068 1.93279 8.6207 2.18141 8.75369 2.32327L14.0755 7.98016H2.36942C2.1655 7.97979 2 8.14529 2 8.34958C2 8.55349 2.1655 8.71899 2.36942 8.71899H14.0755L8.75369 14.3755C8.62033 14.5174 8.62883 14.7678 8.77106 14.9008C8.91291 15.0342 9.14158 15.0371 9.29637 14.8835L15.2071 8.60337C15.3474 8.43048 15.3105 8.2188 15.2071 8.09542Z"
-                        fill="#2E2E2E"
-                        stroke="#2E2E2E"></path>
-                </g>
-            </svg>
+            <i class="fa-solid fa-arrow-right fa-lg"></i>
         </button>
     </div>
 </section>
@@ -96,6 +71,11 @@ const { banner } = Astro.props;
     .banner-info button {
         max-width: 9.75rem;
         border: none;
+    }
+    .banner-info button: {
+        i {
+            color: #fff;
+        }
     }
 
     @media (min-width: 768px) and (max-width: 1024px) {
