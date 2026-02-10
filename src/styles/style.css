@@ -62,16 +62,10 @@
 
     /*component*/
     --hero-image-scaled-margin: clamp(5.8125rem, 1.8rem + 20.0625vw, 25.875rem);
+    --font-playfair: "Playfair Display", serif;
 }
 
 /* ---------------------------------------- Typography ---------------------------------------- */
-/*@font-face {
-    font-family: "Playfair Display";
-    src: url("/fonts/Playfair DisplayTRIAL-Medium.woff") format("woff");
-    font-weight: medium;
-    font-style: normal;
-    font-display: swap;
-}*/
 
 body {
     font-family: "Geist", sans-serif;
