@@ -1,9 +1,6 @@
 ---
 title: "Simple, transparent pricing"
 description: "OnTarget™ is free to start and powerful when you're ready to go deeper. Whether you're just exploring or building a long-term plan, you only pay for what you need."
-heroTitle: "Simple, transparent pricing"
-heroSubtitle: "OnTarget™ is free to start and powerful when you're ready to go deeper. Whether you're just exploring or building a long-term plan, you only pay for what you need."
-heroImage: "/images/pricing-hero-placeholder.jpg"
 
 billingToggle:
   monthly: "Monthly"
@@ -53,7 +50,7 @@ plans:
   - id: "lifetime"
     name: "Lifetime"
     price: 1199
-    period: ""
+    period: "/y"
     description: "Get all the great features of Pro with a single one-time payment."
     buttonText: "Choose Plan"
     popular: false
@@ -89,9 +86,11 @@ faqs:
     answer: "OnTarget™ is designed to help you understand and engage with your plan - whether you work with an advisor or not."
 
 whyWorthIt:
+  onTargetLogo: "/images/logos/ontarget/ontarget_black_green.png"
   title: "Why we charge - and why it's worth it"
-  subtitle: "This isn't a one-time calculator. It's an ongoing planning tool. Retirement planning isn't something you do once. It's something you revisit as markets, life, and priorities change."
-  description: "Your Pro subscription supports:"
+  subtitle: "This isn't a one-time calculator. It's an ongoing planning tool."
+  description : "Retirement planning isn't something you do once. It's something you revisit as markets, life, and priorities change."
+  listTitle: "Your Pro subscription supports:"
   benefits:
     - "Continuous improvements"
     - "New features and modeling tools"

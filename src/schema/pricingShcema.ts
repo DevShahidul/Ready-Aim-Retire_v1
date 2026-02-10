@@ -4,9 +4,6 @@ export const pricingSchema = z.object({
     // Basic metadata
     title: z.string(),
     description: z.string(),
-    heroTitle: z.string(),
-    heroSubtitle: z.string(),
-    heroImage: z.string().optional(),
 
     // Billing toggle
     billingToggle: z.object({
@@ -42,9 +39,11 @@ export const pricingSchema = z.object({
 
     // Why worth it section
     whyWorthIt: z.object({
+        onTargetLogo: z.string(),
         title: z.string(),
         subtitle: z.string(),
         description: z.string(),
+        listTitle: z.string(),
         benefits: z.array(z.string()),
         trustIndicators: z.array(z.string()),
     }),

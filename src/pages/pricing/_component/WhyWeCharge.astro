@@ -1,47 +1,40 @@
 ---
-
+const { whyCharge } = Astro.props;
 ---
 
 <section class="why-charge-section">
     <div class="container">
         <div class="why-charge-inner">
-            <img src="/images/logos/ontarget/ontarget_black_green.png" alt="" />
+            <img src={whyCharge.onTargetLogo} alt="" />
             <div class="why-charge-content">
                 <h2 class="why-charge-title">
-                    Why we charge - and why it's worth it
+                    {whyCharge.title}
                 </h2>
 
-                <p class="why-charge-intro">
-                    This isn't a one-time calculator. It's an ongoing planning
-                    tool.
-                </p>
+                <p class="why-charge-intro">{whyCharge.subtitle}</p>
 
-                <p class="why-charge-description">
-                    Retirement planning isn't something you do once. It's
-                    something you revisit as markets, life, and priorities
-                    change.
-                </p>
+                <p class="why-charge-description">{whyCharge.description}</p>
 
                 <div class="pro-subscription">
                     <p class="pro-subscription-title">
-                        Your Pro subscription supports:
+                        {whyCharge.listTitle}
                     </p>
 
                     <ul class="pro-features-list">
-                        <li>Continuous improvements</li>
-                        <li>New features and modeling tools</li>
-                        <li>Accurate, thoughtful assumptions</li>
-                        <li>
-                            A product &nbsp;&nbsp;&nbsp;&nbsp; built for
-                            planners - not advertisers
-                        </li>
+                        {
+                            whyCharge.benefits.map((item: string) => (
+                                <li>{item}</li>
+                            ))
+                        }
                     </ul>
                 </div>
 
                 <div class="trust-statements">
-                    <p>We don't sell your data.</p>
-                    <p>We don't push products.</p>
-                    <p>Our incentives are aligned with your clarity.</p>
+                    {
+                        whyCharge.trustIndicators.map((item: string) => (
+                            <li>{item}</li>
+                        ))
+                    }
                 </div>
             </div>
         </div>

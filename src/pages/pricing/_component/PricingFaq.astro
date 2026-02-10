@@ -1,22 +1,5 @@
 ---
-const faqs = [
-    {
-        question: "Can I switch between monthly and annual plans?",
-        answer: "Yes - upgrade, downgrade, or switch billing at any time.",
-    },
-    {
-        question: "Is my data safe?",
-        answer: "Yes. Your plans are private and secure. We never sell or share your data.",
-    },
-    {
-        question: "Do I need Pro forever?",
-        answer: "No. You can cancel anytime. Your account remains accessible under the Free plan.",
-    },
-    {
-        question: "Is this a replacement for a financial advisor?",
-        answer: "OnTarget™ is designed to help you understand and engage with your plan - whether you work with an advisor or not.",
-    },
-];
+const { faqs } = Astro.props;
 ---
 
 <section class="faq-section container">
@@ -24,7 +7,7 @@ const faqs = [
 
     <div class="faq-list">
         {
-            faqs.map((faq) => (
+            faqs.map((faq: { question: string; answer: string }) => (
                 <div class="faq-item">
                     <h3 class="faq-question">{faq.question}</h3>
                     <p class="faq-answer">{faq.answer}</p>

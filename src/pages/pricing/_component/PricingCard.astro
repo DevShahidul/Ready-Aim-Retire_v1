@@ -2,16 +2,16 @@
 const { plan } = Astro.props;
 ---
 
-<div class={`pricing-card ${plan.isComingSoon && "coming-soon"}`}>
+<div
+    class={`pricing-card ${plan.buttonText == "Coming Soon" && "coming-soon"}`}
+>
     <div class="price-badge">${plan.price}{plan.period}</div>
     <div class="pricing-card-body">
         <div class="pricing-card-label">
             <h3>{plan.name}</h3>
             <p>{plan.description}</p>
         </div>
-        <button class="btn btn-outline-dark"
-            >{plan.isComingSoon ? "Coming Soon" : plan.buttonText}</button
-        >
+        <button class="btn btn-outline-dark">{plan.buttonText}</button>
         <ul class="pricing-features">
             {
                 plan.features.map((item: string) => (

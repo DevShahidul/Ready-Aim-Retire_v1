@@ -7,9 +7,13 @@ import PricingFaq from "./_component/PricingFaq.astro";
 import PricingPlans from "./_component/PricingPlans.astro";
 import WhyWeCharge from "./_component/WhyWeCharge.astro";
 
-const pricingPageData = await getEntry("pricingPage", "pricing");
-
-console.log(pricingPageData);
+const { data } = await getEntry("pricingPage", "pricing");
+console.log(data);
+const plansData = {
+    description: data.description,
+    billing: data.billingToggle,
+    plans: data.plans,
+};
 ---
 
 <BaseLayout
@@ -18,16 +22,16 @@ console.log(pricingPageData);
     solidHeader={true}
 >
     <!-- Pricing Hero -->
-    <CommonHero title={"Simple, transparent pricing"} />
+    <CommonHero title={data.title} />
 
     <!-- Pricing Plans -->
-    <PricingPlans />
+    <PricingPlans plansData={plansData} />
 
     <!-- Why We Charge Section -->
-    <WhyWeCharge />
+    <WhyWeCharge whyCharge={data.whyWorthIt} />
 
     <!-- FAQ Section -->
-    <PricingFaq />
+    <PricingFaq faqs={data.faqs} />
 
     <!-- Common Banner -->
     <!-- <CommonBanner /> -->
