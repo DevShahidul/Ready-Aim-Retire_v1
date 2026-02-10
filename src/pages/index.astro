@@ -12,8 +12,29 @@ import Newsletter from "../components/Newsletter.astro";
 >
     <!-- Hero Section -->
     <section class="hero" id="home">
-        <div class="container" data-aos="fade" data-aos-delay="200" data-original-aos="fade">
-            <h1 id="hero-title">Visualize your<br />retirement</h1>
+        <div
+            class="container"
+            data-aos="fade"
+            data-aos-delay="200"
+            data-original-aos="fade"
+        >
+            <h1 id="hero-title">
+                <span
+                    data-aos="fade-zoom-in"
+                    data-aos-delay="300"
+                    data-aos-duration="1000">Visualize</span
+                >
+                <span
+                    data-aos="fade-zoom-in"
+                    data-aos-duration="1000"
+                    data-aos-delay="400">your</span
+                ><br /><span
+                    data-aos="fade-zoom-in"
+                    data-aos-delay="500"
+                    data-aos-duration="1000"
+                    class="text-primary">retirement</span
+                >
+            </h1>
             <p class="hero-tagline-text">
                 Clearly, confidently, all in one place
             </p>
@@ -55,7 +76,11 @@ import Newsletter from "../components/Newsletter.astro";
         <!-- OnTarget Section -->
         <section class="ontarget-section">
             <div class="container">
-                <div class="ontarget-header" data-aos="fade-up" data-original-aos="fade-up">
+                <div
+                    class="ontarget-header"
+                    data-aos="fade-up"
+                    data-original-aos="fade-up"
+                >
                     <img
                         src="/images/logos/ontarget/ontarget_black_green.png"
                         alt="OnTarget™ by Ready Aim Retire"
@@ -118,7 +143,11 @@ import Newsletter from "../components/Newsletter.astro";
 
         <!-- Complete Retirement Planning System Section -->
         <section class="complete-system-section muted-border" id="holistic">
-            <div class="container feature" data-aos="fade-up" data-original-aos="fade-up">
+            <div
+                class="container feature"
+                data-aos="fade-up"
+                data-original-aos="fade-up"
+            >
                 <div class="feature-text">
                     <h3>Holistic Timeline</h3>
                     <h2>
@@ -167,7 +196,11 @@ import Newsletter from "../components/Newsletter.astro";
 
         <!-- Features Section 1 - Unlimited Scenarios -->
         <section class="section-gray muted-border" id="scenario">
-            <div class="container feature" data-aos="fade-right" data-original-aos="fade-right">
+            <div
+                class="container feature"
+                data-aos="fade-right"
+                data-original-aos="fade-right"
+            >
                 <div class="feature-img">
                     <img
                         src="/images/feature-img2.png"
@@ -213,7 +246,11 @@ import Newsletter from "../components/Newsletter.astro";
 
         <!-- Features Section 2 - Budget Planning -->
         <section class="muted-border" id="income">
-            <div class="container feature" data-aos="fade-left" data-original-aos="fade-left">
+            <div
+                class="container feature"
+                data-aos="fade-left"
+                data-original-aos="fade-left"
+            >
                 <div class="feature-text">
                     <h3>Income & Spending Clarity</h3>
                     <h2>
@@ -270,7 +307,11 @@ import Newsletter from "../components/Newsletter.astro";
 
         <!-- Features Section 3 - Confidence from Pressure Testing -->
         <section class="section-gray muted-border" id="stress">
-            <div class="container feature" data-aos="fade-right" data-original-aos="fade-right">
+            <div
+                class="container feature"
+                data-aos="fade-right"
+                data-original-aos="fade-right"
+            >
                 <div class="feature-img">
                     <img
                         src="/images/feature-img2.png"
@@ -307,9 +348,13 @@ import Newsletter from "../components/Newsletter.astro";
             </div>
         </section>
     </div>
-<!-- Features Section 4 - Tax Strategy -->
-        <section id="taxes">
-        <div class="container feature" data-aos="fade-left" data-original-aos="fade-left">
+    <!-- Features Section 4 - Tax Strategy -->
+    <section id="taxes">
+        <div
+            class="container feature"
+            data-aos="fade-left"
+            data-original-aos="fade-left"
+        >
             <div class="feature-text">
                 <h3>Maximise Taxes & Benefits</h3>
                 <h2>
@@ -574,7 +619,10 @@ import Newsletter from "../components/Newsletter.astro";
                 } else {
                     elements.forEach((el) => {
                         if (!el.hasAttribute("data-aos")) {
-                            el.setAttribute("data-aos", el.dataset.originalAos || "fade");
+                            el.setAttribute(
+                                "data-aos",
+                                el.dataset.originalAos || "fade",
+                            );
                         }
                     });
                 }
@@ -590,7 +638,9 @@ import Newsletter from "../components/Newsletter.astro";
                 if (window.innerWidth <= GSAP_BREAKPOINT) return;
 
                 const heroTitleEl = document.getElementById("hero-title");
-                const originalTitleHTML = heroTitleEl ? heroTitleEl.innerHTML : "";
+                const originalTitleHTML = heroTitleEl
+                    ? heroTitleEl.innerHTML
+                    : "";
 
                 function splitWordsToSpans(element) {
                     const html = element.innerHTML;
@@ -616,45 +666,49 @@ import Newsletter from "../components/Newsletter.astro";
                 }
 
                 // Hero animation on page load
-                if (heroTitleEl) {
-                    heroTitleEl.style.visibility = "hidden";
-                    const heroSubtitleEl = document.getElementById("hero-subtitle");
-                    const heroBtnEl = document.getElementById("hero-btn");
-                    gsap.set([heroSubtitleEl, heroBtnEl], { opacity: 0, y: 20 });
+                // if (heroTitleEl) {
+                //     heroTitleEl.style.visibility = "hidden";
+                //     const heroSubtitleEl =
+                //         document.getElementById("hero-subtitle");
+                //     const heroBtnEl = document.getElementById("hero-btn");
+                //     gsap.set([heroSubtitleEl, heroBtnEl], {
+                //         opacity: 0,
+                //         y: 20,
+                //     });
 
-                    setTimeout(function () {
-                        heroTitleEl.style.visibility = "visible";
-                        heroTitleEl.innerHTML = originalTitleHTML;
-                        const words = splitWordsToSpans(heroTitleEl);
-                        gsap.fromTo(
-                            words,
-                            { opacity: 0, filter: "blur(20px)" },
-                            {
-                                opacity: 1,
-                                filter: "blur(0px)",
-                                duration: 0.8,
-                                stagger: 0.1,
-                                ease: "power2.out",
-                            },
-                        );
+                //     setTimeout(function () {
+                //         heroTitleEl.style.visibility = "visible";
+                //         heroTitleEl.innerHTML = originalTitleHTML;
+                //         const words = splitWordsToSpans(heroTitleEl);
+                //         gsap.fromTo(
+                //             words,
+                //             { opacity: 0, filter: "blur(20px)" },
+                //             {
+                //                 opacity: 1,
+                //                 filter: "blur(0px)",
+                //                 duration: 0.8,
+                //                 stagger: 0.1,
+                //                 ease: "power2.out",
+                //             },
+                //         );
 
-                        setTimeout(function () {
-                            gsap.to(heroSubtitleEl, {
-                                opacity: 1,
-                                y: 0,
-                                duration: 0.6,
-                                ease: "power2.out",
-                            });
-                            gsap.to(heroBtnEl, {
-                                opacity: 1,
-                                y: 0,
-                                duration: 0.6,
-                                delay: 0.15,
-                                ease: "power2.out",
-                            });
-                        }, 750);
-                    }, 300);
-                }
+                //         setTimeout(function () {
+                //             gsap.to(heroSubtitleEl, {
+                //                 opacity: 1,
+                //                 y: 0,
+                //                 duration: 0.6,
+                //                 ease: "power2.out",
+                //             });
+                //             gsap.to(heroBtnEl, {
+                //                 opacity: 1,
+                //                 y: 0,
+                //                 duration: 0.6,
+                //                 delay: 0.15,
+                //                 ease: "power2.out",
+                //             });
+                //         }, 750);
+                //     }, 300);
+                // }
 
                 // Section Animations with GSAP ScrollTrigger
                 gsap.registerPlugin(ScrollTrigger);
@@ -684,7 +738,12 @@ import Newsletter from "../components/Newsletter.astro";
                             ease: "power3.out",
                         }).to(
                             text,
-                            { opacity: 1, x: 0, duration: 0.8, ease: "power3.out" },
+                            {
+                                opacity: 1,
+                                x: 0,
+                                duration: 0.8,
+                                ease: "power3.out",
+                            },
                             "-=0.6",
                         );
                         currentSectionTriggers.push(tl.scrollTrigger);
