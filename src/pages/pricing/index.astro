@@ -6,6 +6,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import PricingFaq from "./_component/PricingFaq.astro";
 import PricingPlans from "./_component/PricingPlans.astro";
 import WhyWeCharge from "./_component/WhyWeCharge.astro";
+import CommonBanner from "../../components/CommonBanner.astro";
 
 const pricingCollection = await getEntry("pricingPage", "pricing");
 const data = pricingCollection?.data;
@@ -37,7 +38,7 @@ const plansData = {
     <PricingFaq faqs={data?.faqs} />
 
     <!-- Common Banner -->
-    <!-- <CommonBanner /> -->
+    <CommonBanner banner={bannerCollection?.data} />
 
     <!-- CTA Banner -->
     <CTABanner />
