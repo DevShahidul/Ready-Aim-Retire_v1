@@ -5,7 +5,10 @@ const { plan } = Astro.props;
 <div
     class={`pricing-card ${plan.buttonText == "Coming Soon" && "coming-soon"}`}
 >
-    <div class="price-badge">${plan.price}{plan.period}</div>
+    <div class="price-badge">
+        <span class="price">${plan.price}</span>
+        <span class="period">{plan.period}</span>
+    </div>
     <div class="pricing-card-body">
         <div class="pricing-card-label">
             <h3>{plan.name}</h3>
@@ -25,6 +28,7 @@ const { plan } = Astro.props;
         {
             plan.limitations && (
                 <ul class="pricing-limitations">
+                    <h4>Limitations</h4>
                     {plan.limitations.map((item: string) => (
                         <li>
                             <img src={"/images/icons/cross-icon.png"} />
@@ -39,6 +43,7 @@ const { plan } = Astro.props;
 
 <style>
     .pricing-card {
+        color: #2e2e2e;
         background-color: #fff;
         border-radius: 0.625rem;
         position: relative;
@@ -48,23 +53,30 @@ const { plan } = Astro.props;
         background-color: #415776;
     }
     .price-badge {
-        font-size: 2rem;
-        font-weight: 600;
-        max-width: 11.25rem;
+        min-width: 50%;
+        text-align: right;
         position: absolute;
         right: 0;
         top: 0;
         border-radius: 50px 0.625rem 0rem 50px;
         color: #fff;
         background-color: #41bab4;
-        padding: 1rem 2rem;
+        padding: 0.5rem 2rem;
+        .price {
+            font-size: 1.875rem;
+            font-weight: 600;
+        }
+        .period {
+            font-size: 1.25rem;
+            font-weight: 400;
+        }
     }
 
     .pricing-card-label {
         margin-top: 4.5rem;
         h3 {
             font-size: 1.75rem;
-            font-weight: 500rem;
+            font-weight: 500;
         }
         p {
             font-size: 1.0625rem;
@@ -78,6 +90,10 @@ const { plan } = Astro.props;
         display: flex;
         flex-direction: column;
         gap: 2.1875rem;
+
+        .btn {
+            font-size: 1.0625rem;
+        }
     }
 
     .pricing-features,
@@ -90,6 +106,7 @@ const { plan } = Astro.props;
     .pricing-features li,
     .pricing-limitations li {
         display: flex;
+        font-size: 1.0625rem;
         align-items: start;
         gap: 0.5rem;
         img {
@@ -102,6 +119,11 @@ const { plan } = Astro.props;
     .pricing-limitations {
         padding-top: 2rem;
         border-top: 1px solid #707070;
+        h4 {
+            font-size: 1.125rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
     }
 
     @media (min-width: 768px) and (max-width: 1024px) {

@@ -327,7 +327,7 @@ section {
 .btn-outline-dark {
     background-color: #f6f7f9;
     color: var(--color-text-dark);
-    border: 0.09375rem solid var(--color-text-dark); /* 1.5px */
+    border: 1px solid #2e2e2e; /* 1.5px */
     padding: 0.65rem 1.25rem;
     font-size: 0.85rem;
     border-radius: 0.25rem; /* 4px */
