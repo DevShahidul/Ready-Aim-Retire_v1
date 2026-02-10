@@ -10,8 +10,11 @@ import type { Plan } from "../../../types/pricing_types";
             {plansData.description}
         </h4>
         <div>
-            <button class="btn">{plansData.billing.monthly}</button>
-            <button class="btn btn-dark">{plansData.billing.annual}</button>
+            <button class="btn price-period">{plansData.billing.monthly}</button
+            >
+            <button class="btn btn-dark price-period"
+                >{plansData.billing.annual}</button
+            >
         </div>
     </div>
     <div class="pricing-card-container">
@@ -154,4 +157,57 @@ import type { Plan } from "../../../types/pricing_types";
     }
 </style>
 
-<script></script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const monthlyBtn = document.querySelector(
+            ".price-period:not(.btn-dark)",
+        );
+        const annualBtn = document.querySelector(".price-period.btn-dark");
+        const priceElements = document.querySelectorAll(".price-badge .price");
+        const periodElements = document.querySelectorAll(
+            ".price-badge .period",
+        );
+
+        // Store original annual prices (current state)
+        const originalPrices = Array.from(priceElements).map(
+            (el) => el.textContent,
+        );
+        const originalPeriods = Array.from(periodElements).map(
+            (el) => el.textContent,
+        );
+
+        // Calculate monthly prices (divide by 12)
+        const monthlyPrices = originalPrices.map((price) => {
+            const numPrice = parseFloat(price.replace("$", ""));
+            return `$${(numPrice / 12).toFixed(2)}`;
+        });
+
+        if (monthlyBtn && annualBtn) {
+            monthlyBtn.addEventListener("click", () => {
+                monthlyBtn.classList.add("btn-dark");
+                annualBtn.classList.remove("btn-dark");
+
+                priceElements.forEach((el, index) => {
+                    el.textContent = monthlyPrices[index];
+                });
+
+                periodElements.forEach((el) => {
+                    el.textContent = "/mo";
+                });
+            });
+
+            annualBtn.addEventListener("click", () => {
+                annualBtn.classList.add("btn-dark");
+                monthlyBtn.classList.remove("btn-dark");
+
+                priceElements.forEach((el, index) => {
+                    el.textContent = originalPrices[index];
+                });
+
+                periodElements.forEach((el, index) => {
+                    el.textContent = originalPeriods[index];
+                });
+            });
+        }
+    });
+</script>
