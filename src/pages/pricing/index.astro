@@ -7,12 +7,15 @@ import PricingFaq from "./_component/PricingFaq.astro";
 import PricingPlans from "./_component/PricingPlans.astro";
 import WhyWeCharge from "./_component/WhyWeCharge.astro";
 
-const { data } = await getEntry("pricingPage", "pricing");
-console.log(data);
+const pricingCollection = await getEntry("pricingPage", "pricing");
+const data = pricingCollection?.data;
+
+const bannerCollection = await getEntry("banner", "banner_pricing");
+
 const plansData = {
-    description: data.description,
-    billing: data.billingToggle,
-    plans: data.plans,
+    description: data?.description,
+    billing: data?.billingToggle,
+    plans: data?.plans,
 };
 ---
 
@@ -22,16 +25,16 @@ const plansData = {
     solidHeader={true}
 >
     <!-- Pricing Hero -->
-    <CommonHero title={data.title} />
+    <CommonHero title={data?.title} />
 
     <!-- Pricing Plans -->
     <PricingPlans plansData={plansData} />
 
     <!-- Why We Charge Section -->
-    <WhyWeCharge whyCharge={data.whyWorthIt} />
+    <WhyWeCharge whyCharge={data?.whyWorthIt} />
 
     <!-- FAQ Section -->
-    <PricingFaq faqs={data.faqs} />
+    <PricingFaq faqs={data?.faqs} />
 
     <!-- Common Banner -->
     <!-- <CommonBanner /> -->
