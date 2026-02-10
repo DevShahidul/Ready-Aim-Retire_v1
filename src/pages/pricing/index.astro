@@ -1,10 +1,15 @@
 ---
+import { getEntry } from "astro:content";
 import CommonHero from "../../components/CommonHero.astro";
 import CTABanner from "../../components/CTABanner.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import PricingFaq from "./_component/PricingFaq.astro";
 import PricingPlans from "./_component/PricingPlans.astro";
 import WhyWeCharge from "./_component/WhyWeCharge.astro";
+
+const pricingPageData = await getEntry("pricingPage", "pricing");
+
+console.log(pricingPageData);
 ---
 
 <BaseLayout
