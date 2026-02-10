@@ -97,61 +97,10 @@ whyWorthIt:
     - "New features and modeling tools"
     - "Accurate, thoughtful assumptions"
     - "A product built for planners - not advertisers"
-
-trustIndicators:
-  - "We don't sell your data."
-  - "We don't push products."
-  - "Our incentives are aligned with your clarity."
-
-ctaSection:
-  title: "Ready to build your plan with confidence?"
-  subtitle: "If you're serious about understanding your retirement, OnTarget™ Pro gives you the tools to explore everything that matters - no guesswork."
-  buttonText: "Get Started"
-  buttonVariant: "primary"
-
-navigation:
-  links:
-    - text: "Features"
-      url: "#features"
-    - text: "Pricing"
-      url: "#pricing"
-    - text: "FAQs"
-      url: "#faqs"
-    - text: "About us"
-      url: "#about"
-    - text: "Latest Updates"
-      url: "#updates"
-    - text: "Advisors"
-      url: "#advisors"
-  signInText: "Sign in"
-
-footer:
-  logo: "/images/logo-placeholder.svg"
-  tagline: "Take aim at your retirement with OnTarget™"
-  quickLinks:
-    - text: "Email"
-      url: "#"
-    - text: "Contact Us"
-      url: "#"
-    - text: "Linkedin"
-      url: "#"
-    - text: "Instagram"
-      url: "#"
-    - text: "YouTube"
-      url: "#"
-    - text: "X"
-      url: "#"
-    - text: "Facebook"
-      url: "#"
-  legalLinks:
-    - text: "Terms of Service"
-      url: "#"
-    - text: "Policy"
-      url: "#"
-    - text: "Cookie Policy"
-      url: "#"
-  copyright: "© 2026 ReadyAimRetire LLC"
-  disclaimer: "Disclaimer: The content, tools, and resources on ReadyAimRetire.com are intended for educational purposes only and should not be construed as professional financial or investment advice. You should consult a professional advisor to determine what may be best for your individual needs."
+  trustIndicators:
+    - "We don't sell your data."
+    - "We don't push products."
+    - "Our incentives are aligned with your clarity."
 ---
 
 # Simple, transparent pricing
