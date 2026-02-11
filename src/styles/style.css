@@ -783,7 +783,7 @@ section {
     padding: 8.25rem 0 5.625rem; /* 148px 0 90px */
     border-bottom: 0.0625rem solid var(--color-muted-border); /* 1px */
     position: sticky;
-    top: -9rem;
+    top: -8rem;
     z-index: 99;
 }
 .ontarget-section.sticky {
