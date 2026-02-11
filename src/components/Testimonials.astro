@@ -107,14 +107,15 @@ const hasLoadMore = initialShow && initialShow < testimonials.length;
 <style>
     .testimonials-section {
         background: #f6f6f4;
-        padding: 5rem 0;
+        padding: 6.4rem 0 4.5rem;
         border-bottom: 1px solid #d1d1d1;
     }
 
     .testimonials-header {
         display: flex;
         justify-content: space-between;
-        align-items: flex-start;
+        /*align-items: flex-start;*/
+        align-items: center;
         margin-bottom: 2.5rem;
         gap: 2rem;
         flex-wrap: wrap;
@@ -133,6 +134,9 @@ const hasLoadMore = initialShow && initialShow < testimonials.length;
     .testimonials-masonry {
         column-count: 3;
         column-gap: 1.5rem;
+    }
+    .testimonials-header .btn {
+        margin-top: 0.8rem;
     }
 
     /* Grid layout - uniform cards */
