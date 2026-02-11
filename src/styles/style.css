@@ -988,6 +988,7 @@ section .feature {
     gap: 0.8rem; /* 16px */
     border-radius: 3.125rem; /* 50px */
     font-size: clamp(0.875rem, 0.8rem + 0.375vw, 1.25rem);
+    font-weight: 400;
     padding: 0.875rem 1.675rem;
     background-color: #ffffff;
 }
