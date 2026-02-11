@@ -662,6 +662,11 @@ section {
     .split-content-text {
         margin-top: 7.3rem;
     }
+    .split-content-thumb {
+        img {
+            min-height: 38.625rem;
+        }
+    }
 }
 
 .split-content-thumb {
@@ -674,7 +679,7 @@ section {
     .split-content-text-overlay {
         position: absolute;
         right: 3rem; /* 60px */
-        bottom: 2.4375rem; /* 55px */
+        bottom: 3.4375rem; /* 55px */
         text-align: right;
         color: #ffffff;
         .stat-number {
