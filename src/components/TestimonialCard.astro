@@ -37,7 +37,12 @@ const colorIndex =
 const avatarColor = colors[colorIndex];
 ---
 
-<div class="testimonial-card-v2" data-testimonial-id={id} data-aos="fade-up" data-original-aos="fade-up">
+<div
+    class="testimonial-card-v2"
+    data-testimonial-id={id}
+    data-aos="fade-up"
+    data-original-aos="fade-up"
+>
     <p class="quote">{quote}</p>
     <div class="card-footer">
         <div class="author">
@@ -117,7 +122,7 @@ const avatarColor = colors[colorIndex];
     }
 
     .testimonial-card-v2 .author-info .name {
-        font-weight: 600;
+        font-weight: 500;
         font-size: 1.0625rem;
         color: #0e3f4a;
     }
