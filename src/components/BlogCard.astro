@@ -28,14 +28,24 @@ const { blog, serial } = Astro.props;
 </div>
 <style>
     .blog-card-wrapper {
-        padding-right: 1.875rem;
-        border-right: 1px solid #d1d1d1;
+        position: relative;
     }
 
-    .blog-card-wrapper:last-of-type {
-        border-right: none;
-        padding-right: 0;
+    .blog-card-wrapper::after {
+        content: "";
+        display: block;
+        width: 1px;
+        height: 100%;
+        background-color: #d1d1d1;
+        position: absolute;
+        right: -2rem;
+        top: 0;
     }
+
+    .blog-card-wrapper:last-of-type::after {
+        display: none;
+    }
+
     .blog-card {
         background: white;
         border-radius: 12px;
@@ -190,18 +200,14 @@ const { blog, serial } = Astro.props;
     }
 
     @media (max-width: 1024px) {
-        .blog-card-wrapper:nth-child(2n) {
-            padding-right: 0;
-            border-right: none;
+        .blog-card-wrapper:nth-child(2n)::after {
+            display: none;
         }
     }
 
     @media (max-width: 768px) {
-        .blog-card-wrapper:not(:last-of-type) {
-            padding-right: 0;
-            border-right: none;
-            padding-bottom: 1rem;
-            border-bottom: 1px solid #d1d1d1;
+        .blog-card-wrapper::after {
+            right: -0.7rem;
         }
         .blog-card-main {
             min-height: 15.625rem;
@@ -227,4 +233,20 @@ const { blog, serial } = Astro.props;
             padding: 1.25rem;
         }
     }
+
+    /*@media (max-width: 475px) {
+        .blog-card-wrapper::before {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 1px;
+            background-color: #d1d1d1;
+            right: 0;
+            bottom: -0.625rem;
+        }
+        .blog-card-wrapper:last-of-type::before {
+            display: none;
+        }
+    }*/
 </style>

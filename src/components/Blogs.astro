@@ -105,7 +105,7 @@ const blogs = limit ? allBlogs.slice(0, limit) : allBlogs;
     .blogs-container {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        gap: 1.875rem;
+        gap: 3.875rem;
     }
 
     /* Tablet breakpoint */
@@ -128,6 +128,9 @@ const blogs = limit ? allBlogs.slice(0, limit) : allBlogs;
     @media (max-width: 768px) {
         .blogs-section {
             padding: 2rem 0;
+        }
+        .blog-inner {
+            padding: 0 1.25rem;
         }
 
         .container {
