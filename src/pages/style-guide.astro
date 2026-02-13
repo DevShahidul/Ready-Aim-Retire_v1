@@ -1,0 +1,1473 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/style.css";
+import "../styles/example.style.css";
+import CTABanner from "../components/CTABanner.astro";
+
+interface Props {
+    title?: string;
+    description?: string;
+    ogImage?: string;
+    ogType?: string;
+    canonicalUrl?: string;
+    solidHeader?: boolean;
+}
+
+const {
+    title = "Style Guide - ReadyAimRetire",
+    description = "Design tokens and components extracted from design",
+    ogImage = "/images/og-default.jpg",
+    ogType = "website",
+    canonicalUrl,
+    solidHeader = false,
+} = Astro.props;
+
+const canonical = canonicalUrl || new URL(Astro.url.pathname, Astro.site).href;
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <link rel="canonical" href={canonical} />
+        <meta property="og:type" content={ogType} />
+        <meta property="og:url" content={canonical} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={new URL(ogImage, Astro.site).href} />
+        <meta property="og:site_name" content="ReadyAimRetire" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content={canonical} />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta
+            name="twitter:image"
+            content={new URL(ogImage, Astro.site).href}
+        />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body class={solidHeader ? "solid-header" : "solid-header"}>
+        <Header />
+
+        <div class="style-guide">
+            <div class="container">
+                <header class="style-guide-header">
+                    <h1>Style Guide</h1>
+                    <p>Design tokens and components extracted from design</p>
+                </header>
+
+                <!-- Colors & Typography Side by Side -->
+                <div class="style-grid-2col">
+                    <!-- Colors Section -->
+                    <section class="style-section">
+                        <h2>Colors</h2>
+
+                        <div class="color-group">
+                            <h3>Primary Colors</h3>
+                            <div class="color-grid">
+                                <div class="color-swatch">
+                                    <div
+                                        class="color-preview"
+                                        style="background-color: #41BAB4;"
+                                    >
+                                    </div>
+                                    <div class="color-info">
+                                        <span class="color-name">Primary</span>
+                                        <code>#41BAB4</code>
+                                    </div>
+                                </div>
+                                <div class="color-swatch">
+                                    <div
+                                        class="color-preview"
+                                        style="background-color: #3aa8a3;"
+                                    >
+                                    </div>
+                                    <div class="color-info">
+                                        <span class="color-name"
+                                            >Primary Hover</span
+                                        >
+                                        <code>#3aa8a3</code>
+                                    </div>
+                                </div>
+                                <div class="color-swatch">
+                                    <div
+                                        class="color-preview"
+                                        style="background-color: #BBE0D3;"
+                                    >
+                                    </div>
+                                    <div class="color-info">
+                                        <span class="color-name"
+                                            >Primary Light</span
+                                        >
+                                        <code>#66c9c3</code>
+                                    </div>
+                                </div>
+                                <div class="color-swatch">
+                                    <div
+                                        class="color-preview"
+                                        style="background-color: #339a94;"
+                                    >
+                                    </div>
+                                    <div class="color-info">
+                                        <span class="color-name"
+                                            >Primary Dark</span
+                                        >
+                                        <code>#339a94</code>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="color-group">
+                            <h3>Secondary Colors</h3>
+                            <div class="color-grid">
+                                <div class="color-swatch">
+                                    <div
+                                        class="color-preview"
+                                        style="background-color: #415776;"
+                                    >
+                                    </div>
+                                    <div class="color-info">
+                                        <span class="color-name">Secondary</span
+                                        >
+                                        <code>#415776</code>
+                                    </div>
+                                </div>
+                                <div class="color-swatch">
+                                    <div
+                                        class="color-preview"
+                                        style="background-color: #364860;"
+                                    >
+                                    </div>
+                                    <div class="color-info">
+                                        <span class="color-name"
+                                            >Secondary Hover</span
+                                        >
+                                        <code>#364860</code>
+                                    </div>
+                                </div>
+                                <div class="color-swatch">
+                                    <div
+                                        class="color-preview"
+                                        style="background-color: #5d728f;"
+                                    >
+                                    </div>
+                                    <div class="color-info">
+                                        <span class="color-name"
+                                            >Secondary Light</span
+                                        >
+                                        <code>#5d728f</code>
+                                    </div>
+                                </div>
+                                <div class="color-swatch">
+                                    <div
+                                        class="color-preview"
+                                        style="background-color: #3F3C68;"
+                                    >
+                                    </div>
+                                    <div class="color-info">
+                                        <span class="color-name">Accent</span>
+                                        <code>#3F3C68</code>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="color-group">
+                            <h3>Grayscale Colors</h3>
+                            <div class="color-grid grayscale-grid">
+                                <div class="color-swatch">
+                                    <div
+                                        class="color-preview"
+                                        style="background-color: #f6f7f9;"
+                                    >
+                                    </div>
+                                    <div class="color-info">
+                                        <span class="color-name">Gray 50</span>
+                                        <code>#f6f7f9</code>
+                                    </div>
+                                </div>
+                                <div class="color-swatch">
+                                    <div
+                                        class="color-preview"
+                                        style="background-color: #f7f6f4;"
+                                    >
+                                    </div>
+                                    <div class="color-info">
+                                        <span class="color-name">Gray 100</span>
+                                        <code>#f7f6f4</code>
+                                    </div>
+                                </div>
+                                <div class="color-swatch">
+                                    <div
+                                        class="color-preview"
+                                        style="background-color: #e8e8e6;"
+                                    >
+                                    </div>
+                                    <div class="color-info">
+                                        <span class="color-name">Gray 200</span>
+                                        <code>#e8e8e6</code>
+                                    </div>
+                                </div>
+                                <div class="color-swatch">
+                                    <div
+                                        class="color-preview"
+                                        style="background-color: #d1d1d1;"
+                                    >
+                                    </div>
+                                    <div class="color-info">
+                                        <span class="color-name">Gray 300</span>
+                                        <code>#d1d1d1</code>
+                                    </div>
+                                </div>
+                                <div class="color-swatch">
+                                    <div
+                                        class="color-preview"
+                                        style="background-color: #94a3b8;"
+                                    >
+                                    </div>
+                                    <div class="color-info">
+                                        <span class="color-name">Gray 400</span>
+                                        <code>#94a3b8</code>
+                                    </div>
+                                </div>
+                                <div class="color-swatch">
+                                    <div
+                                        class="color-preview"
+                                        style="background-color: #64748b;"
+                                    >
+                                    </div>
+                                    <div class="color-info">
+                                        <span class="color-name">Gray 500</span>
+                                        <code>#64748b</code>
+                                    </div>
+                                </div>
+                                <div class="color-swatch">
+                                    <div
+                                        class="color-preview"
+                                        style="background-color: #475569;"
+                                    >
+                                    </div>
+                                    <div class="color-info">
+                                        <span class="color-name">Gray 600</span>
+                                        <code>#475569</code>
+                                    </div>
+                                </div>
+                                <div class="color-swatch">
+                                    <div
+                                        class="color-preview"
+                                        style="background-color: #334155;"
+                                    >
+                                    </div>
+                                    <div class="color-info">
+                                        <span class="color-name">Gray 700</span>
+                                        <code>#334155</code>
+                                    </div>
+                                </div>
+                                <div class="color-swatch">
+                                    <div
+                                        class="color-preview"
+                                        style="background-color: #2e2e2e;"
+                                    >
+                                    </div>
+                                    <div class="color-info">
+                                        <span class="color-name">Gray 800</span>
+                                        <code>#2e2e2e</code>
+                                    </div>
+                                </div>
+                                <div class="color-swatch">
+                                    <div
+                                        class="color-preview"
+                                        style="background-color: #1a1a2e;"
+                                    >
+                                    </div>
+                                    <div class="color-info">
+                                        <span class="color-name">Gray 900</span>
+                                        <code>#1a1a2e</code>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="color-group">
+                            <h3>Neutral Colors</h3>
+                            <div class="color-grid">
+                                <div class="color-swatch">
+                                    <div
+                                        class="color-preview"
+                                        style="background-color: #FFFFFF; border: 1px solid #e5e5e5;"
+                                    >
+                                    </div>
+                                    <div class="color-info">
+                                        <span class="color-name">White</span>
+                                        <code>#FFFFFF</code>
+                                    </div>
+                                </div>
+                                <div class="color-swatch">
+                                    <div
+                                        class="color-preview"
+                                        style="background-color: #F7F6F4;"
+                                    >
+                                    </div>
+                                    <div class="color-info">
+                                        <span class="color-name"
+                                            >Background Light</span
+                                        >
+                                        <code>#F7F6F4</code>
+                                    </div>
+                                </div>
+                                <div class="color-swatch">
+                                    <div
+                                        class="color-preview"
+                                        style="background-color: #E8E8E6;"
+                                    >
+                                    </div>
+                                    <div class="color-info">
+                                        <span class="color-name"
+                                            >Background Gray</span
+                                        >
+                                        <code>#E8E8E6</code>
+                                    </div>
+                                </div>
+                                <div class="color-swatch">
+                                    <div
+                                        class="color-preview"
+                                        style="background-color: #707070;"
+                                    >
+                                    </div>
+                                    <div class="color-info">
+                                        <span class="color-name">Muted</span>
+                                        <code>#707070</code>
+                                    </div>
+                                </div>
+                                <div class="color-swatch">
+                                    <div
+                                        class="color-preview"
+                                        style="background-color: #D1D1D1;"
+                                    >
+                                    </div>
+                                    <div class="color-info">
+                                        <span class="color-name">Border</span>
+                                        <code>#D1D1D1</code>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="color-group">
+                            <h3>Text Colors</h3>
+                            <div class="color-grid">
+                                <div class="color-swatch">
+                                    <div
+                                        class="color-preview"
+                                        style="background-color: #2E2E2E;"
+                                    >
+                                    </div>
+                                    <div class="color-info">
+                                        <span class="color-name"
+                                            >Text Primary</span
+                                        >
+                                        <code>#2E2E2E</code>
+                                    </div>
+                                </div>
+                                <div class="color-swatch">
+                                    <div
+                                        class="color-preview"
+                                        style="background-color: #707070;"
+                                    >
+                                    </div>
+                                    <div class="color-info">
+                                        <span class="color-name"
+                                            >Text Secondary</span
+                                        >
+                                        <code>#707070</code>
+                                    </div>
+                                </div>
+                                <div class="color-swatch">
+                                    <div
+                                        class="color-preview"
+                                        style="background-color: #94A3B8;"
+                                    >
+                                    </div>
+                                    <div class="color-info">
+                                        <span class="color-name"
+                                            >Text Muted</span
+                                        >
+                                        <code>#94A3B8</code>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Typography Section -->
+                    <section class="style-section">
+                        <h2>Typography</h2>
+
+                        <div class="typography-group">
+                            <h3>Font Family</h3>
+                            <div class="font-family-demo">
+                                <div class="font-sample">
+                                    <span class="font-name">Primary Font</span>
+                                    <p
+                                        class="font-demo"
+                                        style="font-family: 'Geist', sans-serif;"
+                                    >
+                                        Geist - The quick brown fox jumps over
+                                        the lazy dog
+                                    </p>
+                                </div>
+                                <div class="font-sample">
+                                    <span class="font-name">Serif Font</span>
+                                    <p
+                                        class="font-demo"
+                                        style="font-family: 'Playfair Display', Georgia, serif;"
+                                    >
+                                        Playfair Display - The quick brown fox
+                                        jumps over the lazy dog
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="typography-group">
+                            <h3>Heading Styles</h3>
+                            <div class="type-scale">
+                                <div class="type-item">
+                                    <span class="type-label"
+                                        >Hero / Display</span
+                                    >
+                                    <p class="type-demo heading-hero">
+                                        Ready Aim Retire
+                                    </p>
+                                    <code>5rem / 80px - Semibold</code>
+                                </div>
+                                <div class="type-item">
+                                    <span class="type-label">Heading 1</span>
+                                    <p class="type-demo heading-1">
+                                        Visualize Your Retirement
+                                    </p>
+                                    <code>3rem / 48px - Medium</code>
+                                </div>
+                                <div class="type-item">
+                                    <span class="type-label">Heading 2</span>
+                                    <p class="type-demo heading-2">
+                                        Complete Retirement Planning
+                                    </p>
+                                    <code>1.75rem / 28px - Medium</code>
+                                </div>
+                                <div class="type-item">
+                                    <span class="type-label">Heading 3</span>
+                                    <p class="type-demo heading-3">
+                                        Scenario Planning
+                                    </p>
+                                    <code>1.5625rem / 25px - Medium</code>
+                                </div>
+                                <div class="type-item">
+                                    <span class="type-label">Heading 4</span>
+                                    <p class="type-demo heading-4">
+                                        Stress Testing
+                                    </p>
+                                    <code>1.25rem / 20px - Semibold</code>
+                                </div>
+                                <div class="type-item">
+                                    <span class="type-label">Heading 5</span>
+                                    <p class="type-demo heading-5">
+                                        Income & Spending
+                                    </p>
+                                    <code>1.125rem / 18px - Semibold</code>
+                                </div>
+                                <div class="type-item">
+                                    <span class="type-label">Heading 6</span>
+                                    <p class="type-demo heading-6">
+                                        Financial Planning
+                                    </p>
+                                    <code>1.0625rem / 17px - Semibold</code>
+                                </div>
+                                <div class="type-item">
+                                    <span class="type-label"
+                                        >Heading 7 (100px)</span
+                                    >
+                                    <p class="type-demo heading-7">
+                                        Ready Aim Retire
+                                    </p>
+                                    <code>6.25rem / 100px - Semibold</code>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="typography-group">
+                            <h3>Font Sizes Scale</h3>
+                            <div class="type-scale">
+                                <div class="type-item">
+                                    <span class="type-label">text-xs</span>
+                                    <p
+                                        class="type-demo"
+                                        style="font-size: var(--text-xs);"
+                                    >
+                                        The quick brown fox
+                                    </p>
+                                    <code>0.75rem / 12px</code>
+                                </div>
+                                <div class="type-item">
+                                    <span class="type-label">text-sm</span>
+                                    <p
+                                        class="type-demo"
+                                        style="font-size: var(--text-sm);"
+                                    >
+                                        The quick brown fox
+                                    </p>
+                                    <code>0.875rem / 14px</code>
+                                </div>
+                                <div class="type-item">
+                                    <span class="type-label">text-base</span>
+                                    <p
+                                        class="type-demo"
+                                        style="font-size: var(--text-base);"
+                                    >
+                                        The quick brown fox
+                                    </p>
+                                    <code>1rem / 16px</code>
+                                </div>
+                                <div class="type-item">
+                                    <span class="type-label">text-md</span>
+                                    <p
+                                        class="type-demo"
+                                        style="font-size: var(--text-md);"
+                                    >
+                                        The quick brown fox
+                                    </p>
+                                    <code>1.0625rem / 17px</code>
+                                </div>
+                                <div class="type-item">
+                                    <span class="type-label">text-lg</span>
+                                    <p
+                                        class="type-demo"
+                                        style="font-size: var(--text-lg);"
+                                    >
+                                        The quick brown fox
+                                    </p>
+                                    <code>1.125rem / 18px</code>
+                                </div>
+                                <div class="type-item">
+                                    <span class="type-label">text-xl</span>
+                                    <p
+                                        class="type-demo"
+                                        style="font-size: var(--text-xl);"
+                                    >
+                                        The quick brown fox
+                                    </p>
+                                    <code>1.25rem / 20px</code>
+                                </div>
+                                <div class="type-item">
+                                    <span class="type-label">text-2xl</span>
+                                    <p
+                                        class="type-demo"
+                                        style="font-size: var(--text-2xl);"
+                                    >
+                                        The quick brown fox
+                                    </p>
+                                    <code>1.5625rem / 25px</code>
+                                </div>
+                                <div class="type-item">
+                                    <span class="type-label">text-3xl</span>
+                                    <p
+                                        class="type-demo"
+                                        style="font-size: var(--text-3xl);"
+                                    >
+                                        The quick brown fox
+                                    </p>
+                                    <code>1.875rem / 30px</code>
+                                </div>
+                                <div class="type-item">
+                                    <span class="type-label"
+                                        >text-4xl / display</span
+                                    >
+                                    <p
+                                        class="type-demo"
+                                        style="font-size: var(--text-4xl);"
+                                    >
+                                        The quick brown fox
+                                    </p>
+                                    <code>2.8125rem / 45px</code>
+                                </div>
+                                <div class="type-item">
+                                    <span class="type-label">text-5xl</span>
+                                    <p
+                                        class="type-demo"
+                                        style="font-size: var(--text-5xl);"
+                                    >
+                                        The quick fox
+                                    </p>
+                                    <code>3rem / 48px</code>
+                                </div>
+                                <div class="type-item">
+                                    <span class="type-label"
+                                        >text-hero (100px)</span
+                                    >
+                                    <p
+                                        class="type-demo"
+                                        style="font-size: var(--text-hero);"
+                                    >
+                                        Ready
+                                    </p>
+                                    <code>6.25rem / 100px</code>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="typography-group">
+                            <h3>Body Text Styles</h3>
+                            <div class="type-scale">
+                                <div class="type-item">
+                                    <span class="type-label">Body Large</span>
+                                    <p class="type-demo text-body-lg">
+                                        OnTarget™ isn't a collection of
+                                        disconnected accounts and assumptions.
+                                    </p>
+                                    <code>1.125rem / 18px - Normal</code>
+                                </div>
+                                <div class="type-item">
+                                    <span class="type-label">Body Medium</span>
+                                    <p class="type-demo text-body-md">
+                                        Ready Aim Retire offers the easiest way
+                                        to model, visualize, and stress-test
+                                        your retirement plan.
+                                    </p>
+                                    <code>1.0625rem / 17px - Normal</code>
+                                </div>
+                                <div class="type-item">
+                                    <span class="type-label">Body Base</span>
+                                    <p class="type-demo text-body-base">
+                                        Everything connects. Nothing lives in
+                                        isolation.
+                                    </p>
+                                    <code>1rem / 16px - Normal</code>
+                                </div>
+                                <div class="type-item">
+                                    <span class="type-label">Body Small</span>
+                                    <p class="type-demo text-body-sm">
+                                        Build a basic retirement plan and
+                                        visualize your financial timeline.
+                                    </p>
+                                    <code>0.875rem / 14px - Normal</code>
+                                </div>
+                                <div class="type-item">
+                                    <span class="type-label"
+                                        >Body Extra Small</span
+                                    >
+                                    <p class="type-demo text-body-xs">
+                                        Limited scenario creation and premium
+                                        features locked.
+                                    </p>
+                                    <code>0.75rem / 12px - Normal</code>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Buttons & Input Fields Side by Side -->
+                <div class="style-grid-2col">
+                    <!-- Buttons Section -->
+                    <section class="style-section">
+                        <h2>Buttons</h2>
+
+                        <div class="component-group">
+                            <h3>Primary Button</h3>
+                            <div class="component-demo">
+                                <button class="btn btn-primary"
+                                    >Get Started</button
+                                >
+                                <button class="btn btn-primary"
+                                    >Subscribe</button
+                                >
+                            </div>
+                            <p class="component-info">
+                                Background: #41BAB4, Padding: 0.75rem 1.5rem,
+                                Radius: 0.5rem
+                            </p>
+                        </div>
+
+                        <div class="component-group">
+                            <h3>Secondary Button</h3>
+                            <div class="component-demo">
+                                <button class="btn btn-secondary"
+                                    >Sign In</button
+                                >
+                                <button class="btn btn-secondary"
+                                    >Choose Plan</button
+                                >
+                            </div>
+                            <p class="component-info">
+                                Background: #2E2E2E, Padding: 0.625rem 1.25rem,
+                                Radius: 0.25rem
+                            </p>
+                        </div>
+
+                        <div class="component-group">
+                            <h3>Outline Button</h3>
+                            <div class="component-demo">
+                                <button class="btn btn-outline"
+                                    >Learn More</button
+                                >
+                                <button class="btn btn-outline"
+                                    >View Features</button
+                                >
+                            </div>
+                            <p class="component-info">
+                                Border: 1px solid #2E2E2E, Transparent bg,
+                                Radius: 0.25rem
+                            </p>
+                        </div>
+
+                        <div class="component-group">
+                            <h3>Ghost Button</h3>
+                            <div class="component-demo">
+                                <button class="btn btn-ghost">Read More</button>
+                                <button class="btn btn-ghost">Contact Us</button
+                                >
+                            </div>
+                            <p class="component-info">
+                                No border, Transparent bg, Radius: 0.25rem
+                            </p>
+                        </div>
+
+                        <div class="component-group">
+                            <h3>Button with Arrow</h3>
+                            <div class="component-demo">
+                                <button class="btn-arrow">
+                                    Get Started
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                        stroke-width="2.5"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                    </svg>
+                                </button>
+                                <button class="btn-arrow-secondary">
+                                    Start Planning
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                        stroke-width="2.5"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                    </svg>
+                                </button>
+                                <button class="btn-arrow-accent">
+                                    Get Started
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                        stroke-width="2.5"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <p class="component-info">
+                                Arrow animates on hover, Padding: 0.75rem
+                                1.25rem, Arrow: 16px with 2.5 stroke
+                            </p>
+                        </div>
+                    </section>
+
+                    <!-- Input Fields Section -->
+                    <section class="style-section">
+                        <h2>Input Fields</h2>
+
+                        <div class="component-group">
+                            <h3>Newsletter Input</h3>
+                            <div class="component-demo">
+                                <form class="newsletter-form">
+                                    <div class="newsletter-inputs">
+                                        <div class="newsletter-field">
+                                            <input
+                                                type="text"
+                                                placeholder="First Name"
+                                                class="newsletter-input"
+                                            />
+                                        </div>
+                                        <div class="newsletter-field">
+                                            <input
+                                                type="text"
+                                                placeholder="Last Name"
+                                                class="newsletter-input"
+                                            />
+                                        </div>
+                                        <div class="newsletter-field">
+                                            <input
+                                                type="email"
+                                                placeholder="Email"
+                                                class="newsletter-input"
+                                            />
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-dark"
+                                        >Subscribe</button
+                                    >
+                                </form>
+                            </div>
+                            <p class="component-info">
+                                Bg: transparent, Border: bottom only (1px
+                                #0e3f4a), Focus: border-bottom-color #0c2350
+                            </p>
+                        </div>
+
+                        <div class="component-group">
+                            <h3>Input States</h3>
+                            <div class="component-demo">
+                                <form class="newsletter-form">
+                                    <div class="newsletter-inputs">
+                                        <div class="newsletter-field">
+                                            <input
+                                                type="text"
+                                                placeholder="Default"
+                                                class="newsletter-input"
+                                            />
+                                        </div>
+                                        <div class="newsletter-field">
+                                            <input
+                                                type="text"
+                                                placeholder="Focus"
+                                                class="newsletter-input"
+                                                style="border-bottom-color: #0c2350;"
+                                            />
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Cards Section -->
+                <div class="style-grid-2col">
+                    <section class="style-section">
+                        <h2>Cards</h2>
+
+                        <div class="component-group">
+                            <h3>Basic Card</h3>
+                            <div class="component-demo">
+                                <div class="card" style="max-width: 300px;">
+                                    <h4>Basic Card</h4>
+                                    <p>
+                                        This is a basic card component with
+                                        white background and subtle shadow.
+                                    </p>
+                                </div>
+                            </div>
+                            <p class="component-info">
+                                Bg: #FFFFFF, Radius: 0.75rem, Padding: 1.5rem,
+                                Shadow: 0 1px 2px rgba(0,0,0,0.05)
+                            </p>
+                        </div>
+
+                        <div class="component-group">
+                            <h3>Primary Card</h3>
+                            <div class="component-demo">
+                                <div
+                                    class="card card-primary"
+                                    style="max-width: 300px;"
+                                >
+                                    <h4 style="color: white;">Primary Card</h4>
+                                    <p style="color: white;">
+                                        This is a primary card with teal
+                                        background.
+                                    </p>
+                                </div>
+                            </div>
+                            <p class="component-info">
+                                Bg: #41BAB4, Text: #FFFFFF, Radius: 0.75rem
+                            </p>
+                        </div>
+
+                        <div class="component-group">
+                            <h3>Secondary Card</h3>
+                            <div class="component-demo">
+                                <div
+                                    class="card card-secondary"
+                                    style="max-width: 300px;"
+                                >
+                                    <h4 style="color: white;">
+                                        Secondary Card
+                                    </h4>
+                                    <p style="color: white;">
+                                        This is a secondary card with dark blue
+                                        background.
+                                    </p>
+                                </div>
+                            </div>
+                            <p class="component-info">
+                                Bg: #415776, Text: #FFFFFF, Radius: 0.75rem
+                            </p>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Spacing & Border Radius Side by Side -->
+                <div class="style-grid-2col">
+                    <!-- Spacing Section -->
+                    <section class="style-section">
+                        <h2>Spacing</h2>
+
+                        <div class="spacing-demo">
+                            <div class="spacing-item">
+                                <div
+                                    class="spacing-box"
+                                    style="width: 0.25rem; height: 0.25rem;"
+                                >
+                                </div>
+                                <span>space-1 (4px)</span>
+                            </div>
+                            <div class="spacing-item">
+                                <div
+                                    class="spacing-box"
+                                    style="width: 0.5rem; height: 0.5rem;"
+                                >
+                                </div>
+                                <span>space-2 (8px)</span>
+                            </div>
+                            <div class="spacing-item">
+                                <div
+                                    class="spacing-box"
+                                    style="width: 0.75rem; height: 0.75rem;"
+                                >
+                                </div>
+                                <span>space-3 (12px)</span>
+                            </div>
+                            <div class="spacing-item">
+                                <div
+                                    class="spacing-box"
+                                    style="width: 1rem; height: 1rem;"
+                                >
+                                </div>
+                                <span>space-4 (16px)</span>
+                            </div>
+                            <div class="spacing-item">
+                                <div
+                                    class="spacing-box"
+                                    style="width: 1.5rem; height: 1.5rem;"
+                                >
+                                </div>
+                                <span>space-6 (24px)</span>
+                            </div>
+                            <div class="spacing-item">
+                                <div
+                                    class="spacing-box"
+                                    style="width: 2rem; height: 2rem;"
+                                >
+                                </div>
+                                <span>space-8 (32px)</span>
+                            </div>
+                            <div class="spacing-item">
+                                <div
+                                    class="spacing-box"
+                                    style="width: 3rem; height: 3rem;"
+                                >
+                                </div>
+                                <span>space-12 (48px)</span>
+                            </div>
+                            <div class="spacing-item">
+                                <div
+                                    class="spacing-box"
+                                    style="width: 4rem; height: 4rem;"
+                                >
+                                </div>
+                                <span>space-16 (64px)</span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Border Radius Section -->
+                    <section class="style-section">
+                        <h2>Border Radius</h2>
+
+                        <div class="radius-demo">
+                            <div class="radius-item">
+                                <div
+                                    class="radius-box"
+                                    style="border-radius: 0.25rem;"
+                                >
+                                </div>
+                                <span>sm (4px)</span>
+                            </div>
+                            <div class="radius-item">
+                                <div
+                                    class="radius-box"
+                                    style="border-radius: 0.5rem;"
+                                >
+                                </div>
+                                <span>md (8px)</span>
+                            </div>
+                            <div class="radius-item">
+                                <div
+                                    class="radius-box"
+                                    style="border-radius: 0.75rem;"
+                                >
+                                </div>
+                                <span>lg (12px)</span>
+                            </div>
+                            <div class="radius-item">
+                                <div
+                                    class="radius-box"
+                                    style="border-radius: 1rem;"
+                                >
+                                </div>
+                                <span>xl (16px)</span>
+                            </div>
+                            <div class="radius-item">
+                                <div
+                                    class="radius-box"
+                                    style="border-radius: 1.875rem;"
+                                >
+                                </div>
+                                <span>3xl (30px)</span>
+                            </div>
+                            <div class="radius-item">
+                                <div
+                                    class="radius-box"
+                                    style="border-radius: 9999px;"
+                                >
+                                </div>
+                                <span>full (pill)</span>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Container Section -->
+                <section
+                    class="style-section"
+                    style="max-width: 800px; margin: 0 auto;"
+                >
+                    <h2>Container</h2>
+
+                    <div class="container-demo">
+                        <div class="container-item">
+                            <div
+                                class="container-bar"
+                                style="width: 1540px; max-width: 100%;"
+                            >
+                            </div>
+                        </div>
+                        <div class="container-info">
+                            <span class="container-name">container</span>
+                            <code>1540px (96.25rem)</code>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </body>
+    <CTABanner />
+    <Footer />
+</html>
+
+<style>
+    .style-guide {
+        padding: 4rem 0;
+        background-color: var(--color-bg-light);
+        min-height: 100vh;
+    }
+
+    .style-guide-header {
+        text-align: center;
+        margin-bottom: 4rem;
+        margin-top: 4rem;
+    }
+
+    .style-guide-header h1 {
+        font-size: 3rem;
+        font-weight: 600;
+        color: var(--color-dark);
+        margin-bottom: 0.5rem;
+    }
+
+    .style-guide-header p {
+        font-size: 1.125rem;
+        color: var(--color-muted);
+    }
+
+    .style-section {
+        background: var(--color-white);
+        border-radius: 1rem;
+        padding: 2rem;
+        margin-bottom: 0;
+    }
+
+    .style-grid-2col {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .style-grid-2col .style-section {
+        height: fit-content;
+    }
+
+    .style-section h2 {
+        font-size: 1.75rem;
+        font-weight: 600;
+        color: var(--color-dark);
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid var(--color-border);
+    }
+
+    .color-group {
+        margin-bottom: 2rem;
+    }
+
+    .color-group h3 {
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--color-muted);
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .color-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .grayscale-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .color-swatch {
+        border-radius: 0.5rem;
+        overflow: hidden;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    .color-preview {
+        height: 100px;
+    }
+
+    .color-info {
+        padding: 0.75rem;
+        background: var(--color-white);
+        border-top: 1px solid #f0f0f0;
+    }
+
+    .color-name {
+        display: block;
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: var(--color-dark);
+    }
+
+    .color-info code {
+        display: block;
+        font-size: 0.75rem;
+        color: var(--color-muted);
+        margin-top: 0.25rem;
+    }
+
+    .typography-group {
+        margin-bottom: 2.5rem;
+    }
+
+    .typography-group h3 {
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--color-muted);
+        margin-bottom: 1.5rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .font-family-demo {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .font-sample {
+        padding: 1.5rem;
+        background: var(--color-bg-light);
+        border-radius: 0.5rem;
+    }
+
+    .font-name {
+        display: block;
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: var(--color-muted);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 0.5rem;
+    }
+
+    .font-demo {
+        font-size: 1.5rem;
+        color: var(--color-dark);
+        margin: 0;
+    }
+
+    .type-scale {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .type-item {
+        padding: 1rem;
+        background: var(--color-bg-light);
+        border-radius: 0.5rem;
+    }
+
+    .type-label {
+        display: block;
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: var(--color-primary);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 0.5rem;
+    }
+
+    .type-demo {
+        color: var(--color-dark);
+        margin: 0 0 0.5rem 0;
+    }
+
+    .type-item code {
+        font-size: 0.75rem;
+        color: var(--color-muted);
+    }
+
+    .component-group {
+        margin-bottom: 2.5rem;
+    }
+
+    .component-group h3 {
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--color-muted);
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .component-demo {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        align-items: center;
+        padding: 1.5rem;
+        background: var(--color-bg-light);
+        border-radius: 0.5rem;
+    }
+
+    .input-demo {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .input-field-wrapper {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 1rem;
+    }
+
+    .input-label {
+        display: block;
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: var(--color-dark);
+        margin-bottom: 0.5rem;
+    }
+
+    .component-info {
+        font-size: 0.75rem;
+        color: var(--color-muted);
+        margin-top: 0.75rem;
+    }
+
+    /* Newsletter Input Styles */
+    .newsletter-form {
+        display: flex;
+        gap: 1rem;
+        align-items: flex-end;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .newsletter-inputs {
+        display: flex;
+        gap: 1.5rem;
+        flex: 1;
+        flex-wrap: wrap;
+        min-width: 0;
+        max-width: 64.7rem;
+    }
+
+    .newsletter-field {
+        flex: 1;
+        min-width: 200px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .newsletter-input {
+        width: 100%;
+        padding: 0;
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid #0e3f4a;
+        font-size: 1rem;
+        line-height: 1.5;
+        outline: none;
+        transition: border-color 0.3s ease;
+    }
+
+    .newsletter-input::placeholder {
+        color: #0e3f4a;
+        font-size: 1rem;
+        opacity: 0.8;
+    }
+
+    .newsletter-input:focus {
+        border-bottom-color: #0c2350;
+    }
+
+    .newsletter-form .btn {
+        width: 9.625rem;
+        height: 2.625rem;
+    }
+
+    .spacing-demo {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .spacing-item {
+        text-align: center;
+        padding: 1rem;
+        background: var(--color-bg-light);
+        border-radius: 0.5rem;
+    }
+
+    .spacing-box {
+        background: var(--color-primary);
+        margin: 0 auto 0.5rem;
+    }
+
+    .spacing-item span {
+        font-size: 0.75rem;
+        color: var(--color-muted);
+    }
+
+    .radius-demo {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .radius-item {
+        text-align: center;
+        padding: 1rem;
+        background: var(--color-bg-light);
+        border-radius: 0.5rem;
+    }
+
+    .radius-box {
+        width: 80px;
+        height: 80px;
+        background: var(--color-primary);
+        margin: 0 auto 0.5rem;
+    }
+
+    .radius-item span {
+        font-size: 0.75rem;
+        color: var(--color-muted);
+    }
+
+    /* Container Demo */
+    .container-demo {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .container-item {
+        width: 100%;
+    }
+
+    .container-bar {
+        height: 32px;
+        background: var(--color-primary);
+        border-radius: 0.25rem;
+    }
+
+    .container-info {
+        text-align: center;
+    }
+
+    .container-name {
+        display: block;
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: var(--color-dark);
+        margin-bottom: 0.25rem;
+    }
+
+    .container-info code {
+        font-size: 0.75rem;
+        color: var(--color-muted);
+    }
+
+    @media (max-width: 768px) {
+        .style-grid-2col {
+            grid-template-columns: 1fr;
+        }
+
+        .style-section {
+            padding: 1.5rem;
+        }
+
+        .color-grid,
+        .grayscale-grid,
+        .spacing-demo,
+        .radius-demo {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
