@@ -709,7 +709,7 @@ section {
     text-align: center;
     padding-top: 11.0625rem; /* 177px */
     padding-bottom: var(--hero-image-scaled-margin);
-    background: url("/images/hero-bg.png") left bottom no-repeat;
+    background: url("/images/hero-bg.png") left top no-repeat;
     background-size: min(100%, 75.375rem) auto; /* 1350px */
     background-color: var(--color-secondary);
     position: relative;
