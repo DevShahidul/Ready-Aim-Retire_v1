@@ -66,351 +66,567 @@ const canonical = canonicalUrl || new URL(Astro.url.pathname, Astro.site).href;
                     <p>Design tokens and components extracted from design</p>
                 </header>
 
-                <!-- Colors & Typography Side by Side -->
-                <div class="style-grid-2col">
-                    <!-- Colors Section -->
-                    <section class="style-section">
-                        <h2>Colors</h2>
+                <section class="style-grid-2col">
+                    <div>
+                        <!-- Buttons Section -->
+                        <section class="style-section">
+                            <h2>Buttons</h2>
 
-                        <div class="color-group">
-                            <h3>Primary Colors</h3>
-                            <div class="color-grid">
-                                <div class="color-swatch">
-                                    <div
-                                        class="color-preview"
-                                        style="background-color: #41BAB4;"
+                            <div class="component-group">
+                                <h3>Primary Button</h3>
+                                <div class="component-demo">
+                                    <button class="btn btn-primary"
+                                        >Get Started</button
                                     >
-                                    </div>
-                                    <div class="color-info">
-                                        <span class="color-name">Primary</span>
-                                        <code>#41BAB4</code>
-                                    </div>
+                                    <button class="btn btn-primary"
+                                        >Subscribe</button
+                                    >
                                 </div>
-                                <div class="color-swatch">
-                                    <div
-                                        class="color-preview"
-                                        style="background-color: #3aa8a3;"
+                                <p class="component-info">
+                                    Background: #41BAB4, Padding: 0.75rem
+                                    1.5rem, Radius: 0.5rem
+                                </p>
+                            </div>
+
+                            <div class="component-group">
+                                <h3>Secondary Button</h3>
+                                <div class="component-demo">
+                                    <button class="btn btn-secondary"
+                                        >Sign In</button
                                     >
-                                    </div>
-                                    <div class="color-info">
-                                        <span class="color-name"
-                                            >Primary Hover</span
-                                        >
-                                        <code>#3aa8a3</code>
-                                    </div>
+                                    <button class="btn btn-secondary"
+                                        >Choose Plan</button
+                                    >
                                 </div>
-                                <div class="color-swatch">
-                                    <div
-                                        class="color-preview"
-                                        style="background-color: #BBE0D3;"
+                                <p class="component-info">
+                                    Background: #2E2E2E, Padding: 0.625rem
+                                    1.25rem, Radius: 0.25rem
+                                </p>
+                            </div>
+
+                            <div class="component-group">
+                                <h3>Outline Button</h3>
+                                <div class="component-demo">
+                                    <button class="btn btn-outline"
+                                        >Learn More</button
                                     >
-                                    </div>
-                                    <div class="color-info">
-                                        <span class="color-name"
-                                            >Primary Light</span
-                                        >
-                                        <code>#66c9c3</code>
-                                    </div>
+                                    <button class="btn btn-outline"
+                                        >View Features</button
+                                    >
                                 </div>
-                                <div class="color-swatch">
-                                    <div
-                                        class="color-preview"
-                                        style="background-color: #339a94;"
+                                <p class="component-info">
+                                    Border: 1px solid #2E2E2E, Transparent bg,
+                                    Radius: 0.25rem
+                                </p>
+                            </div>
+
+                            <div class="component-group">
+                                <h3>Ghost Button</h3>
+                                <div class="component-demo">
+                                    <button class="btn btn-ghost"
+                                        >Read More</button
                                     >
-                                    </div>
-                                    <div class="color-info">
-                                        <span class="color-name"
-                                            >Primary Dark</span
+                                    <button class="btn btn-ghost"
+                                        >Contact Us</button
+                                    >
+                                </div>
+                                <p class="component-info">
+                                    No border, Transparent bg, Radius: 0.25rem
+                                </p>
+                            </div>
+
+                            <div class="component-group">
+                                <h3>Button with Arrow</h3>
+                                <div class="component-demo">
+                                    <button class="btn-arrow">
+                                        Get Started
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                            stroke="currentColor"
+                                            stroke-width="2.5"
                                         >
-                                        <code>#339a94</code>
+                                            <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                d="M17 8l4 4m0 0l-4 4m4-4H3"
+                                            ></path>
+                                        </svg>
+                                    </button>
+                                    <button class="btn-arrow-secondary">
+                                        Start Planning
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                            stroke="currentColor"
+                                            stroke-width="2.5"
+                                        >
+                                            <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                d="M17 8l4 4m0 0l-4 4m4-4H3"
+                                            ></path>
+                                        </svg>
+                                    </button>
+                                    <button class="btn-arrow-accent">
+                                        Get Started
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                            stroke="currentColor"
+                                            stroke-width="2.5"
+                                        >
+                                            <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                d="M17 8l4 4m0 0l-4 4m4-4H3"
+                                            ></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <p class="component-info">
+                                    Arrow animates on hover, Padding: 0.75rem
+                                    1.25rem, Arrow: 16px with 2.5 stroke
+                                </p>
+                            </div>
+                        </section>
+                        <!-- Colors Section -->
+                        <section class="style-section">
+                            <h2>Colors</h2>
+
+                            <div class="color-group">
+                                <h3>Primary Colors</h3>
+                                <div class="color-grid">
+                                    <div class="color-swatch">
+                                        <div
+                                            class="color-preview"
+                                            style="background-color: #41BAB4;"
+                                        >
+                                        </div>
+                                        <div class="color-info">
+                                            <span class="color-name"
+                                                >Primary</span
+                                            >
+                                            <code>#41BAB4</code>
+                                        </div>
+                                    </div>
+                                    <div class="color-swatch">
+                                        <div
+                                            class="color-preview"
+                                            style="background-color: #3aa8a3;"
+                                        >
+                                        </div>
+                                        <div class="color-info">
+                                            <span class="color-name"
+                                                >Primary Hover</span
+                                            >
+                                            <code>#3aa8a3</code>
+                                        </div>
+                                    </div>
+                                    <div class="color-swatch">
+                                        <div
+                                            class="color-preview"
+                                            style="background-color: #BBE0D3;"
+                                        >
+                                        </div>
+                                        <div class="color-info">
+                                            <span class="color-name"
+                                                >Primary Light</span
+                                            >
+                                            <code>#66c9c3</code>
+                                        </div>
+                                    </div>
+                                    <div class="color-swatch">
+                                        <div
+                                            class="color-preview"
+                                            style="background-color: #339a94;"
+                                        >
+                                        </div>
+                                        <div class="color-info">
+                                            <span class="color-name"
+                                                >Primary Dark</span
+                                            >
+                                            <code>#339a94</code>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="color-group">
-                            <h3>Secondary Colors</h3>
-                            <div class="color-grid">
-                                <div class="color-swatch">
-                                    <div
-                                        class="color-preview"
-                                        style="background-color: #415776;"
-                                    >
-                                    </div>
-                                    <div class="color-info">
-                                        <span class="color-name">Secondary</span
+                            <div class="color-group">
+                                <h3>Secondary Colors</h3>
+                                <div class="color-grid">
+                                    <div class="color-swatch">
+                                        <div
+                                            class="color-preview"
+                                            style="background-color: #415776;"
                                         >
-                                        <code>#415776</code>
+                                        </div>
+                                        <div class="color-info">
+                                            <span class="color-name"
+                                                >Secondary</span
+                                            >
+                                            <code>#415776</code>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="color-swatch">
-                                    <div
-                                        class="color-preview"
-                                        style="background-color: #364860;"
-                                    >
-                                    </div>
-                                    <div class="color-info">
-                                        <span class="color-name"
-                                            >Secondary Hover</span
+                                    <div class="color-swatch">
+                                        <div
+                                            class="color-preview"
+                                            style="background-color: #364860;"
                                         >
-                                        <code>#364860</code>
+                                        </div>
+                                        <div class="color-info">
+                                            <span class="color-name"
+                                                >Secondary Hover</span
+                                            >
+                                            <code>#364860</code>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="color-swatch">
-                                    <div
-                                        class="color-preview"
-                                        style="background-color: #5d728f;"
-                                    >
-                                    </div>
-                                    <div class="color-info">
-                                        <span class="color-name"
-                                            >Secondary Light</span
+                                    <div class="color-swatch">
+                                        <div
+                                            class="color-preview"
+                                            style="background-color: #5d728f;"
                                         >
-                                        <code>#5d728f</code>
+                                        </div>
+                                        <div class="color-info">
+                                            <span class="color-name"
+                                                >Secondary Light</span
+                                            >
+                                            <code>#5d728f</code>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="color-swatch">
-                                    <div
-                                        class="color-preview"
-                                        style="background-color: #3F3C68;"
-                                    >
-                                    </div>
-                                    <div class="color-info">
-                                        <span class="color-name">Accent</span>
-                                        <code>#3F3C68</code>
+                                    <div class="color-swatch">
+                                        <div
+                                            class="color-preview"
+                                            style="background-color: #3F3C68;"
+                                        >
+                                        </div>
+                                        <div class="color-info">
+                                            <span class="color-name"
+                                                >Accent</span
+                                            >
+                                            <code>#3F3C68</code>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="color-group">
-                            <h3>Grayscale Colors</h3>
-                            <div class="color-grid grayscale-grid">
-                                <div class="color-swatch">
-                                    <div
-                                        class="color-preview"
-                                        style="background-color: #f6f7f9;"
-                                    >
+                            <div class="color-group">
+                                <h3>Grayscale Colors</h3>
+                                <div class="color-grid grayscale-grid">
+                                    <div class="color-swatch">
+                                        <div
+                                            class="color-preview"
+                                            style="background-color: #f6f7f9;"
+                                        >
+                                        </div>
+                                        <div class="color-info">
+                                            <span class="color-name"
+                                                >Gray 50</span
+                                            >
+                                            <code>#f6f7f9</code>
+                                        </div>
                                     </div>
-                                    <div class="color-info">
-                                        <span class="color-name">Gray 50</span>
-                                        <code>#f6f7f9</code>
+                                    <div class="color-swatch">
+                                        <div
+                                            class="color-preview"
+                                            style="background-color: #f7f6f4;"
+                                        >
+                                        </div>
+                                        <div class="color-info">
+                                            <span class="color-name"
+                                                >Gray 100</span
+                                            >
+                                            <code>#f7f6f4</code>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="color-swatch">
-                                    <div
-                                        class="color-preview"
-                                        style="background-color: #f7f6f4;"
-                                    >
+                                    <div class="color-swatch">
+                                        <div
+                                            class="color-preview"
+                                            style="background-color: #e8e8e6;"
+                                        >
+                                        </div>
+                                        <div class="color-info">
+                                            <span class="color-name"
+                                                >Gray 200</span
+                                            >
+                                            <code>#e8e8e6</code>
+                                        </div>
                                     </div>
-                                    <div class="color-info">
-                                        <span class="color-name">Gray 100</span>
-                                        <code>#f7f6f4</code>
+                                    <div class="color-swatch">
+                                        <div
+                                            class="color-preview"
+                                            style="background-color: #d1d1d1;"
+                                        >
+                                        </div>
+                                        <div class="color-info">
+                                            <span class="color-name"
+                                                >Gray 300</span
+                                            >
+                                            <code>#d1d1d1</code>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="color-swatch">
-                                    <div
-                                        class="color-preview"
-                                        style="background-color: #e8e8e6;"
-                                    >
+                                    <div class="color-swatch">
+                                        <div
+                                            class="color-preview"
+                                            style="background-color: #94a3b8;"
+                                        >
+                                        </div>
+                                        <div class="color-info">
+                                            <span class="color-name"
+                                                >Gray 400</span
+                                            >
+                                            <code>#94a3b8</code>
+                                        </div>
                                     </div>
-                                    <div class="color-info">
-                                        <span class="color-name">Gray 200</span>
-                                        <code>#e8e8e6</code>
+                                    <div class="color-swatch">
+                                        <div
+                                            class="color-preview"
+                                            style="background-color: #64748b;"
+                                        >
+                                        </div>
+                                        <div class="color-info">
+                                            <span class="color-name"
+                                                >Gray 500</span
+                                            >
+                                            <code>#64748b</code>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="color-swatch">
-                                    <div
-                                        class="color-preview"
-                                        style="background-color: #d1d1d1;"
-                                    >
+                                    <div class="color-swatch">
+                                        <div
+                                            class="color-preview"
+                                            style="background-color: #475569;"
+                                        >
+                                        </div>
+                                        <div class="color-info">
+                                            <span class="color-name"
+                                                >Gray 600</span
+                                            >
+                                            <code>#475569</code>
+                                        </div>
                                     </div>
-                                    <div class="color-info">
-                                        <span class="color-name">Gray 300</span>
-                                        <code>#d1d1d1</code>
+                                    <div class="color-swatch">
+                                        <div
+                                            class="color-preview"
+                                            style="background-color: #334155;"
+                                        >
+                                        </div>
+                                        <div class="color-info">
+                                            <span class="color-name"
+                                                >Gray 700</span
+                                            >
+                                            <code>#334155</code>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="color-swatch">
-                                    <div
-                                        class="color-preview"
-                                        style="background-color: #94a3b8;"
-                                    >
+                                    <div class="color-swatch">
+                                        <div
+                                            class="color-preview"
+                                            style="background-color: #2e2e2e;"
+                                        >
+                                        </div>
+                                        <div class="color-info">
+                                            <span class="color-name"
+                                                >Gray 800</span
+                                            >
+                                            <code>#2e2e2e</code>
+                                        </div>
                                     </div>
-                                    <div class="color-info">
-                                        <span class="color-name">Gray 400</span>
-                                        <code>#94a3b8</code>
-                                    </div>
-                                </div>
-                                <div class="color-swatch">
-                                    <div
-                                        class="color-preview"
-                                        style="background-color: #64748b;"
-                                    >
-                                    </div>
-                                    <div class="color-info">
-                                        <span class="color-name">Gray 500</span>
-                                        <code>#64748b</code>
-                                    </div>
-                                </div>
-                                <div class="color-swatch">
-                                    <div
-                                        class="color-preview"
-                                        style="background-color: #475569;"
-                                    >
-                                    </div>
-                                    <div class="color-info">
-                                        <span class="color-name">Gray 600</span>
-                                        <code>#475569</code>
-                                    </div>
-                                </div>
-                                <div class="color-swatch">
-                                    <div
-                                        class="color-preview"
-                                        style="background-color: #334155;"
-                                    >
-                                    </div>
-                                    <div class="color-info">
-                                        <span class="color-name">Gray 700</span>
-                                        <code>#334155</code>
-                                    </div>
-                                </div>
-                                <div class="color-swatch">
-                                    <div
-                                        class="color-preview"
-                                        style="background-color: #2e2e2e;"
-                                    >
-                                    </div>
-                                    <div class="color-info">
-                                        <span class="color-name">Gray 800</span>
-                                        <code>#2e2e2e</code>
-                                    </div>
-                                </div>
-                                <div class="color-swatch">
-                                    <div
-                                        class="color-preview"
-                                        style="background-color: #1a1a2e;"
-                                    >
-                                    </div>
-                                    <div class="color-info">
-                                        <span class="color-name">Gray 900</span>
-                                        <code>#1a1a2e</code>
+                                    <div class="color-swatch">
+                                        <div
+                                            class="color-preview"
+                                            style="background-color: #1a1a2e;"
+                                        >
+                                        </div>
+                                        <div class="color-info">
+                                            <span class="color-name"
+                                                >Gray 900</span
+                                            >
+                                            <code>#1a1a2e</code>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="color-group">
-                            <h3>Neutral Colors</h3>
-                            <div class="color-grid">
-                                <div class="color-swatch">
-                                    <div
-                                        class="color-preview"
-                                        style="background-color: #FFFFFF; border: 1px solid #e5e5e5;"
-                                    >
-                                    </div>
-                                    <div class="color-info">
-                                        <span class="color-name">White</span>
-                                        <code>#FFFFFF</code>
-                                    </div>
-                                </div>
-                                <div class="color-swatch">
-                                    <div
-                                        class="color-preview"
-                                        style="background-color: #F7F6F4;"
-                                    >
-                                    </div>
-                                    <div class="color-info">
-                                        <span class="color-name"
-                                            >Background Light</span
+                            <div class="color-group">
+                                <h3>Neutral Colors</h3>
+                                <div class="color-grid">
+                                    <div class="color-swatch">
+                                        <div
+                                            class="color-preview"
+                                            style="background-color: #FFFFFF; border: 1px solid #e5e5e5;"
                                         >
-                                        <code>#F7F6F4</code>
+                                        </div>
+                                        <div class="color-info">
+                                            <span class="color-name">White</span
+                                            >
+                                            <code>#FFFFFF</code>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="color-swatch">
-                                    <div
-                                        class="color-preview"
-                                        style="background-color: #E8E8E6;"
-                                    >
-                                    </div>
-                                    <div class="color-info">
-                                        <span class="color-name"
-                                            >Background Gray</span
+                                    <div class="color-swatch">
+                                        <div
+                                            class="color-preview"
+                                            style="background-color: #F7F6F4;"
                                         >
-                                        <code>#E8E8E6</code>
+                                        </div>
+                                        <div class="color-info">
+                                            <span class="color-name"
+                                                >Background Light</span
+                                            >
+                                            <code>#F7F6F4</code>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="color-swatch">
-                                    <div
-                                        class="color-preview"
-                                        style="background-color: #707070;"
-                                    >
+                                    <div class="color-swatch">
+                                        <div
+                                            class="color-preview"
+                                            style="background-color: #E8E8E6;"
+                                        >
+                                        </div>
+                                        <div class="color-info">
+                                            <span class="color-name"
+                                                >Background Gray</span
+                                            >
+                                            <code>#E8E8E6</code>
+                                        </div>
                                     </div>
-                                    <div class="color-info">
-                                        <span class="color-name">Muted</span>
-                                        <code>#707070</code>
+                                    <div class="color-swatch">
+                                        <div
+                                            class="color-preview"
+                                            style="background-color: #707070;"
+                                        >
+                                        </div>
+                                        <div class="color-info">
+                                            <span class="color-name">Muted</span
+                                            >
+                                            <code>#707070</code>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="color-swatch">
-                                    <div
-                                        class="color-preview"
-                                        style="background-color: #D1D1D1;"
-                                    >
-                                    </div>
-                                    <div class="color-info">
-                                        <span class="color-name">Border</span>
-                                        <code>#D1D1D1</code>
+                                    <div class="color-swatch">
+                                        <div
+                                            class="color-preview"
+                                            style="background-color: #D1D1D1;"
+                                        >
+                                        </div>
+                                        <div class="color-info">
+                                            <span class="color-name"
+                                                >Border</span
+                                            >
+                                            <code>#D1D1D1</code>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="color-group">
-                            <h3>Text Colors</h3>
-                            <div class="color-grid">
-                                <div class="color-swatch">
-                                    <div
-                                        class="color-preview"
-                                        style="background-color: #2E2E2E;"
-                                    >
-                                    </div>
-                                    <div class="color-info">
-                                        <span class="color-name"
-                                            >Text Primary</span
+                            <div class="color-group">
+                                <h3>Text Colors</h3>
+                                <div class="color-grid">
+                                    <div class="color-swatch">
+                                        <div
+                                            class="color-preview"
+                                            style="background-color: #2E2E2E;"
                                         >
-                                        <code>#2E2E2E</code>
+                                        </div>
+                                        <div class="color-info">
+                                            <span class="color-name"
+                                                >Text Primary</span
+                                            >
+                                            <code>#2E2E2E</code>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="color-swatch">
-                                    <div
-                                        class="color-preview"
-                                        style="background-color: #707070;"
-                                    >
-                                    </div>
-                                    <div class="color-info">
-                                        <span class="color-name"
-                                            >Text Secondary</span
+                                    <div class="color-swatch">
+                                        <div
+                                            class="color-preview"
+                                            style="background-color: #707070;"
                                         >
-                                        <code>#707070</code>
+                                        </div>
+                                        <div class="color-info">
+                                            <span class="color-name"
+                                                >Text Secondary</span
+                                            >
+                                            <code>#707070</code>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="color-swatch">
-                                    <div
-                                        class="color-preview"
-                                        style="background-color: #94A3B8;"
-                                    >
-                                    </div>
-                                    <div class="color-info">
-                                        <span class="color-name"
-                                            >Text Muted</span
+                                    <div class="color-swatch">
+                                        <div
+                                            class="color-preview"
+                                            style="background-color: #94A3B8;"
                                         >
-                                        <code>#94A3B8</code>
+                                        </div>
+                                        <div class="color-info">
+                                            <span class="color-name"
+                                                >Text Muted</span
+                                            >
+                                            <code>#94A3B8</code>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </section>
+                        </section>
+                        <!-- Cards & Typography Side by Side -->
+                        <section class="style-section">
+                            <h2>Cards</h2>
 
-                    <!-- Typography Section -->
+                            <div class="component-group">
+                                <h3>Basic Card</h3>
+                                <div class="component-demo">
+                                    <div class="card" style="max-width: 300px;">
+                                        <h4>Basic Card</h4>
+                                        <p>
+                                            This is a basic card component with
+                                            white background and subtle shadow.
+                                        </p>
+                                    </div>
+                                </div>
+                                <p class="component-info">
+                                    Bg: #FFFFFF, Radius: 0.75rem, Padding:
+                                    1.5rem, Shadow: 0 1px 2px rgba(0,0,0,0.05)
+                                </p>
+                            </div>
+
+                            <div class="component-group">
+                                <h3>Primary Card</h3>
+                                <div class="component-demo">
+                                    <div
+                                        class="card card-primary"
+                                        style="max-width: 300px;"
+                                    >
+                                        <h4 style="color: white;">
+                                            Primary Card
+                                        </h4>
+                                        <p style="color: white;">
+                                            This is a primary card with teal
+                                            background.
+                                        </p>
+                                    </div>
+                                </div>
+                                <p class="component-info">
+                                    Bg: #41BAB4, Text: #FFFFFF, Radius: 0.75rem
+                                </p>
+                            </div>
+
+                            <div class="component-group">
+                                <h3>Secondary Card</h3>
+                                <div class="component-demo">
+                                    <div
+                                        class="card card-secondary"
+                                        style="max-width: 300px;"
+                                    >
+                                        <h4 style="color: white;">
+                                            Secondary Card
+                                        </h4>
+                                        <p style="color: white;">
+                                            This is a secondary card with dark
+                                            blue background.
+                                        </p>
+                                    </div>
+                                </div>
+                                <p class="component-info">
+                                    Bg: #415776, Text: #FFFFFF, Radius: 0.75rem
+                                </p>
+                            </div>
+                        </section>
+                    </div>
                     <section class="style-section">
                         <h2>Typography</h2>
 
@@ -675,131 +891,9 @@ const canonical = canonicalUrl || new URL(Astro.url.pathname, Astro.site).href;
                             </div>
                         </div>
                     </section>
-                </div>
-
-                <!-- Buttons & Input Fields Side by Side -->
-                <div class="style-grid-2col">
-                    <!-- Buttons Section -->
-                    <section class="style-section">
-                        <h2>Buttons</h2>
-
-                        <div class="component-group">
-                            <h3>Primary Button</h3>
-                            <div class="component-demo">
-                                <button class="btn btn-primary"
-                                    >Get Started</button
-                                >
-                                <button class="btn btn-primary"
-                                    >Subscribe</button
-                                >
-                            </div>
-                            <p class="component-info">
-                                Background: #41BAB4, Padding: 0.75rem 1.5rem,
-                                Radius: 0.5rem
-                            </p>
-                        </div>
-
-                        <div class="component-group">
-                            <h3>Secondary Button</h3>
-                            <div class="component-demo">
-                                <button class="btn btn-secondary"
-                                    >Sign In</button
-                                >
-                                <button class="btn btn-secondary"
-                                    >Choose Plan</button
-                                >
-                            </div>
-                            <p class="component-info">
-                                Background: #2E2E2E, Padding: 0.625rem 1.25rem,
-                                Radius: 0.25rem
-                            </p>
-                        </div>
-
-                        <div class="component-group">
-                            <h3>Outline Button</h3>
-                            <div class="component-demo">
-                                <button class="btn btn-outline"
-                                    >Learn More</button
-                                >
-                                <button class="btn btn-outline"
-                                    >View Features</button
-                                >
-                            </div>
-                            <p class="component-info">
-                                Border: 1px solid #2E2E2E, Transparent bg,
-                                Radius: 0.25rem
-                            </p>
-                        </div>
-
-                        <div class="component-group">
-                            <h3>Ghost Button</h3>
-                            <div class="component-demo">
-                                <button class="btn btn-ghost">Read More</button>
-                                <button class="btn btn-ghost">Contact Us</button
-                                >
-                            </div>
-                            <p class="component-info">
-                                No border, Transparent bg, Radius: 0.25rem
-                            </p>
-                        </div>
-
-                        <div class="component-group">
-                            <h3>Button with Arrow</h3>
-                            <div class="component-demo">
-                                <button class="btn-arrow">
-                                    Get Started
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        fill="none"
-                                        viewBox="0 0 24 24"
-                                        stroke="currentColor"
-                                        stroke-width="2.5"
-                                    >
-                                        <path
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                    </svg>
-                                </button>
-                                <button class="btn-arrow-secondary">
-                                    Start Planning
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        fill="none"
-                                        viewBox="0 0 24 24"
-                                        stroke="currentColor"
-                                        stroke-width="2.5"
-                                    >
-                                        <path
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                    </svg>
-                                </button>
-                                <button class="btn-arrow-accent">
-                                    Get Started
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        fill="none"
-                                        viewBox="0 0 24 24"
-                                        stroke="currentColor"
-                                        stroke-width="2.5"
-                                    >
-                                        <path
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                    </svg>
-                                </button>
-                            </div>
-                            <p class="component-info">
-                                Arrow animates on hover, Padding: 0.75rem
-                                1.25rem, Arrow: 16px with 2.5 stroke
-                            </p>
-                        </div>
-                    </section>
-
-                    <!-- Input Fields Section -->
+                </section>
+                <div>
+                    <!-- Input Fields Section (left) -->
                     <section class="style-section">
                         <h2>Input Fields</h2>
 
@@ -866,75 +960,7 @@ const canonical = canonicalUrl || new URL(Astro.url.pathname, Astro.site).href;
                             </div>
                         </div>
                     </section>
-                </div>
-
-                <!-- Cards Section -->
-                <div class="style-grid-2col">
-                    <section class="style-section">
-                        <h2>Cards</h2>
-
-                        <div class="component-group">
-                            <h3>Basic Card</h3>
-                            <div class="component-demo">
-                                <div class="card" style="max-width: 300px;">
-                                    <h4>Basic Card</h4>
-                                    <p>
-                                        This is a basic card component with
-                                        white background and subtle shadow.
-                                    </p>
-                                </div>
-                            </div>
-                            <p class="component-info">
-                                Bg: #FFFFFF, Radius: 0.75rem, Padding: 1.5rem,
-                                Shadow: 0 1px 2px rgba(0,0,0,0.05)
-                            </p>
-                        </div>
-
-                        <div class="component-group">
-                            <h3>Primary Card</h3>
-                            <div class="component-demo">
-                                <div
-                                    class="card card-primary"
-                                    style="max-width: 300px;"
-                                >
-                                    <h4 style="color: white;">Primary Card</h4>
-                                    <p style="color: white;">
-                                        This is a primary card with teal
-                                        background.
-                                    </p>
-                                </div>
-                            </div>
-                            <p class="component-info">
-                                Bg: #41BAB4, Text: #FFFFFF, Radius: 0.75rem
-                            </p>
-                        </div>
-
-                        <div class="component-group">
-                            <h3>Secondary Card</h3>
-                            <div class="component-demo">
-                                <div
-                                    class="card card-secondary"
-                                    style="max-width: 300px;"
-                                >
-                                    <h4 style="color: white;">
-                                        Secondary Card
-                                    </h4>
-                                    <p style="color: white;">
-                                        This is a secondary card with dark blue
-                                        background.
-                                    </p>
-                                </div>
-                            </div>
-                            <p class="component-info">
-                                Bg: #415776, Text: #FFFFFF, Radius: 0.75rem
-                            </p>
-                        </div>
-                    </section>
-                </div>
-
-                <!-- Spacing & Border Radius Side by Side -->
-                <div class="style-grid-2col">
-                    <!-- Spacing Section -->
+                    <!-- Spacing Section (left) -->
                     <section class="style-section">
                         <h2>Spacing</h2>
 
@@ -1005,8 +1031,7 @@ const canonical = canonicalUrl || new URL(Astro.url.pathname, Astro.site).href;
                             </div>
                         </div>
                     </section>
-
-                    <!-- Border Radius Section -->
+                    <!-- Border Radius Section (left) -->
                     <section class="style-section">
                         <h2>Border Radius</h2>
 
@@ -1061,29 +1086,25 @@ const canonical = canonicalUrl || new URL(Astro.url.pathname, Astro.site).href;
                             </div>
                         </div>
                     </section>
-                </div>
+                    <!-- Container Section (left) -->
+                    <section class="style-section">
+                        <h2>Container</h2>
 
-                <!-- Container Section -->
-                <section
-                    class="style-section"
-                    style="max-width: 800px; margin: 0 auto;"
-                >
-                    <h2>Container</h2>
-
-                    <div class="container-demo">
-                        <div class="container-item">
-                            <div
-                                class="container-bar"
-                                style="width: 1540px; max-width: 100%;"
-                            >
+                        <div class="container-demo">
+                            <div class="container-item">
+                                <div
+                                    class="container-bar"
+                                    style="width: 1540px; max-width: 100%;"
+                                >
+                                </div>
+                            </div>
+                            <div class="container-info">
+                                <span class="container-name">container</span>
+                                <code>1540px (96.25rem)</code>
                             </div>
                         </div>
-                        <div class="container-info">
-                            <span class="container-name">container</span>
-                            <code>1540px (96.25rem)</code>
-                        </div>
-                    </div>
-                </section>
+                    </section>
+                </div>
             </div>
         </div>
     </body>
@@ -1120,7 +1141,7 @@ const canonical = canonicalUrl || new URL(Astro.url.pathname, Astro.site).href;
         background: var(--color-white);
         border-radius: 1rem;
         padding: 2rem;
-        margin-bottom: 0;
+        margin-bottom: 2rem;
     }
 
     .style-grid-2col {
@@ -1132,6 +1153,10 @@ const canonical = canonicalUrl || new URL(Astro.url.pathname, Astro.site).href;
 
     .style-grid-2col .style-section {
         height: fit-content;
+    }
+
+    .style-guide > .container > .style-section {
+        max-width: calc(50% - 1rem);
     }
 
     .style-section h2 {
