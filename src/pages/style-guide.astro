@@ -1,4 +1,5 @@
 ---
+import CommonBanner from "../components/CommonBanner.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import "../styles/style.css";
@@ -6,6 +7,8 @@ import "../styles/example.style.css";
 import Blogs from "../components/Blogs.astro";
 import CTABanner from "../components/CTABanner.astro";
 import Newsletter from "../components/Newsletter.astro";
+import { getEntry } from "astro:content";
+const bannerCollection = await getEntry("banner", "banner_pricing");
 
 interface Props {
     title?: string;
@@ -1168,6 +1171,7 @@ const canonical = canonicalUrl || new URL(Astro.url.pathname, Astro.site).href;
                         </div>
                     </div>
                 </section>
+                <CommonBanner banner={bannerCollection?.data} />
                 <Blogs limit={4} />
                 <Newsletter />
             </div>
