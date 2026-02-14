@@ -3,7 +3,9 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import "../styles/style.css";
 import "../styles/example.style.css";
+import Blogs from "../components/Blogs.astro";
 import CTABanner from "../components/CTABanner.astro";
+import Newsletter from "../components/Newsletter.astro";
 
 interface Props {
     title?: string;
@@ -905,25 +907,37 @@ const canonical = canonicalUrl || new URL(Astro.url.pathname, Astro.site).href;
                                         <div class="newsletter-field">
                                             <input
                                                 type="text"
+                                                id="firstName"
+                                                name="firstName"
                                                 placeholder="First Name"
                                                 class="newsletter-input"
+                                                required
                                             />
                                         </div>
+
                                         <div class="newsletter-field">
                                             <input
                                                 type="text"
+                                                id="lastName"
+                                                name="lastName"
                                                 placeholder="Last Name"
                                                 class="newsletter-input"
+                                                required
                                             />
                                         </div>
+
                                         <div class="newsletter-field">
                                             <input
                                                 type="email"
+                                                id="email"
+                                                name="email"
                                                 placeholder="Email"
                                                 class="newsletter-input"
+                                                required
                                             />
                                         </div>
                                     </div>
+
                                     <button type="submit" class="btn btn-dark"
                                         >Subscribe</button
                                     >
@@ -1105,6 +1119,57 @@ const canonical = canonicalUrl || new URL(Astro.url.pathname, Astro.site).href;
                         </div>
                     </section>
                 </div>
+            </div>
+
+            <div>
+                <header class="style-guide-header">
+                    <h1>Common Components</h1>
+                </header>
+                <section class="clearer-way">
+                    <div class="container">
+                        <div class="split-content">
+                            <div class="split-content-text">
+                                <h2>
+                                    A clearer way to plan retirement – built for <span
+                                        class="text-teal">real people</span
+                                    >
+                                </h2>
+                                <p>
+                                    OnTarget™ helps you model your entire
+                                    financial life, not just a single number or
+                                    projection. Visualize income, spending,
+                                    taxes, and assets over time. Explore endless
+                                    "what-if" scenarios without breaking
+                                    anything. Understand how today's decisions
+                                    affect decades of retirement.
+                                </p>
+                                <p style="font-weight: 400;">
+                                    Adjust as life changes – because it always
+                                    does.
+                                </p>
+                            </div>
+                            <div class="split-content-thumb">
+                                <img
+                                    src="/images/landing/stock/couple_water.jpg"
+                                    alt="People with a retirement plan feel more confident about their future"
+                                />
+                                <div class="split-content-text-overlay">
+                                    <h3 class="stat-number">87%</h3>
+                                    <p class="stat-headline">
+                                        People with a retirement plan feel more
+                                        confident about their future.
+                                    </p>
+                                    <p class="stat-subtext">
+                                        Confidence comes from planning, not
+                                        guessing.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <Blogs limit={4} />
+                <Newsletter />
             </div>
         </div>
     </body>
@@ -1319,39 +1384,12 @@ const canonical = canonicalUrl || new URL(Astro.url.pathname, Astro.site).href;
         border-radius: 0.5rem;
     }
 
-    .input-demo {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .input-field-wrapper {
-        width: 100%;
-        max-width: 300px;
-        margin-bottom: 1rem;
-    }
-
-    .input-label {
-        display: block;
-        font-size: 0.875rem;
-        font-weight: 500;
-        color: var(--color-dark);
-        margin-bottom: 0.5rem;
-    }
-
-    .component-info {
-        font-size: 0.75rem;
-        color: var(--color-muted);
-        margin-top: 0.75rem;
-    }
-
-    /* Newsletter Input Styles */
     .newsletter-form {
         display: flex;
         gap: 1rem;
         align-items: flex-end;
         flex-wrap: wrap;
         justify-content: space-between;
-        width: 100%;
     }
 
     .newsletter-inputs {
@@ -1391,10 +1429,33 @@ const canonical = canonicalUrl || new URL(Astro.url.pathname, Astro.site).href;
     .newsletter-input:focus {
         border-bottom-color: #0c2350;
     }
-
     .newsletter-form .btn {
         width: 9.625rem;
         height: 2.625rem;
+    }
+    .input-demo {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .input-field-wrapper {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 1rem;
+    }
+
+    .input-label {
+        display: block;
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: var(--color-dark);
+        margin-bottom: 0.5rem;
+    }
+
+    .component-info {
+        font-size: 0.75rem;
+        color: var(--color-muted);
+        margin-top: 0.75rem;
     }
 
     .spacing-demo {
