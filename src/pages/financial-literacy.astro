@@ -6,6 +6,7 @@ import HeroDescription from "../components/HeroDescription.astro";
 import { getEntry } from "astro:content";
 import Questions from "./affiliates/_components/Questions.astro";
 import InfoColumns from "../components/InfoColumns.astro";
+import CommonBanner from "../components/CommonBanner.astro";
 
 const decriptionCollection = await getEntry(
     "heroDescription",
@@ -13,6 +14,7 @@ const decriptionCollection = await getEntry(
 );
 const infoCards = await getEntry("infoCard", "financial-literacy_cards");
 const infoColumns = await getEntry("infoColumn", "financial-literacy_columns");
+const bannerCollection = await getEntry("banner", "banner_pricing");
 ---
 
 <BaseLayout
@@ -23,6 +25,7 @@ const infoColumns = await getEntry("infoColumn", "financial-literacy_columns");
     <CommonHero title="Gift Financial Literacy" />
     <HeroDescription description={decriptionCollection} />
     <Questions infoCards={infoCards} />
+    <CommonBanner banner={bannerCollection?.data} />
     <InfoColumns data={infoColumns?.data} />
     <CTABanner />
 </BaseLayout>
