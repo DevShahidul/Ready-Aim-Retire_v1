@@ -1,0 +1,20 @@
+---
+import { getEntry } from "astro:content";
+import CommonHero from "../../components/CommonHero.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import HeroDescription from "../../components/HeroDescription.astro";
+
+const decriptionCollection = await getEntry(
+    "heroDescription",
+    "affiliate_description",
+);
+---
+
+<BaseLayout
+    title="Affiliate Program – ReadyAimRetire"
+    description="Join the ReadyAimRetire affiliate program. Earn commissions by helping others plan their retirement."
+    solidHeader={true}
+>
+    <CommonHero title="Affiliate Program" />
+    <HeroDescription description={decriptionCollection} />
+</BaseLayout>
