@@ -1,0 +1,19 @@
+---
+import { getEntry } from "astro:content";
+import InfoCard from "../../../components/InfoCard.astro";
+
+const infoCards = await getEntry("infoCard", "affiliates_cards");
+---
+
+<section class="container questions">
+    {infoCards?.data?.map((info) => <InfoCard info={info} />)}
+</section>
+
+<style>
+    .questions {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+</style>

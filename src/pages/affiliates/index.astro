@@ -3,6 +3,7 @@ import { getEntry } from "astro:content";
 import CommonHero from "../../components/CommonHero.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import HeroDescription from "../../components/HeroDescription.astro";
+import Questions from "./_components/Questions.astro";
 
 const decriptionCollection = await getEntry(
     "heroDescription",
@@ -17,4 +18,5 @@ const decriptionCollection = await getEntry(
 >
     <CommonHero title="Affiliate Program" />
     <HeroDescription description={decriptionCollection} />
+    <Questions />
 </BaseLayout>
