@@ -1,0 +1,17 @@
+---
+const { mailingAddress, stayConnected } = Astro.props;
+---
+
+<section class="container address-info">
+    <h2>{mailingAddress?.title}</h2>
+    <h2>{stayConnected?.title}</h2>
+</section>
+
+<style>
+    .address-info {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin: 2rem auto;
+    }
+</style>

@@ -5,6 +5,9 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import HeroDivider from "../../components/HeroDivider.astro";
 import HeroDescription from "../../components/HeroDescription.astro";
 import ContactOptions from "./_component/ContactOptions.astro";
+import AddressInfo from "./_component/AddressInfo.astro";
+import Newsletter from "../../components/Newsletter.astro";
+import CTABanner from "../../components/CTABanner.astro";
 
 const contactCollection = await getEntry("contactPage", "contact");
 const data = contactCollection?.data;
@@ -25,4 +28,10 @@ console.log(data);
     <HeroDivider text="We’re here to help" />
     <HeroDescription description={decriptionCollection} />
     <ContactOptions options={data?.contactOptions} />
+    <AddressInfo
+        mailingAddress={data?.mailingAddress}
+        stayConnected={data?.stayConnected}
+    />
+    <Newsletter />
+    <CTABanner />
 </BaseLayout>
