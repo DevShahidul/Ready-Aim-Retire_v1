@@ -19,4 +19,22 @@ const { text } = Astro.props;
             font-weight: 400;
         }
     }
+
+    @media (max-width: 1024px) {
+        .hero-divider {
+            padding: 0.8rem 0;
+        }
+        .container {
+            padding: 0 2rem;
+        }
+        .container h4 {
+            font-size: 1.0625rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .container h4 {
+            font-size: 1rem;
+        }
+    }
 </style>
