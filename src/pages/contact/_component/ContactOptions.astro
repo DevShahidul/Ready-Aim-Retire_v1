@@ -9,13 +9,59 @@ type ContactCard = {
 ---
 
 <section class="container contact-options">
-    {options?.map((item: ContactCard) => <h2>{item.title}</h2>)}
+    {
+        options?.map((item: ContactCard) => (
+            <div class="option-card">
+                <img src={item.icon} alt="" />
+                <div class="option-card-body">
+                    <h5>{item.title}</h5>
+                    <p>{item.description}</p>
+                    <a href={`mailto:${item.email}`}>{item.email}</a>
+                </div>
+            </div>
+        ))
+    }
 </section>
 
 <style>
     .contact-options {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 2rem;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 9%;
+        margin-top: 2.8125rem;
+        padding-bottom: 5rem;
+        border-bottom: 1px solid #707070;
+    }
+
+    .option-card {
+        max-width: 26.25rem;
+        background-color: #ffffff;
+        border-radius: 0.3125rem;
+        display: flex;
+        align-items: start;
+        gap: 1.25rem;
+    }
+
+    .option-card-body {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+        h5 {
+            margin-top: 1.3rem;
+            font-size: 0.8125rem;
+            font-weight: 400;
+        }
+        p {
+            font-size: 1.0625rem;
+            color: #707070;
+            line-height: 1.5rem;
+        }
+        a {
+            font-size: 0.9375rem;
+            color: #2e2e2e;
+            text-decoration: underline;
+        }
+        padding-bottom: 2.25rem;
+        padding-right: 1.875rem;
     }
 </style>
