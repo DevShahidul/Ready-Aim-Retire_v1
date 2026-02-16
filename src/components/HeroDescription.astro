@@ -41,13 +41,13 @@ const { Content } = await render(description);
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-gap: 2rem;
-        margin-top: 7.1875rem;
+        margin-top: 2.625rem;
     }
     .description-title {
         h3 {
             font-size: 1.75rem;
             font-weight: 400;
-            max-width: 27.5rem;
+            max-width: 30rem;
             line-height: 2.25rem;
         }
     }
@@ -57,6 +57,9 @@ const { Content } = await render(description);
             font-size: 1.25rem;
             line-height: 1.75rem;
             font-weight: 300;
+        }
+        p:not(:last-child) {
+            margin-bottom: 1.25rem;
         }
     }
 </style>
