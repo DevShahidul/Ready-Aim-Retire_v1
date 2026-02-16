@@ -4,6 +4,7 @@ import CommonHero from "../../components/CommonHero.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import HeroDivider from "../../components/HeroDivider.astro";
 import HeroDescription from "../../components/HeroDescription.astro";
+import ContactOptions from "./_component/ContactOptions.astro";
 
 const contactCollection = await getEntry("contactPage", "contact");
 const data = contactCollection?.data;
@@ -12,7 +13,7 @@ const decriptionCollection = await getEntry(
     "heroDescription",
     "contact_description",
 );
-console.log(decriptionCollection);
+console.log(data);
 ---
 
 <BaseLayout
@@ -23,4 +24,5 @@ console.log(decriptionCollection);
     <CommonHero title={data?.hero.title} />
     <HeroDivider text="We’re here to help" />
     <HeroDescription description={decriptionCollection} />
+    <ContactOptions options={data?.contactOptions} />
 </BaseLayout>

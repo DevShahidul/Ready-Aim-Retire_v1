@@ -1,0 +1,21 @@
+---
+const { options } = Astro.props;
+type ContactCard = {
+    title: string;
+    description: string;
+    email: string;
+    icon: string;
+};
+---
+
+<section class="container contact-options">
+    {options?.map((item: ContactCard) => <h2>{item.title}</h2>)}
+</section>
+
+<style>
+    .contact-options {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+    }
+</style>

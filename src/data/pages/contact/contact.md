@@ -8,17 +8,17 @@ contactOptions:
   - title: "General Questions & Support"
     email: "support@readyaimretire.com"
     description: "For product questions and support"
-    icon: "support"
+    icon: "/images/icons/option1.png"
     
   - title: "Student Pro Access"
     email: "info@readyaimretire.com"
     description: "Students can receive a free Pro account by emailing us from their .edu email address. Tell us you're a student - we'll take it from there."
-    icon: "student"
+    icon: "/images/icons/option2.png"
     
   - title: "Advisors & Partnerships"
     email: "info@readyaimretire.com"
     description: "If you're a financial advisor or interested in working with Ready Aim Retire, please reach out and let us know a bit about what you're looking to do."
-    icon: "partnerships"
+    icon: "/images/icons/option3.png"
 
 mailingAddress:
   title: "Mailing Address"
