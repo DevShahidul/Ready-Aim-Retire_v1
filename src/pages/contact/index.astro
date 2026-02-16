@@ -1,0 +1,18 @@
+---
+import { getEntry } from "astro:content";
+import CommonHero from "../../components/CommonHero.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import HeroDivider from "../../components/HeroDivider.astro";
+
+const contactCollection = await getEntry("contactPage", "contact");
+const data = contactCollection?.data;
+---
+
+<BaseLayout
+    title="Contact Us – ReadyAimRetire"
+    description="Get in touch with the ReadyAimRetire team. We're here to help with your retirement planning questions."
+    solidHeader={true}
+>
+    <CommonHero title={data?.hero.title} />
+    <HeroDivider text="We’re here to help" />
+</BaseLayout>
