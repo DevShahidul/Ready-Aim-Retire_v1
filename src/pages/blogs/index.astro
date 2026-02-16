@@ -1,0 +1,14 @@
+---
+import Blogs from "../../components/Blogs.astro";
+import CommonHero from "../../components/CommonHero.astro";
+import CTABanner from "../../components/CTABanner.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout solidHeader={true}>
+    <CommonHero
+        title="Lorem ipsum dolor sit amet, consetetur sadipscing elitr"
+    />
+    <Blogs limit={8} />
+    <CTABanner />
+</BaseLayout>

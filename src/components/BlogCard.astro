@@ -42,7 +42,7 @@ const { blog, serial } = Astro.props;
         top: 0;
     }
 
-    .blog-card-wrapper:last-of-type::after {
+    .blog-card-wrapper:nth-child(4n)::after {
         display: none;
     }
 
