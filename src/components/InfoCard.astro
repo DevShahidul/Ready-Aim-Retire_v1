@@ -2,8 +2,79 @@
 const { info } = Astro.props;
 ---
 
-<div>
-    <h2>{info?.title}</h2>
+<div class="question-card">
+    {info.tag && <h2 class="tag">{info.tag}</h2>}
+    <div class="question-card-body">
+        <h3>{info.title}</h3>
+        <p>{info.subtitle}</p>
+        <ul>
+            {info.checkList.title && <h4>{info.checkList.title}</h4>}
+            {
+                info.checkList.items.map((item: string) => (
+                    <li>
+                        <img src="./images/icons/check-icon.png" alt="" />
+                        {item}
+                    </li>
+                ))
+            }
+        </ul>
+        <p class="text-bottom">{info.bottomText}</p>
+    </div>
 </div>
 
-<style></style>
+<style>
+    .question-card {
+        background-color: #fff;
+        border-radius: 0.625rem;
+        padding-bottom: 2.75rem;
+    }
+
+    .question-card .tag {
+        text-align: left;
+        border-radius: 10px 50px 50px 10px;
+        max-width: 11.25rem;
+        color: #fff;
+        background-color: #41bab4;
+        padding: 0.5rem 2rem;
+        font-size: 1.875rem;
+        font-weight: 500;
+    }
+    .question-card-body {
+        padding-left: 2.5rem;
+        padding-right: 1.5rem;
+        display: flex;
+        height: 80%;
+        flex-direction: column;
+        h3 {
+            font-size: 1.75rem;
+            font-weight: 400;
+            margin-top: 2.5rem;
+        }
+        p {
+            font-size: 1.125rem;
+            font-weight: 500;
+        }
+        ul {
+            margin-bottom: 2rem;
+        }
+        ul h4 {
+            margin-top: 1.25rem;
+        }
+        ul li {
+            display: flex;
+            font-size: 1.0625rem;
+            align-items: center;
+            gap: 0.75rem;
+            margin-top: 1rem;
+        }
+    }
+    .question-card-body:last-of-type {
+        height: 86%;
+    }
+    .text-bottom {
+        max-width: 35.625rem;
+        padding-top: 1.625rem;
+        margin-top: auto;
+        border-top: 1px solid #707070;
+    }
+</style>

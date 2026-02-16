@@ -1,17 +1,18 @@
 ---
 import InfoCard from "../../../components/InfoCard.astro";
 const { infoCards } = Astro.props;
+import type { QuestionCard } from "../../../types/questionCard_types";
 ---
 
 <section class="container questions">
-    {infoCards?.data?.map((info) => <InfoCard info={info} />)}
+    {infoCards?.data?.map((info: QuestionCard) => <InfoCard info={info} />)}
 </section>
 
 <style>
     .questions {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 2rem;
-        margin-top: 2rem;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4.875rem;
+        margin-top: 3.3125rem;
     }
 </style>
