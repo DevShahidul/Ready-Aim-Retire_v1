@@ -1,0 +1,45 @@
+---
+import { render } from "astro:content";
+
+const { description } = Astro.props;
+const { Content } = await render(description);
+---
+
+<section class="container hero-description">
+    <div>
+        <h3>
+            {description?.data.title}
+        </h3>
+        {
+            description?.data.btnText && (
+                <a href="btn btn-dark">{description?.data.btnText}</a>
+            )
+        }
+    </div>
+    <div>
+        <div>
+            <Content />
+        </div>
+        <div>
+            {
+                description?.data.checkList.map(
+                    (item: { point: string }) =>
+                        item?.point && (
+                            <div class="benefit-pill">
+                                <img src="/images/icons/clearer-way-check.svg" />
+                                <span>{item}</span>
+                            </div>
+                        ),
+                )
+            }
+        </div>
+    </div>
+</section>
+
+<style>
+    .hero-description {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 2rem;
+    }
+</style>
