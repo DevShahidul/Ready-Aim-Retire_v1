@@ -5,6 +5,7 @@ import { bannerSchema } from "./schema/bannerSchema";
 import { heroDescriptionShcema } from "./schema/heroDescriptionSchema";
 import { contactSchema } from "./schema/contactSchema";
 import { infoCardSchema } from "./schema/infoCardSchema";
+import { infoColumnSchema } from "./schema/infoColumnSchema";
 
 const pricingPage = defineCollection({
     loader: glob({ pattern: "**/*.md", base: "./src/data/pages/pricing" }),
@@ -31,7 +32,13 @@ const infoCard = defineCollection({
     schema: infoCardSchema,
 });
 
+const infoColumn = defineCollection({
+    loader: glob({ pattern: "**/*.md", base: "./src/data/infoColumn" }),
+    schema: infoColumnSchema,
+});
+
 export const collections = {
+    infoColumn,
     infoCard,
     pricingPage,
     banner,

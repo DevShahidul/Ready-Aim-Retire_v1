@@ -4,11 +4,16 @@ import CommonHero from "../../components/CommonHero.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import HeroDescription from "../../components/HeroDescription.astro";
 import Questions from "./_components/Questions.astro";
+import CTABanner from "../../components/CTABanner.astro";
+import InfoColumns from "../../components/InfoColumns.astro";
 
 const decriptionCollection = await getEntry(
     "heroDescription",
     "affiliate_description",
 );
+
+const infoCards = await getEntry("infoCard", "affiliates_cards");
+const infoColumns = await getEntry("infoColumn", "affiliates_columns");
 ---
 
 <BaseLayout
@@ -18,5 +23,7 @@ const decriptionCollection = await getEntry(
 >
     <CommonHero title="Affiliate Program" />
     <HeroDescription description={decriptionCollection} />
-    <Questions />
+    <Questions infoCards={infoCards} />
+    <InfoColumns data={infoColumns?.data} />
+    <CTABanner />
 </BaseLayout>
