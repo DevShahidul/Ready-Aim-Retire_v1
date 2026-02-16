@@ -3,15 +3,69 @@ const { mailingAddress, stayConnected } = Astro.props;
 ---
 
 <section class="container address-info">
-    <h2>{mailingAddress?.title}</h2>
-    <h2>{stayConnected?.title}</h2>
+    <div class="mailing-info">
+        <h3>{mailingAddress?.title}</h3>
+        <address>{mailingAddress?.address}</address>
+    </div>
+    <div class="social-info">
+        <h3>{stayConnected?.title}</h3>
+        <p>{stayConnected?.description}</p>
+        <ul>
+            {
+                stayConnected?.socialLinks.map(
+                    (item: { platform: string; url: string }) => (
+                        <li>
+                            <a href={item.url}>{item.platform}</a>
+                        </li>
+                    ),
+                )
+            }
+        </ul>
+        <a href={stayConnected?.ctaButton.url} class="btn btn-dark"
+            >{stayConnected?.ctaButton.text}
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+    </div>
 </section>
 
 <style>
     .address-info {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
-        margin: 2rem auto;
+        margin: 5.25rem auto 8.125rem;
+    }
+    .mailing-info,
+    .social-info {
+        h3 {
+            font-size: 1.5625rem;
+            font-weight: 400;
+            color: #2e2e2e;
+        }
+    }
+    .mailing-info {
+        address {
+            margin-top: 0.875rem;
+            max-width: 11rem;
+            font-style: normal;
+            color: #707070;
+        }
+    }
+
+    .social-info {
+        p,
+        a {
+            font-size: 1.0625rem;
+            color: #707070;
+        }
+        p {
+            margin: 0.875rem 0;
+            max-width: 35.625rem;
+        }
+        .btn-dark {
+            background-color: #3f3c68;
+            color: #ffffff;
+            margin-top: 2rem;
+        }
     }
 </style>
