@@ -6,7 +6,7 @@ const { Content } = await render(description);
 ---
 
 <section class="container hero-description">
-    <div>
+    <div class="description-title">
         <h3>
             {description?.data.title}
         </h3>
@@ -17,7 +17,7 @@ const { Content } = await render(description);
         }
     </div>
     <div>
-        <div>
+        <div class="description-details">
             <Content />
         </div>
         <div>
@@ -41,5 +41,22 @@ const { Content } = await render(description);
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-gap: 2rem;
+        margin-top: 7.1875rem;
+    }
+    .description-title {
+        h3 {
+            font-size: 1.75rem;
+            font-weight: 400;
+            max-width: 27.5rem;
+            line-height: 2.25rem;
+        }
+    }
+    .description-details {
+        max-width: 41.875rem;
+        p {
+            font-size: 1.25rem;
+            line-height: 1.75rem;
+            font-weight: 300;
+        }
     }
 </style>

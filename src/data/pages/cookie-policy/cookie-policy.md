@@ -1,7 +1,7 @@
 ---
 title: "Cookie Policy"
 description: "How Ready Aim Retire uses cookies and similar technologies."
-lastUpdated: "last updated: january 1, 2026"
+lastUpdated: "Last Updated: [January 1, 2026]"
 ---
   <p>
     This Cookie Policy explains how <strong>Ready Aim Retire</strong> (“Company,”
