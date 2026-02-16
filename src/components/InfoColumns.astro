@@ -1,21 +1,99 @@
 ---
+import { Picture } from "astro:assets";
+import type { ColumnCard } from "../types/component_types";
+
 const { data } = Astro.props;
 ---
 
-<section class="container info-columns">
-    {
-        data?.map((item) => (
-            <div>
-                <h2>{item?.title}</h2>
-            </div>
-        ))
-    }
+<section class="info-columns-section">
+    <div class="container info-card-wrapper">
+        {
+            data?.map((item: ColumnCard) => (
+                <div class="info-card">
+                    <h2>{item?.title}</h2>
+                    {item?.subtitle && <p>{item?.subtitle}</p>}
+                    {item?.dotList && (
+                        <div class="info-card-list">
+                            {item.dotList.title && <p>{item.dotList.title}</p>}
+                            <ul class="bullet-list ">
+                                {item.dotList.items?.map((text) => (
+                                    <li>{text}</li>
+                                ))}
+                            </ul>
+                        </div>
+                    )}
+                    {item.btnText && (
+                        <a href="#" class="btn btn-dark">
+                            {item.btnText}
+                            <i class="fa-solid fa-arrow-right" />
+                        </a>
+                    )}
+                    {item.bottomText && <p>{item.bottomText}</p>}
+                    {item.email && (
+                        <a
+                            href={`mailto:${item.email}`}
+                            class="info-card-email"
+                        >
+                            <img src="./images/icons/option3.png" />
+                            {item.email}
+                        </a>
+                    )}
+                </div>
+            ))
+        }
+    </div>
 </section>
 <style>
-    .info-columns {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    .info-columns-section {
+        padding: 4.5rem 0 5.25rem;
+    }
+
+    .info-card-wrapper {
+        display: flex;
         gap: 2rem;
-        margin-top: 2rem;
+        justify-content: space-between;
+    }
+    .info-card {
+        position: relative;
+        max-width: 28.875rem;
+        color: #2e2e2e;
+        h2 {
+            font-size: 1.75rem;
+            font-weight: 400;
+        }
+        p {
+            margin-top: 1rem;
+        }
+        ul {
+            margin-top: 1.3rem;
+        }
+        ul li {
+            color: #2e2e2e;
+        }
+        .btn-dark {
+            margin-top: 1rem;
+        }
+    }
+    .info-card-email {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-top: 1.875rem;
+        img {
+            width: 1.375rem;
+        }
+    }
+    .info-card::after {
+        content: "";
+        display: block;
+        width: 1px;
+        height: 100%;
+        background-color: #d1d1d1;
+        position: absolute;
+        right: -7rem;
+        top: 0;
+    }
+    .info-card:nth-child(3n)::after {
+        display: none;
     }
 </style>

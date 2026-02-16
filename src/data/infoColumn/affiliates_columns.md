@@ -1,7 +1,7 @@
 ---
 - id: "1"
   title: "What We Ask in Return"
-  subtile: "What We Ask in Return"
+  subtitle: "What We Ask in Return"
   dotList: 
     title: ""
     items: 
@@ -15,7 +15,7 @@
 
 - id: "2"
   title: "Tracking & Payouts"
-  subtile: ""
+  subtitle: ""
   dotList: 
     title: ""
     items: 
@@ -29,13 +29,8 @@
   
 - id: "3"
   title: "Ready to Become an Affiliate?"
-  subtile: "If you believe in financial literacy and want to share a tool that genuinely helps people plan better, we’d love to work with you."
-  dotList: 
-    title: ""
-    items: 
-      - ""
-      - ""
-      - ""
+  subtitle: "If you believe in financial literacy and want to share a tool that genuinely helps people plan better, we’d love to work with you."
+  # dotList: ""
   btnText: "Apply to the Affiliate Program" 
   bottomText: "If you’re not sure whether the affiliate program is right for you, feel free to reach out."
   email: "info@readyaimretire.com"

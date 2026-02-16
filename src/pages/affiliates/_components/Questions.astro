@@ -1,7 +1,7 @@
 ---
 import InfoCard from "../../../components/InfoCard.astro";
 const { infoCards } = Astro.props;
-import type { QuestionCard } from "../../../types/questionCard_types";
+import type { QuestionCard } from "../../../types/component_types";
 ---
 
 <section class="container questions">
@@ -14,5 +14,6 @@ import type { QuestionCard } from "../../../types/questionCard_types";
         grid-template-columns: repeat(2, 1fr);
         gap: 4.875rem;
         margin-top: 3.3125rem;
+        padding-bottom: 6.75rem;
     }
 </style>
