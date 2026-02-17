@@ -68,4 +68,74 @@ const { mailingAddress, stayConnected } = Astro.props;
             margin-top: 1rem;
         }
     }
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+        .address-info {
+            margin: 3.5rem auto 6rem;
+        }
+    }
+
+    @media (min-width: 481px) and (max-width: 768px) {
+        .address-info {
+            grid-template-columns: 1fr;
+            gap: 2.5rem;
+            margin: 2.5rem auto 4rem;
+        }
+        .mailing-info,
+        .social-info {
+            h3 {
+                font-size: 1.375rem;
+            }
+        }
+        .mailing-info {
+            address {
+                max-width: 100%;
+                font-size: 1rem;
+            }
+        }
+        .social-info {
+            p {
+                max-width: 100%;
+                font-size: 1rem;
+            }
+            ul {
+                margin-top: 0.75rem;
+            }
+        }
+    }
+
+    @media (max-width: 480px) {
+        .address-info {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin: 2rem auto 3rem;
+        }
+        .mailing-info,
+        .social-info {
+            h3 {
+                font-size: 1.25rem;
+            }
+        }
+        .mailing-info {
+            address {
+                max-width: 100%;
+                font-size: 0.9375rem;
+            }
+        }
+        .social-info {
+            p,
+            a {
+                font-size: 0.9375rem;
+            }
+            p {
+                max-width: 100%;
+            }
+            ul {
+                margin-top: 0.75rem;
+            }
+            .btn-dark {
+                margin-top: 0.75rem;
+            }
+        }
+    }
 </style>
