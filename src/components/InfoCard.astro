@@ -5,7 +5,7 @@ const { info } = Astro.props;
 <div class="question-card">
     {info.tag && <h2 class="tag">{info.tag}</h2>}
     <div class="question-card-body">
-        <h3>{info.title}</h3>
+        <h3 set:html={info.title} />
         <p>{info.subtitle}</p>
         <ul>
             {info.checkList.title && <h4>{info.checkList.title}</h4>}

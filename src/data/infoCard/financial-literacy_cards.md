@@ -1,7 +1,7 @@
 ---
   - id: "1"
     tag: ""
-    title: "What You’re Giving"
+    title: "<span class='text-teal'>What</span> You’re Giving"
     subtitle: "A full year of OnTarget™ Pro"
     checkList: 
       title: "A gifted Pro account includes:"
@@ -17,7 +17,7 @@
     
   - id: "2"
     tag: ""
-    title: "A Pro gift is ideal for:"
+    title: "A Pro gift is <span class='text-teal'>ideal</span> for:"
     subtitle: "A Pro gift is ideal for:"
     checkList: 
       title: "A gifted Pro account includes:"
