@@ -1,12 +1,16 @@
 ---
-const { blog, serial } = Astro.props;
+const { blog, serial, blogPage } = Astro.props;
 ---
 
 <div class="blog-card-wrapper">
     <div class={`blog-card ${serial === 1 ? "active" : ""}`}>
         <div class="blog-card-main">
             <div class="blog-card-image-wrapper">
-                <img src={blog.img} alt={blog.title} class="blog-card-image" />
+                <img
+                    src={blogPage ? blog.blogImg : blog.img}
+                    alt={blog.title}
+                    class="blog-card-image"
+                />
                 <div class="blog-card-overlay">
                     <h3 class="blog-card-title-overlay">
                         {blog.title?.slice(0, 37)}
