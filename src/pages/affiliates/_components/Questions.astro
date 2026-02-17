@@ -16,4 +16,30 @@ import type { QuestionCard } from "../../../types/component_types";
         margin-top: 4.3125rem;
         padding-bottom: 6.75rem;
     }
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+        .questions {
+            gap: 3rem;
+            margin-top: 3.5rem;
+            padding-bottom: 5rem;
+        }
+    }
+
+    @media (min-width: 481px) and (max-width: 768px) {
+        .questions {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-top: 2.5rem;
+            padding-bottom: 4rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .questions {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin-top: 2rem;
+            padding-bottom: 3rem;
+        }
+    }
 </style>
