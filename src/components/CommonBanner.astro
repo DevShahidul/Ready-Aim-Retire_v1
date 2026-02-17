@@ -1,5 +1,6 @@
 ---
 const { banner } = Astro.props;
+console.log(banner);
 ---
 
 <section class="banner-section">
@@ -15,6 +16,25 @@ const { banner } = Astro.props;
             <p>{banner.title}</p>
         </div>
         <h3>{banner.subtitle}</h3>
+        {
+            banner.pointsList && (
+                <ul>
+                    {banner.pointsList.map(
+                        (
+                            item: { point: string; details: string },
+                            idx: number,
+                        ) => (
+                            <li>
+                                <h4>
+                                    {idx + 1}. {item.point}
+                                </h4>
+                                <p>{item.details}</p>
+                            </li>
+                        ),
+                    )}
+                </ul>
+            )
+        }
         <button class="btn btn-outline-dark"
             >{banner.buttonText}
             <i class="fa-solid fa-arrow-right fa-lg"></i>
@@ -45,7 +65,7 @@ const { banner } = Astro.props;
         display: flex;
         flex-direction: column;
         justify-content: end;
-        gap: 4.735rem;
+        gap: 1.735rem;
         padding: 1rem 1.25rem 6.25rem 4.25rem;
     }
     .banner-heading {
@@ -67,8 +87,18 @@ const { banner } = Astro.props;
         line-height: 3.3125rem;
         color: #f6f7f9;
     }
+    .banner-info ul {
+        color: #f6f7f9;
+
+        h4 {
+            font-weight: 500;
+        }
+        li:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+    }
     .banner-info button {
-        max-width: 9.75rem;
+        max-width: 11.75rem;
         border: none;
     }
     .banner-info button: {

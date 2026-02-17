@@ -5,7 +5,7 @@ export const bannerSchema = z.object({
     image: z.string(),
     title: z.string(),
     subtitle: z.string(),
-    list: z
+    pointsList: z
         .array(
             z.object({
                 point: z.string(),

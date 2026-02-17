@@ -3,7 +3,7 @@
   image: "/images/banner/people.png"
   title: "How Gifting Works"
   subtitle: "Simple and flexible"
-  list:
+  pointsList:
     - point: "Purchase a Pro Gift"
       details: "Choose a one-year Pro gift subscription"
     - point: "Send it to someone you care about"
