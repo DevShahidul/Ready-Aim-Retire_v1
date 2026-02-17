@@ -3,6 +3,7 @@ import { render } from "astro:content";
 
 const { description } = Astro.props;
 const { Content } = await render(description);
+console.log(description);
 ---
 
 <section class="container hero-description">
@@ -17,7 +18,9 @@ const { Content } = await render(description);
         }
     </div>
     <div>
-        <div class="description-details">
+        <div
+            class={`description-details ${description?.data.largeContent ? "more-space" : ""}`}
+        >
             <Content />
         </div>
         <div>
@@ -52,16 +55,20 @@ const { Content } = await render(description);
         }
     }
     .description-details {
-        max-width: 41.875rem;
+        max-width: 36rem;
         p {
             font-size: 1.0625rem;
             line-height: 1.75rem;
             font-weight: 300;
-            max-width: 36rem;
+            /*max-width: 36rem;*/
         }
         p:not(:last-child) {
             margin-bottom: 1.25rem;
         }
+    }
+
+    .more-space {
+        max-width: 41.5rem;
     }
 
     @media (min-width: 769px) and (max-width: 1024px) {
