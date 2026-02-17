@@ -5,5 +5,13 @@ export const bannerSchema = z.object({
     image: z.string(),
     title: z.string(),
     subtitle: z.string(),
+    list: z
+        .array(
+            z.object({
+                point: z.string(),
+                details: z.string(),
+            }),
+        )
+        .optional(),
     buttonText: z.string(),
 });
