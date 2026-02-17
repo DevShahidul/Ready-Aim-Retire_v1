@@ -32,8 +32,7 @@ const { mailingAddress, stayConnected } = Astro.props;
     .address-info {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
-        margin: 5.25rem auto 8.125rem;
+        margin: 4.9rem auto 8rem;
     }
     .mailing-info,
     .social-info {
@@ -45,7 +44,6 @@ const { mailingAddress, stayConnected } = Astro.props;
     }
     .mailing-info {
         address {
-            margin-top: 0.875rem;
             max-width: 11rem;
             font-style: normal;
             color: #707070;
@@ -59,13 +57,15 @@ const { mailingAddress, stayConnected } = Astro.props;
             color: #707070;
         }
         p {
-            margin: 0.875rem 0;
             max-width: 35.625rem;
         }
         .btn-dark {
             background-color: #3f3c68;
             color: #ffffff;
-            margin-top: 2rem;
+            margin-top: 1rem;
+        }
+        ul {
+            margin-top: 1rem;
         }
     }
 </style>
