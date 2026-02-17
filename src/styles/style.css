@@ -1209,6 +1209,77 @@ footer .disclaimer {
     color: #888;
 }
 
+/* Policy page styles start */
+.policy-page {
+    p,
+    section,
+    ul,
+    address,
+    h2,
+    h3 {
+        margin-top: 1rem;
+    }
+
+    h2 {
+        font-size: 28px;
+        font-weight: 400;
+    }
+
+    address {
+        font-style: normal;
+    }
+
+    p:last-of-type {
+        margin-bottom: 1rem;
+    }
+
+    /* Tablet */
+    @media (max-width: 1024px) {
+        p,
+        section,
+        ul,
+        address,
+        h2,
+        h3 {
+            margin-top: 0.75rem;
+        }
+
+        h2 {
+            font-size: 24px;
+        }
+    }
+
+    /* Mobile */
+    @media (max-width: 640px) {
+        p,
+        section,
+        ul,
+        address,
+        h2,
+        h3 {
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 20px;
+        }
+
+        p:last-of-type {
+            margin-bottom: 0.5rem;
+        }
+    }
+
+    margin-bottom: 7rem;
+}
+
+@media (max-width: 768px) {
+    .policy-page {
+        margin-bottom: 2rem;
+    }
+}
+
+/* Policy page styles end */
+
 /* ---------------------------------------- Responsive Media Queries - Organized by Width ---------------------------------------- */
 
 /* Max-width: 1400px */
