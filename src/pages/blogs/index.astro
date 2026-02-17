@@ -46,7 +46,8 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 
 <style>
     .blog-content-container {
-        margin-top: 2rem;
+        margin-top: 4rem;
+        margin-bottom: 4rem;
     }
     .blog-split-content {
         display: flex;
@@ -64,14 +65,14 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
         margin-top: 3.8rem;
         max-width: 38.1875rem;
         h2 {
-            margin-bottom: 3rem;
+            margin-bottom: 1rem;
             font-size: 2.8125rem;
             font-weight: 400;
             line-height: 3rem;
         }
         p {
             font-size: var(--text-xl);
-            margin-top: 1.8rem;
+            margin-top: 0.8rem;
             line-height: 1.75rem;
         }
         .btn-dark {
@@ -123,15 +124,9 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
     @media (min-width: 90rem) {
         .blog-split-content {
             align-items: start;
-            min-height: 41rem;
         }
         .blog-split-content-text {
-            margin-top: 7.3rem;
-        }
-        .blog-split-content-thumb {
-            img {
-                min-height: 38.625rem;
-            }
+            margin-top: 5.3rem;
         }
     }
 
