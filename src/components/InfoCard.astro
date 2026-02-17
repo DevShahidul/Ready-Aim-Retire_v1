@@ -3,22 +3,26 @@ const { info } = Astro.props;
 ---
 
 <div class="question-card">
-    {info.tag && <h2 class="tag">{info.tag}</h2>}
+    {info.tag && <span class="tag">{info.tag}</span>}
     <div class="question-card-body">
-        <h3 set:html={info.title} />
-        <p>{info.subtitle}</p>
-        <ul>
-            {info.checkList.title && <h4>{info.checkList.title}</h4>}
-            {
-                info.checkList.items.map((item: string) => (
-                    <li>
-                        <img src="/images/icons/check-icon.png" alt="" />
-                        {item}
-                    </li>
-                ))
-            }
-        </ul>
-        <p class="text-bottom">{info.bottomText}</p>
+        <div>
+            <h3 set:html={info.title} />
+            <p>{info.subtitle}</p>
+            <ul>
+                {info.checkList.title && <h4>{info.checkList.title}</h4>}
+                {
+                    info.checkList.items.map((item: string) => (
+                        <li>
+                            <img src="/images/icons/check-icon.png" alt="" />
+                            {item}
+                        </li>
+                    ))
+                }
+            </ul>
+        </div>
+    </div>
+    <div class="text-bottom" style="--height: 4.875rem">
+        <p>{info.bottomText}</p>
     </div>
 </div>
 
@@ -27,11 +31,15 @@ const { info } = Astro.props;
         background-color: #fff;
         border-radius: 0.625rem;
         padding-bottom: 2.75rem;
+        display: flex;
+        flex-direction: column;
+        --padding-s: 2.5rem;
+        --padding-e: 1.5rem;
     }
 
     .question-card .tag {
         text-align: left;
-        border-radius: 10px 50px 50px 10px;
+        border-radius: 10px 50px 50px 0px;
         max-width: 11.25rem;
         color: #fff;
         background-color: #41bab4;
@@ -40,11 +48,9 @@ const { info } = Astro.props;
         font-weight: 500;
     }
     .question-card-body {
-        padding-left: 2.5rem;
-        padding-right: 1.5rem;
-        display: flex;
-        height: 80%;
-        flex-direction: column;
+        flex-grow: 1;
+        padding-left: var(--padding-s);
+        padding-right: var(--padding-e);
         h3 {
             font-size: 1.75rem;
             font-weight: 400;
@@ -68,14 +74,18 @@ const { info } = Astro.props;
             margin-top: 1rem;
         }
     }
-    .question-card-body:last-of-type {
-        height: 86%;
-    }
+
     .text-bottom {
+        width: 100%;
+        padding-left: var(--padding-s);
+        padding-right: var(--padding-e);
+        min-height: var(--height);
+    }
+
+    .text-bottom p {
         max-width: 35.625rem;
-        padding-top: 1.625rem;
-        margin-top: auto;
         border-top: 1px solid #707070;
+        padding-top: 1.625rem;
     }
 
     @media (min-width: 769px) and (max-width: 1024px) {

@@ -5,6 +5,7 @@ checkList:
   - point: ""
   - point: ""
   - point: ""
+largeContent: true
 ---
 Ready Aim Retire is built for people who care about understanding their financial future. If your audience values clarity, financial literacy, and thoughtful planning, we’d love to partner with you.
 

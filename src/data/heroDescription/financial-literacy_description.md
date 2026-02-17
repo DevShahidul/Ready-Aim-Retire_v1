@@ -5,6 +5,7 @@ checkList:
   - point: ""
   - point: ""
   - point: ""
+largeContent: true
 ---
 If you’re looking for a thoughtful way to support someone you care about, consider giving them something more valuable than a gadget:
 
