@@ -10,7 +10,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
         title="Lorem ipsum dolor sit amet, consetetur sadipscing elitr"
     />
 
-    <div class="container">
+    <div class="container blog-content-container">
         <div class="blog-split-content">
             <div class="blog-split-content-text">
                 <h2>
@@ -45,6 +45,9 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 </BaseLayout>
 
 <style>
+    .blog-content-container {
+        margin-top: 2rem;
+    }
     .blog-split-content {
         display: flex;
         justify-content: space-between;
