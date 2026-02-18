@@ -12,7 +12,6 @@ const pricingCollection = await getEntry("pricingPage", "pricing");
 const data = pricingCollection?.data;
 
 const bannerCollection = await getEntry("banner", "pricing_banner");
-console.log(bannerCollection);
 const plansData = {
     description: data?.description,
     billing: data?.billingToggle,
