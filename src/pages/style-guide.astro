@@ -8,7 +8,7 @@ import Blogs from "../components/Blogs.astro";
 import CTABanner from "../components/CTABanner.astro";
 import Newsletter from "../components/Newsletter.astro";
 import { getEntry } from "astro:content";
-const bannerCollection = await getEntry("banner", "banner_pricing");
+const bannerCollection = await getEntry("banner", "pricing_banner");
 
 interface Props {
     title?: string;
