@@ -2,227 +2,27 @@
 const { displayData } = Astro.props;
 ---
 
-<div class="container">
-    <div class="split-content">
-        <div class="split-content-text">
-            <h2>
-                A clearer way to plan retirement – built for <span
-                    class="text-teal">real people</span
-                >
-            </h2>
-            <p>
-                OnTarget™ helps you model your entire financial life, not just a
-                single number or projection. Visualize income, spending, taxes,
-                and assets over time. Explore endless "what-if" scenarios
-                without breaking anything. Understand how today's decisions
-                affect decades of retirement.
-            </p>
-            <p style="font-weight: 400;">
-                Adjust as life changes – because it always does.
-            </p>
+<div class="container display-card-container">
+    <div class="display-card">
+        <div class="display-card-text">
+            <h2>{displayData.title}</h2>
+            {displayData.subtitle && <p>{displayData.subtitle}</p>}
+            {
+                displayData.time && (
+                    <p class="time-text">
+                        <span>2 min read</span>
+                        <span>19 Dec 25</span>
+                    </p>
+                )
+            }
         </div>
-        <div class="split-content-thumb">
+        <div class="blog-split-content-thumb">
             <img
-                src="/images/landing/stock/couple_water.jpg"
+                src="/images/blog/blog-content.png"
                 alt="People with a retirement plan feel more confident about their future"
             />
-            <div class="split-content-text-overlay">
-                <h3 class="stat-number">87%</h3>
-                <p class="stat-headline">
-                    People with a retirement plan feel more confident about
-                    their future.
-                </p>
-                <p class="stat-subtext">
-                    Confidence comes from planning, not guessing.
-                </p>
-            </div>
         </div>
     </div>
 </div>
 
-<style>
-    .blog-content-container {
-        margin-top: 4rem;
-        margin-bottom: 4rem;
-    }
-    .blog-split-content {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding-right: 4.625rem; /* 58px */
-        gap: 2.3125rem; /* 5px */
-        background-color: var(--color-bg-light);
-        border: 1.25rem solid #ffffff; /* 20px */
-        border-radius: 1.875rem; /* 30px */
-    }
-
-    .blog-split-content-text {
-        order: 2;
-        margin-top: 3.8rem;
-        max-width: 38.1875rem;
-        h2 {
-            margin-bottom: 1rem;
-            font-size: 2.8125rem;
-            font-weight: 400;
-            line-height: 3rem;
-        }
-        p {
-            font-size: var(--text-xl);
-            margin-top: 0.8rem;
-            line-height: 1.75rem;
-        }
-        .btn-dark {
-            margin-top: 2rem;
-        }
-    }
-
-    .blog-split-content-thumb {
-        position: relative;
-        img {
-            width: 100%;
-            max-width: 47.25rem; /* 772px */
-            border-radius: 1.25rem 0rem 0rem 1.25rem;
-        }
-        .blog-split-content-text-overlay {
-            position: absolute;
-            right: 3rem; /* 60px */
-            bottom: 3.4375rem; /* 55px */
-            text-align: right;
-            color: #ffffff;
-            .stat-number {
-                font-size: 5.625rem;
-                font-weight: 400;
-                line-height: 6.875rem;
-            }
-            .stat-headline {
-                font-size: 1.875rem;
-                max-width: 40rem;
-                line-height: 2.1875rem;
-                font-weight: 400;
-                margin-top: 0.6rem;
-            }
-            .stat-subtext {
-                font-size: 1.375rem;
-                font-weight: 400;
-                margin-top: 0.5rem;
-            }
-        }
-    }
-
-    .time-text {
-        font-size: 0.75rem !important;
-        color: #898d8e;
-        display: flex;
-        align-items: center;
-        gap: 2rem;
-    }
-
-    @media (min-width: 90rem) {
-        .blog-split-content {
-            align-items: start;
-        }
-        .blog-split-content-text {
-            margin-top: 5.3rem;
-        }
-    }
-
-    @media (max-width: 87.5rem) {
-        .blog-split-content {
-            padding-right: 0.625rem; /* 10px */
-        }
-
-        .blog-split-content-text {
-            max-width: 25rem; /* 400px */
-            padding: 0.5rem 0;
-            p {
-                font-size: 0.875rem; /* 14px */
-                margin-top: 0.3125rem; /* 5px */
-                line-height: 1.4rem;
-            }
-        }
-
-        .blog-split-content-thumb {
-            img {
-                max-width: 29.25rem; /* 500px */
-            }
-            .blog-split-content-text-overlay {
-                right: 0.75rem;
-                bottom: 1rem;
-                .stat-number {
-                    font-size: 1.875rem; /* 30px */
-                    line-height: 2.25rem; /* 36px */
-                }
-                .stat-headline {
-                    font-size: 0.875rem; /* 14px */
-                    margin-top: 0;
-                    line-height: 1.3;
-                }
-                .stat-subtext {
-                    font-size: 0.75rem; /* 12px */
-                    margin-top: 0.3125rem; /* 5px */
-                }
-            }
-        }
-    }
-
-    @media (max-width: 64rem) {
-        .blog-split-content {
-            padding-left: 1.625rem;
-        }
-        .blog-split-content-text h2 {
-            margin-bottom: 1rem;
-            line-height: 2rem;
-        }
-    }
-
-    @media (max-width: 61.5625rem) {
-        .blog-split-content-text {
-            margin-top: 0;
-            h2 {
-                margin-bottom: 0;
-                line-height: 2rem;
-                font-size: 1.5rem;
-            }
-        }
-        .blog-split-content {
-            gap: 1.5rem;
-        }
-    }
-
-    @media (max-width: 48rem) {
-        .blog-split-content {
-            flex-direction: column;
-            gap: 0.5rem;
-            border: 1rem solid #ffffff;
-            padding-left: 0;
-            padding-right: 0;
-        }
-
-        .blog-split-content-thumb {
-            .blog-split-content-text-overlay {
-                .stat-headline {
-                    line-height: 1rem;
-                }
-            }
-            img {
-                max-width: 100%;
-                border-radius: 1.25rem 1.25rem 0 0;
-            }
-        }
-        .blog-split-content-text {
-            order: 2;
-            max-width: 100%;
-            padding: 0.3125rem 1rem 1rem;
-            h2 {
-                line-height: 1.875rem; /* 30px */
-                margin-bottom: 1rem;
-            }
-        }
-        .blog-split-content-thumb {
-            .blog-split-content-text-overlay {
-                right: 0.3125rem; /* 5px */
-                bottom: 0.625rem; /* 10px */
-            }
-        }
-    }
-</style>
+<style></style>
