@@ -5,6 +5,7 @@ export const displayCardSchema = z.object({
     subtitle: z.string().optional(),
     time: z.string().optional(),
     description: z.string().optional(),
+    image: z.string(),
     list: z
         .array(
             z.object({
