@@ -58,19 +58,22 @@ const { banner } = Astro.props;
         top: 2rem;
     }
     .banner-info {
-        background-image: url("/images/banner/arrow_background.png");
+        background-image: url("/images/banner/arrow_shape.svg");
+        /*background-image: url("/images/banner/arrow_shape.png");*/
         background-repeat: no-repeat;
-        background-size: cover;
+        background-position: right top;
+        background-size: contain;
         display: flex;
         flex-direction: column;
         justify-content: end;
+        background-color: #43b9b3;
         gap: 1.735rem;
         padding: 1rem 1.25rem 9.25rem 4.25rem;
     }
     .banner-heading {
         display: flex;
         align-items: center;
-        gap: 1rem;
+        gap: 1.25rem;
         p {
             font-size: 1.5625rem;
             font-weight: 400;

@@ -183,31 +183,11 @@ const { info } = Astro.props;
 </style>
 
 <script>
-    function syncTextBottomHeight(): void {
-        const elements: NodeListOf<HTMLElement> =
-            document.querySelectorAll(".text-bottom");
+    import { syncHeight } from "../lib/utils.ts";
 
-        if (elements.length === 0) return;
+    document.addEventListener("DOMContentLoaded", () =>
+        syncHeight("text-bottom"),
+    );
 
-        elements.forEach((el: HTMLElement) => {
-            el.style.removeProperty("--height");
-        });
-
-        let maxHeight = 0;
-
-        elements.forEach((el: HTMLElement) => {
-            const height: number = el.scrollHeight;
-            if (height > maxHeight) {
-                maxHeight = height;
-            }
-        });
-
-        elements.forEach((el: HTMLElement) => {
-            el.style.setProperty("--height", `${maxHeight}px`);
-        });
-    }
-
-    document.addEventListener("DOMContentLoaded", syncTextBottomHeight);
-
-    window.addEventListener("resize", syncTextBottomHeight);
+    window.addEventListener("resize", () => syncHeight("text-bottom"));
 </script>
