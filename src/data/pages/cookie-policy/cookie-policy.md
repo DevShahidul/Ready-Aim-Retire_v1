@@ -168,5 +168,4 @@ lastUpdated: "Last Updated: [January 1, 2026]"
     <a href="mailto:privacy@readyaimretire.co">privacy@readyaimretire.co</a>
   </p>
 
-  <p>© 2026 Ready Aim Retire LLC</p>
 </div>

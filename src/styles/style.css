@@ -1233,6 +1233,10 @@ footer .disclaimer {
         margin-bottom: 1rem;
     }
 
+    a {
+        text-decoration: underline;
+    }
+
     /* Tablet */
     @media (max-width: 1024px) {
         p,
