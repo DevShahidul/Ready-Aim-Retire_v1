@@ -3,7 +3,6 @@ import { render } from "astro:content";
 
 const { description } = Astro.props;
 const { Content } = await render(description);
-console.log(description);
 ---
 
 <section class="container hero-description">
