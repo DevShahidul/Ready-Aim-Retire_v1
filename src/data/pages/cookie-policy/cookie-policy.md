@@ -4,19 +4,17 @@ description: "How Ready Aim Retire uses cookies and similar technologies."
 lastUpdated: "Last Updated: [January 1, 2026]"
 ---
 <div class="policy-page">
-  <p>
+  <p class="description">
     This Cookie Policy explains how <strong>Ready Aim Retire</strong> (“Company,”
     “we,” “us,” or “our”) uses cookies and similar technologies when you visit our
     website, applications, or related services (collectively, the “Services”).
+    <span>This policy should be read alongside our Privacy Policy.</span>
   </p>
 
-  <p>
-    This policy should be read alongside our Privacy Policy.
-  </p>
 
   <section>
     <h2>Cookies at a Glance</h2>
-    <ul>
+    <ul class="bullet-list">
       <li>Cookies help our site function properly and securely</li>
       <li>We use cookies to understand how people use Ready Aim Retire and improve the experience</li>
       <li>We do not use cookies to sell personal data</li>
@@ -35,7 +33,7 @@ lastUpdated: "Last Updated: [January 1, 2026]"
 
   <p>Cookies may be:</p>
 
-  <ul>
+  <ul class="bullet-list">
     <li><strong>Session cookies</strong> (deleted when you close your browser)</li>
     <li><strong>Persistent cookies</strong> (stored for a set period of time)</li>
     <li><strong>First-party cookies</strong> (set by Ready Aim Retire)</li>
@@ -49,7 +47,7 @@ lastUpdated: "Last Updated: [January 1, 2026]"
       These cookies are essential for the Services to function and cannot be
       disabled. They enable:
     </p>
-    <ul>
+    <ul class="bullet-list">
       <li>Account login and authentication</li>
       <li>Security and fraud prevention</li>
       <li>Core site functionality</li>
@@ -59,13 +57,13 @@ lastUpdated: "Last Updated: [January 1, 2026]"
       These cookies help us understand how users interact with the Services so we
       can improve usability and performance.
     </p>
-    <ul>
+    <ul class="bullet-list">
       <li>Page views and feature usage</li>
       <li>Error tracking and performance monitoring</li>
     </ul>
     <h3>c. Functionality Cookies</h3>
     <p>These cookies remember your preferences and settings, such as:</p>
-    <ul>
+    <ul class="bullet-list">
       <li>Language or region preferences</li>
       <li>Saved settings within your account</li>
     </ul>
@@ -73,7 +71,7 @@ lastUpdated: "Last Updated: [January 1, 2026]"
     <p>
       We may use limited marketing cookies to:
     </p>
-    <ul>
+    <ul class="bullet-list">
       <li>Measure the effectiveness of campaigns</li>
       <li>Understand how users discover Ready Aim Retire</li>
     </ul>
@@ -89,7 +87,7 @@ lastUpdated: "Last Updated: [January 1, 2026]"
       We may allow trusted third-party service providers to place cookies on our
       behalf to support:
     </p>
-    <ul>
+    <ul class="bullet-list">
       <li>Analytics and performance monitoring</li>
       <li>Payment processing</li>
       <li>Affiliate tracking (e.g., rewards)</li>
@@ -106,7 +104,7 @@ lastUpdated: "Last Updated: [January 1, 2026]"
       You can control cookies through your browser settings. Most browsers allow
       you to:
     </p>
-    <ul>
+    <ul class="bullet-list">
       <li>View what cookies are stored</li>
       <li>Delete existing cookies</li>
       <li>Block cookies entirely</li>
@@ -122,7 +120,7 @@ lastUpdated: "Last Updated: [January 1, 2026]"
     <p>
       If you are located in the European Economic Area (EEA) or the United Kingdom:
     </p>
-    <ul>
+    <ul class="bullet-list">
       <li>You may be presented with a cookie consent banner</li>
       <li>You have the right to accept or reject non-essential cookies</li>
       <li>You may withdraw consent at any time through your browser or account settings</li>
@@ -135,7 +133,7 @@ lastUpdated: "Last Updated: [January 1, 2026]"
       Under the California Consumer Privacy Act (CCPA) and California Privacy Rights
       Act (CPRA):
     </p>
-    <ul>
+    <ul class="bullet-list">
       <li>Cookies may be considered personal information</li>
       <li>You have the right to know what information is collected via cookies</li>
       <li>You have the right to request deletion of personal information</li>
@@ -155,11 +153,12 @@ lastUpdated: "Last Updated: [January 1, 2026]"
   </section>
 
   <h2>8. Contact Us</h2>
+  <p>If you have questions about our use of cookies or this Cookie Policy, contact us: </p>
 
   <address>
     <strong>Ready Aim Retire</strong><br />
-    13121 W 72nd Dr<br />
-    Denver, CO 80221<br />
+    1312 17th St Unit 70441<br />
+    Denver, CO 80202<br />
     United States
   </address>
 

@@ -1211,6 +1211,15 @@ footer .disclaimer {
 
 /* Policy page styles start */
 .policy-page {
+    .description {
+        max-width: 56.625rem;
+        span {
+            display: block;
+        }
+    }
+    .bullet-list li {
+        font-size: 1rem;
+    }
     p,
     section,
     ul,
