@@ -14,4 +14,6 @@ export const bannerSchema = z.object({
         )
         .optional(),
     buttonText: z.string(),
+    largeBtn: z.boolean(),
+    largeGap: z.boolean(),
 });

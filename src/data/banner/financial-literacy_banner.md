@@ -11,4 +11,6 @@
     - point: "They activate when ready"
       details: "No credit card required from the recipient"
   buttonText: "Gift a Pro Account"
+  largeBtn: true
+  largeGap: false
 ---
