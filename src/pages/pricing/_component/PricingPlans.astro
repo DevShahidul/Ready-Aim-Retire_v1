@@ -9,7 +9,7 @@ import type { Plan } from "../../../types/pricing_types";
         <h4>
             {plansData.description}
         </h4>
-        <div>
+        <div class="plan-toggler" data-savings={plansData.billing.annualSavings}>
             <button class="btn price-period">{plansData.billing.monthly}</button
             >
             <button class="btn btn-dark price-period"
@@ -167,6 +167,7 @@ import type { Plan } from "../../../types/pricing_types";
         const periodElements = document.querySelectorAll(
             ".price-badge .period",
         );
+        const planToggler = document.querySelector(".plan-toggler");
 
         // Store original annual prices (current state)
         const originalPrices = Array.from(priceElements).map(
@@ -176,10 +177,20 @@ import type { Plan } from "../../../types/pricing_types";
             (el) => el.textContent,
         );
 
+        const savings:number = Number(planToggler?.getAttribute("data-savings")) ?? 0;
+
+        console.log(savings);
+
+        
+        
+
         // Calculate monthly prices (divide by 12)
-        const monthlyPrices = originalPrices.map((price) => {
+        const monthlyPrices = originalPrices.map((price, index) => {
+            const tier = priceElements[index]?.getAttribute("data-tire");
+            const discountRate = savings / 100;
             const numPrice = parseFloat(price.replace("$", ""));
-            return `$${(numPrice / 12).toFixed(2)}`;
+            const originalPrice = numPrice / (1 - discountRate);
+            return tier === "pro" ? `$${(originalPrice / 12).toFixed(2)}` : `$${numPrice}`;
         });
 
         if (monthlyBtn && annualBtn) {
@@ -191,8 +202,11 @@ import type { Plan } from "../../../types/pricing_types";
                     el.textContent = monthlyPrices[index];
                 });
 
-                periodElements.forEach((el) => {
-                    el.textContent = "/mo";
+                periodElements.forEach((el, index) => {
+                    const tier = priceElements[index]?.getAttribute("data-tire");
+                    if(tier === "pro"){
+                        el.textContent = "/mo";
+                    }
                 });
             });
 

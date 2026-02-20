@@ -4,8 +4,8 @@ description: "OnTarget™ is free to start and powerful when you're ready to go 
 
 billingToggle:
   monthly: "Monthly"
-  annual: "Annual (Save 38%)"
-  annualSavings: 38
+  annual: "Annual (Save 26%)"
+  annualSavings: 26
 
 plans:
   - id: "basic"
@@ -50,7 +50,7 @@ plans:
   - id: "lifetime"
     name: "Lifetime"
     price: 1199
-    period: "/y"
+    period: ""
     description: "Get all the great features of Pro with a single one-time payment."
     buttonText: "Choose Plan"
     popular: false

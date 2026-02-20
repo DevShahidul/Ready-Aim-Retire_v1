@@ -6,7 +6,7 @@ const { plan } = Astro.props;
     class={`pricing-card ${plan.buttonText == "Coming Soon" && "coming-soon"}`}
 >
     <div class="price-badge">
-        <span class="price">${plan.price}</span>
+        <span class="price" data-tire={plan.id}>${plan.price}</span>
         <span class="period">{plan.period}</span>
     </div>
     <div class="pricing-card-body">
