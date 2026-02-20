@@ -164,7 +164,7 @@ lastUpdated: "Last Updated: [January 1, 2026]"
 
   <p>
     Email:
-    <a href="mailto:privacy@readyaimretire.co">privacy@readyaimretire.co</a>
+    <a href="mailto:privacy@readyaimretire.com">privacy@readyaimretire.com</a>
   </p>
 
 </div>
