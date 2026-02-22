@@ -7,7 +7,7 @@ const { displayData } = Astro.props;
         <div
             class={`display-card-text ${displayData.textRight ? "text-right" : ""}`}
         >
-            <h2>{displayData.title}</h2>
+            <h2 set:html={displayData.title} />
             {displayData.subtitle && <p>{displayData.subtitle}</p>}
             {
                 displayData.time && (

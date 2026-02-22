@@ -7,12 +7,10 @@ export const displayCardSchema = z.object({
     description: z.string().optional(),
     image: z.string(),
     list: z
-        .array(
-            z.object({
-                title: z.string().optional(),
-                listItems: z.array(z.string()),
-            }),
-        )
+        .object({
+            title: z.string().optional(),
+            listItems: z.array(z.string()),
+        })
         .optional(),
     btnText: z.string().optional(),
     textRight: z.boolean().optional(),

@@ -3,11 +3,15 @@ import { getEntry } from "astro:content";
 import CommonHero from "../components/CommonHero.astro";
 import HeroDescription from "../components/HeroDescription.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import DisplayCard from "../components/DisplayCard.astro";
+import { getCollection } from "astro:content";
 
 const decriptionCollection = await getEntry(
     "heroDescription",
     "our-commitment_description",
 );
+
+const displayData = await getEntry("displayCard", "our-commitment_card");
 ---
 
 <BaseLayout
@@ -17,4 +21,5 @@ const decriptionCollection = await getEntry(
 >
     <CommonHero title="Our Commitment to Financial Literacy" isLarge={true} />
     <HeroDescription description={decriptionCollection} />
+    <DisplayCard displayData={displayData.data} />
 </BaseLayout>
