@@ -1,10 +1,11 @@
 ---
 import { getEntry } from "astro:content";
-import CommonHero from "../components/CommonHero.astro";
-import HeroDescription from "../components/HeroDescription.astro";
-import BaseLayout from "../layouts/BaseLayout.astro";
-import DisplayCard from "../components/DisplayCard.astro";
-import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CommonHero from "../../components/CommonHero.astro";
+import HeroDescription from "../../components/HeroDescription.astro";
+import DisplayCard from "../../components/DisplayCard.astro";
+import CommitmentCta from "./_component/CommitmentCta.astro";
+import CTABanner from "../../components/CTABanner.astro";
 
 const decriptionCollection = await getEntry(
     "heroDescription",
@@ -12,6 +13,9 @@ const decriptionCollection = await getEntry(
 );
 
 const displayData = await getEntry("displayCard", "our-commitment_card");
+const pageData = await getEntry("ourCommitmentPage", "our-commitment");
+
+console.log(pageData);
 ---
 
 <BaseLayout
@@ -22,4 +26,7 @@ const displayData = await getEntry("displayCard", "our-commitment_card");
     <CommonHero title="Our Commitment to Financial Literacy" isLarge={true} />
     <HeroDescription description={decriptionCollection} />
     <DisplayCard displayData={displayData.data} />
+    <CommitmentCta ctaData={pageData.data.ctaInfo} />
+
+    <CTABanner />
 </BaseLayout>
