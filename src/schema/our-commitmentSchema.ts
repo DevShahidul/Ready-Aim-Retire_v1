@@ -24,7 +24,7 @@ const commitmentCardSchema = z
         list: listSchema,
         firstBottomText: z.string().optional(),
         secondBottomText: z.string().optional(),
-        emailInfo: z.array(emailInfoSchema).optional(),
+        emailInfo: emailInfoSchema,
     })
     .optional();
 

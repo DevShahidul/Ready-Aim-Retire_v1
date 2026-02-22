@@ -1,0 +1,38 @@
+---
+const { cards } = Astro.props;
+type Card = {
+    id?: number;
+    title?: string;
+    subtitle?: string;
+    description?: string;
+    shortDescription?: string;
+    list?: {
+        title?: string;
+        listItems?: string;
+    };
+    firstBottomText?: string;
+    secondBottomText?: string;
+    emailInfo?: {
+        title: string;
+        email: string;
+    };
+};
+---
+
+<section>
+    {
+        cards.map((card: Card) => (
+            <div>
+                <h2>{card.title}</h2>
+            </div>
+        ))
+    }
+</section>
+
+<style>
+    section {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+    }
+</style>
