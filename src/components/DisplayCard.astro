@@ -4,7 +4,9 @@ const { displayData } = Astro.props;
 
 <div class="container display-card-container">
     <div class="display-card">
-        <div class="display-card-text">
+        <div
+            class={`display-card-text ${displayData.textRight ? "text-right" : ""}`}
+        >
             <h2>{displayData.title}</h2>
             {displayData.subtitle && <p>{displayData.subtitle}</p>}
             {
@@ -15,12 +17,46 @@ const { displayData } = Astro.props;
                     </p>
                 )
             }
+            {displayData.description && <p>{displayData.description}</p>}
+            {displayData.list.title && <h4>{displayData.list.title}</h4>}
+            {
+                displayData.list.listItems && (
+                    <ul>
+                        {displayData.list.listItems.map((item: string) => (
+                            <li>{item}</li>
+                        ))}
+                    </ul>
+                )
+            }
+            {
+                displayData.btnText && (
+                    <a href="#" class="btn btn-dark">
+                        {displayData.btnText}
+                    </a>
+                )
+            }
+            {displayData.bottomText && <p>{displayData.bottomText}</p>}
         </div>
         <div class="blog-split-content-thumb">
             <img
-                src="/images/blog/blog-content.png"
+                src={displayData.image}
                 alt="People with a retirement plan feel more confident about their future"
             />
+            {
+                displayData.absoluteContent && (
+                    <div class="split-content-text-overlay">
+                        <h3 class="stat-number">
+                            {displayData.absoluteContent.stats}
+                        </h3>
+                        <p class="stat-headline">
+                            {displayData.absoluteContent.title}
+                        </p>
+                        <p class="stat-subtext">
+                            {displayData.absoluteContent.subtitle}
+                        </p>
+                    </div>
+                )
+            }
         </div>
     </div>
 </div>
