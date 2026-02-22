@@ -8,6 +8,7 @@ import { infoCardSchema } from "./schema/infoCardSchema";
 import { infoColumnSchema } from "./schema/infoColumnSchema";
 import { cookiePolicySchema } from "./schema/cookiePolicySchema";
 import { displayCardSchema } from "./schema/displayCardSchema";
+import { commitmentSchema } from "./schema/our-commitmentSchema";
 
 const pricingPage = defineCollection({
     loader: glob({ pattern: "**/*.md", base: "./src/data/pages/pricing" }),
@@ -25,6 +26,14 @@ const cookiePage = defineCollection({
         base: "./src/data/pages/cookie-policy",
     }),
     schema: cookiePolicySchema,
+});
+
+const ourCommitmentPage = defineCollection({
+    loader: glob({
+        pattern: "**/*.md",
+        base: "./src/data/pages/our-commitment",
+    }),
+    schema: commitmentSchema,
 });
 
 const banner = defineCollection({
@@ -61,4 +70,5 @@ export const collections = {
     heroDescription,
     contactPage,
     cookiePage,
+    ourCommitmentPage,
 };
