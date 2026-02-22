@@ -1,5 +1,5 @@
 ---
-title: "Our Commitment to Financial Literacy"
+title: "Building confidence through understanding - for everyone."
 btnText: ""
 checkList:
   - point: ""

@@ -1,7 +1,13 @@
 ---
+import { getEntry } from "astro:content";
 import CommonHero from "../components/CommonHero.astro";
 import HeroDescription from "../components/HeroDescription.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
+
+const decriptionCollection = await getEntry(
+    "heroDescription",
+    "our-commitment_description",
+);
 ---
 
 <BaseLayout
@@ -10,5 +16,5 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     solidHeader={true}
 >
     <CommonHero title="Our Commitment to Financial Literacy" isLarge={true} />
-    <!-- <HeroDescription /> -->
+    <HeroDescription description={decriptionCollection} />
 </BaseLayout>
