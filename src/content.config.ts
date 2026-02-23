@@ -10,6 +10,7 @@ import { cookiePolicySchema } from "./schema/cookiePolicySchema";
 import { displayCardSchema } from "./schema/displayCardSchema";
 import { commitmentSchema } from "./schema/our-commitmentSchema";
 import { advisorsSchema } from "./schema/advisorsSchema";
+import { fireSchema } from "./schema/fireSchema";
 
 const pricingPage = defineCollection({
     loader: glob({ pattern: "**/*.md", base: "./src/data/pages/pricing" }),
@@ -43,6 +44,14 @@ const advisorsPage = defineCollection({
         base: "./src/data/pages/advisors",
     }),
     schema: advisorsSchema,
+});
+
+const firePage = defineCollection({
+    loader: glob({
+        pattern: "**/*.md",
+        base: "./src/data/pages/fire",
+    }),
+    schema: fireSchema,
 });
 
 const banner = defineCollection({
@@ -81,4 +90,5 @@ export const collections = {
     cookiePage,
     ourCommitmentPage,
     advisorsPage,
+    firePage,
 };

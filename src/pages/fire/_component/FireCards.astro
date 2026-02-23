@@ -1,0 +1,28 @@
+---
+import AdvisorsCard from "../../../components/AdvisorsCard.astro";
+
+const { cards } = Astro.props;
+type Card = {
+    id: number;
+    secondary: boolean;
+    title: string;
+    subtitle: string;
+    list: {
+        title: string;
+        items: string[];
+    };
+    bottomText: string;
+};
+---
+
+<section>
+    {cards.map((card: Card) => <AdvisorsCard cardData={card} />)}
+</section>
+
+<style>
+    section {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+    }
+</style>
