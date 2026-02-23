@@ -11,7 +11,7 @@ image: "/images/founder2.png"
 #     - "A plan they can’t visualize"
 #     - "Uncertainty about tradeoffs and risks"
 # btnText: ""
-# textRight: false
+textRight: false
 bottomText: "Ross brings a user-first mindset to Ready Aim Retire - ensuring that the platform speaks plain English, stays practical, and always serves the person using it."
 # absoluteContent: 
 #     stats: "40–50yr"

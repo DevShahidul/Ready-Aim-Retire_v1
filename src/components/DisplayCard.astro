@@ -17,9 +17,13 @@ const { displayData } = Astro.props;
                     </p>
                 )
             }
-            {displayData.description && <p>{displayData.description}</p>}
             {
-                displayData.list.listItems && (
+                displayData.description && (
+                    <p set:html={displayData.description} />
+                )
+            }
+            {
+                displayData?.list?.listItems && (
                     <ul class="display-card-list bullet-list">
                         {displayData.list.title && (
                             <h4>{displayData.list.title}</h4>

@@ -6,6 +6,7 @@ import CommonHero from "../../components/CommonHero.astro";
 import HeroDescription from "../../components/HeroDescription.astro";
 import AboutCards from "./_component/AboutCards.astro";
 import InfoColumns from "../../components/InfoColumns.astro";
+import Founders from "./_component/Founders.astro";
 const pageData = await getEntry("aboutPage", "about");
 const descriptionData = await getEntry("heroDescription", "about_description");
 const columnsData = await getEntry("infoColumn", "about_columns");
@@ -19,6 +20,7 @@ const columnsData = await getEntry("infoColumn", "about_columns");
     <CommonHero title={pageData?.data.title!} />
     <HeroDescription description={descriptionData} />
     <AboutCards cards={pageData?.data.aboutCards} />
+    <Founders />
     <InfoColumns data={columnsData?.data} />
     <CTABanner />
 </BaseLayout>
