@@ -2,10 +2,50 @@
 const { ctaData } = Astro.props;
 ---
 
-<section>
-    <div>
-        <h2>{ctaData.title}</h2>
+<section class="commitment-cta">
+    <div class="container">
+        <div class="commitment-cta-heading">
+            <img src="/images/icons/arrow-black.png" alt="" />
+            <h2>{ctaData.title}</h2>
+        </div>
+        <div class="commitment-cta-description">
+            <div>
+                <h4>{ctaData.subtitle}</h4>
+                <p>{ctaData.description}</p>
+            </div>
+            <a href="#" class="btn btn-dark"
+                >{ctaData.btnText}
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
     </div>
 </section>
 
-<style></style>
+<style>
+    .commitment-cta {
+        background-color: #fff;
+        color: #2e2e2e;
+        padding: 4rem 0 5.375rem;
+    }
+    .commitment-cta-heading {
+        display: flex;
+        align-items: center;
+        gap: 1.125rem;
+    }
+    .commitment-cta-description {
+        display: flex;
+        align-items: end;
+        gap: 4rem;
+        justify-content: space-between;
+        h4 {
+            font-size: 1.0625rem;
+            font-weight: 500;
+            max-width: 38.75rem;
+            margin-top: 2.1875rem;
+        }
+        p {
+            max-width: 25.75rem;
+            margin-top: 2rem;
+        }
+    }
+</style>
