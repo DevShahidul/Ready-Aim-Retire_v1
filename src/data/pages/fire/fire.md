@@ -3,30 +3,31 @@ title: "Financial independence, without guesswork"
 advisorsCards:
   - id: 1
     secondary: false
-    title: "Designed to support - not replace - advisors"
-    subtitle: "Your expertise stays front and center"
+    title: "Built for people who <span class='text-teal'>think</span> in scenarios"
+    subtitle: "Because FIRE isn’t one number - it’s a range of outcomes"
     list: 
-      title: "OnTarget™ is not built to automate advice or remove professional judgment. Instead, it helps you:"
+      title: "OnTarget™ lets you:"
       items:
-        - "Demonstrate assumptions clearly"
-        - "Explore scenarios collaboratively"
-        - "Show cause-and-effect visually"
-        - "Keep clients engaged between meetings"
-    bottomText: ""
+        - "Model multiple FIRE dates"
+        - "Compare aggressive vs conservative assumptions"
+        - "Stress test against historical market data"
+        - "Explore different savings rates and spending levels"
+        - "See how taxes and withdrawal strategies change everything"
+    bottomText: "You don’t just see if FIRE is possible -  You see <strong>how fragile or resilient your plan actually is.</strong>"
         
   - id: 2
     secondary: true
-    title: "Powerful modeling with understanding"
-    subtitle: ""
+    title: "Your entire financial life - modeled together"
+    subtitle: "No more isolated calculators"
     list: 
-      title: "<b>Transparency builds trust, with OnTarget™, advisors can:</b>"
+      title: "Most FIRE tools answer one question at a time. OnTarget™ models:"
       items:
-        - "Model full-lifecycle retirement plans"
-        - "Run and compare multiple scenarios live"
-        - "Stress test plans against historical data"
-        - "Explore withdrawal strategies and tax impacts"
-        - "Adjust assumptions in real time"
-    bottomText: "Clients don’t just see results - they see why those results change."
+        - "Assets and net worth growth"
+        - "Income, savings, and investment returns"
+        - "Spending now and post-FIRE"
+        - "Taxes across account types"
+        - "Withdrawal sequencing and longevity"
+    bottomText: "All connected. All adjustable. All visible."
 ctaInfo:
   title: "The Bottom Line"
   subtitle: "OnTarget™ helps advisors do what they do best - guide, explain, and build confidence - with tools that make complex planning easier to understand."

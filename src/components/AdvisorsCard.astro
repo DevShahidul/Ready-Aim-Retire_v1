@@ -19,7 +19,7 @@ const { cardData } = Astro.props;
             ))
         }
     </ul>
-    <p>{cardData.bottomText}</p>
+    <p set:html={cardData.bottomText} />
 </div>
 
 <style>
