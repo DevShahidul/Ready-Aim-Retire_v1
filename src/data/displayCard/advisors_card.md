@@ -15,6 +15,6 @@ textRight: false
 bottomText: "OnTarget™ helps bridge that gap by turning complex planning concepts into clear, visual stories your clients can follow."
 absoluteContent: 
     stats: "68%"
-    title: "68% of people say trust is the top "
-    subtitle: "factor in choosing a financial planner."
+    title: "68% of people say trust is the top factor in choosing a financial planner."
+    subtitle: ""
 ---
