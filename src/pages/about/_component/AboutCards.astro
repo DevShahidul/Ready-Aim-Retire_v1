@@ -1,0 +1,21 @@
+---
+const { cards } = Astro.props;
+---
+
+<section>
+    {
+        cards.map((card) => (
+            <div>
+                <h2 set:html={card.title} />
+            </div>
+        ))
+    }
+</section>
+
+<style>
+    section {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+    }
+</style>

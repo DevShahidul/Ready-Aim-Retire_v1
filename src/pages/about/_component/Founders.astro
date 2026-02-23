@@ -1,0 +1,13 @@
+---
+import { getEntry } from "astro:content";
+import DisplayCard from "../../../components/DisplayCard.astro";
+const founder1Data = await getEntry("displayCard", "FounderOne_card");
+const founder2Data = await getEntry("displayCard", "FounderTwo_card");
+---
+
+<section>
+    <h2>Meet our founders</h2>
+
+    <DisplayCard displayData={founder1Data?.data} />
+    <DisplayCard displayData={founder2Data?.data} />
+</section>

@@ -11,6 +11,7 @@ import { displayCardSchema } from "./schema/displayCardSchema";
 import { commitmentSchema } from "./schema/our-commitmentSchema";
 import { advisorsSchema } from "./schema/advisorsSchema";
 import { fireSchema } from "./schema/fireSchema";
+import { aboutSchema } from "./schema/aboutSchema";
 
 const pricingPage = defineCollection({
     loader: glob({ pattern: "**/*.md", base: "./src/data/pages/pricing" }),
@@ -54,6 +55,14 @@ const firePage = defineCollection({
     schema: fireSchema,
 });
 
+const aboutPage = defineCollection({
+    loader: glob({
+        pattern: "**/*.md",
+        base: "./src/data/pages/about",
+    }),
+    schema: aboutSchema,
+});
+
 const banner = defineCollection({
     loader: glob({ pattern: "**/*.md", base: "./src/data/banner" }),
     schema: bannerSchema,
@@ -91,4 +100,5 @@ export const collections = {
     ourCommitmentPage,
     advisorsPage,
     firePage,
+    aboutPage,
 };
