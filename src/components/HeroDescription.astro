@@ -12,7 +12,10 @@ const { Content } = await render(description);
         </h3>
         {
             description?.data.btnText && (
-                <a href="btn btn-dark">{description?.data.btnText}</a>
+                <a href="#" class="btn btn-dark">
+                    {description?.data.btnText}
+                    <i class="fa-solid fa-arrow-right" />
+                </a>
             )
         }
     </div>
@@ -22,19 +25,19 @@ const { Content } = await render(description);
         >
             <Content />
         </div>
-        <div>
+        <ul class="description-points">
             {
                 description?.data.checkList.map(
                     (item: { point: string }) =>
                         item?.point && (
-                            <div class="benefit-pill">
+                            <li class="benefit-pill">
                                 <img src="/images/icons/clearer-way-check.svg" />
-                                <span>{item}</span>
-                            </div>
+                                <span>{item.point}</span>
+                            </li>
                         ),
                 )
             }
-        </div>
+        </ul>
     </div>
 </section>
 
@@ -49,8 +52,12 @@ const { Content } = await render(description);
         h3 {
             font-size: 1.75rem;
             font-weight: 400;
-            max-width: 33rem;
+            max-width: 32rem;
             line-height: 2.25rem;
+        }
+
+        .btn {
+            margin-top: 3.625rem;
         }
     }
     .description-details {
@@ -64,6 +71,14 @@ const { Content } = await render(description);
         p:not(:last-child) {
             margin-bottom: 1.25rem;
         }
+    }
+
+    .description-points {
+        display: flex;
+        flex-direction: column;
+        gap: 2.0625rem;
+        margin-top: 3.5rem;
+        max-width: 21.875rem;
     }
 
     .more-space {

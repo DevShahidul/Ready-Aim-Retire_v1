@@ -9,6 +9,7 @@ import { infoColumnSchema } from "./schema/infoColumnSchema";
 import { cookiePolicySchema } from "./schema/cookiePolicySchema";
 import { displayCardSchema } from "./schema/displayCardSchema";
 import { commitmentSchema } from "./schema/our-commitmentSchema";
+import { advisorsSchema } from "./schema/advisorsSchema";
 
 const pricingPage = defineCollection({
     loader: glob({ pattern: "**/*.md", base: "./src/data/pages/pricing" }),
@@ -34,6 +35,14 @@ const ourCommitmentPage = defineCollection({
         base: "./src/data/pages/our-commitment",
     }),
     schema: commitmentSchema,
+});
+
+const advisorsPage = defineCollection({
+    loader: glob({
+        pattern: "**/*.md",
+        base: "./src/data/pages/advisors",
+    }),
+    schema: advisorsSchema,
 });
 
 const banner = defineCollection({
@@ -71,4 +80,5 @@ export const collections = {
     contactPage,
     cookiePage,
     ourCommitmentPage,
+    advisorsPage,
 };

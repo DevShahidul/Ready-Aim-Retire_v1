@@ -6,8 +6,8 @@ type Props = {
 const { title, isLarge }: Props = Astro.props;
 ---
 
-<section class={`common-hero container ${!isLarge ? "limited-width" : ""}`}>
-    <h2>{title}</h2>
+<section class={`common-hero container`}>
+    <h2 class={`${!isLarge ? "limited-width" : ""}`}>{title}</h2>
 </section>
 
 <style>
@@ -24,7 +24,7 @@ const { title, isLarge }: Props = Astro.props;
     }
 
     .limited-width {
-        max-width: 65rem;
+        max-width: 57rem;
     }
 
     @media (max-width: 1024px) {

@@ -16,12 +16,10 @@ export const displayCardSchema = z.object({
     textRight: z.boolean().optional(),
     bottomText: z.string().optional(),
     absoluteContent: z
-        .array(
-            z.object({
-                stats: z.string().optional(),
-                title: z.string().optional(),
-                subtitle: z.string().optional(),
-            }),
-        )
+        .object({
+            stats: z.string().optional(),
+            title: z.string().optional(),
+            subtitle: z.string().optional(),
+        })
         .optional(),
 });

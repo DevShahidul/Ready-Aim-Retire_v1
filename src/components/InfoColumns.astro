@@ -50,7 +50,9 @@ const { data } = Astro.props;
 
     .info-card-wrapper {
         display: flex;
+        flex-wrap: wrap;
         gap: 2rem;
+        row-gap: 6rem;
         justify-content: space-between;
     }
     .info-card {
@@ -128,7 +130,7 @@ const { data } = Astro.props;
         }
         .info-card {
             width: 100%;
-            .btn-dark{
+            .btn-dark {
                 margin-bottom: 1rem;
             }
         }

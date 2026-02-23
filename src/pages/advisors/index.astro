@@ -1,0 +1,33 @@
+---
+import { getEntry } from "astro:content";
+import CommonHero from "../../components/CommonHero.astro";
+import CTABanner from "../../components/CTABanner.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import HeroDescription from "../../components/HeroDescription.astro";
+import DisplayCard from "../../components/DisplayCard.astro";
+import AdvisorsCards from "./_component/AdvisorsCards.astro";
+import AdvisorsCta from "../../components/AdvisorsCta.astro";
+import InfoColumns from "../../components/InfoColumns.astro";
+const pageData = await getEntry("advisorsPage", "advisors");
+const descriptionData = await getEntry(
+    "heroDescription",
+    "advisors_description",
+);
+const displayData = await getEntry("displayCard", "advisors_card");
+const infoColumsData = await getEntry("infoColumn", "advisors_columns");
+---
+
+<BaseLayout
+    title="For Advisors – ReadyAimRetire"
+    description="Built for Advisors who value clarity and client understanding. A modern planning tool that helps clients see their retirement - and trust the plan."
+    solidHeader={true}
+>
+    <CommonHero title={pageData?.data.title!} />
+    <HeroDescription description={descriptionData} />
+    <DisplayCard displayData={displayData?.data} />
+    <AdvisorsCards cards={pageData?.data.advisorsCards} />
+    <InfoColumns data={infoColumsData?.data} />
+    <AdvisorsCta ctaData={pageData?.data.ctaInfo} />
+
+    <CTABanner />
+</BaseLayout>

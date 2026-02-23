@@ -16,7 +16,7 @@ commitmentCards:
     firstBottomText: "Their mission closely aligns with our own belief that understanding money is a form of empowerment."
     secondBottomText: "Supporting organizations like Operation HOPE is one way we extend our commitment beyond software and into the broader community."
     emailInfo:
-      - title: ""
+        title: ""
         email: ""
         
   - id: 2
@@ -34,7 +34,7 @@ commitmentCards:
     firstBottomText: "Their mission closely aligns with our own belief that understanding money is a form of empowerment."
     secondBottomText: "Supporting organizations like Operation HOPE is one way we extend our commitment beyond software and into the broader community."
     emailInfo:
-      - title: ""
+        title: ""
         email: ""
         
   
@@ -53,7 +53,7 @@ commitmentCards:
     firstBottomText: "Their mission closely aligns with our own belief that understanding money is a form of empowerment."
     secondBottomText: "Supporting organizations like Operation HOPE is one way we extend our commitment beyond software and into the broader community."
     emailInfo:
-      - title: ""
+        title: ""
         email: ""
         
   - id: 4
