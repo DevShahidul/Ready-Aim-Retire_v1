@@ -2,8 +2,48 @@
 const { cardData } = Astro.props;
 ---
 
-<div>
-    <h2>{cardData.title}</h2>
+<div
+    class="advisors-card"
+    style={`background-color: ${cardData.secondary ? "#BBE0D3" : "#fff"} ;`}
+>
+    <h3 set:html={cardData.title} />
+    <p><strong>{cardData.subtitle}</strong></p>
+    <h4 set:html={cardData.list.title} />
+    <ul class="checklist">
+        {
+            cardData?.list.items.map((item: string) => (
+                <li>
+                    <img src="/images/icons/check-icon.png" />
+                    {item}
+                </li>
+            ))
+        }
+    </ul>
+    <p>{cardData.bottomText}</p>
 </div>
 
-<style></style>
+<style>
+    .advisors-card {
+        padding: 3.625rem 3rem 2.625rem;
+        border-radius: 0.625rem;
+        h3 {
+            font-size: 1.5625rem;
+            font-weight: 500;
+            margin-bottom: 1.875rem;
+        }
+        p {
+            margin-bottom: 2rem;
+        }
+        p,
+        li {
+            font-size: 1.0625rem;
+        }
+        ul {
+            margin-top: 1.8rem;
+        }
+    }
+
+    .checklist li {
+        align-items: center;
+    }
+</style>

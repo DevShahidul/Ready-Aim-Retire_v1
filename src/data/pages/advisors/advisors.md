@@ -3,7 +3,7 @@ title: "Built for Advisors who value clarity and client understanding"
 advisorsCards:
   - id: 1
     secondary: false
-    title: "Designed to support - not replace - advisors"
+    title: "Designed to <span class='text-teal'>support</span> - not replace - advisors"
     subtitle: "Your expertise stays front and center"
     list: 
       title: "OnTarget™ is not built to automate advice or remove professional judgment. Instead, it helps you:"
@@ -19,7 +19,7 @@ advisorsCards:
     title: "Powerful modeling with understanding"
     subtitle: ""
     list: 
-      title: "<b>Transparency builds trust, with OnTarget™, advisors can:</b>"
+      title: "<strong>Transparency builds trust, with OnTarget™, advisors can:</strong>"
       items:
         - "Model full-lifecycle retirement plans"
         - "Run and compare multiple scenarios live"

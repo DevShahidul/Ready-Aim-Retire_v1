@@ -2,8 +2,62 @@
 const { ctaData } = Astro.props;
 ---
 
-<section>
-    <h2>{ctaData.title}</h2>
+<section class="advisors-cta">
+    <div class="container">
+        <div class="advisors-cta-wrapper">
+            <div>
+                <div class="advisors-cta-heading">
+                    <img src="/images/icons/round-arrow.png" alt="" />
+                    <h2>{ctaData.title}</h2>
+                </div>
+                <div class="advisors-cta-description">
+                    <div>
+                        <h4>{ctaData.subtitle}</h4>
+                        <p>{ctaData.description}</p>
+                    </div>
+                    <a href="#" class="btn btn-dark"
+                        >{ctaData.btnText}
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
-<style></style>
+<style>
+    .advisors-cta {
+        color: #fff;
+        padding: 4rem 0 5.375rem;
+    }
+    .advisors-cta-wrapper {
+        padding: 4.0625rem 0rem;
+        border-radius: 0.625rem;
+        background-color: var(--color-primary);
+        > div {
+            max-width: 81.625rem;
+            margin: 0 auto;
+        }
+    }
+    .advisors-cta-heading {
+        display: flex;
+        align-items: center;
+        gap: 1.125rem;
+    }
+    .advisors-cta-description {
+        display: flex;
+        align-items: end;
+        gap: 4rem;
+        justify-content: space-between;
+        h4 {
+            font-size: 1.0625rem;
+            font-weight: 500;
+            max-width: 38.75rem;
+            margin-top: 2.1875rem;
+        }
+        p {
+            max-width: 25.75rem;
+            margin-top: 2rem;
+        }
+    }
+</style>

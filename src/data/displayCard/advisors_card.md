@@ -1,8 +1,8 @@
 ---
 title: "Better tools lead to better <span class='text-teal'>conversations</span>"
-subtitle: "Clients don’t struggle with advice — they struggle with understanding."
+subtitle: "<strong>Clients don’t struggle with advice — they struggle with understanding.</strong>"
 # time: ""
-description: "OnTarget™ helps you model your entire financial life, not just a single number or projection. Visualize income, spending, taxes, and assets over time. Explore endless “what-if” scenarios without breaking anything. Understand how today’s decisions affect decades of retirement."
+# description: "OnTarget™ helps you model your entire financial life, not just a single number or projection. Visualize income, spending, taxes, and assets over time. Explore endless “what-if” scenarios without breaking anything. Understand how today’s decisions affect decades of retirement."
 image: "/images/landing/advisors/advisors-img.png"
 list: 
    title: "Many clients leave meetings with:"

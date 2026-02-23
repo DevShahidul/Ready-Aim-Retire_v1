@@ -15,14 +15,15 @@ type Card = {
 };
 ---
 
-<section>
+<section class="container advisors-cards-wrapper">
     {cards.map((card: Card) => <AdvisorsCard cardData={card} />)}
 </section>
 
 <style>
-    section {
+    .advisors-cards-wrapper {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: clamp(1rem, 0.225rem + 3.875vw, 4.875rem);
+        margin-top: 7.1875rem;
     }
 </style>
