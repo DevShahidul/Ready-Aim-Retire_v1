@@ -15,15 +15,12 @@ commitmentCards:
         - "Expand access to economic opportunity"
     firstBottomText: "Their mission closely aligns with our own belief that understanding money is a form of empowerment."
     secondBottomText: "Supporting organizations like Operation HOPE is one way we extend our commitment beyond software and into the broader community."
-    emailInfo:
-        title: ""
-        email: ""
         
   - id: 2
     title: "Free Pro Access for Students"
     subtitle: "Investing in the next generation of planners"
     description: "We believe students should have access to the same planning tools as anyone else - without cost being a barrier."
-    shortDescription: "That’s why we offer free Pro accounts to students."
+    shortDescription: "That’s why we offer <strong>free Pro accounts to students.</strong>"
     list: 
       title: "<strong>How it works:</strong>"
       listItems: 
@@ -39,7 +36,7 @@ commitmentCards:
   
   - id: 3
     title: "Built with Respect - and Responsibility"
-    subtitle: "<strong>We take our role seriously</strong>"
+    subtitle: "We take our role seriously"
     description: ""
     shortDescription: ""
     list: 
@@ -50,27 +47,20 @@ commitmentCards:
         - "We don’t profit from specific outcomes"
     firstBottomText: "Our success depends on helping people understand their finances better — not steering them toward decisions that benefit us."
     secondBottomText: ""
-    emailInfo:
-        title: ""
-        email: ""
         
   - id: 4
     title: "Looking Ahead"
-    subtitle: "<strong>Our commitment to financial literacy is ongoing.</strong>"
+    subtitle: "Our commitment to financial literacy is ongoing."
     description: ""
     shortDescription: ""
     list: 
       title: "As Ready Aim Retire grows, we plan to:"
       listItems: 
         - "Expand educational resources"
-        - "Support organizations aligned with financial
-          empowerment"
+        - "Support organizations aligned with financial empowerment"
         - "Continue improving access to high-quality planning tools"
     firstBottomText: "Because financial confidence should be something people build - not something they’re so."
     secondBottomText: ""
-    emailInfo:
-        title: ""
-        email: ""
 ctaInfo: 
   title: "Join Us"
   subtitle: "Whether you’re planning for retirement, pursuing financial independence, advising clients, or just starting out — we’re glad you’re here."

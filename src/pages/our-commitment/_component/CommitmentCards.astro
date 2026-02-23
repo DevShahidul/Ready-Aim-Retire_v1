@@ -8,7 +8,7 @@ type Card = {
     shortDescription?: string;
     list?: {
         title?: string;
-        listItems?: string;
+        listItems?: string[];
     };
     firstBottomText?: string;
     secondBottomText?: string;
@@ -19,20 +19,89 @@ type Card = {
 };
 ---
 
-<section>
+<section class="container commitment-cards-wrapper">
     {
         cards.map((card: Card) => (
-            <div>
-                <h2>{card.title}</h2>
+            <div class="commitment-card">
+                <h3>{card.title}</h3>
+                <div class="commitment-card-body">
+                    <p>
+                        <strong>{card.subtitle}</strong>
+                    </p>
+                    {card.description && <p>{card.description}</p>}
+                    {card.shortDescription && (
+                        <p set:html={card.shortDescription} />
+                    )}
+                    <ul class="bullet-list">
+                        {card.list?.title && <h4 set:html={card.list?.title} />}
+
+                        {card.list?.listItems?.map((item: string) => (
+                            <li set:html={item} />
+                        ))}
+                    </ul>
+                    {card.firstBottomText && <p>{card.firstBottomText}</p>}
+                    {card.secondBottomText && <p>{card.secondBottomText}</p>}
+                    {card.emailInfo && (
+                        <>
+                            <h4>{card.emailInfo?.title}</h4>
+                            <a
+                                href={`mailto:${card.emailInfo?.email}`}
+                                class="email"
+                            >
+                                <img src="/images/icons/option3.png" alt="" />
+                                {card.emailInfo?.email}
+                            </a>
+                        </>
+                    )}
+                </div>
             </div>
         ))
     }
 </section>
 
 <style>
-    section {
+    .commitment-cards-wrapper {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4.6875rem;
+        margin-top: 6.5625rem;
+        font-size: 1.0625rem;
+    }
+    .commitment-card {
+        background-color: #fff;
+        h3 {
+            font-size: 1.5625rem;
+            font-weight: 500;
+            color: #f6f7f9;
+            background-color: var(--color-primary);
+            padding: 1.57rem 1.75rem;
+            border-radius: 0.625rem 0.625rem 0 0;
+        }
+        h4 {
+            margin-top: 1.8rem;
+        }
+        ul {
+            margin-top: 1.8rem;
+            li {
+                font-size: 1.0625rem;
+            }
+        }
+    }
+    .commitment-card-body {
+        padding: 2.5rem 1.875rem 3.625rem 1.5625rem;
+        p:not(:first-child) {
+            margin-top: 1.8rem;
+        }
+        .email {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 1rem;
+            align-items: center;
+            img {
+                width: 1.375rem;
+                height: 1.375rem;
+                border-radius: 5px;
+            }
+        }
     }
 </style>
