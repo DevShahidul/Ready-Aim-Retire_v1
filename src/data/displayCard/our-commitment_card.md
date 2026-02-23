@@ -1,6 +1,6 @@
 ---
 title: "Why Financial Literacy <span class='text-teal'>Matters<span>"
-subtitle: "Knowledge changes outcomes"
+subtitle: "<strong>Knowledge changes outcomes</strong>"
 description: "Financial decisions made early - and revisited often - can have an outsized impact over a lifetime. Yet many people are forced to make those decisions without the tools or education they deserve."
 image: "/images/landing/playing.png"
 list: 

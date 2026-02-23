@@ -8,7 +8,7 @@ const { displayData } = Astro.props;
             class={`display-card-text ${displayData.textRight ? "text-right" : ""}`}
         >
             <h2 set:html={displayData.title} />
-            {displayData.subtitle && <p>{displayData.subtitle}</p>}
+            {displayData.subtitle && <p set:html={displayData.subtitle} />}
             {
                 displayData.time && (
                     <p class="time-text">
@@ -18,10 +18,12 @@ const { displayData } = Astro.props;
                 )
             }
             {displayData.description && <p>{displayData.description}</p>}
-            {displayData.list.title && <h4>{displayData.list.title}</h4>}
             {
                 displayData.list.listItems && (
-                    <ul>
+                    <ul class="display-card-list bullet-list">
+                        {displayData.list.title && (
+                            <h4>{displayData.list.title}</h4>
+                        )}
                         {displayData.list.listItems.map((item: string) => (
                             <li>{item}</li>
                         ))}
@@ -37,14 +39,15 @@ const { displayData } = Astro.props;
             }
             {displayData.bottomText && <p>{displayData.bottomText}</p>}
         </div>
-        <div class="blog-split-content-thumb">
+        <div class="display-card-thumb">
             <img
+                class={`${displayData.textRight ? "rounded-left" : "rounded-right"}`}
                 src={displayData.image}
                 alt="People with a retirement plan feel more confident about their future"
             />
             {
                 displayData.absoluteContent && (
-                    <div class="split-content-text-overlay">
+                    <div class="display-card-text-overlay">
                         <h3 class="stat-number">
                             {displayData.absoluteContent.stats}
                         </h3>
@@ -61,4 +64,100 @@ const { displayData } = Astro.props;
     </div>
 </div>
 
-<style></style>
+<style>
+    .display-card {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 2.625rem; /* 58px */
+        gap: 2.3125rem; /* 5px */
+        background-color: var(--color-bg-light);
+        border: 1.25rem solid #ffffff; /* 20px */
+        border-radius: 1.875rem; /* 30px */
+        color: #2e2e2e;
+    }
+
+    .display-card-text {
+        margin-top: 3.8rem;
+        h2 {
+            /*max-width: 29.1875rem;*/
+            margin-bottom: 3rem;
+            font-size: 2.8125rem;
+            font-weight: 400;
+            line-height: 3rem;
+        }
+        p {
+            max-width: 38.1875rem;
+            font-size: var(--text-xl);
+            margin-top: 1.8rem;
+            line-height: 1.75rem;
+        }
+    }
+
+    .display-card-list {
+        margin-top: 1.8rem;
+        margin-bottom: 0;
+        h4 {
+            font-size: 1.25rem;
+            margin-bottom: 1.8rem;
+        }
+        li {
+            font-size: 1.25rem;
+        }
+    }
+
+    .rounded-left {
+        border-radius: 1.25rem 0px 0px 1.25rem;
+    }
+
+    .rounded-right {
+        border-radius: 0px 1.25rem 1.25rem 0px;
+    }
+
+    @media (min-width: 90rem) {
+        .display-card {
+            align-items: start;
+            min-height: 41rem;
+        }
+        .display-card-text {
+            margin-top: 5.25rem;
+        }
+        .display-card-thumb {
+            img {
+                min-height: 38.625rem;
+            }
+        }
+    }
+
+    .display-card-thumb {
+        position: relative;
+        img {
+            width: 100%;
+            max-width: 47.25rem; /* 772px */
+        }
+        .display-card-text-overlay {
+            position: absolute;
+            right: 3rem; /* 60px */
+            bottom: 3.4375rem; /* 55px */
+            text-align: right;
+            color: #ffffff;
+            .stat-number {
+                font-size: 5.625rem;
+                font-weight: 400;
+                line-height: 6.875rem;
+            }
+            .stat-headline {
+                font-size: 1.875rem;
+                max-width: 40rem;
+                line-height: 2.1875rem;
+                font-weight: 400;
+                margin-top: 0.6rem;
+            }
+            .stat-subtext {
+                font-size: 1.375rem;
+                font-weight: 400;
+                margin-top: 0.5rem;
+            }
+        }
+    }
+</style>

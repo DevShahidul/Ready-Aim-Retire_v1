@@ -24,9 +24,9 @@ const pageData = await getEntry("ourCommitmentPage", "our-commitment");
 >
     <CommonHero title="Our Commitment to Financial Literacy" isLarge={true} />
     <HeroDescription description={decriptionCollection} />
-    <DisplayCard displayData={displayData.data} />
-    <CommitmentCards cards={pageData.data.commitmentCards} />
-    <CommitmentCta ctaData={pageData.data.ctaInfo} />
+    <DisplayCard displayData={displayData?.data} />
+    <CommitmentCards cards={pageData?.data.commitmentCards} />
+    <CommitmentCta ctaData={pageData?.data.ctaInfo} />
 
     <CTABanner />
 </BaseLayout>

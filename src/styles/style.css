@@ -568,7 +568,7 @@ section {
     color: #555;
 }
 
-.bullet-list + section h3{
+.bullet-list + section h3 {
     font-weight: 500;
 }
 

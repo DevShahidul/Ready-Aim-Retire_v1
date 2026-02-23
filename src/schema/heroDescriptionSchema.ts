@@ -9,6 +9,6 @@ export const heroDescriptionShcema = z.object({
                 point: z.string().default(""),
             }),
         )
-        .default([{ point: "" }, { point: "" }, { point: "" }]),
+        .optional(),
     largeContent: z.boolean().default(true).optional(),
 });

@@ -1,10 +1,6 @@
 ---
 title: "Building confidence through understanding - for everyone."
 btnText: ""
-checkList:
-  - point: ""
-  - point: ""
-  - point: ""
 largeContent: true
 ---
 At Ready Aim Retire, we believe financial clarity should be accessible to everyone.

@@ -25,19 +25,21 @@ const { Content } = await render(description);
         >
             <Content />
         </div>
-        <ul class="description-points">
-            {
-                description?.data.checkList.map(
-                    (item: { point: string }) =>
-                        item?.point && (
-                            <li class="benefit-pill">
-                                <img src="/images/icons/clearer-way-check.svg" />
-                                <span>{item.point}</span>
-                            </li>
-                        ),
-                )
-            }
-        </ul>
+        {
+            description.data.checkList && (
+                <ul class="description-points">
+                    {description?.data.checkList.map(
+                        (item: { point: string }) =>
+                            item?.point && (
+                                <li class="benefit-pill">
+                                    <img src="/images/icons/clearer-way-check.svg" />
+                                    <span>{item.point}</span>
+                                </li>
+                            ),
+                    )}
+                </ul>
+            )
+        }
     </div>
 </section>
 
