@@ -37,7 +37,7 @@ const { displayData } = Astro.props;
                     </a>
                 )
             }
-            {displayData.bottomText && <p>{displayData.bottomText}</p>}
+            {displayData.bottomText && <p set:html={displayData.bottomText} />}
         </div>
         <div class="display-card-thumb">
             <img
@@ -69,7 +69,6 @@ const { displayData } = Astro.props;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding-left: 2.625rem; /* 58px */
         gap: 2.3125rem; /* 5px */
         background-color: var(--color-bg-light);
         border: 1.25rem solid #ffffff; /* 20px */
@@ -79,6 +78,8 @@ const { displayData } = Astro.props;
 
     .display-card-text {
         margin-top: 3.8rem;
+        padding-left: 2.625rem; /* 58px */
+        max-width: 39rem;
         h2 {
             /*max-width: 29.1875rem;*/
             margin-bottom: 3rem;
@@ -114,10 +115,16 @@ const { displayData } = Astro.props;
         border-radius: 0px 1.25rem 1.25rem 0px;
     }
 
+    .text-right {
+        order: 2;
+        padding-left: 0rem;
+        padding-right: 2.625rem; /* 58px */
+    }
+
     @media (min-width: 90rem) {
         .display-card {
             align-items: start;
-            min-height: 41rem;
+            /*min-height: 41rem;*/
         }
         .display-card-text {
             margin-top: 5.25rem;

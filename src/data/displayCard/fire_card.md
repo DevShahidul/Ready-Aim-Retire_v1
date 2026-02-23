@@ -1,17 +1,19 @@
 ---
-title: "If you’re chasing financial independence, you’ve probably asked…"
-subtitle: "Clients don’t struggle with advice — they struggle with understanding."
+title: "If you’re chasing financial <span class='text-teal'>independence</span>, you’ve probably asked…"
+# subtitle: ""
 # time: ""
-description: "OnTarget™ helps you model your entire financial life, not just a single number or projection. Visualize income, spending, taxes, and assets over time. Explore endless “what-if” scenarios without breaking anything. Understand how today’s decisions affect decades of retirement."
+# description: ""
 image: "/images/landing/fire-img.png"
 list: 
-   title: "Many clients leave meetings with:"
+   # title: ""
    listItems:
-    - "A recommendation they trust — but don’t fully understand"
-    - "A plan they can’t visualize"
-    - "Uncertainty about tradeoffs and risks"
+    - "Am I actually on track — or just optimistic?"
+    - "Can I retire earlier without taking on unnecessary risk?"
+    - "How sensitive is my plan to market downturns?"
+    - "What happens if I increase spending — or cut it?"
+    - "How do taxes and withdrawals really affect my timeline?"
 # btnText: ""
-textRight: false
+textRight: true
 bottomText: "<strong>OnTarget™ helps bridge that gap by turning complex planning concepts into clear, visual stories your clients can follow.</strong>"
 absoluteContent: 
     stats: "40–50yr"
