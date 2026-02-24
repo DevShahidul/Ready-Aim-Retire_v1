@@ -7,6 +7,12 @@ type ColumnCard = {
     dotList?: {
         title?: string;
         items?: string[];
+        footer?: string;
+    };
+    dotList2?: {
+        title?: string;
+        items?: string[];
+        footer?: string;
     };
     btnText?: string;
     bottomText?: string;
@@ -38,6 +44,24 @@ const { data, transparentBg } = Astro.props;
                                     <li>{text}</li>
                                 ))}
                             </ul>
+                            {item.dotList.footer && (
+                                <p set:html={item.dotList.footer} />
+                            )}
+                        </div>
+                    )}
+                    {item?.dotList2 && (
+                        <div class="info-card-list">
+                            {item.dotList2.title && (
+                                <p set:html={item.dotList2.title} />
+                            )}
+                            <ul class="bullet-list ">
+                                {item.dotList2.items?.map((text) => (
+                                    <li>{text}</li>
+                                ))}
+                            </ul>
+                            {item.dotList2.footer && (
+                                <p set:html={item.dotList2.footer} />
+                            )}
                         </div>
                     )}
                     {item.btnText && (

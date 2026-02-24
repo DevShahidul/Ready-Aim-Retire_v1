@@ -10,6 +10,14 @@ export const infoColumnSchema = z.array(
             .object({
                 title: z.string(),
                 items: z.array(z.string()),
+                footer: z.string().optional(),
+            })
+            .optional(),
+        dotList2: z
+            .object({
+                title: z.string(),
+                items: z.array(z.string()),
+                footer: z.string().optional(),
             })
             .optional(),
         btnText: z.string(),

@@ -8,14 +8,14 @@
       - "They break"
       - "They’re hard to maintain"
       - "One change can ripple unpredictably"
+  dotList2:
+    title: "OnTarget™ gives you <strong>spreadsheet-level power</strong> with:"
+    items:
+      - "Clean visual timelines"
+      - "Instant scenario comparisons"
+      - "No formulas to debug"
   btnText: ""
-  bottomText: |
-    OnTarget™ gives you spreadsheet-level power with:
-    • Clean visual timelines
-    • Instant scenario comparisons
-    • No formulas to debug
-
-    The result? Faster insight with fewer mistakes.
+  bottomText: "The result? Faster insight with fewer mistakes."
   email: ""
 
 - id: "7"
@@ -67,7 +67,8 @@
       - "Built for iteration and experimentation"
       - "Transparent assumptions — no black boxes"
       - "Holistic modeling that mirrors real life"
+    footer: "If you care enough to optimize your savings rate, you should care enough to understand your plan."
   btnText: ""
-  bottomText: "If you care enough to optimize your savings rate, you should care enough to understand your plan."
+  bottomText: ""
   email: ""
 ---
