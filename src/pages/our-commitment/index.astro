@@ -18,7 +18,7 @@ const pageData = await getEntry("ourCommitmentPage", "our-commitment");
 ---
 
 <BaseLayout
-    title=""
+    title={pageData?.data.title}
     description="Run your retirement plan through 153 years of market history. See your probability of success across 150+ simulations including every major crash since 1871."
     solidHeader={true}
 >

@@ -81,9 +81,9 @@ const { displayData } = Astro.props;
     }
 
     .display-card-text {
-        margin-top: 3.8rem;
+        /*margin-top: 3.8rem;*/
         padding-left: 2.625rem; /* 58px */
-        max-width: 39rem;
+        max-width: 42rem;
         h2 {
             /*max-width: 29.1875rem;*/
             margin-bottom: 3rem;
@@ -122,17 +122,23 @@ const { displayData } = Astro.props;
     .text-right {
         order: 2;
         padding-left: 0rem;
-        padding-right: 2.625rem; /* 58px */
+        padding-right: 2.625rem;
     }
 
     @media (min-width: 90rem) {
         .display-card {
             align-items: start;
-            /*min-height: 41rem;*/
         }
         .display-card-text {
-            margin-top: 5.25rem;
+            padding: 5.25rem 0rem 3.25rem 2.625rem;
         }
+
+        .text-right {
+            order: 2;
+            padding-left: 0rem;
+            padding-right: 2.625rem; /* 58px */
+        }
+
         .display-card-thumb {
             img {
                 min-height: 38.625rem;
