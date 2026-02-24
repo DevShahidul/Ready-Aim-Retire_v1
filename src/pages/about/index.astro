@@ -21,6 +21,6 @@ const columnsData = await getEntry("infoColumn", "about_columns");
     <HeroDescription description={descriptionData} />
     <AboutCards cards={pageData?.data.aboutCards} />
     <Founders />
-    <InfoColumns data={columnsData?.data} />
+    <InfoColumns data={columnsData?.data} transparentBg={true} />
     <CTABanner />
 </BaseLayout>

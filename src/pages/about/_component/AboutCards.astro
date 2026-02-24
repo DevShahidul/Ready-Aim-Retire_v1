@@ -24,10 +24,13 @@ type Card = {
                 </div>
                 <div class="about-card-body">
                     <p>{card.description}</p>
-                    <ul>
-                        <h5>{card.list?.title}</h5>
+                    <ul class="checklist">
+                        <h4>{card.list?.title}</h4>
                         {card?.list?.items?.map((item: string) => (
-                            <li>{item}</li>
+                            <li>
+                                <img src="/images/icons/check-icon.png" />
+                                {item}
+                            </li>
                         ))}
                     </ul>
                     <p>{card.firstBottomText}</p>
@@ -45,10 +48,101 @@ type Card = {
         gap: clamp(1rem, 0.225rem + 3.875vw, 4.875rem);
     }
 
+    .about-card {
+        color: #2e2e2e;
+        font-size: 1.0625rem;
+        padding: 4.0625rem 1.875rem 3.125rem 2.75rem;
+        background-color: #fff;
+        border-radius: 0.625rem;
+    }
+
+    .about-card-heading {
+        h4 {
+            font-size: 0.8125rem;
+            font-weight: 400;
+            color: #898d8e;
+            text-transform: uppercase;
+        }
+        h2 {
+            font-size: 2.8125rem;
+            font-weight: 400;
+            margin-top: 1.1875rem;
+        }
+    }
+
+    .about-card-body {
+        p,
+        ul {
+            margin-top: 1.8rem;
+        }
+        h4 {
+            margin-bottom: 1.8rem;
+        }
+
+        ul li {
+            font-size: 1.0625rem;
+            align-items: center;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        .about-cards-wrapper {
+            gap: 2.5rem;
+        }
+        .about-card {
+            padding: 3rem 1.5rem 2.5rem 2rem;
+        }
+        .about-card-heading h2 {
+            font-size: 2.25rem;
+        }
+    }
+
     @media (max-width: 768px) {
         .about-cards-wrapper {
             grid-template-columns: 1fr;
             gap: 1.5rem;
+        }
+        .about-card {
+            padding: 2rem 1.25rem 1.75rem 1.5rem;
+        }
+        .about-card-heading h4 {
+            font-size: 0.75rem;
+        }
+        .about-card-heading h2 {
+            font-size: 1.75rem;
+            margin-top: 0.75rem;
+        }
+        .about-card-body p,
+        .about-card-body ul {
+            margin-top: 1.25rem;
+        }
+        .about-card-body h4 {
+            margin-bottom: 1.25rem;
+        }
+        .about-card-body ul li {
+            font-size: 0.9375rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .about-card {
+            padding: 1.5rem 1rem 1.25rem 1.25rem;
+            font-size: 0.9375rem;
+        }
+        .about-card-heading h4 {
+            font-size: 0.6875rem;
+        }
+        .about-card-heading h2 {
+            font-size: 1.5rem;
+            margin-top: 0.5rem;
+        }
+        .about-card-body p,
+        .about-card-body ul {
+            margin-top: 1rem;
+        }
+        .about-card-body h4 {
+            margin-bottom: 1rem;
+            font-size: 1rem;
         }
     }
 </style>
