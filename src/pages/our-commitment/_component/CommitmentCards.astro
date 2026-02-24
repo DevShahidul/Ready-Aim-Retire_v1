@@ -103,4 +103,51 @@ type Card = {
             }
         }
     }
+
+    @media (max-width: 1024px) {
+        .commitment-cards-wrapper {
+            gap: 2.5rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .commitment-cards-wrapper {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            font-size: 0.9375rem;
+        }
+        .commitment-card h3 {
+            font-size: 1.25rem;
+            padding: 1.2rem 1.25rem;
+        }
+        .commitment-card-body {
+            padding: 1.5rem 1.25rem 2rem 1.25rem;
+        }
+        .commitment-card h4 {
+            margin-top: 1.2rem;
+        }
+        .commitment-card ul {
+            margin-top: 1.2rem;
+        }
+        .commitment-card ul li {
+            font-size: 0.9375rem;
+        }
+        .commitment-card-body p:not(:first-child) {
+            margin-top: 1.2rem;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .commitment-cards-wrapper {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+        .commitment-card h3 {
+            font-size: 1.125rem;
+            padding: 1rem 1rem;
+        }
+        .commitment-card-body {
+            padding: 1.25rem 1rem 1.5rem 1rem;
+        }
+    }
 </style>

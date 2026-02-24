@@ -48,4 +48,52 @@ const { ctaData } = Astro.props;
             margin-top: 2rem;
         }
     }
+
+    @media (max-width: 1024px) {
+        .commitment-cta-description {
+            gap: 2rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .commitment-cta {
+            padding: 3rem 0 4rem;
+        }
+        .commitment-cta-heading img {
+            width: 2rem;
+            height: auto;
+        }
+        .commitment-cta-description {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1.5rem;
+        }
+        .commitment-cta-description h4 {
+            margin-top: 1.5rem;
+            max-width: 100%;
+        }
+        .commitment-cta-description p {
+            max-width: 100%;
+            margin-top: 1rem;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .commitment-cta {
+            padding: 2rem 0 3rem;
+        }
+        .commitment-cta-heading {
+            gap: 0.75rem;
+        }
+        .commitment-cta-heading img {
+            width: 1.5rem;
+        }
+        .commitment-cta-heading h2 {
+            font-size: 1.25rem;
+        }
+        .commitment-cta-description h4 {
+            font-size: 0.9375rem;
+            margin-top: 1.25rem;
+        }
+    }
 </style>

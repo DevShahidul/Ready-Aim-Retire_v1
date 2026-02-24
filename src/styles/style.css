@@ -1643,11 +1643,6 @@ footer .disclaimer {
 
 /* Max-width: 600px */
 @media (max-width: 37.5rem) {
-    /* 600px */
-    .container {
-        padding: 0 1.5rem;
-    }
-
     .hero-section,
     .hero-section-white {
         padding: 6rem 0 2rem 0;
