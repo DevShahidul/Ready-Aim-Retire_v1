@@ -70,6 +70,9 @@ const { ctaData } = Astro.props;
     @media (max-width: 768px) {
         .advisors-cta-wrapper {
             padding: 3rem 1.5rem;
+            > div {
+                padding: 0;
+            }
         }
         .advisors-cta-description {
             flex-direction: column;
