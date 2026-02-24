@@ -1,10 +1,12 @@
 ---
 import type { ColumnCard } from "../types/component_types";
 
-const { data } = Astro.props;
+const { data, transparentBg } = Astro.props;
 ---
 
-<section class="info-columns-section">
+<section
+    class={`info-columns-section ${transparentBg ? "bg-transparent" : ""}`}
+>
     <div class="container info-card-wrapper">
         {
             data?.map((item: ColumnCard) => (
@@ -46,6 +48,9 @@ const { data } = Astro.props;
     .info-columns-section {
         padding: 4.5rem 0 5.25rem;
         background-color: #fff;
+    }
+    .bg-transparent {
+        background-color: transparent;
     }
 
     .info-card-wrapper {

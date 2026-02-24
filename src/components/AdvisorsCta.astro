@@ -28,14 +28,14 @@ const { ctaData } = Astro.props;
 <style>
     .advisors-cta {
         color: #fff;
-        padding: 4rem 0 5.375rem;
     }
     .advisors-cta-wrapper {
         padding: 4.0625rem 0rem;
         border-radius: 0.625rem;
         background-color: var(--color-primary);
         > div {
-            max-width: 81.625rem;
+            max-width: 83.625rem;
+            padding: 0 1rem;
             margin: 0 auto;
         }
     }
@@ -58,6 +58,51 @@ const { ctaData } = Astro.props;
         p {
             max-width: 25.75rem;
             margin-top: 2rem;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        .advisors-cta-description {
+            gap: 2rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .advisors-cta-wrapper {
+            padding: 3rem 1.5rem;
+        }
+        .advisors-cta-description {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1.5rem;
+        }
+        .advisors-cta-description h4 {
+            margin-top: 1.5rem;
+            max-width: 100%;
+        }
+        .advisors-cta-description p {
+            max-width: 100%;
+            margin-top: 1rem;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .advisors-cta-wrapper {
+            padding: 2rem 1.25rem;
+        }
+        .advisors-cta-heading {
+            gap: 0.75rem;
+        }
+        .advisors-cta-heading img {
+            width: 2rem;
+            height: auto;
+        }
+        .advisors-cta-heading h2 {
+            font-size: 1.5rem;
+        }
+        .advisors-cta-description h4 {
+            font-size: 0.9375rem;
+            margin-top: 1.25rem;
         }
     }
 </style>

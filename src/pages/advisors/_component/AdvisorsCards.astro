@@ -24,6 +24,12 @@ type Card = {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: clamp(1rem, 0.225rem + 3.875vw, 4.875rem);
-        margin-top: 7.1875rem;
+    }
+
+    @media (max-width: 768px) {
+        .advisors-cards-wrapper {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
     }
 </style>
