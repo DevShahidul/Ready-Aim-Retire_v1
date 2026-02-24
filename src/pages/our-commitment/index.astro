@@ -24,9 +24,27 @@ const pageData = await getEntry("ourCommitmentPage", "our-commitment");
 >
     <CommonHero title="Our Commitment to Financial Literacy" isLarge={true} />
     <HeroDescription description={decriptionCollection} />
-    <DisplayCard displayData={displayData?.data} />
-    <CommitmentCards cards={pageData?.data.commitmentCards} />
-    <CommitmentCta ctaData={pageData?.data.ctaInfo} />
+    <section class="commitment-display-card-section">
+        <DisplayCard displayData={displayData?.data} />
+    </section>
+    <section class="commitment-cards-section">
+        <CommitmentCards cards={pageData?.data.commitmentCards} />
+    </section>
+    <section class="commitment-cta-section">
+        <CommitmentCta ctaData={pageData?.data.ctaInfo} />
+    </section>
 
     <CTABanner />
 </BaseLayout>
+
+<style>
+    .commitment-display-card-section {
+        margin-top: clamp(1.25rem, 0.425rem + 4.125vw, 5.375rem);
+    }
+    .commitment-cards-section {
+        margin-top: clamp(1.25rem, 0.1875rem + 5.3125vw, 6.5625rem);
+    }
+    .commitment-cta-section {
+        margin-top: clamp(1.25rem, 0.375rem + 4.375vw, 5.625rem);
+    }
+</style>

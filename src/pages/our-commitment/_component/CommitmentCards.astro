@@ -19,7 +19,7 @@ type Card = {
 };
 ---
 
-<section class="container commitment-cards-wrapper">
+<div class="container commitment-cards-wrapper">
     {
         cards.map((card: Card) => (
             <div class="commitment-card">
@@ -57,14 +57,13 @@ type Card = {
             </div>
         ))
     }
-</section>
+</div>
 
 <style>
     .commitment-cards-wrapper {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 4.6875rem;
-        margin-top: 6.5625rem;
         font-size: 1.0625rem;
     }
     .commitment-card {
