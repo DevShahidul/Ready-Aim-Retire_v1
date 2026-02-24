@@ -73,11 +73,13 @@ const { data, transparentBg } = Astro.props;
     }
 
     .info-card-wrapper {
-        display: flex;
+        /*display: flex;
         flex-wrap: wrap;
-        gap: 2rem;
+        justify-content: space-between;*/
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(28rem, 100%), 1fr));
+        gap: 1rem;
         row-gap: 6rem;
-        justify-content: space-between;
     }
     .info-card {
         position: relative;
@@ -139,11 +141,8 @@ const { data, transparentBg } = Astro.props;
             flex-wrap: wrap;
             gap: 1.5rem;
         }
-        .info-card {
-            width: calc(50% - 0.75rem);
-        }
-        .info-card::after {
-            display: none;
+        .info-card:nth-child(3n)::after {
+            display: block;
         }
         .info-card h2 {
             font-size: 1.5rem;
