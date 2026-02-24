@@ -29,8 +29,8 @@ advisorsCards:
         - "Withdrawal sequencing and longevity"
     bottomText: "All connected. All adjustable. All visible."
 ctaInfo:
-  title: "The Bottom Line"
-  subtitle: "OnTarget™ helps advisors do what they do best - guide, explain, and build confidence - with tools that make complex planning easier to understand."
-  description: "Better understanding leads to better outcomes. For clients and advisors alike."
-  btnText: "Learn More About Advisor Access"
+  title: "Ready to see your path to financial independence?"
+  subtitle: "REPLACE GUESSWORK"
+  description: "Stop relying on single-number targets. See your entire FIRE journey - clearly."
+  btnText: "Start Planning for Free"
 ---

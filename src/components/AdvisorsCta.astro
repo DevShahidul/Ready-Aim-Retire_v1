@@ -43,6 +43,12 @@ const { ctaData } = Astro.props;
         display: flex;
         align-items: center;
         gap: 1.125rem;
+
+        h2 {
+            font-size: clamp(1.875rem, 1.65rem + 1.125vw, 3rem);
+            font-weight: 400;
+            line-height: 1;
+        }
     }
     .advisors-cta-description {
         display: flex;
