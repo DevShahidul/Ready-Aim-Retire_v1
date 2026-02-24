@@ -9,16 +9,3 @@ export type QuestionCard = {
     };
     bottomText?: string;
 };
-
-export type ColumnCard = {
-    id: string;
-    title: string;
-    subtitle?: string;
-    dotList?: {
-        title?: string;
-        items?: string[];
-    };
-    btnText?: string;
-    bottomText?: string;
-    email?: string;
-};

@@ -1,5 +1,19 @@
 ---
-import type { ColumnCard } from "../types/component_types";
+type ColumnCard = {
+    id: string;
+    title: string;
+    subtitle?: string;
+    description?: string;
+    dotList?: {
+        title?: string;
+        items?: string[];
+    };
+    btnText?: string;
+    bottomText?: string;
+    bottomText2?: string;
+    image?: string;
+    email?: string;
+};
 
 const { data, transparentBg } = Astro.props;
 ---
@@ -12,10 +26,13 @@ const { data, transparentBg } = Astro.props;
             data?.map((item: ColumnCard) => (
                 <div class="info-card">
                     <h2>{item?.title}</h2>
-                    {item?.subtitle && <p>{item?.subtitle}</p>}
+                    {item?.subtitle && <p set:html={item?.subtitle} />}
+                    {item?.description && <p set:html={item?.description} />}
                     {item?.dotList && (
                         <div class="info-card-list">
-                            {item.dotList.title && <p>{item.dotList.title}</p>}
+                            {item.dotList.title && (
+                                <p set:html={item.dotList.title} />
+                            )}
                             <ul class="bullet-list ">
                                 {item.dotList.items?.map((text) => (
                                     <li>{text}</li>
@@ -30,6 +47,7 @@ const { data, transparentBg } = Astro.props;
                         </a>
                     )}
                     {item.bottomText && <p>{item.bottomText}</p>}
+                    {item.bottomText2 && <p>{item.bottomText2}</p>}
                     {item.email && (
                         <a
                             href={`mailto:${item.email}`}
@@ -39,6 +57,7 @@ const { data, transparentBg } = Astro.props;
                             {item.email}
                         </a>
                     )}
+                    {item.image && <img src={item.image} />}
                 </div>
             ))
         }
@@ -70,16 +89,22 @@ const { data, transparentBg } = Astro.props;
         }
         p {
             margin-top: 1.25rem;
+            font-size: 1.0625rem;
         }
         ul {
             margin-top: 1.3rem;
         }
         ul li {
+            font-size: 1.0625rem;
             color: #2e2e2e;
         }
         .btn-dark {
             margin-top: 1rem;
             margin-bottom: 2rem;
+        }
+        img {
+            max-width: 13.125rem;
+            margin-top: clamp(1rem, 0.675rem + 1.625vw, 2.625rem);
         }
     }
     .info-card-email {
@@ -117,7 +142,7 @@ const { data, transparentBg } = Astro.props;
         .info-card {
             width: calc(50% - 0.75rem);
         }
-        .info-card:nth-child(2n)::after {
+        .info-card::after {
             display: none;
         }
         .info-card h2 {

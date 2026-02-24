@@ -8,6 +8,24 @@ const founder2Data = await getEntry("displayCard", "founder-two_card");
 <section>
     <h2 class="container">Meet our founders</h2>
 
-    <DisplayCard displayData={founder1Data?.data} />
+    <div class="first-display-card">
+        <DisplayCard displayData={founder1Data?.data} />
+    </div>
     <DisplayCard displayData={founder2Data?.data} />
 </section>
+
+<style>
+    section {
+        margin-top: clamp(1.25rem, -0.775rem + 10.125vw, 11.375rem);
+
+        .first-display-card {
+            margin: 1.875rem 0 2.625rem;
+        }
+    }
+    h2 {
+        font-size: clamp(1.875rem, 1.25rem + 3.125vw, 5rem);
+        line-height: 1;
+        font-weight: 400;
+        font-family: "Playfair Display", sans-serif;
+    }
+</style>
