@@ -21,10 +21,32 @@ const infoColumsData = await getEntry("infoColumn", "fire_columns");
 >
     <CommonHero title={pageData?.data.title!} />
     <HeroDescription description={descriptionData} />
-    <DisplayCard displayData={displayData?.data} />
-    <FireCards cards={pageData?.data.advisorsCards} />
-    <InfoColumns data={infoColumsData?.data} />
-    <AdvisorsCta ctaData={pageData?.data.ctaInfo} />
+    <section class="fire-display-card-section">
+        <DisplayCard displayData={displayData?.data} />
+    </section>
+    <section class="fire-cards-section">
+        <FireCards cards={pageData?.data.advisorsCards} />
+    </section>
+    <InfoColumns data={infoColumsData?.data} transparentBg={true} />
+    <section class="fire-cta-section">
+        <AdvisorsCta ctaData={pageData?.data.ctaInfo} />
+    </section>
 
     <CTABanner />
 </BaseLayout>
+
+<style>
+    .fire-display-card-section {
+        margin-top: clamp(1.25rem, 0.3125rem + 4.6875vw, 5.9375rem);
+        padding: 0;
+    }
+    .fire-cards-section {
+        margin-top: clamp(1.25rem, 0.0625rem + 5.9375vw, 7.1875rem);
+        padding: 0;
+    }
+    .fire-cta-section {
+        /*margin-top: clamp(1.25rem, 0.375rem + 4.375vw, 5.625rem);*/
+        margin-bottom: clamp(1.25rem, -0.225rem + 7.375vw, 8.625rem);
+        padding: 0;
+    }
+</style>
