@@ -1,12 +1,10 @@
 ---
 title: "Privacy Policy"
 description: "How Ready Aim Retire collects, uses, and protects your information."
-lastUpdated: "Last Updated: January 1, 2026"
+lastUpdated: "Last Updated: [January 1, 2026]"
 ---
 
 <div class="policy-page">
-
-  <p><strong>Last Updated: January 1, 2026</strong></p>
 
   <section>
     <h2>Privacy at a Glance</h2>
