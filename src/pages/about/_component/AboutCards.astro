@@ -1,21 +1,54 @@
 ---
 const { cards } = Astro.props;
+type Card = {
+    id?: number;
+    title?: string;
+    subtitle?: string;
+    description?: string;
+    list?: {
+        title: string;
+        items: string[];
+    };
+    firstBottomText?: string;
+    secondBottomText?: string;
+};
 ---
 
-<section>
+<section class="container about-cards-wrapper">
     {
-        cards.map((card) => (
-            <div>
-                <h2 set:html={card.title} />
+        cards.map((card: Card) => (
+            <div class="about-card">
+                <div class="about-card-heading">
+                    <h4>{card.subtitle}</h4>
+                    <h2 set:html={card.title} />
+                </div>
+                <div class="about-card-body">
+                    <p>{card.description}</p>
+                    <ul>
+                        <h5>{card.list?.title}</h5>
+                        {card?.list?.items?.map((item: string) => (
+                            <li>{item}</li>
+                        ))}
+                    </ul>
+                    <p>{card.firstBottomText}</p>
+                    {card.secondBottomText && <p>{card.secondBottomText}</p>}
+                </div>
             </div>
         ))
     }
 </section>
 
 <style>
-    section {
+    .about-cards-wrapper {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: clamp(1rem, 0.225rem + 3.875vw, 4.875rem);
+    }
+
+    @media (max-width: 768px) {
+        .about-cards-wrapper {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
     }
 </style>
