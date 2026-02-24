@@ -98,6 +98,9 @@ const { Content } = await render(description);
                 line-height: 2.125rem;
                 max-width: 26rem;
             }
+            .btn {
+                margin-top: 2.5rem;
+            }
         }
         .description-details {
             max-width: 36rem;
@@ -117,18 +120,26 @@ const { Content } = await render(description);
         }
         .description-title {
             h3 {
-                font-size: 1.5rem;
-                line-height: 2rem;
+                font-size: 1.375rem;
+                line-height: 1.875rem;
                 max-width: 100%;
+            }
+            .btn {
+                margin-top: 2rem;
             }
         }
         .description-details {
             max-width: 100%;
             p {
-                font-size: 1.125rem;
-                line-height: 1.625rem;
+                font-size: 1rem;
+                line-height: 1.5rem;
                 max-width: 100%;
             }
+        }
+        .description-points {
+            margin-top: 2rem;
+            gap: 1.25rem;
+            max-width: 100%;
         }
     }
 
@@ -141,32 +152,19 @@ const { Content } = await render(description);
             font-size: 1.25rem;
             line-height: 1.75rem;
         }
+        .description-title .btn {
+            margin-top: 1.5rem;
+            width: 100%;
+            text-align: center;
+            justify-content: center;
+        }
         .description-details p {
-            font-size: 1rem;
+            font-size: 0.9375rem;
             line-height: 1.5rem;
         }
-    }
-
-    @media (min-width: 481px) and (max-width: 768px) {
-        .hero-description {
-            grid-template-columns: 1fr;
-            grid-gap: 1.25rem;
-            margin-top: 1.25rem;
-        }
-        .description-title {
-            h3 {
-                font-size: 1.375rem;
-                line-height: 1.875rem;
-                max-width: 100%;
-            }
-        }
-        .description-details {
-            max-width: 100%;
-            p {
-                font-size: 1rem;
-                line-height: 1.5rem;
-                max-width: 100%;
-            }
+        .description-points {
+            margin-top: 1.5rem;
+            gap: 1rem;
         }
     }
 </style>
