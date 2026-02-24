@@ -138,8 +138,14 @@ const { data, transparentBg } = Astro.props;
             padding: 3.5rem 0 4rem;
         }
         .info-card-wrapper {
-            flex-wrap: wrap;
+            grid-template-columns: repeat(
+                auto-fit,
+                minmax(min(23rem, 100%), 1fr)
+            );
             gap: 1.5rem;
+        }
+        .info-card {
+            width: 19.25rem;
         }
         .info-card:nth-child(3n)::after {
             display: block;
@@ -164,7 +170,12 @@ const { data, transparentBg } = Astro.props;
             }
         }
         .info-card::after {
-            display: none;
+            display: block !important;
+            height: 1px;
+            width: 100%;
+            bottom: -1.5rem;
+            top: auto;
+            left: 0;
         }
         .info-card h2 {
             font-size: 1.375rem;
