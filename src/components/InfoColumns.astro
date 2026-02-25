@@ -21,7 +21,7 @@ type ColumnCard = {
     email?: string;
 };
 
-const { data, transparentBg } = Astro.props;
+const { data, transparentBg, twoCols } = Astro.props;
 ---
 
 <section
@@ -30,7 +30,7 @@ const { data, transparentBg } = Astro.props;
     <div class="container info-card-wrapper">
         {
             data?.map((item: ColumnCard) => (
-                <div class="info-card">
+                <div class={`info-card ${twoCols ? "remove-border" : ""}`}>
                     <h2>{item?.title}</h2>
                     {item?.subtitle && <p set:html={item?.subtitle} />}
                     {item?.description && <p set:html={item?.description} />}
@@ -143,6 +143,9 @@ const { data, transparentBg } = Astro.props;
             width: 1.375rem;
             border-radius: 0.25rem;
         }
+    }
+    .info-card.remove-border:last-of-type:after {
+        display: none;
     }
     .info-card::after {
         content: "";
