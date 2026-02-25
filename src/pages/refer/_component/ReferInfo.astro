@@ -11,19 +11,41 @@ const { referCta } = Astro.props;
     </div>
     <div class="refer-cta">
         <h2>{referCta.title}</h2>
+        <p>{referCta.subtitle}</p>
+        <a href="#" class="btn btn-dark"
+            >{referCta.btnText} <i class="fas fa-arrow-right"></i>
+        </a>
     </div>
-
-    <style>
-        section {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            grid-gap: 2rem;
-        }
-        .refer-info-columns {
-            grid-column: 1/4;
-        }
-        .refer-cta {
-            grid-column: 4/4;
-        }
-    </style>
 </section>
+
+<style>
+    section {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 1rem;
+    }
+    .refer-info-columns {
+        grid-column: 1/4;
+    }
+    .refer-cta {
+        grid-column: 4/4;
+        padding: 2.375rem 4.5625rem 3.5rem 2.8125rem;
+        margin-top: 6.5rem;
+        background-color: #bbe0d3;
+        border-radius: 0.625rem;
+        max-height: fit-content;
+        width: 28.25rem;
+        max-width: 100%;
+
+        h2 {
+            font-size: 1.75rem;
+            font-weight: 400;
+            line-height: 1;
+            margin-bottom: 2.1875rem;
+        }
+        .btn-dark {
+            font-size: 1rem;
+            margin-top: 2.1875rem;
+        }
+    }
+</style>
