@@ -1,10 +1,6 @@
 ---
 title: "Help others plan better - and get a <br/> 1-on-1 session on us."
 btnText: "Start Planning for Free"
-checkList:
-  - point: ""
-  - point: ""
-  - point: ""
 largeContent: true
 ---
 If Ready Aim Retire has helped you understand your retirement plan, chances are it could help people you care about too.
