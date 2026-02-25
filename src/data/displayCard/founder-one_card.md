@@ -1,6 +1,6 @@
 ---
 title: "Stephen Gower"
-subtitle: "Builder. Systems thinker. Retirement modeler."
+subtitle: "<strong>Builder. Systems thinker. Retirement modeler.</strong>"
 # time: ""
 description: "Stephen has spent decades thinking deeply about how money, time, and uncertainty interact over a lifetime. He brings a long history of building thoughtful financial models and a belief that <strong>good tools should reveal insight, not hide it.</strong>"
 image: "/images/founder1.png"

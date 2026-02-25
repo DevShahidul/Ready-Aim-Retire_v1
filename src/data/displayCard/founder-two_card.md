@@ -1,6 +1,6 @@
 ---
 title: "Ross Williams"
-subtitle: "Educator. Advocate. Plain-English communicator."
+subtitle: "<strong>Educator. Advocate. Plain-English communicator.</strong>"
 # time: ""
 description: "Ross has built his career helping individuals navigate complex financial decisions with clarity and confidence. He is deeply passionate about financial literacy and believes that people should never feel intimidated by the tools meant to help them."
 image: "/images/founder2.png"

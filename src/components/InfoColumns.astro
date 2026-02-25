@@ -81,7 +81,7 @@ const { data, transparentBg } = Astro.props;
                             {item.email}
                         </a>
                     )}
-                    {item.image && <img src={item.image} />}
+                    {item.image && <img src={item.image} class="logo" />}
                 </div>
             ))
         }
@@ -129,7 +129,7 @@ const { data, transparentBg } = Astro.props;
             margin-bottom: 2rem;
             font-size: 1rem;
         }
-        img {
+        .logo {
             max-width: 13.125rem;
             margin-top: clamp(1rem, 0.675rem + 1.625vw, 2.625rem);
         }
