@@ -7,7 +7,9 @@ const { cardData } = Astro.props;
     style={`background-color: ${cardData.secondary ? "#BBE0D3" : "#fff"} ;`}
 >
     <h3 set:html={cardData.title} />
-    <p><strong>{cardData.subtitle}</strong></p>
+    <p style={`margin-bottom: ${!cardData.secondary ? "1.8rem" : ""};`}>
+        <strong>{cardData.subtitle}</strong>
+    </p>
     <h4 set:html={cardData.list.title} />
     <ul class="checklist">
         {
@@ -32,9 +34,6 @@ const { cardData } = Astro.props;
             font-size: 1.5625rem;
             font-weight: 500;
             margin-bottom: 1.875rem;
-        }
-        p {
-            margin-bottom: 2rem;
         }
         p,
         li {
