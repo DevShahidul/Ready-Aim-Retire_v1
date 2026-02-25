@@ -1,5 +1,5 @@
 ---
-title: "A modern planning tool that helps clients see their retirement - and trust the plan."
+title: "A modern planning tool that helps <br/> clients see their retirement - and trust <br/> the plan."
 btnText: "Explore Advisor Access"
 checkList:
   - point: "Prioritizes clarity"

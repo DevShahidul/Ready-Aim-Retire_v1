@@ -1,5 +1,5 @@
 ---
-title: "See exactly when you can stop working - and why."
+title: "See exactly when you can stop working <br/> - and why."
 btnText: "Start Planning for Free"
 checkList:
   - point: "No hype"

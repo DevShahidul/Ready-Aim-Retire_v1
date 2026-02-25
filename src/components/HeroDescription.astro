@@ -7,9 +7,7 @@ const { Content } = await render(description);
 
 <section class="container hero-description">
     <div class="description-title">
-        <h3>
-            {description?.data.title}
-        </h3>
+        <h3 set:html={description?.data.title} />
         {
             description?.data.btnText && (
                 <a href="#" class="btn btn-dark">
@@ -54,7 +52,7 @@ const { Content } = await render(description);
         h3 {
             font-size: 1.75rem;
             font-weight: 400;
-            max-width: 32rem;
+            max-width: 34.4rem;
             line-height: 2.25rem;
         }
 

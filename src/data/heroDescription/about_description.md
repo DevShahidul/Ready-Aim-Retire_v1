@@ -7,5 +7,5 @@ checkList:
   - point: ""
 largeContent: true
 ---
-People make better decisions when they truly understand their own plan.
+People make better decisions when they truly understand their own plan. <br/>
 Not just the outcome - but the why behind it.
