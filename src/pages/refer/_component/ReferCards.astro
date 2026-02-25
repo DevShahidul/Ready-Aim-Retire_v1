@@ -12,18 +12,99 @@ type Card = {
     }[];
     list: {
         title?: string;
-        items?: string;
+        items?: string[];
     };
     bottomText?: string;
 };
 ---
 
-<section>
+<section class="container refer-cards-wrapper">
     {
         cards.map((card: Card) => (
-            <div>
+            <div class="refer-card">
+                <img src={card.image} />
                 <h2 set:html={card.title} />
+                <p class="refer-card-subtitle">{card.subtitle}</p>
+                <p class="refer-card-description">{card.description}</p>
+                {card.numberList && (
+                    <ol class="refer-number-list">
+                        {card.numberList.map((item, idx) => (
+                            <li>
+                                <p>{idx + 1}.</p>
+                                <div>
+                                    <p>{item.title}</p>
+                                    <p>{item.description}</p>
+                                </div>
+                            </li>
+                        ))}
+                    </ol>
+                )}
+                {card.list?.title && <h4>{card.list.title}</h4>}
+                {card.list?.items && (
+                    <ul class="bullet-list">
+                        {card.list.items?.map((text) => (
+                            <li>{text}</li>
+                        ))}
+                    </ul>
+                )}
+                {card.bottomText && <p>{card.bottomText}</p>}
             </div>
         ))
     }
 </section>
+
+<style>
+    .refer-cards-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: clamp(1rem, 0.6rem + 2vw, 3rem);
+        margin-top: clamp(1.25rem, 0.5rem + 3.75vw, 5rem);
+        margin-bottom: clamp(1.25rem, 0.2rem + 5.25vw, 6.5rem);
+    }
+
+    .refer-card {
+        padding: 1.75rem 5rem 2.375rem 2.75rem;
+        background-color: #fff;
+        border-radius: 0.625rem;
+        font-size: 1.0625rem;
+
+        img {
+            max-width: 5.5rem;
+        }
+
+        h2 {
+            font-size: 3rem;
+            font-weight: 400;
+            margin-top: 1.75rem;
+        }
+        .refer-card-subtitle {
+            font-weight: 500;
+            margin-top: 1.6rem;
+        }
+        .refer-card-description {
+            margin: 1.6rem 0;
+        }
+        ul,
+        ol {
+            margin: 1.6rem 0;
+        }
+        ul li {
+            font-size: 1.0625rem;
+        }
+
+        .refer-number-list {
+            li {
+                display: flex;
+                gap: 1rem;
+                align-items: start;
+
+                div p:first-of-type {
+                    font-weight: 500;
+                }
+            }
+            li:not(:first-child) {
+                margin-top: 1.5rem;
+            }
+        }
+    }
+</style>

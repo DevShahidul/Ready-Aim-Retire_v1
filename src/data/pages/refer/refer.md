@@ -4,8 +4,7 @@ referCards:
   - id: 1
     image: "/images/icons/refer-icon1.png"
     title: "How it <span class='text-teal'>works<span>"
-    subtitle: "<strong>Simple. Transparent. Worth it.</strong>"
-    # description: ""
+    subtitle: "Simple. Transparent. Worth it."
     numberList:
       - title: "Share your referral link "
         description: "Invite friends, family, or colleagues to try Ready Aim Retire."
@@ -15,30 +14,12 @@ referCards:
         description: "Once five referred users have created accounts, you qualify."
       - title: "Get a free 1-hour consultation"
         description: "We’ll reach out to schedule your session."
-    # list: 
-    #   title: ""
-    #   items: 
-    #     - ""
-    #     - ""
-    #     - ""
-    #     - ""
-    #     - ""
-    # bottomText: ""
-    
+        
   - id: 2
     image: "/images/icons/refer-icon2.png"
-    title: "<span class='text-teal'>What you get</span>: A 1-hour personal planning session"
+    title: "<span class='text-teal'>What you get</span>: A 1-hour <br/> personal planning session"
     subtitle: "A focused, educational consultation - not a sales call"
     description: "Your free session is similar to the personalized training sessions offered by professional planners."
-    # numberList:
-    #   - title: ""
-    #     description: ""
-    #   - title: ""
-    #     description: ""
-    #   - title: ""
-    #     description: ""
-    #   - title: ""
-    #     description: ""
     list: 
       title: "During the session, we can:"
       items: 
