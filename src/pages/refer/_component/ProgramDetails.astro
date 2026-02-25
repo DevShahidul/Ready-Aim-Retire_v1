@@ -2,9 +2,49 @@
 const { programData } = Astro.props;
 ---
 
-<section>
+<section class="container refer-program">
     <h2>{programData.title}</h2>
     <ul>
-        {programData?.items.map((item: string) => <li>{item}</li>)}
+        {
+            programData?.items.map((item: string) => (
+                <li>
+                    <img src="/images/icons/arrow-black.png" alt="" />
+                    {item}
+                </li>
+            ))
+        }
     </ul>
 </section>
+
+<style>
+    .refer-program {
+        margin-bottom: 7.875rem;
+        h2 {
+            font-size: 4rem;
+            font-weight: 400;
+            font-family: var(--font-playfair);
+            line-height: 1;
+            color: #41bab4;
+        }
+        ul {
+            margin-top: 4.6875rem;
+        }
+
+        ul li {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            font-size: 1.75rem;
+            font-weight: 400;
+            color: #2e2e2e;
+            img {
+                width: 2rem;
+                height: 2rem;
+            }
+        }
+
+        ul li:not(:first-child) {
+            margin-top: 2.5rem;
+        }
+    }
+</style>
