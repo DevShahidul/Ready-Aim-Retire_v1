@@ -1,3 +1,4 @@
+import { string } from "astro/zod";
 import { z } from "astro:content";
 
 export const referSchema = z.object({
@@ -35,5 +36,8 @@ export const referSchema = z.object({
             btnText: z.string().optional(),
         })
         .optional(),
-    referProgramDetails: z.array(z.string()).optional(),
+    referProgramDetails: z.object({
+        title: z.string(),
+        items: z.array(z.string()),
+    }),
 });

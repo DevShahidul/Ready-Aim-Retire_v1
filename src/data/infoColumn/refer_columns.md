@@ -11,7 +11,6 @@
   btnText: ""
   bottomText: "Referrals help us grow thoughtfully - and consultations help you go deeper."
   bottomText2: ""
-  image: '/images/logos/ontarget/ontarget_black_green.png'
   email: ""
 
 - id: "2"

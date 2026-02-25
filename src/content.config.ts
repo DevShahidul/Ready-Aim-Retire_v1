@@ -120,5 +120,5 @@ export const collections = {
     firePage,
     aboutPage,
     privacyPage,
-    referSchema,
+    referPage,
 };

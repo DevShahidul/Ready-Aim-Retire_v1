@@ -1,0 +1,10 @@
+---
+const { programData } = Astro.props;
+---
+
+<section>
+    <h2>{programData.title}</h2>
+    <ul>
+        {programData?.items.map((item: string) => <li>{item}</li>)}
+    </ul>
+</section>

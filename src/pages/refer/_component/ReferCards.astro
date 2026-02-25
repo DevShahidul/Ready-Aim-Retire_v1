@@ -1,0 +1,29 @@
+---
+const { cards } = Astro.props;
+type Card = {
+    id?: number;
+    image?: string;
+    title?: string;
+    subtitle?: string;
+    description?: string;
+    numberList?: {
+        title?: string;
+        description?: string;
+    }[];
+    list: {
+        title?: string;
+        items?: string;
+    };
+    bottomText?: string;
+};
+---
+
+<section>
+    {
+        cards.map((card: Card) => (
+            <div>
+                <h2 set:html={card.title} />
+            </div>
+        ))
+    }
+</section>

@@ -1,5 +1,5 @@
 ---
-title: "Help others plan better - and get a 1-on-1 session on us."
+title: "Help others plan better - and get a <br/> 1-on-1 session on us."
 btnText: "Start Planning for Free"
 checkList:
   - point: ""

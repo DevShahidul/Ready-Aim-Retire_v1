@@ -7,7 +7,7 @@ const { title, isLarge }: Props = Astro.props;
 ---
 
 <section class={`common-hero container`}>
-    <h2 class={`${!isLarge ? "limited-width" : ""}`}>{title}</h2>
+    <h2 class={`${!isLarge ? "limited-width" : ""}`} set:html={title} />
 </section>
 
 <style>

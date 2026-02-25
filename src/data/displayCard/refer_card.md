@@ -1,5 +1,5 @@
 ---
-title: "Who the consultation is for?"
+title: "<span class='text-teal'>Who</span> the consultation is for?"
 subtitle: "<strong>This session is ideal if you want to:</strong>"
 description: ""
 image: "/images/landing/refer-img.png"

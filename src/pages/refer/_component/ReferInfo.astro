@@ -1,0 +1,29 @@
+---
+import { getEntry } from "astro:content";
+import InfoColumns from "../../../components/InfoColumns.astro";
+const infoData = await getEntry("infoColumn", "refer_columns");
+const { referCta } = Astro.props;
+---
+
+<section class="container">
+    <div class="refer-info-columns">
+        <InfoColumns data={infoData?.data} transparentBg={true} />
+    </div>
+    <div class="refer-cta">
+        <h2>{referCta.title}</h2>
+    </div>
+
+    <style>
+        section {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 2rem;
+        }
+        .refer-info-columns {
+            grid-column: 1/4;
+        }
+        .refer-cta {
+            grid-column: 4/4;
+        }
+    </style>
+</section>

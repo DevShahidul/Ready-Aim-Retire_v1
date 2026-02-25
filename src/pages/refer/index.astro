@@ -1,0 +1,29 @@
+---
+import { getEntry } from "astro:content";
+import CommonHero from "../../components/CommonHero.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import HeroDescription from "../../components/HeroDescription.astro";
+import ReferCards from "./_component/ReferCards.astro";
+import DisplayCard from "../../components/DisplayCard.astro";
+import ReferInfo from "./_component/ReferInfo.astro";
+import ProgramDetails from "./_component/ProgramDetails.astro";
+import CTABanner from "../../components/CTABanner.astro";
+const pageData = await getEntry("referPage", "refer");
+const descriptionData = await getEntry("heroDescription", "refer_description");
+const displayData = await getEntry("displayCard", "refer_card");
+---
+
+<BaseLayout
+    title="Refer Friends – ReadyAimRetire"
+    description="Share ReadyAimRetire with friends and family. Refer 5 friends and get a free 1-hour personal planning session."
+    solidHeader={true}
+>
+    <CommonHero title={pageData?.data.title!} isLarge={true} />
+    <HeroDescription description={descriptionData} />
+    <ReferCards cards={pageData?.data.referCards} />
+    <DisplayCard displayData={displayData?.data} />
+    <ReferInfo referCta={pageData?.data.referCta} />
+    <ProgramDetails programData={pageData?.data.referProgramDetails} />
+
+    <CTABanner />
+</BaseLayout>
