@@ -1,5 +1,5 @@
 ---
-const { displayData } = Astro.props;
+const { displayData, smallImg } = Astro.props;
 ---
 
 <div class="container display-card-container">
@@ -43,7 +43,7 @@ const { displayData } = Astro.props;
             }
             {displayData.bottomText && <p set:html={displayData.bottomText} />}
         </div>
-        <div class="display-card-thumb">
+        <div class={`display-card-thumb ${!smallImg ? "imgLarge" : ""}`}>
             <img
                 class={`${displayData.textRight ? "rounded-left" : "rounded-right"}`}
                 src={displayData.image}
@@ -143,7 +143,7 @@ const { displayData } = Astro.props;
             padding-right: 2.625rem; /* 58px */
         }
 
-        .display-card-thumb {
+        .display-card-thumb.imgLarge {
             img {
                 min-height: 38.625rem;
             }

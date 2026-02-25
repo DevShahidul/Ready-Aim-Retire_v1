@@ -21,7 +21,7 @@ const displayData = await getEntry("displayCard", "refer_card");
     <CommonHero title={pageData?.data.title!} isLarge={true} />
     <HeroDescription description={descriptionData} />
     <ReferCards cards={pageData?.data.referCards} />
-    <DisplayCard displayData={displayData?.data} />
+    <DisplayCard displayData={displayData?.data} smallImg={true} />
     <ReferInfo referCta={pageData?.data.referCta} />
     <ProgramDetails programData={pageData?.data.referProgramDetails} />
 
