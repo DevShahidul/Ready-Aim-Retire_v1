@@ -1,7 +1,7 @@
 ---
 - id: "7"
   title: "Improve Client Engagement and Confidence"
-  subtitle: "When clients understand the plan, they stick with it"
+  subtitle: "<strong>When clients understand the plan, they stick with it</strong>"
   dotList:
     title: "Visual, intuitive planning helps:"
     items:
@@ -15,7 +15,7 @@
 
 - id: "8"
   title: "Flexible for Different Advisory Styles"
-  subtitle: "Use it your way"
+  subtitle: "<strong>Use it your way</strong>"
   dotList:
     title: "OnTarget™ works well for:"
     items:
