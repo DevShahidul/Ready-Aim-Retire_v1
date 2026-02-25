@@ -60,7 +60,7 @@ const { displayData } = Astro.props;
                         <p
                             class="stat-headline"
                             set:html={displayData.absoluteContent.title}
-                        ></p>
+                        />
                         <p class="stat-subtext">
                             {displayData.absoluteContent.subtitle}
                         </p>
@@ -76,7 +76,7 @@ const { displayData } = Astro.props;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        gap: 2.3125rem; /* 5px */
+        gap: 3.3125rem; /* 5px */
         background-color: var(--color-bg-light);
         border: 1.25rem solid #ffffff; /* 20px */
         border-radius: 1.875rem; /* 30px */
