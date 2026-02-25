@@ -14,6 +14,7 @@ import { fireSchema } from "./schema/fireSchema";
 import { aboutSchema } from "./schema/aboutSchema";
 import { privacyPolicySchema } from "./schema/privacyPolicySchema";
 import { referSchema } from "./schema/referSchema";
+import { blogDetailsSchema } from "./schema/blogDetailsSchema";
 
 const pricingPage = defineCollection({
     loader: glob({ pattern: "**/*.md", base: "./src/data/pages/pricing" }),
@@ -81,6 +82,14 @@ const referPage = defineCollection({
     schema: referSchema,
 });
 
+const blogDetailsPage = defineCollection({
+    loader: glob({
+        pattern: "**/*.md",
+        base: "./src/data/pages/blogDetails",
+    }),
+    schema: blogDetailsSchema,
+});
+
 const banner = defineCollection({
     loader: glob({ pattern: "**/*.md", base: "./src/data/banner" }),
     schema: bannerSchema,
@@ -121,4 +130,5 @@ export const collections = {
     aboutPage,
     privacyPage,
     referPage,
+    blogDetailsPage,
 };
