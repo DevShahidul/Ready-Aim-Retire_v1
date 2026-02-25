@@ -3,7 +3,12 @@ import { getEntry } from "astro:content";
 import CTABanner from "../../components/CTABanner.astro";
 import Newsletter from "../../components/Newsletter.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import Sidebar from "./_component/Sidebar.astro";
 const pageData = await getEntry("blogDetailsPage", "blog-details");
+const sidebarData = {
+    socials: pageData.data.socials,
+    relatedArticles: pageData.data.relatedArticles,
+};
 ---
 
 <BaseLayout title="Blog Details" solidHeader={true}>
@@ -20,6 +25,10 @@ const pageData = await getEntry("blogDetailsPage", "blog-details");
             <p>{pageData.data.time}</p>
             <p>{pageData.data.date}</p>
         </div>
+    </section>
+
+    <section class="blog-content container">
+        <Sidebar sidebarData={sidebarData} />
     </section>
     <Newsletter />
     <CTABanner />
@@ -53,5 +62,8 @@ const pageData = await getEntry("blogDetailsPage", "blog-details");
         font-size: 0.75rem;
         color: #898d8e;
         margin-top: 1.5rem;
+    }
+    .blog-content {
+        margin-top: 2.1875rem;
     }
 </style>

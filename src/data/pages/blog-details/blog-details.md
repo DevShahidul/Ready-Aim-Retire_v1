@@ -6,7 +6,7 @@ breadcrumb:
   step1: "Latest Updates"
   step2: "Latest Updates"
   step3: "Lorem ipsum dolor sit amet"
-relaterArticles:
+relatedArticles:
   - id: 1
     title: "Lorem ipsum dolor sit amet, consetetur sadipscin"
     time: "2 min read"

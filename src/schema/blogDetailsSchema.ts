@@ -11,7 +11,7 @@ export const blogDetailsSchema = z.object({
             step3: z.string().optional(),
         })
         .optional(),
-    relaterArticles: z
+    relatedArticles: z
         .array(
             z.object({
                 id: z.number(),
