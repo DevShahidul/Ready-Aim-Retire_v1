@@ -57,9 +57,10 @@ const { displayData } = Astro.props;
                         <h3 class="stat-number">
                             {displayData.absoluteContent.stats}
                         </h3>
-                        <p class="stat-headline">
-                            {displayData.absoluteContent.title}
-                        </p>
+                        <p
+                            class="stat-headline"
+                            set:html={displayData.absoluteContent.title}
+                        ></p>
                         <p class="stat-subtext">
                             {displayData.absoluteContent.subtitle}
                         </p>

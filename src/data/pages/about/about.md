@@ -15,7 +15,7 @@ aboutCards:
     secondBottomText: "That original system focused on clarity, flexibility, and seeing the full picture over time - not just producing a single answer."
     
   - id: 2
-    title: "From personal tool to <span class='text-teal'>global</span> platform"
+    title: "From personal tool to <br/> <span class='text-teal'>global</span> platform"
     subtitle: "A New Chapter"
     description: "In 2025, Stephen teamed up with Ross Williams to reimagine and rebuild the platform from the ground up - this time with a much bigger goal:"
     list: 
