@@ -82,6 +82,11 @@ a {
     font-weight: 300;
 }
 
+strong,
+b {
+    font-weight: 500;
+}
+
 body {
     font-family: "Geist", sans-serif;
     line-height: 1.6;
