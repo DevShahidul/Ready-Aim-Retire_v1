@@ -13,7 +13,7 @@ advisorsCards:
         - "Stress test against historical market data"
         - "Explore different savings rates and spending levels"
         - "See how taxes and withdrawal strategies change everything"
-    bottomText: "You don’t just see if FIRE is possible -  You see <strong>how fragile or resilient your plan actually is.</strong>"
+    bottomText: "You don’t just see if FIRE is possible -<br/> You see <strong>how fragile or resilient your plan actually is.</strong>"
         
   - id: 2
     secondary: true
