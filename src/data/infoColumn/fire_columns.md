@@ -1,7 +1,7 @@
 ---
 - id: "6"
   title: "Visual Clarity > Mental Math"
-  subtitle: "Spreadsheets are powerful – until they aren’t"
+  subtitle: "<strong>Spreadsheets are powerful – until they aren’t</strong>"
   dotList:
     title: "If you’ve built complex spreadsheets, you already know:"
     items:
@@ -20,7 +20,7 @@
 
 - id: "7"
   title: "Stress-Test Your FIRE Plan"
-  subtitle: "Optimism is not a strategy"
+  subtitle: "<strong>Optimism is not a strategy</strong>"
   dotList:
     title: "OnTarget™ works well for:"
     items:
@@ -33,7 +33,7 @@
 
 - id: "8"
   title: "Plan Withdrawals Like a Pro"
-  subtitle: "Accumulation gets you to FIRE. Strategy keeps you there."
+  subtitle: "<strong>Accumulation gets you to FIRE. Strategy keeps you there.</strong>"
   dotList:
     title: "OnTarget™ helps you:"
     items:
@@ -53,8 +53,9 @@
       - "Start free and build your FIRE plan"
       - "Upgrade to Pro only when you want deeper insight"
       - "Cancel anytime"
+    footer: "Pro unlocks unlimited scenarios, stress testing, tax modeling, and withdrawal strategy tools."
   btnText: "Start Free"
-  bottomText: "Pro unlocks unlimited scenarios, stress testing, tax modeling, and withdrawal strategy tools."
+  bottomText: ""
   email: ""
 
 - id: "10"
