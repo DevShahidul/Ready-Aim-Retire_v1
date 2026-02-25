@@ -85,7 +85,7 @@ const referPage = defineCollection({
 const blogDetailsPage = defineCollection({
     loader: glob({
         pattern: "**/*.md",
-        base: "./src/data/pages/blogDetails",
+        base: "./src/data/pages/blog-details",
     }),
     schema: blogDetailsSchema,
 });

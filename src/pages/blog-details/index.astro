@@ -1,5 +1,57 @@
 ---
+import { getEntry } from "astro:content";
+import CTABanner from "../../components/CTABanner.astro";
+import Newsletter from "../../components/Newsletter.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
+const pageData = await getEntry("blogDetailsPage", "blog-details");
 ---
 
-<BaseLayout title="Blog Details" />
+<BaseLayout title="Blog Details" solidHeader={true}>
+    <section class="blog-details-heading container">
+        <ul class="breadcrumb">
+            <li>{pageData.data.breadcrumb.step1}</li>
+            <li>{">"}</li>
+            <li>{pageData.data.breadcrumb.step2}</li>
+            <li>{">"}</li>
+            <li class="current">{pageData.data.breadcrumb.step3}...</li>
+        </ul>
+        <h2>{pageData.data.title}</h2>
+        <div class="time-stamp">
+            <p>{pageData.data.time}</p>
+            <p>{pageData.data.date}</p>
+        </div>
+    </section>
+    <Newsletter />
+    <CTABanner />
+</BaseLayout>
+
+<style>
+    .blog-details-heading {
+        margin-top: 15.125rem;
+        color: #2e2e2e;
+        h2 {
+            font-size: 2.8125rem;
+            line-height: 1;
+            font-weight: 400;
+            max-width: 36rem;
+            margin-top: 4.6875rem;
+        }
+    }
+    .breadcrumb {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        font-size: 0.75rem;
+        .current {
+            color: #898d8e;
+        }
+    }
+    .time-stamp {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+        font-size: 0.75rem;
+        color: #898d8e;
+        margin-top: 1.5rem;
+    }
+</style>
