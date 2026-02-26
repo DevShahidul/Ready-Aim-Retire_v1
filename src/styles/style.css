@@ -1302,6 +1302,42 @@ footer .disclaimer {
 
 /* Policy page styles end */
 
+/* Blog markdown content styles start*/
+.blog-content {
+    p:not(:first-child) {
+        margin-top: 2rem;
+        font-size: 1.0625rem;
+        color: #2e2e2e;
+    }
+
+    h4 {
+        font-size: 1.25rem;
+        line-height: 1;
+        margin-top: 2rem;
+        font-weight: 500;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin-top: 2rem;
+    }
+
+    ul li {
+        font-size: 1.0625rem;
+        padding-left: 0.75rem;
+        position: relative;
+    }
+
+    ul li::before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        color: #2e2e2e;
+    }
+}
+/* Blog markdown content styles end*/
+
 /* ---------------------------------------- Responsive Media Queries - Organized by Width ---------------------------------------- */
 
 /* Max-width: 1400px */

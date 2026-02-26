@@ -1,5 +1,5 @@
 ---
-import { getEntry } from "astro:content";
+import { getEntry, render } from "astro:content";
 import CTABanner from "../../components/CTABanner.astro";
 import Newsletter from "../../components/Newsletter.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
@@ -9,6 +9,7 @@ const sidebarData = {
     socials: pageData.data.socials,
     relatedArticles: pageData.data.relatedArticles,
 };
+const { Content } = await render(pageData);
 ---
 
 <BaseLayout title="Blog Details" solidHeader={true}>
@@ -27,7 +28,20 @@ const sidebarData = {
         </div>
     </section>
 
-    <section class="blog-content container">
+    <section class="blog-content-wrapper container">
+        <div class="blog-content">
+            <Content />
+            <div class="blog-navigation">
+                <a>
+                    <i class="fa-solid fa-arrow-left"></i>
+                    <span>Previous Article</span>
+                </a>
+                <a>
+                    <span>Next Article</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
         <Sidebar sidebarData={sidebarData} />
     </section>
     <Newsletter />
@@ -63,7 +77,35 @@ const sidebarData = {
         color: #898d8e;
         margin-top: 1.5rem;
     }
-    .blog-content {
+    .blog-content-wrapper {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: clamp(1rem, 0.7rem + 1.5vw, 2.5rem);
         margin-top: 2.1875rem;
+        margin-bottom: clamp(1.875rem, 0.75rem + 5.625vw, 7.5rem);
+    }
+    .blog-content {
+        grid-column: 1/9;
+    }
+    .blog-navigation {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        justify-content: space-between;
+        margin-top: 4.75rem;
+
+        a {
+            font-size: 1.0625rem;
+            color: #41bab4;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+
+            span {
+                text-decoration: underline;
+                text-decoration-color: #d1d1d1;
+                text-underline-offset: 5px;
+            }
+        }
     }
 </style>

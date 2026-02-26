@@ -1,7 +1,105 @@
 ---
 const { sidebarData } = Astro.props;
+type Article = {
+    id: number;
+    title: string;
+    time: string;
+    date: string;
+    image: string;
+};
 ---
 
-<aside>
-    <h3>Socials</h3>
+<aside class="blog-sidebar">
+    <div class="socials">
+        <h2>Share this article</h2>
+        <ul>
+            {
+                sidebarData.socials.map((social: string) => (
+                    <li>
+                        <img src={social} />
+                    </li>
+                ))
+            }
+        </ul>
+    </div>
+    <div class="related-articles">
+        <h3>Related Articles</h3>
+        <div class="article-cards-wrapper">
+            {
+                sidebarData.relatedArticles.map((article: Article) => (
+                    <div class="article-card">
+                        <img src={article.image} />
+                        <div class="time-stamp">
+                            <p>{article.time}</p>
+                            <p>{article.date}</p>
+                        </div>
+                        <h2>{article.title}...</h2>
+                    </div>
+                ))
+            }
+        </div>
+    </div>
 </aside>
+
+<style>
+    .blog-sidebar {
+        grid-column: 10/13;
+    }
+
+    .socials {
+        h2 {
+            font-size: 0.75rem;
+            color: #2e2e2e;
+            line-height: 1;
+        }
+        ul {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+
+            li img {
+                width: 1.875rem;
+                height: 1.875rem;
+            }
+        }
+    }
+
+    .related-articles {
+        color: #0e3f4a;
+        margin-top: 4rem;
+        h3 {
+            font-size: 1.25rem;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    .article-card {
+        max-width: 25rem;
+        img {
+            width: 100%;
+        }
+        h2 {
+            font-size: 1.5625rem;
+            font-weight: 500;
+            margin-top: 0.75rem;
+            line-height: 1;
+        }
+    }
+
+    .article-card:not(:last-child) {
+        padding-bottom: 2rem;
+        margin-bottom: 2rem;
+        border-bottom: 1px solid #d1d1d1;
+    }
+
+    .time-stamp {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+        font-size: 0.75rem;
+        color: #898d8e;
+        margin-top: 1.5rem;
+    }
+</style>
