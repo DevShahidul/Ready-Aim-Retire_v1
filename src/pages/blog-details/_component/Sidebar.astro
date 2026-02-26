@@ -102,4 +102,44 @@ type Article = {
         color: #898d8e;
         margin-top: 1.5rem;
     }
+
+    @media (max-width: 1024px) {
+        .blog-sidebar {
+            grid-column: 1 / -1;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+        }
+
+        .related-articles {
+            margin-top: 0;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .blog-sidebar {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .article-card {
+            max-width: 100%;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .socials ul {
+            flex-wrap: wrap;
+        }
+
+        .article-card h2 {
+            font-size: 1.25rem;
+        }
+
+        .time-stamp {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.5rem;
+        }
+    }
 </style>
