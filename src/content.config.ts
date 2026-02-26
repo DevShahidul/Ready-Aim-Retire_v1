@@ -16,6 +16,7 @@ import { privacyPolicySchema } from "./schema/privacyPolicySchema";
 import { referSchema } from "./schema/referSchema";
 import { blogDetailsSchema } from "./schema/blogDetailsSchema";
 import { retireesSchema } from "./schema/retireesSchema";
+import { faqsPageSchema } from "./schema/faqsPageSchema";
 import { faqsSchema } from "./schema/faqsSchema";
 
 const pricingPage = defineCollection({
@@ -105,6 +106,14 @@ const faqsPage = defineCollection({
         pattern: "**/*.md",
         base: "./src/data/pages/faqs",
     }),
+    schema: faqsPageSchema,
+});
+
+const faqs = defineCollection({
+    loader: glob({
+        pattern: "**/*.md",
+        base: "./src/data/faqs",
+    }),
     schema: faqsSchema,
 });
 
@@ -151,4 +160,5 @@ export const collections = {
     blogDetailsPage,
     retireesPage,
     faqsPage,
+    faqs,
 };
