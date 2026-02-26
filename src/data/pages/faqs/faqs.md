@@ -33,7 +33,7 @@ secondaryCards:
     buttonText: "Start Planning for Free"
     
 faqsCta:
-  heading: "Using OnTarget™ with an Advisor"
+  heading: "Using OnTarget™<br/> with an Advisor"
   title: "Is this a replacement for a financial advisor?"
   subtitle: "No - and it’s not meant to be."
   description: "OnTarget™ is designed to help you understand your plan, ask better questions, and stay engaged - whether you work with an advisor or not."

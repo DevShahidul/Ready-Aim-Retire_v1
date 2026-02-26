@@ -1,0 +1,57 @@
+---
+const { ctaData } = Astro.props;
+---
+
+<section class="container">
+    <div class="faqs-cta">
+        <div class="faqs-cta-heading">
+            <img src="/images/icons/round-arrow.png" />
+            <h2 set:html={ctaData.heading} />
+        </div>
+        <div>
+            <h3>{ctaData.title}</h3>
+            <p>{ctaData.subtitle}</p>
+            <p>{ctaData.description}</p>
+            <p>{ctaData.bottomText}</p>
+        </div>
+    </div>
+</section>
+
+<style>
+    .faqs-cta {
+        padding: 3.75rem 2.1875rem 3.4375rem 3.875rem;
+        border-radius: 0.625rem;
+        background-color: #41bab4;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        align-items: start;
+        color: #fff;
+
+        img {
+            width: 4rem;
+            height: 4rem;
+        }
+
+        h2 {
+            font-size: 3rem;
+            line-height: 1;
+            font-weight: 400;
+        }
+
+        h3 {
+            font-size: 1.5625rem;
+        }
+
+        p {
+            font-size: 1.0625rem;
+            margin-top: 1.6rem;
+        }
+    }
+
+    .faqs-cta-heading {
+        display: flex;
+        align-items: start;
+        gap: 2.25rem;
+    }
+</style>
