@@ -1,7 +1,18 @@
 ---
 import PricingCard from "./PricingCard.astro";
 const { plansData } = Astro.props;
-import type { Plan } from "../../../types/pricing_types";
+type Plan = {
+    id: string;
+    name: string;
+    price: number;
+    period: string;
+    description: string;
+    buttonText: string;
+    popular: boolean;
+    icon: string;
+    features: [string];
+    limitations: [string];
+};
 ---
 
 <section class="container">
@@ -9,7 +20,10 @@ import type { Plan } from "../../../types/pricing_types";
         <h4>
             {plansData.description}
         </h4>
-        <div class="plan-toggler" data-savings={plansData.billing.annualSavings}>
+        <div
+            class="plan-toggler"
+            data-savings={plansData.billing.annualSavings}
+        >
             <button class="btn price-period">{plansData.billing.monthly}</button
             >
             <button class="btn btn-dark price-period"
@@ -177,12 +191,10 @@ import type { Plan } from "../../../types/pricing_types";
             (el) => el.textContent,
         );
 
-        const savings:number = Number(planToggler?.getAttribute("data-savings")) ?? 0;
+        const savings: number =
+            Number(planToggler?.getAttribute("data-savings")) ?? 0;
 
         console.log(savings);
-
-        
-        
 
         // Calculate monthly prices (divide by 12)
         const monthlyPrices = originalPrices.map((price, index) => {
@@ -190,7 +202,9 @@ import type { Plan } from "../../../types/pricing_types";
             const discountRate = savings / 100;
             const numPrice = parseFloat(price.replace("$", ""));
             const originalPrice = numPrice / (1 - discountRate);
-            return tier === "pro" ? `$${(originalPrice / 12).toFixed(2)}` : `$${numPrice}`;
+            return tier === "pro"
+                ? `$${(originalPrice / 12).toFixed(2)}`
+                : `$${numPrice}`;
         });
 
         if (monthlyBtn && annualBtn) {
@@ -203,8 +217,9 @@ import type { Plan } from "../../../types/pricing_types";
                 });
 
                 periodElements.forEach((el, index) => {
-                    const tier = priceElements[index]?.getAttribute("data-tire");
-                    if(tier === "pro"){
+                    const tier =
+                        priceElements[index]?.getAttribute("data-tire");
+                    if (tier === "pro") {
                         el.textContent = "/mo";
                     }
                 });

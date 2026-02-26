@@ -1,18 +1,12 @@
 ---
 import TestimonialCard from "./TestimonialCard.astro";
-import SourceModal from "./SourceModal.astro";
 import testimonialData from "../data/testimonials.json";
 
 interface Props {
-    /** Number of testimonials to display. Defaults to all. */
     limit?: number;
-    /** Number to show initially before "Load more". Defaults to all rendered. */
     initialShow?: number;
-    /** Show the section header */
     showHeader?: boolean;
-    /** Custom heading text */
     heading?: string;
-    /** Layout style: 'masonry' or 'grid' */
     layout?: "masonry" | "grid";
 }
 
@@ -102,7 +96,6 @@ const hasLoadMore = initialShow && initialShow < testimonials.length;
 </section>
 
 <!-- Modal for viewing source images - included once -->
-<SourceModal />
 
 <style>
     .testimonials-section {

@@ -1,7 +1,17 @@
 ---
 import InfoCard from "../../../components/InfoCard.astro";
 const { infoCards } = Astro.props;
-import type { QuestionCard } from "../../../types/component_types";
+type QuestionCard = {
+    id: string;
+    tag?: string;
+    title: string;
+    subtitle?: string;
+    checkList: {
+        title: string;
+        items: string[];
+    };
+    bottomText?: string;
+};
 ---
 
 <section class="container questions">
