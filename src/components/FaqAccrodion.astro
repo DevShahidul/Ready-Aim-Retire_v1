@@ -131,6 +131,57 @@ const { accordionData, borderBottom, paddingTop } = Astro.props;
             grid-column: auto;
         }
     }
+
+    @media (max-width: 768px) {
+        .accordion-wrapper {
+            gap: 1.5rem;
+            padding-bottom: 3rem;
+        }
+
+        .accordion-wrapper.top-padding {
+            padding-top: 3rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+        }
+
+        .accordion-trigger {
+            padding: 1rem 0;
+            font-size: 1.125rem;
+        }
+
+        .accordion-content p {
+            font-size: 1rem;
+            padding-bottom: 1.25rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .accordion-wrapper {
+            gap: 1rem;
+            padding-bottom: 2rem;
+        }
+
+        .accordion-wrapper.top-padding {
+            padding-top: 2rem;
+        }
+
+        h2 {
+            font-size: 1.25rem;
+        }
+
+        .accordion-trigger {
+            padding: 0.875rem 0;
+            font-size: 1rem;
+            text-align: left;
+        }
+
+        .accordion-content p {
+            font-size: 0.9375rem;
+            padding-bottom: 1rem;
+        }
+    }
 </style>
 
 <script>
