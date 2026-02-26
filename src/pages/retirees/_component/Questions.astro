@@ -1,0 +1,90 @@
+---
+const { questionData } = Astro.props;
+---
+
+<section class="container questions">
+    <h3>{questionData.title}</h3>
+    <div class="question-cards-wrapper">
+        {
+            questionData.questions.map((item: string, idx: number) => (
+                <div class={`question-card ${idx === 0 ? "active" : ""}`}>
+                    <p>{item}</p>
+                </div>
+            ))
+        }
+    </div>
+    <div class="question-cta">
+        <p>{questionData.bottomText}</p>
+        <a href="#" class="btn btn-dark"
+            >{questionData.btnText} <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+</section>
+
+<style>
+    .questions {
+        margin-top: clamp(1.875rem, 0.5rem + 6.875vw, 8.75rem);
+        h3 {
+            font-size: 1.75rem;
+            line-height: 1;
+            font-weight: 400;
+        }
+    }
+    .question-cards-wrapper {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 1rem;
+        margin-top: 1.75rem;
+    }
+
+    .question-card {
+        background-color: #fff;
+        color: #2e2e2e;
+        border-radius: 0.625rem;
+        text-align: center;
+        padding: 2rem;
+        font-size: 1.25rem;
+        font-weight: 500;
+        min-height: 12.625rem;
+        display: grid;
+        place-items: center;
+        transition: all 0.3s ease-in;
+    }
+    .question-card.active {
+        background-color: #41bab4;
+        color: #fff;
+    }
+    .question-card:hover {
+        background-color: #41bab4;
+        color: #fff;
+    }
+
+    .question-cta {
+        background-color: #fff;
+        color: #2e2e2e;
+        padding: 1.5625rem 3rem;
+        border-radius: 0.625rem;
+        margin-top: 2.625rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+
+        p {
+            font-size: 1.75rem;
+            font-weight: 400;
+            line-height: 1;
+        }
+    }
+</style>
+
+<script>
+    const cards = document.querySelectorAll(".question-card");
+
+    cards.forEach((card) => {
+        card.addEventListener("click", () => {
+            cards.forEach((card) => card.classList.remove("active"));
+            card.classList.add("active");
+        });
+    });
+</script>

@@ -1,0 +1,109 @@
+---
+const { ctaData } = Astro.props;
+---
+
+<div class="commitment-cta">
+    <div class="container">
+        <div class="commitment-cta-heading">
+            <img src="/images/icons/round-arrow.png" alt="" />
+            <h2>{ctaData.title}</h2>
+        </div>
+        <div class="commitment-cta-description">
+            <div>
+                <h4>{ctaData.subtitle}</h4>
+                <p>{ctaData.description}</p>
+                <p class="bottom-text">"{ctaData.bottomText}"</p>
+            </div>
+            <a href="#" class="btn btn-dark"
+                >{ctaData.btnText}
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+</div>
+
+<style>
+    .commitment-cta {
+        background-color: #41bab4;
+        color: #fff;
+        padding: 4rem 0 5.375rem;
+        margin-top: clamp(1.875rem, 0.4125rem + 7.3125vw, 9.1875rem);
+    }
+    .commitment-cta-heading {
+        display: flex;
+        align-items: center;
+        gap: 1.125rem;
+    }
+    .commitment-cta-description {
+        display: flex;
+        align-items: end;
+        gap: 4rem;
+        justify-content: space-between;
+        max-width: 63.625rem;
+        h4 {
+            font-size: 1.0625rem;
+            font-weight: 500;
+            max-width: 38.75rem;
+            margin-top: 2.1875rem;
+        }
+        p {
+            max-width: 25.75rem;
+            margin-top: 1.6rem;
+        }
+        .btn-dark {
+            font-size: 1rem;
+        }
+        .bottom-text {
+            font-size: 1.75rem;
+            font-weight: 400;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        .commitment-cta-description {
+            gap: 2rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .commitment-cta {
+            padding: 3rem 0 4rem;
+        }
+        .commitment-cta-heading img {
+            width: 2rem;
+            height: auto;
+        }
+        .commitment-cta-description {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1.5rem;
+        }
+        .commitment-cta-description h4 {
+            margin-top: 1.5rem;
+            max-width: 100%;
+        }
+        .commitment-cta-description p {
+            max-width: 100%;
+            margin-top: 1rem;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .commitment-cta {
+            padding: 2rem 0 3rem;
+        }
+        .commitment-cta-heading {
+            gap: 0.75rem;
+        }
+        .commitment-cta-heading img {
+            width: 1.5rem;
+        }
+        .commitment-cta-heading h2 {
+            font-size: 1.25rem;
+        }
+        .commitment-cta-description h4 {
+            font-size: 0.9375rem;
+            margin-top: 1.25rem;
+        }
+    }
+</style>

@@ -3,7 +3,19 @@ import { getEntry } from "astro:content";
 import CTABanner from "../../components/CTABanner.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import CommonHero from "../../components/CommonHero.astro";
+import HeroDescription from "../../components/HeroDescription.astro";
+import InfoColumns from "../../components/InfoColumns.astro";
+import DisplayCard from "../../components/DisplayCard.astro";
+import RetireesCta from "./_component/RetireesCta.astro";
+import Questions from "./_component/Questions.astro";
 const pageData = await getEntry("retireesPage", "retirees");
+const descriptionData = await getEntry(
+    "heroDescription",
+    "retirees_description",
+);
+const infoColumn = await getEntry("infoColumn", "retirees_columns");
+const displayData = await getEntry("displayCard", "retirees_card");
+console.log(pageData);
 ---
 
 <BaseLayout
@@ -11,6 +23,11 @@ const pageData = await getEntry("retireesPage", "retirees");
     description="Make your retirement savings last. Plan Social Security, RMDs, and withdrawal strategies with confidence."
     solidHeader={true}
 >
-    <CommonHero title={pageData?.data.title} />
+    <CommonHero title={pageData?.data.title!} />
+    <HeroDescription description={descriptionData} />
+    <Questions questionData={pageData?.data.thoughts} />
+    <InfoColumns data={infoColumn?.data} transparentBg={true} />
+    <DisplayCard displayData={displayData?.data} smallImg={true} />
+    <RetireesCta ctaData={pageData?.data.retireesCta} />
     <CTABanner />
 </BaseLayout>
