@@ -76,6 +76,64 @@ const { questionData } = Astro.props;
             line-height: 1;
         }
     }
+
+    @media (max-width: 1024px) {
+        .question-cards-wrapper {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .question-cta {
+            flex-direction: column;
+            text-align: center;
+            gap: 1.5rem;
+
+            p {
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .question-cards-wrapper {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .question-card {
+            padding: 1.5rem;
+            font-size: 1rem;
+            min-height: 10rem;
+        }
+
+        .question-cta {
+            padding: 1.25rem 1.5rem;
+
+            p {
+                font-size: 1.25rem;
+            }
+        }
+    }
+
+    @media (max-width: 480px) {
+        .question-cards-wrapper {
+            grid-template-columns: 1fr;
+        }
+
+        .question-card {
+            padding: 1.25rem;
+            min-height: 8rem;
+            font-size: 0.9375rem;
+        }
+
+        .question-cta {
+            flex-direction: column;
+            gap: 1rem;
+            padding: 1rem;
+
+            p {
+                font-size: 1.125rem;
+            }
+        }
+    }
 </style>
 
 <script>
