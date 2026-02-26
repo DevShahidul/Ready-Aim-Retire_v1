@@ -14,6 +14,7 @@ export const displayCardSchema = z.object({
         .optional(),
     btnText: z.string().optional(),
     textRight: z.boolean().optional(),
+    statsLeft: z.boolean().optional(),
     bottomText: z.string().optional(),
     absoluteContent: z
         .object({

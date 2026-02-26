@@ -52,7 +52,7 @@ const { displayData, smallImg } = Astro.props;
             {
                 displayData.absoluteContent && (
                     <div
-                        class={`display-card-text-overlay ${displayData.textRight ? "left-align" : ""}`}
+                        class={`display-card-text-overlay ${displayData.statsLeft ? "left-align" : ""}`}
                     >
                         <h3 class="stat-number">
                             {displayData.absoluteContent.stats}

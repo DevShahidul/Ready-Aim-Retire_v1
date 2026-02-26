@@ -14,6 +14,7 @@ list:
     - "How do taxes and withdrawals really affect my timeline?"
 # btnText: ""
 textRight: true
+statsLeft: true
 bottomText: "<strong>OnTarget™ helps bridge that gap by turning complex planning concepts into clear, visual stories your clients can follow.</strong>"
 absoluteContent: 
     stats: "40–50yr"
