@@ -1,9 +1,19 @@
 ---
+import { getEntry } from "astro:content";
+import CommonHero from "../../components/CommonHero.astro";
+import CTABanner from "../../components/CTABanner.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import HeroDescription from "../../components/HeroDescription.astro";
+const pageData = await getEntry("faqsPage", "faqs");
+const descriptionData = await getEntry("heroDescription", "faqs_description");
 ---
 
 <BaseLayout
     title="FAQs – ReadyAimRetire"
     description="Find answers to common questions about ReadyAimRetire's retirement planning tools, features, and pricing."
     solidHeader={true}
-/>
+>
+    <CommonHero title={pageData?.data.title!} isLarge={true} />
+    <HeroDescription description={descriptionData} />
+    <CTABanner />
+</BaseLayout>
