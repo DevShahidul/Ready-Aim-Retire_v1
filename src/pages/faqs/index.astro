@@ -4,6 +4,7 @@ import CommonHero from "../../components/CommonHero.astro";
 import CTABanner from "../../components/CTABanner.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import HeroDescription from "../../components/HeroDescription.astro";
+import FaqsCards from "./_component/FaqsCards.astro";
 const pageData = await getEntry("faqsPage", "faqs");
 const descriptionData = await getEntry("heroDescription", "faqs_description");
 ---
@@ -15,5 +16,7 @@ const descriptionData = await getEntry("heroDescription", "faqs_description");
 >
     <CommonHero title={pageData?.data.title!} isLarge={true} />
     <HeroDescription description={descriptionData} />
+    <FaqsCards cards={pageData?.data.primaryCards} />
+    <FaqsCards cards={pageData?.data.secondaryCards} />
     <CTABanner />
 </BaseLayout>

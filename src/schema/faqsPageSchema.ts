@@ -16,7 +16,7 @@ export const faqsPageSchema = z.object({
             }),
         )
         .optional(),
-    secondaryCard: z
+    secondaryCards: z
         .array(
             z.object({
                 id: z.number(),
