@@ -1,7 +1,7 @@
 ---
 - id: "13"
   title: "See Your Retirement, Year by Year"
-  subtitle: "Because confidence comes from understanding."
+  subtitle: "<strong>Because confidence comes from understanding.</strong>"
   dotList:
     title: "OnTarget™ shows your retirement as a clear, easy-to-follow timeline – so you can see:"
     items:
@@ -42,15 +42,10 @@
 
 - id: "16"
   title: "Social Security – Planned, Not Guessed"
-  subtitle: "Make informed claiming decisions"
-  dotList:
-    title: ""
-    items:
-      - "See how Social Security fits into your retirement income"
-      - "Understand how different claiming ages affect your overall plan"
-      - "No assumptions hidden behind the scenes"
+  subtitle: "<strong>Make informed claiming decisions</strong>"
+  description: "See how Social Security fits into your retirement income and understand how different claiming ages affect your overall plan."
   btnText: ""
-  bottomText: ""
+  bottomText: "No assumptions hidden behind the scenes"
   email: ""
 
 - id: "17"
@@ -75,7 +70,8 @@
       - "Build a free retirement plan"
       - "See your timeline"
       - "Save your work for a limited time"
+    footer: "Upgrade to Pro only if you want deeper insight, more scenarios, and long-term planning tools."
   btnText: "Start Planning for Free"
-  bottomText: "Upgrade to Pro only if you want deeper insight, more scenarios, and long-term planning tools."
+  bottomText: ""
   email: ""
 ---

@@ -12,6 +12,12 @@ export const displayCardSchema = z.object({
             listItems: z.array(z.string()),
         })
         .optional(),
+    checkList: z
+        .object({
+            title: z.string().optional(),
+            listItems: z.array(z.string()),
+        })
+        .optional(),
     btnText: z.string().optional(),
     textRight: z.boolean().optional(),
     statsLeft: z.boolean().optional(),

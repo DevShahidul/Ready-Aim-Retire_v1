@@ -1,10 +1,10 @@
 ---
-title: "Why people like you use OnTarget™"
+title: "Why people like you use <span class='text-teal'>OnTarget™</span>"
 # subtitle: ""
 # time: ""
 # description: ""
 image: "/images/retirees.png"
-list: 
+checkList: 
    # title: ""
    listItems:
     - "To reduce uncertainty"

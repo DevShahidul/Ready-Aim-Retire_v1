@@ -35,6 +35,21 @@ const { displayData, smallImg } = Astro.props;
                 )
             }
             {
+                displayData?.checkList?.listItems && (
+                    <ul class="display-card-list checklist">
+                        {displayData.checkList.title && (
+                            <h4>{displayData.checkList.title}</h4>
+                        )}
+                        {displayData.checkList.listItems.map((item: string) => (
+                            <li>
+                                <img src="/images/icons/check-icon.png" />
+                                {item}
+                            </li>
+                        ))}
+                    </ul>
+                )
+            }
+            {
                 displayData.btnText && (
                     <a href="#" class="btn btn-dark">
                         {displayData.btnText}
@@ -112,6 +127,7 @@ const { displayData, smallImg } = Astro.props;
         li {
             font-size: 1.0625rem;
             color: #2e2e2e;
+            align-items: center;
         }
     }
 
