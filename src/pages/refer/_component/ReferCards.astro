@@ -107,4 +107,47 @@ type Card = {
             }
         }
     }
+
+    @media (max-width: 1024px) {
+        .refer-cards-wrapper {
+            grid-template-columns: 1fr;
+        }
+
+        .refer-card {
+            padding: 1.5rem 2rem;
+
+            h2 {
+                font-size: 2.5rem;
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .refer-card {
+            padding: 1.25rem 1.5rem;
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            img {
+                max-width: 4rem;
+            }
+        }
+    }
+
+    @media (max-width: 480px) {
+        .refer-card {
+            padding: 1rem;
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .refer-number-list li {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+    }
 </style>

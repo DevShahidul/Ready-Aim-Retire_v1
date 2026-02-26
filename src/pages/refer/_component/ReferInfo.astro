@@ -52,4 +52,47 @@ const { referCta } = Astro.props;
             margin-top: 2.1875rem;
         }
     }
+
+    @media (max-width: 1024px) {
+        section {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .refer-info-columns {
+            grid-column: 1 / -1;
+        }
+
+        .refer-cta {
+            grid-column: 1 / -1;
+            margin-top: 0;
+            width: 100%;
+            padding: 2rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .refer-cta {
+            padding: 1.5rem;
+
+            h2 {
+                font-size: 1.5rem;
+                margin-bottom: 1.5rem;
+            }
+
+            p {
+                font-size: 0.9375rem;
+            }
+        }
+    }
+
+    @media (max-width: 480px) {
+        .refer-cta {
+            padding: 1.25rem;
+
+            h2 {
+                font-size: 1.25rem;
+            }
+        }
+    }
 </style>
