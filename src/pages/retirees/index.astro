@@ -1,6 +1,9 @@
 ---
+import { getEntry } from "astro:content";
 import CTABanner from "../../components/CTABanner.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import CommonHero from "../../components/CommonHero.astro";
+const pageData = await getEntry("retireesPage", "retirees");
 ---
 
 <BaseLayout
@@ -8,5 +11,6 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
     description="Make your retirement savings last. Plan Social Security, RMDs, and withdrawal strategies with confidence."
     solidHeader={true}
 >
+    <CommonHero title={pageData?.data.title} />
     <CTABanner />
 </BaseLayout>
