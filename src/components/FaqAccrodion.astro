@@ -1,0 +1,176 @@
+---
+const { accordionData, borderBottom, paddingTop } = Astro.props;
+---
+
+<section class="faq-section container">
+    <div
+        class={`accordion-wrapper ${borderBottom ? "bottom-border" : ""} ${paddingTop ? "top-padding" : ""}`}
+    >
+        <h2>{accordionData.title}</h2>
+
+        <div class="accordion">
+            {
+                accordionData.faqs.map(
+                    (faq: { question: string; answer: string }) => (
+                        <div class="accordion-item">
+                            <button class="accordion-trigger">
+                                <span>{faq.question}</span>
+                                <span class="icon" />
+                            </button>
+
+                            <div class="accordion-content">
+                                <p set:html={faq.answer} />
+                            </div>
+                        </div>
+                    ),
+                )
+            }
+        </div>
+    </div>
+</section>
+
+<style>
+    .accordion-wrapper {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 2rem;
+        align-items: start;
+        padding-bottom: 4.75rem;
+    }
+
+    .accordion-wrapper.bottom-border {
+        border-bottom: 1px solid #ddd;
+    }
+
+    .accordion-wrapper.top-padding {
+        padding-top: 5.125rem;
+    }
+
+    h2 {
+        grid-column: 1 / 2;
+        font-size: 28px;
+        font-weight: 400;
+    }
+
+    .accordion {
+        grid-column: 3 / 6;
+    }
+
+    .accordion-item:not(:last-child) {
+        border-bottom: 1px solid #b6bac3;
+    }
+
+    .accordion-trigger {
+        width: 100%;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 1.375rem 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1.25rem;
+        font-weight: 500;
+        color: #2e2e2e;
+    }
+
+    .icon {
+        width: 16px;
+        height: 16px;
+        position: relative;
+    }
+
+    .icon::before,
+    .icon::after {
+        content: "";
+        position: absolute;
+        background: #222;
+        transition: transform 0.3s ease;
+    }
+
+    .icon::before {
+        width: 100%;
+        height: 2px;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+    }
+
+    .icon::after {
+        width: 2px;
+        height: 100%;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+    }
+
+    .accordion-item.active .icon::after {
+        transform: translateX(-50%) scaleY(0);
+    }
+
+    .accordion-content {
+        height: 0;
+        overflow: hidden;
+        transition: height 0.35s ease;
+    }
+
+    .accordion-content p {
+        font-size: 1.0625rem;
+        padding-bottom: 1.5rem;
+        color: #2e2e2e;
+        line-height: 1.6;
+    }
+
+    @media (max-width: 1024px) {
+        .accordion-wrapper {
+            grid-template-columns: 1fr;
+        }
+
+        h2,
+        .accordion {
+            grid-column: auto;
+        }
+    }
+</style>
+
+<script>
+    const triggers =
+        document.querySelectorAll<HTMLButtonElement>(".accordion-trigger");
+
+    triggers.forEach((btn) => {
+        btn.addEventListener("click", () => {
+            const item = btn.parentElement as HTMLDivElement | null;
+            if (!item) return;
+
+            const content =
+                item.querySelector<HTMLDivElement>(".accordion-content");
+            if (!content) return;
+
+            const isOpen = item.classList.contains("active");
+
+            if (isOpen) {
+                content.style.height = `${content.scrollHeight}px`;
+
+                requestAnimationFrame(() => {
+                    content.style.height = "0px";
+                });
+
+                item.classList.remove("active");
+            } else {
+                item.classList.add("active");
+
+                content.style.height = `${content.scrollHeight}px`;
+
+                const onTransitionEnd = () => {
+                    if (item.classList.contains("active")) {
+                        content.style.height = "auto";
+                    }
+                };
+
+                content.addEventListener("transitionend", onTransitionEnd, {
+                    once: true,
+                });
+            }
+        });
+    });
+</script>

@@ -6,8 +6,14 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import HeroDescription from "../../components/HeroDescription.astro";
 import FaqsCards from "./_component/FaqsCards.astro";
 import FaqsCta from "./_component/FaqsCta.astro";
+import FaqAccrodion from "../../components/FaqAccrodion.astro";
 const pageData = await getEntry("faqsPage", "faqs");
 const descriptionData = await getEntry("heroDescription", "faqs_description");
+const gettingStartedFaqs = await getEntry("faqs", "getting-started_faqs");
+const planingFaqs = await getEntry("faqs", "planing_faqs");
+const taxesFaqs = await getEntry("faqs", "taxes_faqs");
+const privacyFaqs = await getEntry("faqs", "privacy_faqs");
+const billingFaqs = await getEntry("faqs", "billing_faqs");
 ---
 
 <BaseLayout
@@ -18,7 +24,19 @@ const descriptionData = await getEntry("heroDescription", "faqs_description");
     <CommonHero title={pageData?.data.title!} isLarge={true} />
     <HeroDescription description={descriptionData} />
     <FaqsCards cards={pageData?.data.primaryCards} />
+    <FaqAccrodion
+        accordionData={gettingStartedFaqs?.data}
+        borderBottom={true}
+    />
+    <FaqAccrodion
+        accordionData={planingFaqs?.data}
+        borderBottom={true}
+        paddingTop={true}
+    />
+    <FaqAccrodion accordionData={taxesFaqs?.data} paddingTop={true} />
     <FaqsCta ctaData={pageData?.data.faqsCta} />
+    <FaqAccrodion accordionData={privacyFaqs?.data} borderBottom={true} />
+    <FaqAccrodion accordionData={billingFaqs?.data} paddingTop={true} />
     <FaqsCards cards={pageData?.data.secondaryCards} />
     <CTABanner />
 </BaseLayout>
