@@ -530,7 +530,7 @@
 
     .mobile-nav > ul > li > a {
         display: block;
-        color: #ffffff;
+        color: #fff !important;
         font-size: 1.1rem;
         font-weight: 500;
         text-decoration: none;
@@ -538,7 +538,27 @@
         transition: color 0.2s ease;
     }
 
-    .mobile-nav > ul > li > a:hover {
+    .mobile-menu-header {
+        .logo {
+            img {
+                filter: none !important;
+            }
+        }
+    }
+
+    header.scrolled .mobile-nav > ul > li > a {
+        color: #16213e !important;
+    }
+
+    header.scrolled .mobile-menu-header {
+        .logo {
+            img {
+                filter: brightness(0) saturate(100%) !important;
+            }
+        }
+    }
+
+    header.scrolled .mobile-nav > ul > li > a:hover {
         color: var(--color-primary);
     }
 
