@@ -6,25 +6,25 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import Sidebar from "./_component/Sidebar.astro";
 const pageData = await getEntry("blogDetailsPage", "blog-details");
 const sidebarData = {
-    socials: pageData.data.socials,
-    relatedArticles: pageData.data.relatedArticles,
+    socials: pageData?.data.socials,
+    relatedArticles: pageData?.data.relatedArticles,
 };
-const { Content } = await render(pageData);
+const { Content } = await render(pageData!);
 ---
 
 <BaseLayout title="Blog Details" solidHeader={true}>
     <section class="blog-details-heading container">
         <ul class="breadcrumb">
-            <li>{pageData.data.breadcrumb.step1}</li>
+            <li>{pageData?.data?.breadcrumb?.step1}</li>
             <li>{">"}</li>
-            <li>{pageData.data.breadcrumb.step2}</li>
+            <li>{pageData?.data?.breadcrumb?.step2}</li>
             <li>{">"}</li>
-            <li class="current">{pageData.data.breadcrumb.step3}...</li>
+            <li class="current">{pageData?.data?.breadcrumb?.step3}...</li>
         </ul>
-        <h2>{pageData.data.title}</h2>
+        <h2>{pageData?.data.title}</h2>
         <div class="time-stamp">
-            <p>{pageData.data.time}</p>
-            <p>{pageData.data.date}</p>
+            <p>{pageData?.data.time}</p>
+            <p>{pageData?.data.date}</p>
         </div>
     </section>
 
@@ -112,7 +112,7 @@ const { Content } = await render(pageData);
     @media (max-width: 1024px) {
         .blog-details-heading {
             margin-top: 10rem;
-            
+
             h2 {
                 font-size: 2.25rem;
                 margin-top: 3rem;

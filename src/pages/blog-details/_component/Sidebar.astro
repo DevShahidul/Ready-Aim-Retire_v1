@@ -27,14 +27,14 @@ type Article = {
         <div class="article-cards-wrapper">
             {
                 sidebarData.relatedArticles.map((article: Article) => (
-                    <div class="article-card">
+                    <a href="/blog-details" class="article-card">
                         <img src={article.image} />
                         <div class="time-stamp">
                             <p>{article.time}</p>
                             <p>{article.date}</p>
                         </div>
                         <h2>{article.title}...</h2>
-                    </div>
+                    </a>
                 ))
             }
         </div>
@@ -77,6 +77,7 @@ type Article = {
 
     .article-card {
         max-width: 25rem;
+        display: block;
         img {
             width: 100%;
         }

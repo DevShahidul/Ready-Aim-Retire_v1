@@ -3,7 +3,7 @@ const { blog, serial, blogPage } = Astro.props;
 ---
 
 <div class="blog-card-wrapper">
-    <div class={`blog-card ${serial === 1 ? "active" : ""}`}>
+    <a href="/blog-details" class={`blog-card ${serial === 1 ? "active" : ""}`}>
         <div class="blog-card-main">
             <div class="blog-card-image-wrapper">
                 <img
@@ -25,10 +25,10 @@ const { blog, serial, blogPage } = Astro.props;
         </div>
 
         <div class="blog-card-footer">
-            <a href="#" class="blog-card-link">Read More</a>
+            <span class="blog-card-link">Read More</span>
             <span class="blog-card-date">{blog.date}</span>
         </div>
-    </div>
+    </a>
 </div>
 <style>
     .blog-card-wrapper {
