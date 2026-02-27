@@ -1,7 +1,7 @@
 ---
 import { render } from "astro:content";
 
-const { description } = Astro.props;
+const { description, bigPill } = Astro.props;
 const { Content } = await render(description);
 ---
 
@@ -25,7 +25,7 @@ const { Content } = await render(description);
         </div>
         {
             description.data.checkList && (
-                <ul class="description-points">
+                <ul class={`description-points ${bigPill ? "big-pill" : ""}`}>
                     {description?.data.checkList.map(
                         (item: { point: string }) =>
                             item?.point && (
@@ -84,6 +84,11 @@ const { Content } = await render(description);
         }
     }
 
+    .description-points.big-pill {
+        width: 21.875rem;
+        max-width: 100%;
+    }
+
     .more-space {
         max-width: 41.5rem;
     }
@@ -140,6 +145,11 @@ const { Content } = await render(description);
         .description-points {
             margin-top: 2rem;
             gap: 1.25rem;
+            max-width: 100%;
+        }
+
+        .description-points.big-pill {
+            width: 100%;
             max-width: 100%;
         }
     }

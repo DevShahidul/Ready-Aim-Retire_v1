@@ -23,7 +23,7 @@ const displayData = await getEntry("displayCard", "retirees_card");
     solidHeader={true}
 >
     <CommonHero title={pageData?.data.title!} />
-    <HeroDescription description={descriptionData} />
+    <HeroDescription description={descriptionData} bigPill={true} />
     <Questions questionData={pageData?.data.thoughts} />
     <InfoColumns data={infoColumn?.data} transparentBg={true} />
     <DisplayCard displayData={displayData?.data} smallImg={true} />
