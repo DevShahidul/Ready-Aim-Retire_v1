@@ -25,7 +25,7 @@ const plansData = {
     solidHeader={true}
 >
     <!-- Pricing Hero -->
-    <CommonHero title={data?.title} />
+    <CommonHero title={data?.title!} isLarge={true} />
 
     <!-- Pricing Plans -->
     <PricingPlans plansData={plansData} />
