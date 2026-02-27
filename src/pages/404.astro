@@ -1,4 +1,5 @@
 ---
+import CommonHero from "../components/CommonHero.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
@@ -7,54 +8,19 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     description="The page you're looking for doesn't exist. Return to ReadyAimRetire's homepage."
     solidHeader={true}
 >
-    <section class="error-404">
-        <div class="container">
-            <div class="error-content">
-                <!-- Large 404 Number -->
-                <div class="error-number">404</div>
-
-                <!-- Headline -->
-                <h1 class="error-title">Page Not Found</h1>
-
-                <!-- Retirement-themed message -->
-                <p class="error-message">Looks like this page retired early!</p>
-
-                <!-- Friendly explanation -->
-                <p class="error-description">
-                    The page you're looking for doesn't exist or may have been
-                    moved. Don't worry though – we'll help you get back on
-                    track.
-                </p>
-
-                <!-- Helpful navigation links -->
-                <div class="helpful-links">
-                    <h2 class="helpful-title">Here are some helpful links:</h2>
-                    <div class="links-grid">
-                        <a href="/" class="link-card">
-                            <i class="fa-solid fa-home"></i>
-                            <span>Home</span>
-                        </a>
-                        <a href="/pricing" class="link-card">
-                            <i class="fa-solid fa-tag"></i>
-                            <span>Pricing</span>
-                        </a>
-                        <a href="/faqs" class="link-card">
-                            <i class="fa-solid fa-circle-question"></i>
-                            <span>FAQs</span>
-                        </a>
-                        <a href="/contact" class="link-card">
-                            <i class="fa-solid fa-envelope"></i>
-                            <span>Contact</span>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Optional: Back to previous page button -->
-                <button onclick="history.back()" class="btn-back">
-                    <i class="fa-solid fa-arrow-left"></i>
-                    Go Back
-                </button>
-            </div>
-        </div>
-    </section>
+    <CommonHero title="404 Page not found" />
+    <div class="return-home container">
+        <a href="/" class="btn btn-dark">
+            <i class="fa-solid fa-home"></i>
+            <span>Return Home</span>
+        </a>
+    </div>
 </BaseLayout>
+
+<style>
+    .return-home {
+        .btn-dark {
+            margin: 3rem 0;
+        }
+    }
+</style>
