@@ -28,11 +28,11 @@
                             </a>
                             <a href="javascript:void(0)" class="dropdown-item">
                                 <span class="dropdown-title"
-                                    >Chance of Success</span
+                                    >Stress-Test Your Plan</span
                                 >
                                 <span class="dropdown-desc"
                                     >Run your plan through historical market
-                                    data. More certainty...</span
+                                    data. More certainty…</span
                                 >
                             </a>
                             <a href="javascript:void(0)" class="dropdown-item">
@@ -55,38 +55,11 @@
                             </a>
                             <a href="javascript:void(0)" class="dropdown-item">
                                 <span class="dropdown-title"
-                                    >Retirement Budget</span
-                                >
-                                <span class="dropdown-desc"
-                                    >Build a detailed budget that powers your
-                                    retirement projections.</span
-                                >
-                            </a>
-                            <a href="/accounts" class="dropdown-item">
-                                <span class="dropdown-title"
-                                    >Accounts & Assets</span
-                                >
-                                <span class="dropdown-desc"
-                                    >Organize all your accounts, assets, and
-                                    liabilities in one place.</span
-                                >
-                            </a>
-                            <a href="javascript:void(0)" class="dropdown-item">
-                                <span class="dropdown-title"
-                                    >Net Worth Tracking</span
-                                >
-                                <span class="dropdown-desc"
-                                    >Track your progress toward financial
-                                    freedom over time.</span
-                                >
-                            </a>
-                            <a href="javascript:void(0)" class="dropdown-item">
-                                <span class="dropdown-title"
                                     >Income & Spending Clarity</span
                                 >
                                 <span class="dropdown-desc"
                                     >Understand where your money comes from and
-                                    where it goes.</span
+                                    where it goes…</span
                                 >
                             </a>
                         </div>
@@ -143,28 +116,21 @@
                             <a href="javascript:void(0)">Holistic Timeline</a>
                         </li>
                         <li>
-                            <a href="javascript:void(0)">Chance of Success</a>
-                        </li>
-                        <li>
                             <a href="javascript:void(0)">Scenario Planning</a>
                         </li>
                         <li>
                             <a href="javascript:void(0)"
-                                >Maximise Taxes & Benefits</a
+                                >Income & Spending Clarity</a
                             >
                         </li>
                         <li>
-                            <a href="javascript:void(0)">Retirement Budget</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0)">Accounts & Assets</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0)">Net Worth Tracking</a>
+                            <a href="javascript:void(0)"
+                                >Stress-Test Your Plan</a
+                            >
                         </li>
                         <li>
                             <a href="javascript:void(0)"
-                                >Income & Spending Clarity</a
+                                >Maximise Taxes & Benefits</a
                             >
                         </li>
                     </ul>
@@ -327,45 +293,63 @@
         position: relative;
     }
 
+    .has-dropdown::after {
+        content: "";
+        width: 100%;
+        height: 4px;
+        background-color: var(--color-primary);
+        bottom: -8px;
+        left: 0;
+        position: absolute;
+        z-index: 1000;
+        transition: all 0.2 ease-in;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .has-dropdown:hover::after {
+        opacity: 1;
+        visibility: visible;
+    }
+
     .dropdown-menu {
         position: absolute;
-        top: 100%;
-        left: 50%;
-        transform: translateX(-50%);
+        top: 2.5rem;
+        left: 0;
         background: #ffffff;
-        border-radius: 12px;
+        border-radius: 0rem 0rem 0.625rem 0.625rem;
         box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
-        padding: 1.5rem;
-        min-width: 31.25rem;
+        padding: 1.875rem;
+        min-width: 45.25rem;
+        max-width: 100%;
         opacity: 0;
         visibility: hidden;
         transition:
             opacity 0.2s ease,
             visibility 0.2s ease,
             transform 0.2s ease;
-        transform: translateX(-50%) translateY(10px);
         z-index: 1000;
     }
 
     .has-dropdown:hover .dropdown-menu {
         opacity: 1;
         visibility: visible;
-        transform: translateX(-50%) translateY(0);
     }
 
     .dropdown-header {
-        font-size: 0.7rem;
-        font-weight: 600;
-        letter-spacing: 0.1em;
+        font-size: 0.875rem;
+        font-weight: 500;
         color: var(--color-primary);
         margin-bottom: 1rem;
         text-transform: uppercase;
+        text-decoration: underline;
     }
 
     .dropdown-grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 1rem;
+        column-gap: clamp(1.875rem, 0.1875rem + 8.4375vw, 10.3125rem);
+        row-gap: 1.6rem;
     }
 
     .dropdown-item {
@@ -383,15 +367,16 @@
     }
 
     .dropdown-title {
-        font-size: 0.9rem;
-        font-weight: 600;
-        color: #1a1a2e;
+        font-size: 1rem;
+        font-weight: 500;
+        color: #2e2e2e;
+        display: block;
     }
 
     .dropdown-desc {
-        font-size: 0.8rem;
-        color: #64748b;
-        line-height: 1.4;
+        font-size: 0.875rem;
+        color: #707070;
+        font-weight: 300;
     }
 
     /* Nav Right */
