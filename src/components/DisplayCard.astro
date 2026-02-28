@@ -5,7 +5,7 @@ const { displayData, smallImg } = Astro.props;
 <div class="container display-card-container">
     <div class="display-card">
         <div
-            class={`display-card-text ${displayData.textRight ? "text-right" : ""}`}
+            class={`display-card-text ${displayData.textRight ? "text-right" : ""} ${smallImg ? "less-padding" : ""}`}
         >
             <h2 set:html={displayData.title} />
             {displayData.subtitle && <p set:html={displayData.subtitle} />}
@@ -88,10 +88,11 @@ const { displayData, smallImg } = Astro.props;
 
 <style>
     .display-card {
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        /*justify-content: space-between;*/
+        grid-template-columns: repeat(2, 1fr);
         align-items: center;
-        gap: 3.3125rem; /* 5px */
+        gap: 1rem; /* 5px */
         background-color: var(--color-bg-light);
         border: 1.25rem solid #ffffff; /* 20px */
         border-radius: 1.875rem; /* 30px */
@@ -152,6 +153,9 @@ const { displayData, smallImg } = Astro.props;
         .display-card-text {
             padding: 5.25rem 0rem 3.25rem 2.625rem;
         }
+        .display-card-text.less-padding {
+            padding: 3.25rem 0rem 3.25rem 2.625rem;
+        }
 
         .text-right {
             order: 2;
@@ -205,7 +209,8 @@ const { displayData, smallImg } = Astro.props;
 
     @media (max-width: 1024px) {
         .display-card {
-            flex-direction: column;
+            /*flex-direction: column;*/
+            grid-template-columns: repeat(1, 1fr);
             gap: 1.5rem;
             border-width: 1rem;
             border-radius: 1.25rem;
